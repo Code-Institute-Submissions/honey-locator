@@ -7,7 +7,7 @@ function initMap() {
     mapTypeControl: false,
   });
 
-// set markers and clusters
+  // set markers and clusters
 
   map.data.loadGeoJson("assets/js/honey-data.json", null, function (features) {
     markers = features.map(function (feature) {
@@ -19,7 +19,7 @@ function initMap() {
         },
       });
 
-// add mouseover
+      // add mouseover
 
       marker.addListener("mouseover", function () {
         marker.setIcon({
@@ -35,9 +35,9 @@ function initMap() {
         });
       });
 
-// open infowindow on click
+      // open infowindow on click
 
-  infowindow = new google.maps.InfoWindow();
+      infowindow = new google.maps.InfoWindow();
 
       marker.addListener("click", function () {
         let feat = feature;
@@ -47,7 +47,7 @@ function initMap() {
         let position = feat.getGeometry().get();
         let html = `<b> ${name}</b><br>
         <i class="fas fa-phone-alt icon-color" alt="phone"></i> ${phone}
-        <br><i class="fas fa-globe icon-color" alt="globe"></i> <a class="website" target="_blank" href=" ${website}">link</a>`;
+        <br><i class="fas fa-globe icon-color" alt="globe"></i> <a class="website" target="_blank" href=" ${website}">link</a> <br><div onclick="newElement()" id="addTo" class="addBtn" value='${name}${phone}${website}'>Add</>`;
         infowindow.setContent(html);
         infowindow.open(map, marker);
       });
@@ -59,9 +59,9 @@ function initMap() {
     });
   });
 
-    map.data.setMap(null);
+  map.data.setMap(null);
 
-     //geolocator
+  //geolocator
 
   let locatorBTN = document.getElementById("locatorBTN");
   locatorBTN.addEventListener("click", function () {
@@ -98,7 +98,68 @@ function initMap() {
     );
     infowindow.open(map);
   }
-
 }
 
+// Let user create list of their choices 
 
+//close button 
+let myNodelist = document.getElementsByTagName("LI");
+var i;
+for (i = 0; i < myNodelist.length; i++) {
+  let span = document.createElement("SPAN");
+  let txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  myNodelist[i].appendChild(span);
+}
+
+// Click on a close button to hide the current list item
+let close = document.getElementsByClassName("close");
+var i;
+for (i = 0; i < close.length; i++) {
+  close[i].onclick = function () {
+    let div = this.parentElement;
+    div.style.display = "none";
+  };
+}
+
+// Create a new list item when clicking on the "Add" button
+function newElement() {
+  let li = document.createElement("li");
+  let inputValue = document.getElementById("addTo").getAttribute("value");
+  let t = document.createTextNode(inputValue);
+  li.appendChild(t);
+  document.getElementById("listItems").appendChild(li);
+
+  let span = document.createElement("SPAN");
+  let txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  li.appendChild(span);
+
+  for (i = 0; i < close.length; i++) {
+    close[i].onclick = function () {
+      let div = this.parentElement;
+      div.style.display = "none";
+    };
+  }
+}
+
+//hide/show list
+$(document).ready(function () {
+  $(".toggleList").click(function () {
+    $("#userList").toggle();
+  });
+});
+
+$(".toggleList").click(function () {
+  let $this = $(this);
+  $this.toggleClass("toggleList");
+  if ($this.hasClass("toggleList")) {
+    $this.text("Hide list");
+  } else {
+    $this.text("Show list");
+  }
+});
+
+  
