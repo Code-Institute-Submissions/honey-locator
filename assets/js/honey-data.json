@@ -1,0 +1,1754 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "geometry": {
+        "coordinates": [-5.851389, 54.264296],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "online",
+        "name": "Castle Farm Fresh Produce",
+        "phone": "+447568436413",
+        "website": "https://www.castlefarmni.com/",
+        "storeid": "02"
+      },
+      "type": "Feature"
+    },
+
+    {
+      "geometry": {
+        "coordinates": [-2.7721087, 53.9136975],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "online",
+        "name": "Lancashire Honey",
+        "phone": "+447787758033",
+        "website": "http://www.lancashirehoney.com/",
+        "storeid": "06"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [-2.2575367, 53.4424254],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "online",
+        "name": "SweetBee - Local Organic Honey",
+        "phone": "+447982935144",
+        "website": "http://www.sweetbee.shop/",
+        "storeid": "07"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [-2.4360498, 53.281011],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "online",
+        "name": "Bax Bees",
+        "phone": "+447722249552",
+        "website": "https://baxbees.co.uk/",
+        "storeid": "08"
+      },
+      "type": "Feature"
+    },
+
+    {
+      "geometry": {
+        "coordinates": [-4.4508308, 52.9627596],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "online",
+        "name": "Treddafydd Organic",
+        "phone": "+441758750418",
+        "website": "http://www.treddafyddorganic.co.uk/",
+        "storeid": "10"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [-4.5044911, 53.3985688],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "online",
+        "name": "Bee Hive Preserves",
+        "phone": "+441407711588",
+        "website": "http://www.jams.co.uk/",
+        "storeid": "11"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [-1.2898863, 52.6482562],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "online",
+        "name": "Raw n Pure",
+        "phone": "+447812990603",
+        "website": "http://www.rawnpure.co.uk/",
+        "storeid": "12"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [-0.6997766, 52.0467182],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "online",
+        "name": "Mr Robs Honey",
+        "phone": "",
+        "website": "http://www.mrrobshoney.com/",
+        "storeid": "14"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [-0.997097, 51.9377865],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "online",
+        "name": "British Honey producers Ltd, Oakfield Honey Farm",
+        "phone": "+441296730794",
+        "website": "http://britishhoneyproducersltd.com/",
+        "storeid": "15"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [-0.7213894, 51.9573705],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "online",
+        "name": "Buckinghamshire Honey Company Ltd",
+        "phone": "+441525270325",
+        "website": "http://www.buckinghamshire-honey.co.uk/",
+        "storeid": "16"
+      },
+      "type": "Feature"
+    },
+
+    {
+      "geometry": {
+        "coordinates": [-0.7454975, 51.533654],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "online",
+        "name": "Natures Raw Honey",
+        "phone": "+447868783563",
+        "website": "http://naturesrawhoney.com/",
+        "storeid": "17"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [-1.7914573, 51.6557467],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "online",
+        "name": "Raw Honey UK",
+        "phone": "+447746891809",
+        "website": "http://www.rawhoneyuk.com/",
+        "storeid": "19"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [-2.286213, 51.35505],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "online",
+        "name": "Hartley Farm Shop & Kitchen",
+        "phone": "+441225864948",
+        "website": "http://www.hartley-farm.co.uk/",
+        "storeid": "20"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [-4.8791898, 50.5770788],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "online",
+        "name": "Porteath Bee Centre",
+        "phone": "+441208863718",
+        "website": "http://www.porteathbeecentre.co.uk/",
+        "storeid": "24"
+      },
+      "type": "Feature"
+    },
+
+    {
+      "geometry": {
+        "coordinates": [-4.2634263, 50.6744277],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "online",
+        "name": "Nearly Home Honey",
+        "phone": "+447795011534",
+        "website": "http://www.nearlyhomehoney.co.uk/",
+        "storeid": "27"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [-3.8800121, 50.3111659],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "online",
+        "name": "Bigbury Bees",
+        "phone": "+447749695754",
+        "website": "https://bigburybees.co.uk/",
+        "storeid": "28"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [-3.8748267, 50.3971026],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "online",
+        "name": "Stone's Honey",
+        "phone": "+447944745153",
+        "website": "http://www.stones-honey.co.uk/",
+        "storeid": "30"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [-3.7752421, 50.2916004],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "online",
+        "name": "Beeza",
+        "phone": "+447914002831",
+        "website": "http://www.beeza.co.uk/",
+        "storeid": "31"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [-3.8522925, 51.0343508],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "online",
+        "name": "Quince Honey Farm",
+        "phone": "+441769572401",
+        "website": "http://www.quincehoneyfarm.co.uk/",
+        "storeid": "33"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [-3.1682675, 50.7286644],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "online",
+        "name": "Blackbury Honey Farm",
+        "phone": "+441404871600",
+        "website": "http://www.blackburyfarm.co.uk/",
+        "storeid": "34"
+      },
+      "type": "Feature"
+    },
+
+    {
+      "geometry": {
+        "coordinates": [-2.7977548, 50.9401522],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "online",
+        "name": "Honey Pot Farm",
+        "phone": "+447971656440",
+        "website": "http://honeypotfarm.org/",
+        "storeid": "36"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [-1.7789871, 50.8576511],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "online",
+        "name": "Honey's Honey",
+        "phone": "+441425477027",
+        "website": "http://www.honeyshoney.co.uk/",
+        "storeid": "37"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [-1.9351882, 50.7445085],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "online",
+        "name": "Dorset Bees Ltd",
+        "phone": "+447966891997",
+        "website": "http://dorsetbees.co.uk/",
+        "storeid": "39"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [-1.812778, 50.8070126],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "online",
+        "name": "Snow C J",
+        "phone": "+441202484628",
+        "website": "http://avonorganics.co.uk/",
+        "storeid": "40"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [-1.2499182, 50.8642728],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "online",
+        "name": "Ashworth Honey",
+        "phone": "",
+        "website": "http://ashworthhoney.co.uk/",
+        "storeid": "42"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [-0.9953616, 50.7915527],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "online",
+        "name": "Sinah Common Honey",
+        "phone": "+447708922013",
+        "website": "http://sinahcommonhoney.com/",
+        "storeid": "44"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [-0.869118, 50.877843],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "online",
+        "name": "Adsdean Farm Shop",
+        "phone": "+441243575212",
+        "website": "http://www.adsdeanfarm.co.uk/",
+        "storeid": "45"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [-0.9571533, 51.0189133],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "online",
+        "name": "Holmbury Honey",
+        "phone": "",
+        "website": "http://holmburyhoney.co.uk/",
+        "storeid": "46"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [-0.9742749, 51.0312384],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "online",
+        "name": "Pipers Honey Farm",
+        "phone": "+441730268777",
+        "website": "https://www.pipershoney.com/",
+        "storeid": "47"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [-0.3060851, 50.8244574],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "online",
+        "name": "Southdowns Honey",
+        "phone": "+447812838439",
+        "website": "http://southdownshoney.co.uk/",
+        "storeid": "49"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [-0.1096449, 50.8443813],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "online",
+        "name": "Aecre Honey",
+        "phone": "+441273974120",
+        "website": "https://www.aecre.co.uk/",
+        "storeid": "50"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [-0.3012784, 51.4870059],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "online",
+        "name": "Bee Master London",
+        "phone": "+447775001921",
+        "website": "https://bee-m.com/product/wildflower-honey-raw/",
+        "storeid": "52"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [0.7493878, 52.0269774],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "online",
+        "name": "Stour Valley Apiaries Limited",
+        "phone": "+447557105495",
+        "website": "http://www.stourvalleyapiaries.com/",
+        "storeid": "55"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [1.3143735, 51.9721448],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "online",
+        "name": "MrBees",
+        "phone": "+447503773630",
+        "website": "http://www.mrbees.co.uk/",
+        "storeid": "57"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [0.8855421, 52.1887859],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "online",
+        "name": "Stubees",
+        "phone": "+447861223512",
+        "website": "https://www.stubees.co.uk/",
+        "storeid": "59"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [1.2190477, 52.6543421],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "online",
+        "name": "Longwater Community Farm",
+        "phone": "+447919342740",
+        "website": "https://www.longwater.org.uk/",
+        "storeid": "62"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [1.6771529, 52.5578036],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "online",
+        "name": "Browston Apiary",
+        "phone": "+447799773140",
+        "website": "https://www.norfolkbee.co.uk/",
+        "storeid": "63"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [0.0402749, 52.7393202],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "online",
+        "name": "Berberis House Apiary",
+        "phone": "+11945440295",
+        "website": "http://bhahoney.com/",
+        "storeid": "65"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [0.1291605, 52.6421253],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "online",
+        "name": "Fenland Apiaries",
+        "phone": "+441945739294",
+        "website": "http://fenlandapiaries.co.uk/",
+        "storeid": "66"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [-1.1806654, 52.2724624],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "online",
+        "name": "Dandy Lions Ltd",
+        "phone": "+441327312912",
+        "website": "https://www.dandylions.co.uk/",
+        "storeid": "68"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [-1.44217, 52.466409],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "online",
+        "name": "Honeyfields Bee Farm",
+        "phone": "+442476490311",
+        "website": "http://www.honeyfieldsbeefarm.co.uk/",
+        "storeid": "71"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [-0.296469, 52.7017692],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "online",
+        "name": "Bees for Business",
+        "phone": "+441778487923",
+        "website": "http://www.beesforbusiness.com/",
+        "storeid": "74"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [-1.1388334, 52.9540435],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "online",
+        "name": "Honeybee Farmacy",
+        "phone": "",
+        "website": "http://honeybeefarmacy.com/",
+        "storeid": "78"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [-4.0035717, 52.7181264],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "online",
+        "name": "Trees and Bees",
+        "phone": "+441341250882",
+        "website": "http://www.treesandbees.co.uk/",
+        "storeid": "79"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [-4.1264085, 53.1201081],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "online",
+        "name": "Snowdon Honey Farm & Winery",
+        "phone": "",
+        "website": "http://www.snowdonhoneyfarmandwinery.co.uk/",
+        "storeid": "82"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [-0.961003, 52.987482],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "online",
+        "name": "Bee Farm Goldendrops",
+        "phone": "",
+        "website": "http://www.goldendrops.co.uk/",
+        "storeid": "83"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [-0.57869, 53.216442],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "online",
+        "name": "Hartsholme Honey",
+        "phone": "+441522878183",
+        "website": "http://www.hartsholmehoney.uk/",
+        "storeid": "84"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [-1.3453831, 53.3143894],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "online",
+        "name": "Bear Cool Honey Company",
+        "phone": "+447778665775",
+        "website": "http://www.bearcoolhoneycompany.co.uk/",
+        "storeid": "85"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [-1.2801234, 53.2866659],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "online",
+        "name": "Ohh Bee Hive HQ",
+        "phone": "+447500888099",
+        "website": "https://www.ohh-bee-hive.com/",
+        "storeid": "87"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [-1.343208, 53.215376],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "online",
+        "name": "Ropers Honey / Local Honey Direct From Producers",
+        "phone": "+441246854318",
+        "website": "http://www.ropershoney.co.uk/",
+        "storeid": "88"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [-1.643221, 53.156499],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "online",
+        "name": "Package Bees UK",
+        "phone": "+441629650457",
+        "website": "http://packagebeesuk.com/",
+        "storeid": "89"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [-0.520736, 53.4212097],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "online",
+        "name": "Croft Apiaries",
+        "phone": "+441673818711",
+        "website": "https://www.croftapiaries.co.uk/",
+        "storeid": "90"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [-1.5741937, 53.3997907],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "online",
+        "name": "The Sheffield Honey Company",
+        "phone": "+447980261554",
+        "website": "http://www.sheffield-honey.co.uk/",
+        "storeid": "91"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [-1.5001459, 53.393652],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "online",
+        "name": "Philip Khorassandjian Master Beekeeper",
+        "phone": "+441142343059",
+        "website": "http://www.workershoney.co.uk/",
+        "storeid": "92"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [-2.0931368, 53.2834782],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "online",
+        "name": "Happy Valley Honey",
+        "phone": "+443301133256",
+        "website": "https://www.happyvalleyhoney.co.uk/",
+        "storeid": "93"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [-2.6017205, 53.4043566],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "online",
+        "name": "mayflower apiaries",
+        "phone": "+441925652826",
+        "website": "http://www.mayflowerapiaries.co.uk/",
+        "storeid": "95"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [-2.779718, 53.9889135],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "online",
+        "name": "Honeycomb Co. Ltd.",
+        "phone": "+441524751347",
+        "website": "http://www.honeycombco.co.uk/",
+        "storeid": "97"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [-1.8611056, 53.7938072],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "online",
+        "name": "Denholme Gate Honey",
+        "phone": "+441274831886",
+        "website": "http://www.denholmegatehoney.co.uk/",
+        "storeid": "98"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [-0.4064132, 54.2100949],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "online",
+        "name": "Bay view bees",
+        "phone": "+447852334503",
+        "website": "http://www.bayviewbees.co.uk/",
+        "storeid": "103"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [-0.7750359, 54.1381064],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "online",
+        "name": "Beez Neez Apiary",
+        "phone": "+441944758614",
+        "website": "http://beezneezapiary.co.uk/",
+        "storeid": "104"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [-1.6666202, 54.8227774],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "online",
+        "name": "Broom House Farm Shop",
+        "phone": "+441913718839",
+        "website": "http://www.broomhousedurham.co.uk/",
+        "storeid": "108"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [-1.5403683, 54.9389807],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "online",
+        "name": "The Travelling Bee Company",
+        "phone": "",
+        "website": "http://www.travellingbee.co.uk/",
+        "storeid": "112"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [-1.6813302, 55.1389114],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "online",
+        "name": "The Honey Store",
+        "phone": "+447843993882",
+        "website": "http://the-honey-store.co.uk/",
+        "storeid": "113"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [-2.4761475, 54.9665667],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "online",
+        "name": "Northumberland Honey Co, Meadery & Bee Farm",
+        "phone": "+447752534953",
+        "website": "https://www.northumberlandhoney.co.uk/",
+        "storeid": "114"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [-2.7531383, 55.0946462],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "online",
+        "name": "Nook Farm Honey",
+        "phone": "+441697748317",
+        "website": "http://www.nookfarmhoney.co.uk/",
+        "storeid": "115"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [-2.1042475, 55.7514213],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "online",
+        "name": "Chain Bridge Honey Farm",
+        "phone": "+441289382362",
+        "website": "http://www.chainbridgehoney.co.uk/",
+        "storeid": "116"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [-4.4204871, 55.7800692],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "online",
+        "name": "Left Field Market Garden - Locavore",
+        "phone": "+441413283303",
+        "website": "http://www.glasgowlocavore.org/",
+        "storeid": "117"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [-3.291115, 56.4746799],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "online",
+        "name": "Collace honey",
+        "phone": "+441821650824",
+        "website": "http://collacehoney.co.uk/",
+        "storeid": "118"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [-3.4055357, 56.647071],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "online",
+        "name": "Heather Hills Farm",
+        "phone": "+441250886252",
+        "website": "http://www.heatherhills.co.uk/",
+        "storeid": "119"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [-2.4567174, 56.8841196],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "online",
+        "name": "Westerton Farmers (Cairnton Farm)",
+        "phone": "",
+        "website": "http://www.westertonfarmers.co.uk/",
+        "storeid": "120"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [-2.1, 57.0922453],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "online",
+        "name": "Cove Honey Bees Collection Point",
+        "phone": "+447751548060",
+        "website": "http://www.covehoneybees.co.uk/",
+        "storeid": "121"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [-2.1283592, 57.1392881],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "online",
+        "name": "Try Bees - Local Urban Honey bees",
+        "phone": "+447985240289",
+        "website": "http://trybees.com/",
+        "storeid": "122"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [-3.6366219, 57.292237],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "online",
+        "name": "Balliefurth Farm",
+        "phone": "+441479821990",
+        "website": "https://www.balliefurth.co.uk/",
+        "storeid": "124"
+      },
+      "type": "Feature"
+    },
+
+    {
+      "geometry": {
+        "coordinates": [-6.5991683, 54.4266948],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "instore",
+        "name": "Loughgall Honey",
+        "phone": "+442838891678",
+        "website": "",
+        "storeid": "01"
+      },
+      "type": "Feature"
+    },
+
+    {
+      "geometry": {
+        "coordinates": [-5.9219548, 54.5961402],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "instore",
+        "name": "St George's Market",
+        "phone": "+442890435704",
+        "website": "http://www.belfastcity.gov.uk/markets",
+        "storeid": "03"
+      },
+      "type": "Feature"
+    },
+
+    {
+      "geometry": {
+        "coordinates": [-5.7548021, 54.6691792],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "instore",
+        "name": "Helen's Bay Organic",
+        "phone": "+447483412212",
+        "website": "https://www.helensbayorganic.com/",
+        "storeid": "04"
+      },
+      "type": "Feature"
+    },
+
+    {
+      "geometry": {
+        "coordinates": [-3.136019, 54.600754],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "instore",
+        "name": "The Honey Pot",
+        "phone": "+441768774974",
+        "website": "http://www.packhorsecourt.com/shops/the-honey-pot/",
+        "storeid": "05"
+      },
+      "type": "Feature"
+    },
+
+    {
+      "geometry": {
+        "coordinates": [-2.3221735, 53.0682961],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "instore",
+        "name": "The Gables Apiary",
+        "phone": "+441782723923",
+        "website": "",
+        "storeid": "09"
+      },
+      "type": "Feature"
+    },
+
+    {
+      "geometry": {
+        "coordinates": [-1.3319997, 52.429168],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "instore",
+        "name": "Malt Kiln Farm Shop",
+        "phone": "+441788832640",
+        "website": "https://www.maltkilnfarmshop.co.uk/",
+        "storeid": "13"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [-1.398755, 51.630665],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "instore",
+        "name": "Dews Meadow Farm",
+        "phone": "+441235868634",
+        "website": "https://www.dewsmeadowfarm.com/?utm_source=yell&utm_medium=referral&utm_campaign=yell",
+        "storeid": "18"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [-2.8036228, 51.363898],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "instore",
+        "name": "West country honey",
+        "phone": "+447718226733",
+        "website": "",
+        "storeid": "21"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [-4.6883022, 50.5641632],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "instore",
+        "name": "Cornish Moorland Honey",
+        "phone": "+441208850090",
+        "website": "",
+        "storeid": "22"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [-5.154832, 50.3112652],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "instore",
+        "name": "The Cornish Bee Farm",
+        "phone": "+441872554165",
+        "website": "",
+        "storeid": "23"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [-4.957916, 50.2668181],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "instore",
+        "name": "W R C M & S R Davey",
+        "phone": "+441872520206",
+        "website": "",
+        "storeid": "25"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [-4.594102, 50.6958166],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "instore",
+        "name": "Cornish Honey",
+        "phone": "+441840261518",
+        "website": "",
+        "storeid": "26"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [-4.0335237, 50.4392267],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "instore",
+        "name": "BIRDYS DEVON HONEY",
+        "phone": "+441752839566",
+        "website": "http://birdysdevonhoney.co.uk/",
+        "storeid": "29"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [-3.6118547, 50.4959852],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "instore",
+        "name": "Abbotskerswell Bee Company",
+        "phone": "+441803872781",
+        "website": "",
+        "storeid": "32"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [-2.8389523, 50.7401217],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "instore",
+        "name": "Felicity's Farm Shop",
+        "phone": "+441297480930",
+        "website": "http://www.felicitysfarmshop.co.uk/index.html",
+        "storeid": "35"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [-1.3318364, 51.111023],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "instore",
+        "name": "Devonhurst Bees",
+        "phone": "+447538790545",
+        "website": "",
+        "storeid": "38"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [-1.3005386, 50.8494721],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "instore",
+        "name": "BritishBeekeeping",
+        "phone": "+447510082531",
+        "website": "",
+        "storeid": "41"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [-1.0560409, 50.867595],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "instore",
+        "name": "Heath Farm",
+        "phone": "+442392263207",
+        "website": "",
+        "storeid": "43"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [-0.4160501, 50.8229725],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "instore",
+        "name": "SW Honey Farms",
+        "phone": "+447368646696",
+        "website": "",
+        "storeid": "48"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [-0.0233679, 51.2349173],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "instore",
+        "name": "Southlands Honey",
+        "phone": "+447500009603",
+        "website": "",
+        "storeid": "51"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [0.0377708, 51.4566853],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "instore",
+        "name": "Eltham Bees Limited",
+        "phone": "+447979626961",
+        "website": "http://elthambees.co.uk/",
+        "storeid": "53"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [0.0342416, 51.6268833],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "instore",
+        "name": "Epping Forest Honey Co.",
+        "phone": "+447971237312",
+        "website": "http://eppingforesthoney.com/",
+        "storeid": "54"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [1.2682591, 51.95679],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "instore",
+        "name": "East Anglian Honey Farm",
+        "phone": "+441473787228",
+        "website": "",
+        "storeid": "56"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [1.2558478, 52.2427483],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "instore",
+        "name": "Honeysuckle Holidays",
+        "phone": "+447899912212",
+        "website": "http://honeysuckleholidays.co.uk/",
+        "storeid": "58"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [0.842097, 52.774585],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "instore",
+        "name": "Paston Cottage Bees",
+        "phone": "+447540891057",
+        "website": "",
+        "storeid": "60"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [0.356029, 52.581861],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "instore",
+        "name": "Denver Junction Honey",
+        "phone": "+441366382991",
+        "website": "http://www.denverjunctionhoney.co.uk/",
+        "storeid": "61"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [1.3035475, 52.5004957],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "instore",
+        "name": "Hempnall Honey Co.",
+        "phone": "+441508499733",
+        "website": "http://www.hempnall-honey.co.uk/",
+        "storeid": "64"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [-0.5078775, 52.0712821],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "instore",
+        "name": "Stewartbees",
+        "phone": "+441234764365",
+        "website": "",
+        "storeid": "67"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [-1.9013502, 52.2669657],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "instore",
+        "name": "Arden Forest Honey",
+        "phone": "+441527853171",
+        "website": "http://ardenforesthoney.co.uk/",
+        "storeid": "69"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [-1.8004684, 52.3605323],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "instore",
+        "name": "Solihull Apiaries",
+        "phone": "+441564782213",
+        "website": "",
+        "storeid": "70"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [-1.5253043, 52.5370771],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "instore",
+        "name": "Moorwood Apiaries",
+        "phone": "+447535405104",
+        "website": "",
+        "storeid": "72"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [-0.6961149, 52.5853046],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "instore",
+        "name": "Oakley J S",
+        "phone": "+441572823810",
+        "website": "",
+        "storeid": "73"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [-0.3521251, 52.7118297],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "instore",
+        "name": "Fen Apiaries",
+        "phone": "+447810894876",
+        "website": "http://fenapiaries.com/",
+        "storeid": "75"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [-1.5053785, 52.7058455],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "instore",
+        "name": "Temple Bees",
+        "phone": "+447884000517",
+        "website": "https://temple-bees.business.site/",
+        "storeid": "76"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [-0.6221884, 52.8113093],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "instore",
+        "name": "Colsterworth Honey Farm",
+        "phone": "+441476861176",
+        "website": "",
+        "storeid": "77"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [-2.8335013, 53.2208226],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "instore",
+        "name": "The Chester Honey Company",
+        "phone": "+441244300655",
+        "website": "",
+        "storeid": "80"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "category": "instore",
+        "coordinates": [-3.0960671, 53.393481],
+        "type": "Point"
+      },
+      "properties": {
+        "name": "Pure Cheshire Honey",
+        "phone": "+447957503038",
+        "website": "",
+        "storeid": "81"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [-1.1472751, 53.3020108],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "instore",
+        "name": "Hobson's Honey",
+        "phone": "+447943868335",
+        "website": "",
+        "storeid": "86"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [-2.2566995, 53.5391992],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "instore",
+        "name": "Heaton Park Honey",
+        "phone": "",
+        "website": "https://www.manchester.gov.uk/info/500307/what_to_see_and_do/6923/beekeeping",
+        "storeid": "94"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [-2.87879, 53.561582],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "instore",
+        "name": "Ormskirk Honey",
+        "phone": "+447963682456",
+        "website": "",
+        "storeid": "96"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [-1.5834973, 53.8239083],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "instore",
+        "name": "WR Bees",
+        "phone": "+447495012990",
+        "website": "https://wr-bees.business.site/",
+        "storeid": "99"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [-1.547441, 53.7201507],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "instore",
+        "name": "Ardsley Bees",
+        "phone": "+441924870984",
+        "website": "",
+        "storeid": "100"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [-1.5173101, 53.5950753],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "instore",
+        "name": "Staincross Apiaries",
+        "phone": "+447837994040",
+        "website": "http://www.staincross-apiaries.co.uk/",
+        "storeid": "101"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [-0.4853446, 54.268994],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "instore",
+        "name": "Osborne Lodge Farm",
+        "phone": "+441723865184",
+        "website": "",
+        "storeid": "102"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [-1.5549382, 53.9928722],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "instore",
+        "name": "Arcadian Apiaries Ltd",
+        "phone": "+441423507236",
+        "website": "",
+        "storeid": "105"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [-1.9257003, 54.9722184],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "instore",
+        "name": "North Acomb Farm Shop",
+        "phone": "+441661843181",
+        "website": "http://northacomb.co.uk/",
+        "storeid": "106"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [-2.0955083, 54.9254615],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "instore",
+        "name": "Hexhamshire Organics",
+        "phone": "+447770634447",
+        "website": "https://www.hexhamshireorganics.co.uk/",
+        "storeid": "107"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [-1.6150948, 54.4631257],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "instore",
+        "name": "Pear Tree Honey Farm Ltd",
+        "phone": "+441325377042",
+        "website": "",
+        "storeid": "109"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [-2.7349247, 54.1586997],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "instore",
+        "name": "Greenlands Farm Village",
+        "phone": "+441524784184",
+        "website": "",
+        "storeid": "110"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [-2.7663118, 54.2819818],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "instore",
+        "name": "Low Sizergh Barn Farm Shop & Café",
+        "phone": "+441539560426",
+        "website": "http://www.lowsizerghbarn.co.uk/",
+        "storeid": "111"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [-2.3193055, 57.2737573],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "instore",
+        "name": "Altons Honey Bee's",
+        "phone": "+447401953020",
+        "website": "",
+        "storeid": "123"
+      },
+      "type": "Feature"
+    }
+  ]
+}
+
+ 
