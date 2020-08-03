@@ -1,10 +1,4 @@
 
-
-/*let geoJSONObject = '{"type": "FeatureCollection", "features": [{"geometry": {"coordinates": [-5.851389, 54.264296],"type": "Point"},"properties": {"category": "online","name": "Castle Farm Fresh Produce","phone": "+447568436413","website": "https://www.castlefarmni.com/","storeid": "02"},"type": "Feature"}, {"geometry": {"coordinates": [-2.7721087, 53.9136975],"type": "Point"},"properties": {"category": "online","name": "Lancashire Honey","phone": "+447787758033","website": "http://www.lancashirehoney.com/","storeid": "06"},"type": "Feature"},]}'
-var geoObject = JSON.parse(geoJSONObject);
-var features = [];
-features = geoObject.features;
-console.log(features.name);*/
 // initilise Map
 
 function initMap() {
@@ -14,7 +8,7 @@ function initMap() {
     mapTypeControl: false,
   });
 
-    new AutocompleteDirectionsHandler(map);
+ // new AutocompleteDirectionsHandler(map);
 
   // set markers and clusters
 
@@ -24,23 +18,24 @@ function initMap() {
         position: feature.getGeometry().get(0),
         icon: {
           url: `assets/images/icon_${feature.getProperty("category")}.jpg`,
-          scaledSize: new google.maps.Size(50, 50),
+          scaledSize: new google.maps.Size(40, 40),
         },
       });
+
 
       // add mouseover
 
       marker.addListener("mouseover", function () {
         marker.setIcon({
           url: `assets/images/icon_${feature.getProperty("category")}.jpg`,
-          scaledSize: new google.maps.Size(60, 60),
+          scaledSize: new google.maps.Size(50, 50),
         });
       });
 
       marker.addListener("mouseout", function () {
         marker.setIcon({
           url: `assets/images/icon_${feature.getProperty("category")}.jpg`,
-          scaledSize: new google.maps.Size(50, 50),
+          scaledSize: new google.maps.Size(40, 40),
         });
       });
 
@@ -83,7 +78,7 @@ function initMap() {
           };
           infowindow.setPosition(pos);
           infowindow.setContent(
-            "<p class = 'general-text'>Your location <img src ='assets/images/icon_Online.jpg' class='icon' alt='logo'></p>"
+            "<p class = 'general-text'>Your location</p>"
           );
           infowindow.open(map);
           map.setCenter(pos);
@@ -107,6 +102,50 @@ function initMap() {
     );
     infowindow.open(map);
   }
+
+  //search bar autocomplete
+    let card = document.getElementById('pac-card');
+    let input = document.getElementById('pac-input');
+    let types = document.getElementById('type-selector');
+    let strictBounds = document.getElementById('strict-bounds-selector');
+    let options = {
+        types: ["address"],
+        componentRestrictions: { country: "gb" },
+    };
+
+  const autocomplete = new google.maps.places.Autocomplete(input, options);
+        
+    autocomplete.bindTo('bounds', map);
+
+  autocomplete.setFields(["address_components", "geometry", "name"]);
+
+  const originMarker = new google.maps.Marker({ map: map });
+  originMarker.setVisible(false);
+  let originLocation = map.getCenter();
+
+  autocomplete.addListener("place_changed", async () => {
+    originMarker.setVisible(false);
+    originLocation = map.getCenter();
+
+    const place = autocomplete.getPlace();
+
+    if (!place.geometry) {
+      window.alert(
+        "Sorry, we can't seem to find: '" +
+          place.name +
+          "' please try a new search."
+      );
+      return;
+    }
+
+    originLocation = place.geometry.location;
+    map.setCenter(originLocation);
+    map.setZoom(10);
+    console.log(place);
+
+    originMarker.setPosition(originLocation);
+    originMarker.setVisible(true);
+  });
 }
 
 // Let user create list of their choices 
@@ -165,14 +204,17 @@ $(".toggleList").click(function () {
   let $this = $(this);
   $this.toggleClass("toggleList");
   if ($this.hasClass("toggleList")) {
-    $this.text("Hide list");
+    $this.html(`<i class="fas fa-minus-square"></i>`);
   } else {
-    $this.text("Show list");
+    $this.html(`<i class="fas fa-plus-square"></i>`);
   }
 });
 
-  
-function AutocompleteDirectionsHandler(map) {
+
+
+ 
+
+/*function AutocompleteDirectionsHandler(map) {
   this.map = map;
   this.originPlaceId = null;
   this.destinationPlaceId = null;
@@ -261,8 +303,4 @@ AutocompleteDirectionsHandler.prototype.route = function() {
         }
       });
 };
-
-
-let txt = '{"category": "online", "name": "Castle Farm Fresh Produce", "latitude":"-5.851389", "longitude":"54.264296", "phone": "+447568436413", "website": "https://www.castlefarmni.com/","storeid": "02"}'
-let obj = JSON.parse(txt);
-document.getElementById("demo").innerHTML = obj.latitude + obj.longitude;
+*/
