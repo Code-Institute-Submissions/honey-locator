@@ -92,6 +92,9 @@
 	</div>
 
 	<!--header-->
+    <div class="container">
+      <img id="logo" src="assets/images/icon_online.jpg" alt="logo" />
+    </div>
 
 	<div class="container">
 		<h1 class="heading general-text">
@@ -101,29 +104,29 @@
 
 	<!--searchers-->
 	<div class="container">
-
+    <div class="general-text"><i class="fas fa-map-marker-alt"></i></div>
 		<input id="pac-input" type="text"
             placeholder="Enter a location">
-            <button id="locatorBTN">Find your location</button>
-    </div>
+		<p class="general-text"> or </p>
+		<button id="locatorBTN" class="buttons">Find current location</button>
+	</div>
 
-		<!-- Map -->
-		<div class="map-container">
-			<div id="map"></div>
+	<!-- Map -->
+	<div class="map-container">
+		<div id="map"></div>
+        	<div class="over-map">
+		<button class="toggleList buttons general-text"><i class="far fa-minus-square"></i></button>
+		<div id="userList">
+			<h3 class="general-text">Your List</h3>
+			<ul class="general-text" id="listItems"></ul>
 		</div>
+	</div>
 
-		<!--list-->
-		<div class="over-map">
-			<button class="toggleList buttons general-text"><i class="far fa-minus-square"></i></button>
-			<div id="userList">
-				<h2>Your List</h2>
-				<ul id="listItems"></ul>
-			</div>
-		</div>
+	</div>
 
-		<!-- Buttons -->
-		<div class="container">
-			<button
+	<!-- Buttons -->
+	<div class="container">
+		<button
         id="edit-btn"
         class="modal-btn general-text buttons"
         type="button"
@@ -132,11 +135,11 @@
       >
         Suggest an edit
       </button>
-		</div>
+	</div>
 
-		<!-- Footer -->
+	<!-- Footer -->
 
-		<!--<input id="origin-input" class="controls" type="text"
+	<!--<input id="origin-input" class="controls" type="text"
             placeholder="Enter an origin location">
 
         <input id="destination-input" class="controls" type="text"
@@ -153,18 +156,18 @@
           <label for="changemode-driving">Driving</label>
         </div>-->
 
-		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-		<script src="assets/js/map.js"></script>
-		<script src="assets/js/form.js"></script>
-		<script src="https://kit.fontawesome.com/89255d1b7b.js"></script>
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-		<script
-			src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
-		</script>
-		<script async defer
-			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYEFJ6Ls3eG2snRN2rZx7zHIZ8SS5UeKE&libraries=places&callback=initMap">
-		</script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+	<script src="assets/js/map.js"></script>
+	<script src="assets/js/form.js"></script>
+	<script src="https://kit.fontawesome.com/89255d1b7b.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+	<script
+		src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
+	</script>
+	<script async defer
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYEFJ6Ls3eG2snRN2rZx7zHIZ8SS5UeKE&libraries=places&callback=initMap">
+	</script>
 </body>
 
 </html>

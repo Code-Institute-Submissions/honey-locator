@@ -1,3 +1,219 @@
+// Map styling
+let mapStyle = [
+  {
+    elementType: "geometry",
+    stylers: [
+      {
+        color: "#ebe3cd",
+      },
+    ],
+  },
+  {
+    elementType: "labels.text.fill",
+    stylers: [
+      {
+        color: "#523735",
+      },
+    ],
+  },
+  {
+    elementType: "labels.text.stroke",
+    stylers: [
+      {
+        color: "#f5f1e6",
+      },
+    ],
+  },
+  {
+    featureType: "administrative",
+    elementType: "geometry.stroke",
+    stylers: [
+      {
+        color: "#c9b2a6",
+      },
+    ],
+  },
+  {
+    featureType: "administrative.land_parcel",
+    elementType: "geometry.stroke",
+    stylers: [
+      {
+        color: "#dcd2be",
+      },
+    ],
+  },
+  {
+    featureType: "administrative.land_parcel",
+    elementType: "labels.text.fill",
+    stylers: [
+      {
+        color: "#ae9e90",
+      },
+    ],
+  },
+  {
+    featureType: "landscape.natural",
+    elementType: "geometry",
+    stylers: [
+      {
+        color: "#81BC84",
+      },
+    ],
+  },
+  {
+    featureType: "poi",
+    elementType: "geometry",
+    stylers: [
+      {
+        color: "#DFD3AE",
+      },
+    ],
+  },
+  {
+    featureType: "poi",
+    elementType: "labels.text.fill",
+    stylers: [
+      {
+        color: "#93817c",
+      },
+    ],
+  },
+  {
+    featureType: "poi.park",
+    elementType: "geometry.fill",
+    stylers: [
+      {
+        color: "#C27156",
+      },
+    ],
+  },
+  {
+    featureType: "poi.park",
+    elementType: "labels.text.fill",
+    stylers: [
+      {
+        color: "#447530",
+      },
+    ],
+  },
+  {
+    featureType: "road",
+    elementType: "geometry",
+    stylers: [
+      {
+        color: "#f5f1e6",
+      },
+    ],
+  },
+  {
+    featureType: "road.arterial",
+    elementType: "geometry",
+    stylers: [
+      {
+        color: "#fdfcf8",
+      },
+    ],
+  },
+  {
+    featureType: "road.highway",
+    elementType: "geometry",
+    stylers: [
+      {
+        color: "#f8c967",
+      },
+    ],
+  },
+  {
+    featureType: "road.highway",
+    elementType: "geometry.stroke",
+    stylers: [
+      {
+        color: "#e9bc62",
+      },
+    ],
+  },
+  {
+    featureType: "road.highway.controlled_access",
+    elementType: "geometry",
+    stylers: [
+      {
+        color: "#e98d58",
+      },
+    ],
+  },
+  {
+    featureType: "road.highway.controlled_access",
+    elementType: "geometry.stroke",
+    stylers: [
+      {
+        color: "#db8555",
+      },
+    ],
+  },
+  {
+    featureType: "road.local",
+    elementType: "labels.text.fill",
+    stylers: [
+      {
+        color: "#806b63",
+      },
+    ],
+  },
+  {
+    featureType: "transit.line",
+    elementType: "geometry",
+    stylers: [
+      {
+        color: "#dfd2ae",
+      },
+    ],
+  },
+  {
+    featureType: "transit.line",
+    elementType: "labels.text.fill",
+    stylers: [
+      {
+        color: "#8f7d77",
+      },
+    ],
+  },
+  {
+    featureType: "transit.line",
+    elementType: "labels.text.stroke",
+    stylers: [
+      {
+        color: "#ebe3cd",
+      },
+    ],
+  },
+  {
+    featureType: "transit.station",
+    elementType: "geometry",
+    stylers: [
+      {
+        color: "#dfd2ae",
+      },
+    ],
+  },
+  {
+    featureType: "water",
+    elementType: "geometry.fill",
+    stylers: [
+      {
+        color: "#A8E1E8",
+      },
+    ],
+  },
+  {
+    featureType: "water",
+    elementType: "labels.text.fill",
+    stylers: [
+      {
+        color: "#92998d",
+      },
+    ],
+  },
+];
 
 // initilise Map
 
@@ -6,9 +222,10 @@ function initMap() {
     zoom: 5.5,
     center: { lat: 55.08122, lng: -3.016536 },
     mapTypeControl: false,
+    styles: mapStyle,
   });
 
- // new AutocompleteDirectionsHandler(map);
+  // new AutocompleteDirectionsHandler(map);
 
   // set markers and clusters
 
@@ -21,7 +238,6 @@ function initMap() {
           scaledSize: new google.maps.Size(40, 40),
         },
       });
-
 
       // add mouseover
 
@@ -77,9 +293,7 @@ function initMap() {
             lng: position.coords.longitude,
           };
           infowindow.setPosition(pos);
-          infowindow.setContent(
-            "<p class = 'general-text'>Your location</p>"
-          );
+          infowindow.setContent("<p class = 'general-text'>Your location</p>");
           infowindow.open(map);
           map.setCenter(pos);
         },
@@ -104,18 +318,18 @@ function initMap() {
   }
 
   //search bar autocomplete
-    let card = document.getElementById('pac-card');
-    let input = document.getElementById('pac-input');
-    let types = document.getElementById('type-selector');
-    let strictBounds = document.getElementById('strict-bounds-selector');
-    let options = {
-        types: ["address"],
-        componentRestrictions: { country: "gb" },
-    };
+  let card = document.getElementById("pac-card");
+  let input = document.getElementById("pac-input");
+  let types = document.getElementById("type-selector");
+  let strictBounds = document.getElementById("strict-bounds-selector");
+  let options = {
+    types: ["address"],
+    componentRestrictions: { country: "gb" },
+  };
 
   const autocomplete = new google.maps.places.Autocomplete(input, options);
-        
-    autocomplete.bindTo('bounds', map);
+
+  autocomplete.bindTo("bounds", map);
 
   autocomplete.setFields(["address_components", "geometry", "name"]);
 
@@ -148,9 +362,9 @@ function initMap() {
   });
 }
 
-// Let user create list of their choices 
+// Let user create list of their choices
 
-//close button 
+//close button
 let myNodelist = document.getElementsByTagName("LI");
 var i;
 for (i = 0; i < myNodelist.length; i++) {
@@ -209,10 +423,6 @@ $(".toggleList").click(function () {
     $this.html(`<i class="fas fa-plus-square"></i>`);
   }
 });
-
-
-
- 
 
 /*function AutocompleteDirectionsHandler(map) {
   this.map = map;
