@@ -24,9 +24,8 @@ body {
 }
 
 .general-text {
-  color: #FAB140;
   letter-spacing: 0.2rem;
-  text-shadow: 0px 1px 1px 	rgb(249,249,249, 0.5);
+  text-shadow: 0px 1px 1px 	rgba(255, 246, 246, 0.5);
 }
 
 .content-heading {
@@ -35,12 +34,11 @@ body {
 
 .content-text {
   font-family: "Montserrat", sans-serif;
-  color: #a8a9ad;
+  color: rgb(109, 112, 114);
 }
 
 .website {
   text-decoration: none;
-  color: #a8a9ad;
   margin-top: 10px;
 }
 
@@ -57,11 +55,15 @@ body {
 }
 
 /*--------color--------*/
-.icon-color {
-  color: #fab140;
+
+.bg-col {
+      background-color: rgb(248,248,255,0.9);
 }
 
+.honey-col {
+      color: #FAB140;
 
+}
 /*--------general--------*/
 .logo {
     height: 200px;
@@ -90,7 +92,6 @@ div #map {
 
 .over-map{
     position: absolute; top: 7%; left: 3%; z-index: 99;
-    background-color: rgba(89, 89, 92, 0.5);
     border-radius: 5px;
 
 }
@@ -98,7 +99,6 @@ div #map {
 
 
 #pac-input {
-  background-color: rgb(248,248,255,0.5);
   font-family: "Montserrat", sans-serif;
   font-size: 15px;
   font-weight: 300;
@@ -201,12 +201,6 @@ ul li:hover {
   color: white;
 }
 
-.header {
-  background-color:rgba(0, 0, 0, 0.15);
-  padding: 30px 40px;
-  color: white;
-  text-align: center;
-}
 
 .addBtn {
   padding: 10px;

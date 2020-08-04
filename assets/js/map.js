@@ -263,9 +263,11 @@ function initMap() {
         let phone = feat.getProperty("phone");
         let website = feat.getProperty("website");
         let position = feat.getGeometry().get();
-        let html = `<b> ${name}</b><br>
-        <i class="fas fa-phone-alt icon-color" alt="phone"></i> ${phone}
-        <br><i class="fas fa-globe icon-color" alt="globe"></i> <a class="website" target="_blank" href=" ${website}">link</a> <br><div onclick="newElement()" id="addTo" class="addBtn" value='${name}${phone}${website}'>Add</>`;
+        let html = `<div class="content-text"><h4>${name}</h4>
+        <i class="fas fa-phone-alt honey-col" alt="phone"></i> ${phone}
+        <br><i class="fas fa-globe honey-col" alt="globe"></i> <a class="website" target="_blank" href="${website}">${website}</a> <br><div onclick="newElement()" id="addTo" class="addBtn" info="${
+          name + phone + website
+        }">Add</></div>`;
         infowindow.setContent(html);
         infowindow.open(map, marker);
       });
@@ -386,7 +388,7 @@ for (i = 0; i < close.length; i++) {
 // Create a new list item when clicking on the "Add" button
 function newElement() {
   let li = document.createElement("li");
-  let inputValue = document.getElementById("addTo").getAttribute("value");
+  let inputValue = document.getElementById("addTo").getAttribute("info");
   let t = document.createTextNode(inputValue);
   li.appendChild(t);
   document.getElementById("listItems").appendChild(li);
@@ -421,4 +423,3 @@ $(".toggleList").click(function () {
     $this.html(`<i class="fas fa-plus-square"></i>`);
   }
 });
-
