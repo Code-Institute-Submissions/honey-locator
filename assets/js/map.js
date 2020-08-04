@@ -426,4 +426,8 @@ $(".toggleList").click(function () {
 
 
 //----------benefits
-$(".card").flip();
+$(function(){
+    $(".flip").flip({
+        trigger: 'click'
+    });
+});

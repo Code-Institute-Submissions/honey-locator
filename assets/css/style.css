@@ -225,3 +225,22 @@ ul li:hover {
 .addBtn:hover {
   background-color: #bbb;
 }
+
+/*--------benefits-cards--------*/
+
+.flip {
+    height: 199px;
+    width: 300px;
+    margin: 0 auto;
+}
+
+.flip .front {
+    background: white;
+    color: black;
+    text-align: center;
+}
+.flip .back {
+    background: #2184cd;
+    color: #fff;
+    text-align: center;
+}
