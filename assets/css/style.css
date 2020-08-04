@@ -21,11 +21,12 @@ body {
 .heading {
   margin-top: 0;
   font-weight: 600;
+    text-shadow: 0.5px 0.5px 0.5px 	rgba(255, 255, 255);
+
 }
 
 .general-text {
   letter-spacing: 0.2rem;
-  text-shadow: 0px 1px 1px 	rgba(255, 246, 246, 0.5);
 }
 
 .content-heading {
@@ -58,6 +59,8 @@ body {
 
 .bg-col {
       background-color: rgb(248,248,255,0.9);
+          border-radius: 5px;
+
 }
 
 .honey-col {
@@ -73,6 +76,11 @@ body {
     border: none;
   background-color: transparent;
   outline: none;
+  
+}
+
+.bee-keeper{
+    height: 400px;
 }
 /*--------map--------*/
 
@@ -92,13 +100,12 @@ div #map {
 
 .over-map{
     position: absolute; top: 7%; left: 3%; z-index: 99;
-    border-radius: 5px;
 
 }
 /*--------search bar--------*/
 
 
-#pac-input {
+.pac-input {
   font-family: "Montserrat", sans-serif;
   font-size: 15px;
   font-weight: 300;
@@ -157,23 +164,23 @@ div #map {
   margin-top: 10px;
 }
 
-.transition {
-  -webkit-transform: scale(1.6);
-  -moz-transform: scale(1.6);
-  -o-transform: scale(1.6);
-  transform: scale(1.6);
-}
-#weblink {
-  -webkit-transition: all 0.4s ease-in-out;
-  -moz-transition: all 0.4s ease-in-out;
-  -o-transition: all 0.4s ease-in-out;
-  -ms-transition: all 0.4s ease-in-out;
+.hvr-grow {
+    display: inline-block;
+    vertical-align: middle;
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    transition-duration: 0.3s;
+    transition-property: transform;
 }
 
-#weblink {
-  width: 80px;
-  margin: 25px;
+.hvr-grow:hover,
+.hvr-grow:focus,
+.hvr-grow:active {
+    transform: scale(1.1);
 }
+
 
 
 
@@ -203,16 +210,16 @@ ul li:hover {
 
 
 .addBtn {
-  padding: 10px;
-  width: 25%;
-  background: #d9d9d9;
-  color: #555;
-  float: left;
-  text-align: center;
-  font-size: 16px;
-  cursor: pointer;
-  transition: 0.3s;
-  border-radius: 0;
+  padding: 5px;
+    margin-top: 5px;
+    width: 20%;
+    background: #d9d9d9;
+    float: left;
+    text-align: center;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 5px;
 }
 
 .addBtn:hover {

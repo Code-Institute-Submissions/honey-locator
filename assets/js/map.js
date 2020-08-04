@@ -265,7 +265,7 @@ function initMap() {
         let position = feat.getGeometry().get();
         let html = `<div class="content-text"><h4>${name}</h4>
         <i class="fas fa-phone-alt honey-col" alt="phone"></i> ${phone}
-        <br><i class="fas fa-globe honey-col" alt="globe"></i> <a class="website" target="_blank" href="${website}">${website}</a> <br><div onclick="newElement()" id="addTo" class="addBtn" info="${
+        <br><i class="fas fa-globe honey-col" alt="globe"></i> <a class="website content-text" target="_blank" href="${website}">${website}</a> <br><div onclick="newElement()" id="addTo" class="addBtn" info="${
           name + phone + website
         }">Add</></div>`;
         infowindow.setContent(html);
