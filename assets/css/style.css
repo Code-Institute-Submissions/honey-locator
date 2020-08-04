@@ -24,7 +24,7 @@ body {
 }
 
 .general-text {
-  color: #eeeff1;
+  color: #FAB140;
   letter-spacing: 0.2rem;
   text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.15);
 }
@@ -63,8 +63,8 @@ body {
 
 
 /*--------general--------*/
-.icon {
-    height: 25px;
+.logo {
+    height: 200px;
 }
 
 .buttons {
