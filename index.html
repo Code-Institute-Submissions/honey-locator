@@ -21,8 +21,50 @@
   </head>
 
   <body>
+
+<!--Nav-->
+
+  <header>
+   <div class="fixed-top dropdown-nav">
+        <nav class="navbar navbar-light navbar-expand-sm">
+          <a href="#home" class="navbar-brand"
+            ><img
+              src="assets/images/icon_online.jpg"
+              alt="bee logo"
+              class="logo-nav"
+          /></a>
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Togglenavigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav m-auto pr-5">
+              <li class="nav-item mr-2" id="navbar">
+                <a class="nav-link" href="#home">Home</a>
+              </li>
+              <li class="nav-item mr-2">
+                <a class="nav-link" href="#benefits">Benefits</a>
+              </li>
+              <li class="nav-item mr-2">
+                <a class="nav-link" href="#quiz">Quiz</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+
     <!-- Modal -->
-    <div id="home-section">
+    <div id="home">
       <div
         class="modal fade"
         id="modal"
@@ -153,11 +195,11 @@
       </div>
     </div>
 
-    <div class="container"><a href="#benefits-section">V</a></div>
+    <div class="container"><a href="#benefits">V</a></div>
 
     <!-- Benefits -->
 
-    <div id="benefits-section" class="container-fluid">
+    <div id="benefits" class="container-fluid">
       <div class="row">
         <div class="col-12 col-md-3">
           <div class="flip">
@@ -180,11 +222,11 @@
       </div>
     </div>
 
-    <div class="container"><a href="#quiz-section">V</a></div>
+    <div class="container"><a href="#quiz">V</a></div>
 
     <!-- Quiz -->
 
-    <div id="quiz-section" class="container">
+    <div id="quiz" class="container">
       <div id="quizQuestions" class="quizContainer">
         <div>Quiz!</div>
         <div id="question" class="question"></div>
