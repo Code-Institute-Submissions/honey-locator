@@ -185,28 +185,29 @@
     <!-- Quiz -->
 
     <div id="quiz-section" class="container">
-    <div id="quizQuestions" class="quizContainer">
-      <div>Quiz!</div>
-      <div id="question" class="question"></div>
-      <label class="option"
-        ><input type="radio" name="options" value="1" /><span
-          id="option1"
-        ></span
-      ></label>
-      <label class="option"
-        ><input type="radio" name="options" value="1" /><span
-          id="option2"
-        ></span
-      ></label>
-      <label class="option"
-        ><input type="radio" name="options" value="1" /><span
-          id="option3"
-        ></span
-      ></label>
-      <button id="nextBtn" onclick="nextQuestion();">Next</button>
+      <div id="quizQuestions" class="quizContainer">
+        <div>Quiz!</div>
+        <div id="question" class="question"></div>
+        <label class="option"
+          ><input type="radio" name="options" value="1" /><span
+            id="option1"
+          ></span
+        ></label>
+        <label class="option"
+          ><input type="radio" name="options" value="2" /><span
+            id="option2"
+          ></span
+        ></label>
+        <label class="option"
+          ><input type="radio" name="options" value="3" /><span
+            id="option3"
+          ></span
+        ></label>
+
+        <button id="nextBtn" onclick="nextQuestion();">Next</button>
+      </div>
+      <div id="quizResults" class="quizContainer" style="display: none;"></div>
     </div>
-    <div id="quizResults" class="quizContainer" style="display:none;"></div>
-</div>
     <!-- Footer -->
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>

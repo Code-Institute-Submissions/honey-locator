@@ -453,8 +453,23 @@ let questions = [
     option1: "half a teaspoon",
     option2: "one whole teaspoon",
     option3: "one tenth of a teaspoon",
-    answer: "3",
+    answer : "3",
   },
+  {
+    question: "A bees' buzz is the sound made by the beat of their wings, how many times do the beat per minute?",
+    option1: "1400 times",
+    option2: "11,400 times",
+    option3: "140 times",
+    answer : "2",
+  },
+{
+    question: "How fast can a honeybee fly?",
+    option1: "Up to five miles per hour",
+    option2: "Up to ten miles per hour",
+    option3: "Up to fifteen miles per hour",
+    answer : "2",
+  },
+
 ];
 
 let currentQuestion = 0;
@@ -485,8 +500,8 @@ function nextQuestion() {
   }
 
   let answer = selectedOption.value;
-  if (questions[currentQuestion].answer === answer) {
-    score += 3;
+  if (questions[currentQuestion].answer == answer) {
+    score += 1;
   }
   selectedOption.checked = false;
   currentQuestion++;
@@ -496,7 +511,8 @@ function nextQuestion() {
   if (currentQuestion === totalQuestions) {
     container.style.display = "none";
     resultCont.style.display = "";
-    resultCont.textContent = "Your Score" + score;
+    resultCont.textContent = "Your Score " + score + "/5";
+
     return;
   }
   loadQuestion(currentQuestion);
