@@ -471,7 +471,7 @@ let resultCont = document.getElementById("quizResults");
 
 function loadQuestion(i) {
   let q = questions[i];
-  questionElement.textContent = i + 1 + ". " + q.question;
+  questionElement.textContent = (i + 1) + ". " + q.question;
   option1.textContent = q.option1;
   option2.textContent = q.option2;
   option3.textContent = q.option3;
@@ -484,7 +484,7 @@ function nextQuestion() {
     return;
   }
 
-  let answer = selectedOption.nodeValue;
+  let answer = selectedOption.value;
   if (questions[currentQuestion].answer === answer) {
     score += 3;
   }
