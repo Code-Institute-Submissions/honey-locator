@@ -423,3 +423,7 @@ $(".toggleList").click(function () {
     $this.html(`<i class="fas fa-plus-square"></i>`);
   }
 });
+
+
+//----------benefits
+$(".card").flip();
