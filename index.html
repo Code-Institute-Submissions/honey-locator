@@ -179,6 +179,33 @@
         </div>
       </div>
     </div>
+
+    <div class="container"><a href="#quiz-section">V</a></div>
+
+    <!-- Quiz -->
+
+    <div id="quiz-section" class="container">
+      <div class="quiz-title">Quiz!</div>
+      <div id="questions" class="questions"></div>
+      <label class="option"
+        ><input type="radio" name="options" value="1" /><span
+          id="option1"
+        ></span
+      ></label>
+      <label class="option"
+        ><input type="radio" name="options" value="2" /><span
+          id="option2"
+        ></span
+      ></label>
+      <label class="option"
+        ><input type="radio" name="options" value="3" /><span
+          id="option3"
+        ></span
+      ></label>
+      <button id="next-btn" onclick="nextQuestion();">Next</button>
+    </div>
+    <div id="result" class="result" style="display:none;"></div>
+
     <!-- Footer -->
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>

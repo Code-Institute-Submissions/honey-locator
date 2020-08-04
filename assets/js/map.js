@@ -431,3 +431,5 @@ $(function(){
         trigger: 'click'
     });
 });
+
+//----------quiz
