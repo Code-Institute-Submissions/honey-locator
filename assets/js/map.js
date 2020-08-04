@@ -321,7 +321,6 @@ function initMap() {
   let card = document.getElementById("pac-card");
   let input = document.getElementById("pac-input");
   let types = document.getElementById("type-selector");
-  let strictBounds = document.getElementById("strict-bounds-selector");
   let options = {
     types: ["address"],
     componentRestrictions: { country: "gb" },
@@ -432,3 +431,75 @@ $(function () {
 });
 
 //----------quiz
+let questions = [
+  {
+    question:
+      "Approximately how many flowers must honeybees visit to make one kilogram of honey?",
+    option1: "Four Hundred",
+    option2: "Four Thousand",
+    option3: "Four Million",
+    answer: "3",
+  },
+  {
+    question:
+      "How many miles does a beehive fly (collectively) to make a pound of honey?",
+    option1: " 55,000 miles",
+    option2: "100,00 miles",
+    option3: "900 miles",
+    answer: "1",
+  },
+  {
+    question: "How much honey does an average worker bee make in its lifetime?",
+    option1: "half a teaspoon",
+    option2: "one whole teaspoon",
+    option3: "one tenth of a teaspoon",
+    answer: "3",
+  },
+];
+
+let currentQuestion = 0;
+let score = 0;
+let totalQuestions = questions.length;
+
+let container = document.getElementById("quizQuestions");
+let questionElement = document.getElementById("question");
+let option1 = document.getElementById("option1");
+let option2 = document.getElementById("option2");
+let option3 = document.getElementById("option3");
+let nextButton = document.getElementById("nextBtn");
+let resultCont = document.getElementById("quizResults");
+
+function loadQuestion(i) {
+  let q = questions[i];
+  questionElement.textContent = i + 1 + ". " + q.question;
+  option1.textContent = q.option1;
+  option2.textContent = q.option2;
+  option3.textContent = q.option3;
+}
+
+function nextQuestion() {
+  let selectedOption = document.querySelector("input[type = radio]:checked");
+  if (!selectedOption) {
+    alert("Please choose an answer");
+    return;
+  }
+
+  let answer = selectedOption.nodeValue;
+  if (questions[currentQuestion].answer === answer) {
+    score += 3;
+  }
+  selectedOption.checked = false;
+  currentQuestion++;
+  if (currentQuestion === totalQuestions - 1) {
+    nextButton.textContent = "Finish";
+  }
+  if (currentQuestion === totalQuestions) {
+    container.style.display = "none";
+    resultCont.style.display = "";
+    resultCont.textContent = "Your Score" + score;
+    return;
+  }
+  loadQuestion(currentQuestion);
+}
+
+loadQuestion(currentQuestion);

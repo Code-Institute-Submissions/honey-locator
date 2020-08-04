@@ -185,8 +185,9 @@
     <!-- Quiz -->
 
     <div id="quiz-section" class="container">
-      <div class="quiz-title">Quiz!</div>
-      <div id="questions" class="questions"></div>
+    <div id="quizQuestions" class="quizContainer">
+      <div>Quiz!</div>
+      <div id="question" class="question"></div>
       <label class="option"
         ><input type="radio" name="options" value="1" /><span
           id="option1"
@@ -202,10 +203,10 @@
           id="option3"
         ></span
       ></label>
-      <button id="next-btn" onclick="nextQuestion();">Next</button>
+      <button id="nextBtn" onclick="nextQuestion();">Next</button>
     </div>
-    <div id="result" class="result" style="display:none;"></div>
-
+    <div id="quizResults" class="quizContainer" style="display:none;"></div>
+</div>
     <!-- Footer -->
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
