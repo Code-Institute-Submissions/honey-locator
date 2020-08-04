@@ -424,12 +424,11 @@ $(".toggleList").click(function () {
   }
 });
 
-
 //----------benefits
-$(function(){
-    $(".flip").flip({
-        trigger: 'click'
-    });
+$(function () {
+  $(".flip").flip({
+    trigger: "click",
+  });
 });
 
 //----------quiz
