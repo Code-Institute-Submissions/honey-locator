@@ -26,7 +26,7 @@ body {
 .general-text {
   color: #FAB140;
   letter-spacing: 0.2rem;
-  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.15);
+  text-shadow: 0px 1px 1px 	rgb(249,249,249, 0.5);
 }
 
 .content-heading {
