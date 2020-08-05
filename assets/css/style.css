@@ -25,10 +25,6 @@ body {
 
 }
 
-.general-text {
-  letter-spacing: 0.2rem;
-}
-
 .content-heading {
   margin: 7px;
 }
@@ -36,6 +32,7 @@ body {
 .content-text {
   font-family: "Montserrat", sans-serif;
   color: rgb(109, 112, 114);
+  letter-spacing: 0.2rem;
 }
 
 .website {
@@ -46,6 +43,10 @@ body {
 /*--------nav--------*/
 .navbar {
     height: 50px;
+}
+
+.navbar-toggler {
+    border: none;
 }
 
 /*--------map--------*/
@@ -136,10 +137,6 @@ div #map {
 
 /*--------modal--------*/
 
-.modal-btn {
-  margin-left: 40%;
-  height: 40px;
-}
 
 .transition {
     -webkit-transform: scale(.1); 
@@ -162,10 +159,7 @@ div #map {
 }
 
 
-.submit-btn:hover {
-background-color: #fab140;
-color: white;
-}
+
 /*--------hover--------*/
 .website:hover {
   text-decoration: none;
@@ -190,8 +184,14 @@ color: white;
     transform: scale(1.1);
 }
 
+.btn-hover:hover {
+background-color: #fab140;
+color: white;
+}
 
-
+.modal-btn:hover{
+    color: #fab140;
+}
 
 /*--------list--------*/
 .listItem {
@@ -208,6 +208,7 @@ color: white;
   -ms-user-select: none;
   user-select: none;
 }
+
 .close {
   position: absolute;
   right: 0;
@@ -224,7 +225,6 @@ color: white;
 .addBtn {
   padding: 5px;
     margin-top: 5px;
-    width: 20%;
     background: #d9d9d9;
     float: left;
     text-align: center;
@@ -236,8 +236,12 @@ color: white;
 
 .addBtn:hover {
   background-color: #bbb;
+
 }
 
+.cursor {
+    cursor: pointer;
+}
 /*--------benefits-cards--------*/
 
 .flip {

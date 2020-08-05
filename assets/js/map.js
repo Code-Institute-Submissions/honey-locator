@@ -263,11 +263,11 @@ function initMap() {
         let phone = feat.getProperty("phone");
         let website = feat.getProperty("website");
         let position = feat.getGeometry().get();
-        let html = `<div class="content-text"><h4>${name}</h4>
+        let html = `<div class="content-text"><h5>${name}</h5>
         <i class="fas fa-phone-alt honey-col" alt="phone"></i> ${phone}
         <br><i class="fas fa-globe honey-col" alt="globe"></i> <a class="website content-text" target="_blank" href="${website}">${website}</a> <br><div onclick="newElement()" id="addTo" class="addBtn" info="${
           name + phone + website
-        }">Add</></div>`;
+        }">Add to your list</></div>`;
         infowindow.setContent(html);
         infowindow.open(map, marker);
       });

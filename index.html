@@ -25,7 +25,7 @@
 
     <header>
       <div class="fixed-top dropdown-nav">
-        <nav class="navbar navbar-light navbar-expand-sm bg-col general-text">
+        <nav class="navbar navbar-light navbar-expand-sm bg-col content-text">
           <a href="#home" class="navbar-brand"
             ><img
               src="assets/images/icon_online.jpg"
@@ -74,7 +74,7 @@
         aria-hidden="true"
       >
         <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content general-text bg-col">
+          <div class="modal-content content-text bg-col">
             <div class="modal-header">
               <h5 class="modal-title">Suggest an edit</h5>
               <button
@@ -111,7 +111,7 @@
                     >What would you like to suggest?</label
                   >
                   <select
-                    class="form-control general-text"
+                    class="form-control content-text"
                     id="selectInput"
                     name="selectInput"
                   >
@@ -124,7 +124,7 @@
                   <textarea
                     id="textInput"
                     name="textInput"
-                    class="form-control general-text"
+                    class="form-control content-text"
                     rows="3"
                     placeholder="Please let us know more"
                     required
@@ -132,12 +132,12 @@
                 </div>
 
                 <div class="modal-footer">
-                  <button type="submit" class="btn general-text submit-btn">
+                  <button type="submit" class="btn content-text btn-hover">
                     Submit
                   </button>
                   <button
                     type="button"
-                    class="btn general-text submit-btn"
+                    class="btn content-text btn-hover"
                     data-dismiss="modal"
                   >
                     Close
@@ -149,8 +149,8 @@
         </div>
       </div>
 
-      <div class="container m-5 p-5">
-        <h1 class="heading general-text honey-col p-4">
+      <div class="container mt-5 pt-5">
+        <h1 class="heading content-text honey-col p-4">
           Find locally produced honey in the UK!
         </h1>
       </div>
@@ -163,7 +163,7 @@
         />
         <p>or</p>
 
-        <button id="locatorBTN" class="bg-col pac-input">
+        <button id="locatorBTN" class="bg-col pac-input cursor">
           Find current location <i class="fas fa-map-marker-alt"></i>
         </button>
       </div>
@@ -171,28 +171,30 @@
       <!-- Map -->
       <div class="map-container">
         <div id="map"></div>
-        <div class="over-map bg-col">
-          <button class="toggleList buttons content-text">
+        <div class="over-map">
+        <div class="bg-col">
+          <button class="toggleList btn-hover buttons cursor content-text">
             <i class="far fa-minus-square"></i>
           </button>
           <div id="userList">
-            <h4 class="content-text p-3">Your List</h4>
+            <h5 class="content-text p-1">Your List</h5>
             <ul class="content-text pr-2" id="listItems">
               <li class="listItem"></li>
             </ul>
           </div>
           <div>
-            <button
+          </div>
+        </div>
+          <button
               id="edit-btn"
-              class="modal-btn general-text honey-col buttons hvr-grow"
+              class="modal-btn content-text buttons hvr-grow cursor m-0"
               type="button"
               data-toggle="modal"
               data-target="#modal"
             >
               Suggest an edit
             </button>
-          </div>
-        </div>
+            </div>
       </div>
     </div>
 
@@ -200,10 +202,10 @@
 
     <!-- Benefits -->
 
-    <div id="benefits" class="container-fluid container general-text">
+    <div id="benefits" class="container-fluid container content-text">
       <div><h3>Benefits</h3></div>
       <div class="row">
-        <div class="col-12 col-md-3 m-4">
+        <div class="col-12 col-md-3 m-4 cursor">
           <div class="flip">
             <div class="front">
               <h5 class="p-2">Health</h5>
@@ -236,7 +238,7 @@
             </div>
           </div>
         </div>
-        <div class="col-12 col-md-3 m-4">
+        <div class="col-12 col-md-3 m-4 cursor">
           <div class="flip">
             <div class="front">
               <h5 class="p-2">Economic</h5>
@@ -273,7 +275,7 @@
             </div>
           </div>
         </div>
-        <div class="col-12 col-md-3 m-4">
+        <div class="col-12 col-md-3 m-4 cursor">
           <div class="flip">
             <div class="front">
               <h5 class="p-2">Environmental</h5>
@@ -296,24 +298,24 @@
     <div id="quiz" class="container">
       <div id="quizQuestions" class="quizContainer">
         <div>Quiz!</div>
-        <div id="question" class="question"></div>
-        <label class="option"
+        <div id="question" class="question "></div>
+        <label class="option cursor"
           ><input type="radio" name="options" value="1" /><span
             id="option1"
           ></span
         ></label>
-        <label class="option"
+        <label class="option cursor"
           ><input type="radio" name="options" value="2" /><span
             id="option2"
           ></span
         ></label>
-        <label class="option"
+        <label class="option cursor"
           ><input type="radio" name="options" value="3" /><span
             id="option3"
           ></span
         ></label>
 
-        <button id="nextBtn" onclick="nextQuestion();">Next</button>
+        <button id="nextBtn" class="cursor" onclick="nextQuestion();">Next</button>
       </div>
       <div id="quizResults" class="quizContainer" style="display: none;"></div>
     </div>
@@ -328,10 +330,10 @@
     <script src="https://kit.fontawesome.com/89255d1b7b.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
     <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
-    <!-- <script
+   <script
       async
       defer
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYEFJ6Ls3eG2snRN2rZx7zHIZ8SS5UeKE&libraries=places&callback=initMap"
-    ></script>-->
+    ></script>
   </body>
 </html>
