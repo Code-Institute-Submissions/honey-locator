@@ -48,7 +48,6 @@ body {
     height: 50px;
 }
 
-
 /*--------map--------*/
 
 .map-container {
@@ -142,8 +141,6 @@ div #map {
   height: 40px;
 }
 
-
-
 .transition {
     -webkit-transform: scale(.1); 
     -moz-transform: scale(.1);
@@ -164,6 +161,11 @@ div #map {
 	-ms-transition: all .6s ease-in-out;
 }
 
+
+.submit-btn:hover {
+background-color: #fab140;
+color: white;
+}
 /*--------hover--------*/
 .website:hover {
   text-decoration: none;
@@ -297,4 +299,6 @@ div #map {
 	font-size: 40px;
     color: white;
 }
+
+
 

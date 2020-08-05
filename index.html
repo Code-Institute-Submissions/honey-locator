@@ -45,7 +45,7 @@
             <span class="navbar-toggler-icon"></span>
           </button>
 
-          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <div class="collapse navbar-collapse bg-col" id="navbarNavDropdown">
             <ul class="navbar-nav m-auto pr-5">
               <li class="nav-item mr-2" id="navbar">
                 <a class="nav-link" href="#home">Home</a>
@@ -63,6 +63,7 @@
     </header>
 
     <!-- Modal -->
+
     <div id="home">
       <div
         class="modal fade"
@@ -73,7 +74,7 @@
         aria-hidden="true"
       >
         <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content">
+          <div class="modal-content general-text bg-col">
             <div class="modal-header">
               <h5 class="modal-title">Suggest an edit</h5>
               <button
@@ -106,9 +107,11 @@
                   />
                 </div>
                 <div class="form-group">
-                  <label for="selectInput">What you want</label>
+                  <label for="selectInput"
+                    >What would you like to suggest?</label
+                  >
                   <select
-                    class="form-control"
+                    class="form-control general-text"
                     id="selectInput"
                     name="selectInput"
                   >
@@ -121,18 +124,20 @@
                   <textarea
                     id="textInput"
                     name="textInput"
-                    class="form-control"
+                    class="form-control general-text"
                     rows="3"
-                    placeholder="please let us know more"
+                    placeholder="Please let us know more"
                     required
                   ></textarea>
                 </div>
 
                 <div class="modal-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" class="btn general-text submit-btn">
+                    Submit
+                  </button>
                   <button
                     type="button"
-                    class="btn btn-secondary"
+                    class="btn general-text submit-btn"
                     data-dismiss="modal"
                   >
                     Close
@@ -245,13 +250,27 @@
                 larger chain stores has many benefits...
               </p>
             </div>
-            <div class="back"><ul><li> Help to boost your local economy
-- Research shows that £10 spent with a local independent shop means up to an additional £50 goes back into the local economy</li><li>Creates local jobs - Small, local businesses are surprisingly the largest employer of jobs nationally and provide the most local jobs to communities</li><li></li></ul> Read more
+            <div class="back">
+              <ul>
+                <li>
+                  Help to boost your local economy - Research shows that £10
+                  spent with a local independent shop means up to an additional
+                  £50 goes back into the local economy
+                </li>
+                <li>
+                  Creates local jobs - Small, local businesses are surprisingly
+                  the largest employer of jobs nationally and provide the most
+                  local jobs to communities
+                </li>
+                <li></li>
+              </ul>
+              Read more
               <a
                 href="https://smallbusiness.co.uk/fifteen-reasons-choose-local-company-2542429/"
                 target="_blank"
                 >here</a
-              ></div>
+              >
+            </div>
           </div>
         </div>
         <div class="col-12 col-md-3 m-4">
@@ -263,10 +282,9 @@
                 alt="earth"
                 class="benefitsImgs"
               />
-              <p>Save the bees! </p>
+              <p>Save the bees!</p>
             </div>
-            <div class="back"><h5 class="p-2">Environmental</h5>
-</div>
+            <div class="back"><h5 class="p-2">Environmental</h5></div>
           </div>
         </div>
       </div>
