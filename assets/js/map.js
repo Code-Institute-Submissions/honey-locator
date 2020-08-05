@@ -453,23 +453,23 @@ let questions = [
     option1: "half a teaspoon",
     option2: "one whole teaspoon",
     option3: "one tenth of a teaspoon",
-    answer : "3",
+    answer: "3",
   },
   {
-    question: "A bees' buzz is the sound made by the beat of their wings, how many times do the beat per minute?",
+    question:
+      "A bees' buzz is the sound made by the beat of their wings, how many times do the beat per minute?",
     option1: "1400 times",
     option2: "11,400 times",
     option3: "140 times",
-    answer : "2",
+    answer: "2",
   },
-{
+  {
     question: "How fast can a honeybee fly?",
     option1: "Up to five miles per hour",
     option2: "Up to ten miles per hour",
     option3: "Up to fifteen miles per hour",
-    answer : "2",
+    answer: "2",
   },
-
 ];
 
 let currentQuestion = 0;
@@ -482,11 +482,12 @@ let option1 = document.getElementById("option1");
 let option2 = document.getElementById("option2");
 let option3 = document.getElementById("option3");
 let nextButton = document.getElementById("nextBtn");
+let showAnswers = document.getElementById("showAnswers");
 let resultCont = document.getElementById("quizResults");
 
 function loadQuestion(i) {
   let q = questions[i];
-  questionElement.textContent = (i + 1) + ". " + q.question;
+  questionElement.textContent = i + 1 + ". " + q.question;
   option1.textContent = q.option1;
   option2.textContent = q.option2;
   option3.textContent = q.option3;
@@ -511,11 +512,13 @@ function nextQuestion() {
   if (currentQuestion === totalQuestions) {
     container.style.display = "none";
     resultCont.style.display = "";
-    resultCont.textContent = "Your Score " + score + "/5";
-
+    resultCont.textContent = `Your Score  ${score}  /5 ` ;
     return;
   }
   loadQuestion(currentQuestion);
+  
 }
 
 loadQuestion(currentQuestion);
+
+
