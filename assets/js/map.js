@@ -406,7 +406,7 @@ function newElement() {
   }
 }
 
-//hide/show list
+// hide/show list
 $(document).ready(function () {
   $(".toggleList").click(function () {
     $("#userList").toggle();
@@ -422,6 +422,7 @@ $(".toggleList").click(function () {
     $this.html(`<i class="fas fa-plus-square"></i>`);
   }
 });
+
 
 //----------benefits
 $(function () {
