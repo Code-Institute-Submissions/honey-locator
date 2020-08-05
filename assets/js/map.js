@@ -364,7 +364,7 @@ function initMap() {
 // Let user create list of their choices
 
 //close button
-let myNodelist = document.getElementsByTagName("LI");
+let myNodelist = document.getElementsByClassName("listItem");
 var i;
 for (i = 0; i < myNodelist.length; i++) {
   let span = document.createElement("SPAN");

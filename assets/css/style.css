@@ -188,10 +188,13 @@ div #map {
 
 
 /*--------list--------*/
+.listItem {
+    display: none;
+}
 #listItems li:nth-child(odd) {
   background: #f9f9f9;
 }
- #listItemsli:hover {
+ #listItems li:hover {
   background: #ddd;
 }
   -webkit-user-select: none;
