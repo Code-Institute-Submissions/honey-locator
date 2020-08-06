@@ -208,7 +208,7 @@
 
     <div id="benefits" class="container-fluid container content-text">
       <div class="row">
-        <div class="col-12 col-md-3"m-4 >
+        <div class="col-12 col-md-3 m-4 cursor">
           <div class="flip">
             <div class="front">
               <h5 class="p-2">Health</h5>
@@ -231,13 +231,19 @@
                 <li>Phytonutrient powerhouse</li>
                 <li>Help for digestive issues</li>
                 <li>Soothe a sore throat</li>
+                <li>
+                  A healthier alternative to the high fructose corn syrup in
+                  lots of sweets and processed foods
+                </li>
               </ul>
+              <p class="pt-5">
               Read more
               <a
                 href="https://www.healthline.com/health/food-nutrition/top-raw-honey-benefits#digestion-and-gut-health"
                 target="_blank"
                 >here</a
               >
+              </p>
             </div>
           </div>
         </div>
@@ -258,7 +264,7 @@
             <div class="back">
               <h5 class="p-2">Economic</h5>
 
-              <ul class="text-small">
+              <ul class="text-small pr-2">
                 <li>
                   Help to boost your local economy - Research shows that £10
                   spent with a local independent shop means up to an additional
@@ -269,14 +275,15 @@
                   the largest employer of jobs nationally and provide the most
                   local jobs to communities
                 </li>
-                <li></li>
               </ul>
+              <p>
               Read more
               <a
                 href="https://smallbusiness.co.uk/fifteen-reasons-choose-local-company-2542429/"
                 target="_blank"
                 >here</a
               >
+              </p>
             </div>
           </div>
         </div>
@@ -289,10 +296,33 @@
                 alt="earth"
                 class="benefitsImgs"
               />
-              <p class="text-small p-2">Save the bees!</p>
+              <p class="text-small p-2">Save the bees! Bees play an important role in the life cycle of most plants and flowers...</p>
             </div>
             <div class="back">
               <h5 class="p-2">Environmental</h5>
+              <ul class="text-small">
+                <li>
+                  Without bees, many plants would have no way to
+                  reproduce and die out.
+                </li>
+                <li>
+                  Bees are responsible for pollinating nearly 85% of all food
+                  crops for humans, as well as numerous crops that grow the food
+                  fed to cattle.
+                </li>
+                <li>
+                  There has been research conducted that predicts environmental
+                  collapse should the honeybee no longer exist
+                </li>
+              </ul>
+              <p>
+              Read more
+              <a
+                href="https://www.perfectbee.com/learn-about-bees/the-science-of-bees/the-benefits-of-bees"
+                target="_blank"
+                >here</a
+              >
+              </p>
             </div>
           </div>
         </div>
@@ -303,8 +333,8 @@
 
     <!-- Quiz -->
     <div id="quiz" class="container">
-      <div id="quizQuestions" class="quizContainer">
-        <div>Quiz!</div>
+      <div id="quizQuestions" class="quizContainer content-text">
+        <div><h3 class="text-center p-3">Quizzzz!</h3></div>
         <div id="question" class="question"></div>
         <label class="option cursor"
           ><input type="radio" name="options" value="1" /><span
@@ -325,10 +355,12 @@
         <button id="nextBtn" class="cursor" onclick="nextQuestion();">
           Next
         </button>
+        <button id="reset" onclick="">reset</button>
+        <div class="container">
+          <progress id="progBar" max="60" value="10"> </progress>
+        </div>
       </div>
       <div id="quizResults" class="quizContainer" style="display: none;"></div>
-      <progress id="progBar" max="60" value="10"> </progress>
-      <button id="reset" onclick="updateDiv();">reset</button>
     </div>
 
     <!-- Footer -->
