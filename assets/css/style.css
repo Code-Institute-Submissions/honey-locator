@@ -43,6 +43,7 @@ body {
 .text-small {
     font-size: small;
     letter-spacing: 0.05rem;
+    text-align: left;
 }
 
 /*--------nav--------*/
@@ -61,10 +62,6 @@ body {
   position: relative;
 }
 
-#map {
-  height: 100%;
-  width: 97%;
-}
 
 /*--------color--------*/
 
@@ -111,7 +108,7 @@ div #map {
 }
 
 .over-map{
-    position: absolute; top: 7%; left: 3%; z-index: 99;
+    position: absolute; bottom: 7%; left: 5%; z-index: 99;
 
 }
 /*--------search bar--------*/
@@ -181,15 +178,15 @@ color: white;
 
 /*--------list--------*/
 
-#userList {
-    width: min-content;
-} 
 
 #userList ul {
     list-style-type: none;
     padding-left: 5px;
 } 
-
+#listDiv {
+    width: 97%;
+    border-radius: 0px 0px 5px 5px; 
+}
 .listItem {
     display: none;
 }

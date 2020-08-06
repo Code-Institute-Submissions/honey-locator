@@ -148,20 +148,23 @@
       <div class="container container-fluid">
         <div class="row">
           <div class="col-12 col-md-auto">
-          <div id="pac-container">
-            <input
-            id="pac-input"
-              class="pac-input bg-col content-text"
-              type="text"
-              placeholder="Enter a location"
-            />
-          </div>
+            <div id="pac-container">
+              <input
+                id="pac-input"
+                class="pac-input bg-col content-text"
+                type="text"
+                placeholder="Enter a location"
+              />
+            </div>
           </div>
           <div class="col-12 col-md-auto">
             <p class="content-text">or</p>
           </div>
           <div class="col-12 col-md-auto">
-            <button id="locatorBTN" class="bg-col pac-input cursor content-text">
+            <button
+              id="locatorBTN"
+              class="bg-col pac-input cursor content-text"
+            >
               Find current location <i class="fas fa-map-marker-alt"></i>
             </button>
           </div>
@@ -169,44 +172,43 @@
       </div>
 
       <!-- Map -->
-      <div class="map-container">
+      <div class="map-container container">
         <div id="map"></div>
-        <div class="over-map">
-          <div id="listDiv" class="bg-col">
-            <button class="toggleList btn-hover buttons cursor content-text">
-              <i class="far fa-minus-square"></i>
-            </button>
-            <div id="userList">
-              <h5 class="content-text p-1">Your List</h5>
-              <ul class="content-text pr-2 text-small" id="listItems">
-                <li class="listItem"></li>
-              </ul>
-            </div>
-            <div></div>
-          </div>
-          <div>
-          <div class="bg-col">
-          <button
-            id="edit-btn"
-            class="modal-btn content-text buttons hvr-grow cursor m-0"
-            type="button"
-            data-toggle="modal"
-            data-target="#modal"
-          >
-            Suggest an edit
-          </button>
-          </div>
-          </div>
-        </div>
+           <div class="bg-col over-map">
+        <button
+          id="edit-btn"
+          class="modal-btn content-text buttons hvr-grow cursor m-0"
+          type="button"
+          data-toggle="modal"
+          data-target="#modal"
+        >
+          Suggest an edit
+        </button>
       </div>
     </div>
-
+<div class="container">
+    <div id="listDiv" class="bg-col">
+      <button class="toggleList btn-hover buttons cursor content-text">
+        <i class="far fa-minus-square"></i>
+      </button>
+      <div id="userList">
+        <h5 class="content-text p-1">Your List</h5>
+        <ul class="content-text pr-2 text-small" id="listItems">
+          <li class="listItem"></li>
+        </ul>
+      </div>
+      <div></div>
+    </div>
+    <div>
+   
+      </div>
+    </div>
+    </div>
     <div class="container"><a href="#benefits">V</a></div>
 
     <!-- Benefits -->
 
     <div id="benefits" class="container-fluid container content-text">
-   
       <div class="row">
         <div class="col-12 col-md-3"m-4 >
           <div class="flip">
@@ -217,7 +219,7 @@
                 alt="heart"
                 class="benefitsImgs"
               />
-              <p class="text-small">
+              <p class="text-small p-2">
                 Raw honey has been used as a folk remedy throughout history and
                 has a variety of health benefits and medical uses...
               </p>
@@ -250,13 +252,15 @@
                 alt="shop"
                 class="benefitsImgs"
               />
-              <p>
+              <p class="text-small p-2">
                 Choosing to shop with your local businesses instead of the
                 larger chain stores has many benefits...
               </p>
             </div>
             <div class="back">
-              <ul>
+              <h5 class="p-2">Economic</h5>
+
+              <ul class="text-small">
                 <li>
                   Help to boost your local economy - Research shows that £10
                   spent with a local independent shop means up to an additional
@@ -287,7 +291,7 @@
                 alt="earth"
                 class="benefitsImgs"
               />
-              <p>Save the bees!</p>
+              <p class="text-small p-2">Save the bees!</p>
             </div>
             <div class="back">
               <h5 class="p-2">Environmental</h5>
