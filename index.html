@@ -159,11 +159,14 @@
       <div class="container container-fluid">
         <div class="row">
           <div class="col-12 col-md-auto">
+          <div id="pac-container">
             <input
+            id="pac-input"
               class="pac-input bg-col content-text"
               type="text"
               placeholder="Enter a location"
             />
+          </div>
           </div>
           <div class="col-12 col-md-auto">
             <p class="content-text">or</p>
@@ -180,7 +183,7 @@
       <div class="map-container">
         <div id="map"></div>
         <div class="over-map">
-          <div class="bg-col">
+          <div id="listDiv" class="bg-col">
             <button class="toggleList btn-hover buttons cursor content-text">
               <i class="far fa-minus-square"></i>
             </button>
