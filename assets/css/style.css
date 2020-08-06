@@ -9,11 +9,10 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
-.container {
-  display: flex;
-  justify-content: center;
-  overflow: hidden;
+.container-height {
+    height: 80vh; 
 }
+
 
 
 /*--------text--------*/
@@ -55,13 +54,6 @@ body {
     border: none;
 }
 
-/*--------map--------*/
-
-.map-container {
-  height: 70vh;
-  position: relative;
-}
-
 
 /*--------color--------*/
 
@@ -76,7 +68,11 @@ body {
 
 }
 /*--------general--------*/
-
+.center {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
 
 .logo-nav{
     height: 40px;
@@ -94,7 +90,7 @@ body {
 /*--------map--------*/
 
 .map-container {
-  height: 70vh;
+  height: 80vh;
   position: relative;
 }
 
@@ -261,10 +257,18 @@ color: white;
 }
 /*--------quiz--------*/
 
+#quiz {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
 .quizContainer {
     background-color: #FAB140;
     border: 1px solid white;
     border-radius: 5px;
+    width: 80%;
+    height: 300px;
 }
 
 
