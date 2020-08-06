@@ -253,7 +253,7 @@ function initMap() {
         });
       });
 
-     // open infowindow on click
+      // open infowindow on click
 
       infowindow = new google.maps.InfoWindow();
 
@@ -265,7 +265,9 @@ function initMap() {
         let position = feat.getGeometry().get();
         let html = `<div class="content-text"><h5>${name}</h5>
         <i class="fas fa-phone-alt honey-col" alt="phone"></i> ${phone}
-        <br><i class="fas fa-globe honey-col" alt="globe"></i> <a class="website content-text" target="_blank" href="${website}">${website}</a> <br><div onclick="newElement()" id="addTo" class="addBtn" info="${name + ' ' + phone + ' ' + website}">Add to your list</div>`;
+        <br><i class="fas fa-globe honey-col" alt="globe"></i> <a class="website content-text" target="_blank" href="${website}">${website}</a> <br><div onclick="newElement()" id="addTo" class="addBtn" info="${
+          name + " " + phone + " " + website
+        }">Add to your list</div>`;
         infowindow.setContent(html);
         infowindow.open(map, marker);
       });
@@ -382,12 +384,12 @@ for (i = 0; i < close.length; i++) {
 // Create a new list item when clicking on the "Add" button
 function newElement() {
   let li = document.createElement("li");
-  let inputValue = document.getElementById("addTo").getAttribute("info") 
+  let inputValue = document.getElementById("addTo").getAttribute("info");
   let t = document.createTextNode(inputValue);
   li.appendChild(t);
   document.getElementById("listItems").appendChild(li);
 
- let div = document.createElement("DIV");
+  let div = document.createElement("DIV");
   let txt = document.createTextNode("\u00D7");
   div.className = "close";
   div.appendChild(txt);
@@ -479,6 +481,7 @@ let option3 = document.getElementById("option3");
 let nextButton = document.getElementById("nextBtn");
 let showAnswers = document.getElementById("showAnswers");
 let resultCont = document.getElementById("quizResults");
+let progress = document.getElementById("progBar");
 
 function loadQuestion(i) {
   let q = questions[i];
@@ -507,13 +510,11 @@ function nextQuestion() {
   if (currentQuestion === totalQuestions) {
     container.style.display = "none";
     resultCont.style.display = "";
-    resultCont.textContent = `Your Score  ${score}  /5 ` ;
+    resultCont.textContent = `Your Score  ${score}  /5 `;
     return;
   }
+  progress.value = progress.value + 10;
   loadQuestion(currentQuestion);
-  
 }
 
 loadQuestion(currentQuestion);
-
-
