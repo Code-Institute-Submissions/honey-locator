@@ -253,7 +253,7 @@ function initMap() {
         });
       });
 
-      // open infowindow on click
+     // open infowindow on click
 
       infowindow = new google.maps.InfoWindow();
 
