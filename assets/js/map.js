@@ -265,9 +265,7 @@ function initMap() {
         let position = feat.getGeometry().get();
         let html = `<div class="content-text"><h5>${name}</h5>
         <i class="fas fa-phone-alt honey-col" alt="phone"></i> ${phone}
-        <br><i class="fas fa-globe honey-col" alt="globe"></i> <a class="website content-text" target="_blank" href="${website}">${website}</a> <br><div onclick="newElement()" id="addTo" class="addBtn" info="${
-          name + phone + website
-        }">Add to your list</></div>`;
+        <br><i class="fas fa-globe honey-col" alt="globe"></i> <a class="website content-text" target="_blank" href="${website}">${website}</a> <br><div onclick="newElement()" id="addTo" class="addBtn" info="${name + ' ' + phone + ' ' + website}">Add to your list</div>`;
         infowindow.setContent(html);
         infowindow.open(map, marker);
       });
@@ -387,16 +385,10 @@ for (i = 0; i < close.length; i++) {
 // Create a new list item when clicking on the "Add" button
 function newElement() {
   let li = document.createElement("li");
-  let inputValue = document.getElementById("addTo").getAttribute("info");
+  let inputValue = document.getElementById("addTo").getAttribute("info") 
   let t = document.createTextNode(inputValue);
   li.appendChild(t);
   document.getElementById("listItems").appendChild(li);
-
-  let span = document.createElement("SPAN");
-  let txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  li.appendChild(span);
 
   for (i = 0; i < close.length; i++) {
     close[i].onclick = function () {

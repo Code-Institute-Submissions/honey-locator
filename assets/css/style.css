@@ -22,8 +22,8 @@ body {
   margin-top: 0;
   font-weight: 600; 
   text-shadow: 0.5px 0.5px 0.5px 	rgba(255, 255, 255);
-
-}
+  letter-spacing: 0.2rem;
+ }
 
 .content-heading {
   margin: 7px;
@@ -32,12 +32,17 @@ body {
 .content-text {
   font-family: "Montserrat", sans-serif;
   color: rgb(109, 112, 114);
-  letter-spacing: 0.2rem;
+  letter-spacing: 0.1rem;
 }
 
 .website {
   text-decoration: none;
   margin-top: 10px;
+}
+
+.text-small {
+    font-size: small;
+    letter-spacing: 0.05rem;
 }
 
 /*--------nav--------*/
@@ -116,14 +121,11 @@ div #map {
   font-family: "Montserrat", sans-serif;
   font-size: 15px;
   font-weight: 300;
-  margin-left: 12px;
   padding: 0 11px 0 13px;
   text-overflow: ellipsis;
-  width: 30%;
   border-radius: 5px;
   border-color: #eeeff1;
   margin-bottom: 5px;
-  width: 20%;
 }
 
 
@@ -194,6 +196,10 @@ color: white;
 }
 
 /*--------list--------*/
+
+#userList {
+    width: min-content;
+} 
 .listItem {
     display: none;
 }
