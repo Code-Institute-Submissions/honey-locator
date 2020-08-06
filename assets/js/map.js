@@ -390,6 +390,12 @@ function newElement() {
   li.appendChild(t);
   document.getElementById("listItems").appendChild(li);
 
+ let div = document.createElement("DIV");
+  let txt = document.createTextNode("\u00D7");
+  div.className = "close";
+  div.appendChild(txt);
+  li.appendChild(div);
+
   for (i = 0; i < close.length; i++) {
     close[i].onclick = function () {
       let div = this.parentElement;
