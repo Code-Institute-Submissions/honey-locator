@@ -266,8 +266,7 @@ function initMap() {
         let html = `<div class="content-text"><h5>${name}</h5>
         <i class="fas fa-phone-alt honey-col" alt="phone"></i> ${phone}
         <br><i class="fas fa-globe honey-col" alt="globe"></i> <a class="website content-text" target="_blank" href="${website}">${website}</a> <br><div onclick="newElement()" id="addTo" class="addBtn" info="${
-          name + " " + phone + " " + website
-        }">Add to your list</div>`;
+          name + " " + phone + " " + website}">Add to your list</div>`;
         infowindow.setContent(html);
         infowindow.open(map, marker);
       });
@@ -389,6 +388,8 @@ function newElement() {
   li.appendChild(t);
   document.getElementById("listItems").appendChild(li);
 
+  inputValue.setAttribute("href", "#");
+
   let div = document.createElement("DIV");
   let txt = document.createTextNode("\u00D7");
   div.className = "close";
@@ -435,7 +436,7 @@ let questions = [
     option1: "Four Hundred",
     option2: "Four Thousand",
     option3: "Four Million",
-    answer: "3",
+    corAnswer: "3",
   },
   {
     question:
@@ -443,14 +444,14 @@ let questions = [
     option1: " 55,000 miles",
     option2: "100,00 miles",
     option3: "900 miles",
-    answer: "1",
+    corAnswer: "1",
   },
   {
     question: "How much honey does an average worker bee make in its lifetime?",
     option1: "half a teaspoon",
     option2: "one whole teaspoon",
     option3: "one tenth of a teaspoon",
-    answer: "3",
+    corAnswer: "3",
   },
   {
     question:
@@ -458,14 +459,14 @@ let questions = [
     option1: "1400 times",
     option2: "11,400 times",
     option3: "140 times",
-    answer: "2",
+    corAnswer: "2",
   },
   {
     question: "How fast can a honeybee fly?",
     option1: "Up to five miles per hour",
     option2: "Up to ten miles per hour",
     option3: "Up to fifteen miles per hour",
-    answer: "2",
+    corAnswer: "2",
   },
 ];
 
@@ -479,7 +480,7 @@ let option1 = document.getElementById("option1");
 let option2 = document.getElementById("option2");
 let option3 = document.getElementById("option3");
 let nextButton = document.getElementById("nextBtn");
-let showAnswers = document.getElementById("showAnswers");
+//let showAnswers = document.getElementById("showAnswers");
 let resultCont = document.getElementById("quizResults");
 let progress = document.getElementById("progBar");
 
@@ -498,9 +499,10 @@ function nextQuestion() {
     return;
   }
 
-  let answer = selectedOption.value;
-  if (questions[currentQuestion].answer == answer) {
+  let corAnswer = selectedOption.value;
+  if (questions[currentQuestion].corAnswer == corAnswer) {
     score += 1;
+    console.log("success");
   }
   selectedOption.checked = false;
   currentQuestion++;
@@ -515,6 +517,11 @@ function nextQuestion() {
   }
   progress.value = progress.value + 10;
   loadQuestion(currentQuestion);
+}
+
+function resetQuiz() {
+  $("#quiz").load(window.location + " #quiz");
+  loadQuestion(0);
 }
 
 loadQuestion(currentQuestion);

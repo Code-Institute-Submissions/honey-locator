@@ -11,6 +11,9 @@
         "name": "Castle Farm Fresh Produce",
         "phone": "+447568436413",
         "website": "https://www.castlefarmni.com/",
+
+        "Google Maps URL": "http://maps.google.com/?cid=11151164493672739755",
+        "Address": "39 Dromara Rd, Dundrum, Newcastle BT33 0NS, United Kingdom",
         "storeid": "02"
       },
       "type": "Feature"
@@ -26,6 +29,9 @@
         "name": "Lancashire Honey",
         "phone": "+447787758033",
         "website": "http://www.lancashirehoney.com/",
+
+        "Google Maps URL": "http://maps.google.com/?cid=12405191178358792369",
+        "Address": "The Hawthorns, Cabus, Forton PR3 0BP, United Kingdom",
         "storeid": "06"
       },
       "type": "Feature"
@@ -40,6 +46,9 @@
         "name": "SweetBee - Local Organic Honey",
         "phone": "+447982935144",
         "website": "http://www.sweetbee.shop/",
+
+        "Google Maps URL": "http://maps.google.com/?cid=3877200446638469757",
+        "Address": "254 Withington Rd, Manchester M21 0YB, United Kingdom",
         "storeid": "07"
       },
       "type": "Feature"
@@ -54,6 +63,8 @@
         "name": "Bax Bees",
         "phone": "+447722249552",
         "website": "https://baxbees.co.uk/",
+        "Google Maps URL": "http://maps.google.com/?cid=7988014817170000310",
+        "Address": "Honey House, Plumley Moor Rd, Plumley, Knutsford WA16 0TZ, United Kingdom",
         "storeid": "08"
       },
       "type": "Feature"
@@ -69,6 +80,8 @@
         "name": "Treddafydd Organic",
         "phone": "+441758750418",
         "website": "http://www.treddafyddorganic.co.uk/",
+        "Google Maps URL": "http://maps.google.com/?cid=4668135446387395620",
+        "Address": "Treddafydd, Llithfaen, Pwllheli LL53 6NL, United Kingdom",
         "storeid": "10"
       },
       "type": "Feature"
@@ -83,6 +96,8 @@
         "name": "Bee Hive Preserves",
         "phone": "+441407711588",
         "website": "http://www.jams.co.uk/",
+        "Google Maps URL": "http://maps.google.com/?cid=5847576045011345377",
+        "Address": "Nanner, Cemaes Bay LL67 0EA, United Kingdom",
         "storeid": "11"
       },
       "type": "Feature"
@@ -97,6 +112,8 @@
         "name": "Raw n Pure",
         "phone": "+447812990603",
         "website": "http://www.rawnpure.co.uk/",
+        "Google Maps URL": "http://maps.google.com/?cid=13397817783417079487",
+        "Address": "Markfield Ln, Botcheston, Leicester LE9 9FH, United Kingdom",
         "storeid": "12"
       },
       "type": "Feature"
@@ -111,6 +128,8 @@
         "name": "Mr Robs Honey",
         "phone": "",
         "website": "http://www.mrrobshoney.com/",
+        "Google Maps URL": "http://maps.google.com/?cid=17780797572794345335",
+        "Address": "Mr Robs, Broughton, Milton Keynes MK10 1LW, United Kingdom",
         "storeid": "14"
       },
       "type": "Feature"
@@ -125,6 +144,8 @@
         "name": "British Honey producers Ltd, Oakfield Honey Farm",
         "phone": "+441296730794",
         "website": "http://britishhoneyproducersltd.com/",
+        "Google Maps URL": "http://maps.google.com/?cid=13197127427092049804",
+        "Address": "West St, Steeple Claydon, Buckingham MK18 2LJ, United Kingdom",
         "storeid": "15"
       },
       "type": "Feature"
@@ -139,6 +160,8 @@
         "name": "Buckinghamshire Honey Company Ltd",
         "phone": "+441525270325",
         "website": "http://www.buckinghamshire-honey.co.uk/",
+        "Google Maps URL": "http://maps.google.com/?cid=10785260395041822661",
+        "Address": "5 Newton Rd, Stoke Hammond, Milton Keynes MK17 9DE, United Kingdom",
         "storeid": "16"
       },
       "type": "Feature"
@@ -154,6 +177,8 @@
         "name": "Natures Raw Honey",
         "phone": "+447868783563",
         "website": "http://naturesrawhoney.com/",
+        "Google Maps URL": "http://maps.google.com/?cid=12396559258910296142",
+        "Address": "12 Gwendale, Maidenhead SL6 6SH, United Kingdom",
         "storeid": "17"
       },
       "type": "Feature"
@@ -168,6 +193,8 @@
         "name": "Raw Honey UK",
         "phone": "+447746891809",
         "website": "http://www.rawhoneyuk.com/",
+        "Google Maps URL": "http://maps.google.com/?cid=8352143166791679419",
+        "Address": "Unit 4 Popular business park, Swindon SN6 6JX, United Kingdom",
         "storeid": "19"
       },
       "type": "Feature"
@@ -182,6 +209,8 @@
         "name": "Hartley Farm Shop & Kitchen",
         "phone": "+441225864948",
         "website": "http://www.hartley-farm.co.uk/",
+        "Google Maps URL": "http://maps.google.com/?cid=6637435631850311143",
+        "Address": "Winsley, Bradford-on-Avon BA15 2JB, United Kingdom",
         "storeid": "20"
       },
       "type": "Feature"
@@ -196,6 +225,8 @@
         "name": "Porteath Bee Centre",
         "phone": "+441208863718",
         "website": "http://www.porteathbeecentre.co.uk/",
+        "Google Maps URL": "http://maps.google.com/?cid=5314128855671944149",
+        "Address": "St Minver, Wadebridge PL27 6RA, United Kingdom",
         "storeid": "24"
       },
       "type": "Feature"
@@ -211,6 +242,8 @@
         "name": "Nearly Home Honey",
         "phone": "+447795011534",
         "website": "http://www.nearlyhomehoney.co.uk/",
+        "Google Maps URL": "http://maps.google.com/?cid=14234478399855503705",
+        "Address": "Higher, Kellacott, Launceston PL15 9SW, United Kingdom",
         "storeid": "27"
       },
       "type": "Feature"
@@ -225,6 +258,8 @@
         "name": "Bigbury Bees",
         "phone": "+447749695754",
         "website": "https://bigburybees.co.uk/",
+        "Google Maps URL": "http://maps.google.com/?cid=11339129968057263459",
+        "Address": "B3392, Kingsbridge TQ7 4HQ, United Kingdom",
         "storeid": "28"
       },
       "type": "Feature"
@@ -239,6 +274,8 @@
         "name": "Stone's Honey",
         "phone": "+447944745153",
         "website": "http://www.stones-honey.co.uk/",
+        "Google Maps URL": "http://maps.google.com/?cid=4204464334476329812",
+        "Address": "Beacon View, Bittaford, Ivybridge PL21 0EN, United Kingdom",
         "storeid": "30"
       },
       "type": "Feature"
@@ -253,6 +290,8 @@
         "name": "Beeza",
         "phone": "+447914002831",
         "website": "http://www.beeza.co.uk/",
+        "Google Maps URL": "http://maps.google.com/?cid=9838094255202757836",
+        "Address": "Fairfield House, Wallingford Rd, Kingsbridge TQ7 1NF, United Kingdom",
         "storeid": "31"
       },
       "type": "Feature"
@@ -267,6 +306,8 @@
         "name": "Quince Honey Farm",
         "phone": "+441769572401",
         "website": "http://www.quincehoneyfarm.co.uk/",
+        "Google Maps URL": "http://maps.google.com/?cid=1825567333242852516",
+        "Address": "Aller Cross, South Molton EX36 3RD, United Kingdom",
         "storeid": "33"
       },
       "type": "Feature"
@@ -281,6 +322,8 @@
         "name": "Blackbury Honey Farm",
         "phone": "+441404871600",
         "website": "http://www.blackburyfarm.co.uk/",
+        "Google Maps URL": "http://maps.google.com/?cid=464324805899314541",
+        "Address": "Southleigh, Colyton EX24 6JF, United Kingdom",
         "storeid": "34"
       },
       "type": "Feature"
@@ -296,6 +339,8 @@
         "name": "Honey Pot Farm",
         "phone": "+447971656440",
         "website": "http://honeypotfarm.org/",
+        "Google Maps URL": "http://maps.google.com/?cid=13604864794895316139",
+        "Address": "Fosseway Bungalow, Yeabridge, South Petherton TA13 5LW, United Kingdom",
         "storeid": "36"
       },
       "type": "Feature"
@@ -310,6 +355,8 @@
         "name": "Honey's Honey",
         "phone": "+441425477027",
         "website": "http://www.honeyshoney.co.uk/",
+        "Google Maps URL": "http://maps.google.com/?cid=16216721666948769167",
+        "Address": "33 N Poulner Rd, Ringwood BH24 1SW, United Kingdom",
         "storeid": "37"
       },
       "type": "Feature"
@@ -324,6 +371,8 @@
         "name": "Dorset Bees Ltd",
         "phone": "+447966891997",
         "website": "http://dorsetbees.co.uk/",
+        "Google Maps URL": "http://maps.google.com/?cid=18187821020962945708",
+        "Address": "28 Berkeley Ave, Poole BH12 4HZ, United Kingdom",
         "storeid": "39"
       },
       "type": "Feature"
@@ -338,6 +387,8 @@
         "name": "Snow C J",
         "phone": "+441202484628",
         "website": "http://avonorganics.co.uk/",
+        "Google Maps URL": "http://maps.google.com/?cid=5953228981563212813",
+        "Address": "Week Farm/Wattons La, Ringwood BH24 2DG, United Kingdom",
         "storeid": "40"
       },
       "type": "Feature"
@@ -352,6 +403,8 @@
         "name": "Ashworth Honey",
         "phone": "",
         "website": "http://ashworthhoney.co.uk/",
+        "Google Maps URL": "http://maps.google.com/?cid=2236937978523966283",
+        "Address": "14 Titchfield Park Rd, Fareham PO15 5RW, United Kingdom",
         "storeid": "42"
       },
       "type": "Feature"
@@ -366,6 +419,8 @@
         "name": "Sinah Common Honey",
         "phone": "+447708922013",
         "website": "http://sinahcommonhoney.com/",
+        "Google Maps URL": "http://maps.google.com/?cid=14269331433812347157",
+        "Address": "16 Staunton Ave, Hayling Island PO11 0EN, United Kingdom",
         "storeid": "44"
       },
       "type": "Feature"
@@ -380,6 +435,8 @@
         "name": "Adsdean Farm Shop",
         "phone": "+441243575212",
         "website": "http://www.adsdeanfarm.co.uk/",
+        "Google Maps URL": "http://maps.google.com/?cid=4243724878128443386",
+        "Address": "Adsdean, Chichester PO18 9DN, United Kingdom",
         "storeid": "45"
       },
       "type": "Feature"
@@ -394,6 +451,8 @@
         "name": "Holmbury Honey",
         "phone": "",
         "website": "http://holmburyhoney.co.uk/",
+        "Google Maps URL": "http://maps.google.com/?cid=4420650799544282589",
+        "Address": "Coppicefield Cottage, Petersfield GU32 1AJ, United Kingdom",
         "storeid": "46"
       },
       "type": "Feature"
@@ -408,6 +467,8 @@
         "name": "Pipers Honey Farm",
         "phone": "+441730268777",
         "website": "https://www.pipershoney.com/",
+        "Google Maps URL": "http://maps.google.com/?cid=12144736186376924144",
+        "Address": "Petersfield GU32 1DP, United Kingdom",
         "storeid": "47"
       },
       "type": "Feature"
@@ -420,6 +481,8 @@
       "properties": {
         "category": "online",
         "name": "Southdowns Honey",
+        "Google Maps URL": "http://maps.google.com/?cid=7994014251283707442",
+        "Address": "West Way, Lancing BN15 8NB, United Kingdom",
         "phone": "+447812838439",
         "website": "http://southdownshoney.co.uk/",
         "storeid": "49"
@@ -436,6 +499,8 @@
         "name": "Aecre Honey",
         "phone": "+441273974120",
         "website": "https://www.aecre.co.uk/",
+        "Google Maps URL": "http://maps.google.com/?cid=18097676535848095371",
+        "Address": "Bevendean Cres, Brighton BN2 4RA, United Kingdom",
         "storeid": "50"
       },
       "type": "Feature"
@@ -450,6 +515,8 @@
         "name": "Bee Master London",
         "phone": "+447775001921",
         "website": "https://bee-m.com/product/wildflower-honey-raw/",
+        "Google Maps URL": "http://maps.google.com/?cid=13813977143108357467",
+        "Address": "28 Mafeking Ave, London, Brentford TW8 0NH, United Kingdom",
         "storeid": "52"
       },
       "type": "Feature"
@@ -464,6 +531,8 @@
         "name": "Stour Valley Apiaries Limited",
         "phone": "+447557105495",
         "website": "http://www.stourvalleyapiaries.com/",
+        "Google Maps URL": "http://maps.google.com/?cid=14725650692992388541",
+        "Address": "75 Head Ln, Great Cornard, Sudbury CO10 0JS, United Kingdom",
         "storeid": "55"
       },
       "type": "Feature"
@@ -478,6 +547,8 @@
         "name": "MrBees",
         "phone": "+447503773630",
         "website": "http://www.mrbees.co.uk/",
+        "Google Maps URL": "http://maps.google.com/?cid=17315750178343324378",
+        "Address": "D3-D5, Searsons Barns, Cordy's Ln, Trimley St Mary, Felixstowe IP11 0UD, United Kingdom",
         "storeid": "57"
       },
       "type": "Feature"
@@ -492,6 +563,8 @@
         "name": "Stubees",
         "phone": "+447861223512",
         "website": "https://www.stubees.co.uk/",
+        "Google Maps URL": "http://maps.google.com/?cid=2935924447263163840",
+        "Address": "3 Thatched Cottages, Top Rd, Rattlesden IP30 0SJ, United Kingdom",
         "storeid": "59"
       },
       "type": "Feature"
@@ -506,6 +579,8 @@
         "name": "Longwater Community Farm",
         "phone": "+447919342740",
         "website": "https://www.longwater.org.uk/",
+        "Google Maps URL": "http://maps.google.com/?cid=5084595538984002661",
+        "Address": "Costessey, Norwich NR5 0TD, United Kingdom",
         "storeid": "62"
       },
       "type": "Feature"
@@ -520,6 +595,8 @@
         "name": "Browston Apiary",
         "phone": "+447799773140",
         "website": "https://www.norfolkbee.co.uk/",
+        "Google Maps URL": "http://maps.google.com/?cid=14076584863384715088",
+        "Address": "Great Yarmouth NR31 9DL, United Kingdom",
         "storeid": "63"
       },
       "type": "Feature"
@@ -534,6 +611,8 @@
         "name": "Berberis House Apiary",
         "phone": "+11945440295",
         "website": "http://bhahoney.com/",
+        "Google Maps URL": "http://maps.google.com/?cid=15205990947451252718",
+        "Address": "Spalding PE12 0HE, United Kingdom",
         "storeid": "65"
       },
       "type": "Feature"
@@ -548,6 +627,8 @@
         "name": "Fenland Apiaries",
         "phone": "+441945739294",
         "website": "http://fenlandapiaries.co.uk/",
+        "Google Maps URL": "http://maps.google.com/?cid=18296526947375319172",
+        "Address": "382 N Brink, Wisbech PE13 4UN, United Kingdom",
         "storeid": "66"
       },
       "type": "Feature"
@@ -562,6 +643,8 @@
         "name": "Dandy Lions Ltd",
         "phone": "+441327312912",
         "website": "https://www.dandylions.co.uk/",
+        "Google Maps URL": "http://maps.google.com/?cid=9555966667400312805",
+        "Address": "5 Whittle Cl, Daventry NN11 8RQ, United Kingdom",
         "storeid": "68"
       },
       "type": "Feature"
@@ -576,6 +659,8 @@
         "name": "Honeyfields Bee Farm",
         "phone": "+442476490311",
         "website": "http://www.honeyfieldsbeefarm.co.uk/",
+        "Google Maps URL": "http://maps.google.com/?cid=15765140198056650773",
+        "Address": "Mile Tree Ln, Bulkington, Coventry CV2 1NT, United Kingdom",
         "storeid": "71"
       },
       "type": "Feature"
@@ -590,6 +675,8 @@
         "name": "Bees for Business",
         "phone": "+441778487923",
         "website": "http://www.beesforbusiness.com/",
+        "Google Maps URL": "http://maps.google.com/?cid=1424609061525787165",
+        "Address": "Six Score Road, Langtoft PE6 9QF, United Kingdom",
         "storeid": "74"
       },
       "type": "Feature"
@@ -604,6 +691,8 @@
         "name": "Honeybee Farmacy",
         "phone": "",
         "website": "http://honeybeefarmacy.com/",
+        "Google Maps URL": "http://maps.google.com/?cid=1708085045603779556",
+        "Business Name": "Honeybee Farmacy",
         "storeid": "78"
       },
       "type": "Feature"
@@ -618,6 +707,8 @@
         "name": "Trees and Bees",
         "phone": "+441341250882",
         "website": "http://www.treesandbees.co.uk/",
+        "Google Maps URL": "http://maps.google.com/?cid=17981038724593576267",
+        "Address": "Erw Goed, Arthog LL39 1YR, United Kingdom",
         "storeid": "79"
       },
       "type": "Feature"
@@ -632,6 +723,8 @@
         "name": "Snowdon Honey Farm & Winery",
         "phone": "",
         "website": "http://www.snowdonhoneyfarmandwinery.co.uk/",
+        "Google Maps URL": "http://maps.google.com/?cid=2465153915167361357",
+        "Address": "72 High St, Llanberis, Caernarfon LL55 4HA, United Kingdom",
         "storeid": "82"
       },
       "type": "Feature"
@@ -646,6 +739,8 @@
         "name": "Bee Farm Goldendrops",
         "phone": "",
         "website": "http://www.goldendrops.co.uk/",
+        "Google Maps URL": "http://maps.google.com/?cid=14158149574944525913",
+        "Address": "Kneeton Road, East Bridgford NG13 8PG, United Kingdom",
         "storeid": "83"
       },
       "type": "Feature"
@@ -660,6 +755,8 @@
         "name": "Hartsholme Honey",
         "phone": "+441522878183",
         "website": "http://www.hartsholmehoney.uk/",
+        "Google Maps URL": "http://maps.google.com/?cid=10615765332779134183",
+        "Address": "The Hives, Hartsholme Dr, Lincoln LN6 0HF, United Kingdom",
         "storeid": "84"
       },
       "type": "Feature"
@@ -674,6 +771,8 @@
         "name": "Bear Cool Honey Company",
         "phone": "+447778665775",
         "website": "http://www.bearcoolhoneycompany.co.uk/",
+        "Google Maps URL": "http://maps.google.com/?cid=12170346934239015452",
+        "Address": "Pipworth Ln, Elda, Eckington, Sheffield S21 4EY, United Kingdom",
         "storeid": "85"
       },
       "type": "Feature"
@@ -688,6 +787,8 @@
         "name": "Ohh Bee Hive HQ",
         "phone": "+447500888099",
         "website": "https://www.ohh-bee-hive.com/",
+        "Google Maps URL": "http://maps.google.com/?cid=2054001024395598147",
+        "Address": "55 Clowne Rd, Barlborough, Chesterfield S43 4EJ, United Kingdom",
         "storeid": "87"
       },
       "type": "Feature"
@@ -702,6 +803,8 @@
         "name": "Ropers Honey / Local Honey Direct From Producers",
         "phone": "+441246854318",
         "website": "http://www.ropershoney.co.uk/",
+        "Google Maps URL": "http://maps.google.com/?cid=15037801292376231717",
+        "Address": "Unit 3, Hall Farm, Sutton Scarsdale, Chesterfield S44 5UW, United Kingdom",
         "storeid": "88"
       },
       "type": "Feature"
@@ -716,6 +819,8 @@
         "name": "Package Bees UK",
         "phone": "+441629650457",
         "website": "http://packagebeesuk.com/",
+        "Google Maps URL": "http://maps.google.com/?cid=14719737404583083815",
+        "Address": "Hill House, Birchover, Nr. Matlock DE4 2BN, United Kingdom",
         "storeid": "89"
       },
       "type": "Feature"
@@ -730,6 +835,8 @@
         "name": "Croft Apiaries",
         "phone": "+441673818711",
         "website": "https://www.croftapiaries.co.uk/",
+        "Google Maps URL": "http://maps.google.com/?cid=10209290096824138622",
+        "Address": "Cornercroft, Main Street, Bishop Norton, Market Rasen LN8 2BE, United Kingdom",
         "storeid": "90"
       },
       "type": "Feature"
@@ -744,6 +851,8 @@
         "name": "The Sheffield Honey Company",
         "phone": "+447980261554",
         "website": "http://www.sheffield-honey.co.uk/",
+        "Google Maps URL": "http://maps.google.com/?cid=15822976957953180507",
+        "Address": "Nethercliffe Barn, Hill Top Rd, Dungworth, Sheffield S6 6GW, United Kingdom",
         "storeid": "91"
       },
       "type": "Feature"
@@ -758,6 +867,8 @@
         "name": "Philip Khorassandjian Master Beekeeper",
         "phone": "+441142343059",
         "website": "http://www.workershoney.co.uk/",
+        "Google Maps URL": "http://maps.google.com/?cid=4676809668823942355",
+        "Address": "109 Carr Rd, Sheffield S6 2WY, United Kingdom",
         "storeid": "92"
       },
       "type": "Feature"
@@ -772,6 +883,8 @@
         "name": "Happy Valley Honey",
         "phone": "+443301133256",
         "website": "https://www.happyvalleyhoney.co.uk/",
+        "Google Maps URL": "http://maps.google.com/?cid=6959083159467028152",
+        "Address": "Endon Quarry, Windmill Ln, Kerridge SK10 5AZ, United Kingdom",
         "storeid": "93"
       },
       "type": "Feature"
@@ -786,6 +899,8 @@
         "name": "mayflower apiaries",
         "phone": "+441925652826",
         "website": "http://www.mayflowerapiaries.co.uk/",
+        "Google Maps URL": "http://maps.google.com/?cid=8839701922883065014",
+        "Address": "Charter Ave, Warrington WA5 0DJ, United Kingdom",
         "storeid": "95"
       },
       "type": "Feature"
@@ -800,6 +915,8 @@
         "name": "Honeycomb Co. Ltd.",
         "phone": "+441524751347",
         "website": "http://www.honeycombco.co.uk/",
+        "Google Maps URL": "http://maps.google.com/?cid=18123861083219397015",
+        "Address": "Pennine Bee Farm, Stoney Ln, Galgate, Lancaster LA2 0QY, United Kingdom",
         "storeid": "97"
       },
       "type": "Feature"
@@ -814,6 +931,8 @@
         "name": "Denholme Gate Honey",
         "phone": "+441274831886",
         "website": "http://www.denholmegatehoney.co.uk/",
+        "Google Maps URL": "http://maps.google.com/?cid=14566346983419934357",
+        "Address": "Hill Top Farm, Hill Top Rd, Thornton, Bradford BD13 3QZ, United Kingdom",
         "storeid": "98"
       },
       "type": "Feature"
@@ -828,6 +947,8 @@
         "name": "Bay view bees",
         "phone": "+447852334503",
         "website": "http://www.bayviewbees.co.uk/",
+        "Google Maps URL": "http://maps.google.com/?cid=8329574662612061947",
+        "Address": "Flixton, Scarborough YO11 3UA, United Kingdom",
         "storeid": "103"
       },
       "type": "Feature"
@@ -842,6 +963,8 @@
         "name": "Beez Neez Apiary",
         "phone": "+441944758614",
         "website": "http://beezneezapiary.co.uk/",
+        "Google Maps URL": "http://maps.google.com/?cid=1184639225063794086",
+        "Address": "Paddock House Farm, Rillington Fields, Norton, Malton YO17 8AE, United Kingdom",
         "storeid": "104"
       },
       "type": "Feature"
@@ -856,6 +979,8 @@
         "name": "Broom House Farm Shop",
         "phone": "+441913718839",
         "website": "http://www.broomhousedurham.co.uk/",
+        "Google Maps URL": "http://maps.google.com/?cid=11224011978952290744",
+        "Address": "Witton Gilbert, Burnhope, Durham DH7 6TR, United Kingdom",
         "storeid": "108"
       },
       "type": "Feature"
@@ -870,6 +995,8 @@
         "name": "The Travelling Bee Company",
         "phone": "",
         "website": "http://www.travellingbee.co.uk/",
+        "Google Maps URL": "http://maps.google.com/?cid=11272222244414556786",
+        "Address": "Millford, Gateshead NE10 8DL, United Kingdom",
         "storeid": "112"
       },
       "type": "Feature"
@@ -884,6 +1011,8 @@
         "name": "The Honey Store",
         "phone": "+447843993882",
         "website": "http://the-honey-store.co.uk/",
+        "Google Maps URL": "http://maps.google.com/?cid=17850147607278129338",
+        "Address": "3 The Shires, Clifton, Morpeth NE61 6DQ, United Kingdom",
         "storeid": "113"
       },
       "type": "Feature"
@@ -898,6 +1027,8 @@
         "name": "Northumberland Honey Co, Meadery & Bee Farm",
         "phone": "+447752534953",
         "website": "https://www.northumberlandhoney.co.uk/",
+        "Google Maps URL": "http://maps.google.com/?cid=9663148602428569702",
+        "Address": "7E, Haltwhistle Industrial Estate, Haltwhistle NE49 9HA, United Kingdom",
         "storeid": "114"
       },
       "type": "Feature"
@@ -912,6 +1043,8 @@
         "name": "Nook Farm Honey",
         "phone": "+441697748317",
         "website": "http://www.nookfarmhoney.co.uk/",
+        "Google Maps URL": "http://maps.google.com/?cid=2052283536530916020",
+        "Address": "Nook Farm, Bailey, Newcastleton TD9 0TR, United Kingdom",
         "storeid": "115"
       },
       "type": "Feature"
@@ -926,6 +1059,8 @@
         "name": "Chain Bridge Honey Farm",
         "phone": "+441289382362",
         "website": "http://www.chainbridgehoney.co.uk/",
+        "Google Maps URL": "http://maps.google.com/?cid=1763138162673217034",
+        "Address": "Horncliffe, Berwick-upon-Tweed TD15 2XT, United Kingdom",
         "storeid": "116"
       },
       "type": "Feature"
@@ -954,6 +1089,8 @@
         "name": "Collace honey",
         "phone": "+441821650824",
         "website": "http://collacehoney.co.uk/",
+        "Google Maps URL": "http://maps.google.com/?cid=15952333985476091789",
+        "Address": "Mulsanne, Collace, Perth PH2 6JB, United Kingdom",
         "storeid": "118"
       },
       "type": "Feature"
@@ -968,6 +1105,8 @@
         "name": "Heather Hills Farm",
         "phone": "+441250886252",
         "website": "http://www.heatherhills.co.uk/",
+        "Google Maps URL": "http://maps.google.com/?cid=11987817338808245813",
+        "Address": "Bridge of Cally, Blairgowrie PH10 7JG, United Kingdom",
         "storeid": "119"
       },
       "type": "Feature"
@@ -982,6 +1121,8 @@
         "name": "Westerton Farmers (Cairnton Farm)",
         "phone": "",
         "website": "http://www.westertonfarmers.co.uk/",
+        "Google Maps URL": "http://maps.google.com/?cid=15318181960381631705",
+        "Address": "Cairnton Farm, Fordoun, Laurencekirk AB30 1SN, United Kingdom",
         "storeid": "120"
       },
       "type": "Feature"
@@ -996,6 +1137,8 @@
         "name": "Cove Honey Bees Collection Point",
         "phone": "+447751548060",
         "website": "http://www.covehoneybees.co.uk/",
+        "Google Maps URL": "http://maps.google.com/?cid=7710492050493088699",
+        "Address": "Bussiness gateway football pitches, Cove Bay, Aberdeen AB12 3SL, United Kingdom",
         "storeid": "121"
       },
       "type": "Feature"
@@ -1010,6 +1153,8 @@
         "name": "Try Bees - Local Urban Honey bees",
         "phone": "+447985240289",
         "website": "http://trybees.com/",
+        "Google Maps URL": "http://maps.google.com/?cid=5947001918788600402",
+        "Address": "Union Grove Ln, Aberdeen AB10 6XP, United Kingdom",
         "storeid": "122"
       },
       "type": "Feature"
@@ -1024,6 +1169,8 @@
         "name": "Balliefurth Farm",
         "phone": "+441479821990",
         "website": "https://www.balliefurth.co.uk/",
+        "Google Maps URL": "http://maps.google.com/?cid=9843934803406107264",
+        "Address": "Balliefurth Farm, Nethybridge Road, Grantown-on-Spey PH26 3NH, United Kingdom",
         "storeid": "124"
       },
       "type": "Feature"
@@ -1054,6 +1201,8 @@
         "name": "St George's Market",
         "phone": "+442890435704",
         "website": "http://www.belfastcity.gov.uk/markets",
+        "Google Maps URL": "http://maps.google.com/?cid=7502688979800164083",
+        "Address": "St George's Market, East Bridge St, Belfast BT1 3NQ, United Kingdom",
         "storeid": "03"
       },
       "type": "Feature"
@@ -1069,6 +1218,8 @@
         "name": "Helen's Bay Organic",
         "phone": "+447483412212",
         "website": "https://www.helensbayorganic.com/",
+        "Google Maps URL": "http://maps.google.com/?cid=8951856641843050685",
+        "Address": "Coastguard Ave, Helen's Bay, Bangor BT19 1JY, United Kingdom",
         "storeid": "04"
       },
       "type": "Feature"
@@ -1084,6 +1235,8 @@
         "name": "The Honey Pot",
         "phone": "+441768774974",
         "website": "http://www.packhorsecourt.com/shops/the-honey-pot/",
+        "Google Maps URL": "http://maps.google.com/?cid=4611630502315929868",
+        "Address": "Packhorse court, Standish St, Keswick CA12 5BB, United Kingdom",
         "storeid": "05"
       },
       "type": "Feature"
@@ -1099,6 +1252,8 @@
         "name": "The Gables Apiary",
         "phone": "+441782723923",
         "website": "",
+        "Google Maps URL": "http://maps.google.com/?cid=7384123778134332863",
+        "Address": "The Gables, Park Lane, Audley, Stoke-on-Trent ST7 8HR, United Kingdom",
         "storeid": "09"
       },
       "type": "Feature"
@@ -1114,6 +1269,8 @@
         "name": "Malt Kiln Farm Shop",
         "phone": "+441788832640",
         "website": "https://www.maltkilnfarmshop.co.uk/",
+        "Google Maps URL": "http://maps.google.com/?cid=16596975034799850748",
+        "Address": "Main St, Stretton under Fosse, Rugby CV23 0PE, United Kingdom",
         "storeid": "13"
       },
       "type": "Feature"
@@ -1128,6 +1285,8 @@
         "name": "Dews Meadow Farm",
         "phone": "+441235868634",
         "website": "https://www.dewsmeadowfarm.com/?utm_source=yell&utm_medium=referral&utm_campaign=yell",
+        "Google Maps URL": "http://maps.google.com/?cid=2972159707522485030",
+        "Address": "Dews Meadow Farm, Oxford Rd, Wantage OX12 0HP, United Kingdom",
         "storeid": "18"
       },
       "type": "Feature"
@@ -1142,6 +1301,8 @@
         "name": "West country honey",
         "phone": "+447718226733",
         "website": "",
+        "Google Maps URL": "http://maps.google.com/?cid=6196267703595078630",
+        "Address": "89 Park Rd, Congresbury, Bristol BS49 5HE, United Kingdom",
         "storeid": "21"
       },
       "type": "Feature"
@@ -1156,6 +1317,8 @@
         "name": "Cornish Moorland Honey",
         "phone": "+441208850090",
         "website": "",
+        "Google Maps URL": "http://maps.google.com/?cid=12867827787889423043",
+        "Address": "Glebe Farm, Bodmin PL30 4PP, United Kingdom",
         "storeid": "22"
       },
       "type": "Feature"
@@ -1168,6 +1331,8 @@
       "properties": {
         "category": "instore",
         "name": "The Cornish Bee Farm",
+        "Google Maps URL": "http://maps.google.com/?cid=10917639333588397920",
+        "Address": "Little Park Hoskyn, Penhallow, Truro TR4 9NA, United Kingdom",
         "phone": "+441872554165",
         "website": "",
         "storeid": "23"
@@ -1184,6 +1349,8 @@
         "name": "W R C M & S R Davey",
         "phone": "+441872520206",
         "website": "",
+        "Google Maps URL": "http://maps.google.com/?cid=17082885383554662791",
+        "Address": "Little Trewirgie Farm, Truro TR2 4HW, United Kingdom",
         "storeid": "25"
       },
       "type": "Feature"
@@ -1198,6 +1365,8 @@
         "name": "Cornish Honey",
         "phone": "+441840261518",
         "website": "",
+        "Google Maps URL": "http://maps.google.com/?cid=17904762859069206177",
+        "Address": "Caroe Farm Bungalow, Camelford PL32 9SZ, United Kingdom",
         "storeid": "26"
       },
       "type": "Feature"
@@ -1212,6 +1381,8 @@
         "name": "BIRDYS DEVON HONEY",
         "phone": "+441752839566",
         "website": "http://birdysdevonhoney.co.uk/",
+        "Google Maps URL": "http://maps.google.com/?cid=11861567693360740827",
+        "Address": "14 Dartmoor Cottages, Wotter, Plymouth PL7 5HN, United Kingdom",
         "storeid": "29"
       },
       "type": "Feature"
@@ -1226,6 +1397,8 @@
         "name": "Abbotskerswell Bee Company",
         "phone": "+441803872781",
         "website": "",
+        "Google Maps URL": "http://maps.google.com/?cid=11880147791010717886",
+        "Address": "The Croft, Abbotskerswell, Newton Abbot TQ12 5LQ, United Kingdom",
         "storeid": "32"
       },
       "type": "Feature"
@@ -1240,6 +1413,8 @@
         "name": "Felicity's Farm Shop",
         "phone": "+441297480930",
         "website": "http://www.felicitysfarmshop.co.uk/index.html",
+        "Google Maps URL": "http://maps.google.com/?cid=558266315958745833",
+        "Address": "A35, Morcombelake DT6 6DJ, United Kingdom",
         "storeid": "35"
       },
       "type": "Feature"
@@ -1254,6 +1429,8 @@
         "name": "Devonhurst Bees",
         "phone": "+447538790545",
         "website": "",
+        "Google Maps URL": "http://maps.google.com/?cid=7711614398360287932",
+        "Address": "6 Cowley Dr, Worthy Down, South Wonston, Winchester SO21 2QW, United Kingdom",
         "storeid": "38"
       },
       "type": "Feature"
@@ -1268,6 +1445,8 @@
         "name": "BritishBeekeeping",
         "phone": "+447510082531",
         "website": "",
+        "Google Maps URL": "http://maps.google.com/?cid=9055021608175611657",
+        "Address": "65 Newtown Rd, Warsash, Southampton SO31 9GA, United Kingdom",
         "storeid": "41"
       },
       "type": "Feature"
@@ -1282,6 +1461,8 @@
         "name": "Heath Farm",
         "phone": "+442392263207",
         "website": "",
+        "Google Maps URL": "http://maps.google.com/?cid=14634036088018469416",
+        "Address": "Purbrook Heath Rd, Waterlooville PO7 5RY, United Kingdom",
         "storeid": "43"
       },
       "type": "Feature"
@@ -1296,6 +1477,8 @@
         "name": "SW Honey Farms",
         "phone": "+447368646696",
         "website": "",
+        "Google Maps URL": "http://maps.google.com/?cid=8935037691454902347",
+        "Address": "28 Harwood Ave, Goring-by-Sea, Worthing BN12 6EJ, United Kingdom",
         "storeid": "48"
       },
       "type": "Feature"
@@ -1310,6 +1493,8 @@
         "name": "Southlands Honey",
         "phone": "+447500009603",
         "website": "",
+        "Google Maps URL": "http://maps.google.com/?cid=12670486339609871879",
+        "Address": "Southlands Lodge, Southlands Ln, Oxted RH8 9PH, United Kingdom",
         "storeid": "51"
       },
       "type": "Feature"
@@ -1324,6 +1509,8 @@
         "name": "Eltham Bees Limited",
         "phone": "+447979626961",
         "website": "http://elthambees.co.uk/",
+        "Google Maps URL": "http://maps.google.com/?cid=18190985954155642919",
+        "Address": "57 Shawbrooke Rd, London SE9 6AL, United Kingdom",
         "storeid": "53"
       },
       "type": "Feature"
@@ -1338,6 +1525,8 @@
         "name": "Epping Forest Honey Co.",
         "phone": "+447971237312",
         "website": "http://eppingforesthoney.com/",
+        "Google Maps URL": "http://maps.google.com/?cid=3372218661237283390",
+        "Address": "108 Palmerston Rd, Buckhurst Hill IG9 5LG, United Kingdom",
         "storeid": "54"
       },
       "type": "Feature"
@@ -1352,6 +1541,8 @@
         "name": "East Anglian Honey Farm",
         "phone": "+441473787228",
         "website": "",
+        "Google Maps URL": "http://maps.google.com/?cid=3309680087543042097",
+        "Address": "Bristol Hill, Shotley Gate, Ipswich IP9 1PU, United Kingdom",
         "storeid": "56"
       },
       "type": "Feature"
@@ -1366,6 +1557,8 @@
         "name": "Honeysuckle Holidays",
         "phone": "+447899912212",
         "website": "http://honeysuckleholidays.co.uk/",
+        "Google Maps URL": "http://maps.google.com/?cid=10595715634267322635",
+        "Address": "Honeysuckle Farm, School Rd, Monk Soham, Woodbridge IP13 7EN, United Kingdom",
         "storeid": "58"
       },
       "type": "Feature"
@@ -1380,6 +1573,8 @@
         "name": "Paston Cottage Bees",
         "phone": "+447540891057",
         "website": "",
+        "Google Maps URL": "http://maps.google.com/?cid=9025928859497287683",
+        "Address": "Paston Cottage, London St NR20 5ST, United Kingdom",
         "storeid": "60"
       },
       "type": "Feature"
@@ -1394,6 +1589,8 @@
         "name": "Denver Junction Honey",
         "phone": "+441366382991",
         "website": "http://www.denverjunctionhoney.co.uk/",
+        "Google Maps URL": "http://maps.google.com/?cid=14781848544450661072",
+        "Address": "The Railway Gatehouse, Denver, Sluice Rd, Downham Market PE38 0EG, United Kingdom",
         "storeid": "61"
       },
       "type": "Feature"
@@ -1408,6 +1605,8 @@
         "name": "Hempnall Honey Co.",
         "phone": "+441508499733",
         "website": "http://www.hempnall-honey.co.uk/",
+        "Google Maps URL": "http://maps.google.com/?cid=8100532796977775409",
+        "Address": "Ford End Bungay Road, Hempnall, Norwich NR15 2NG, United Kingdom",
         "storeid": "64"
       },
       "type": "Feature"
@@ -1422,6 +1621,8 @@
         "name": "Stewartbees",
         "phone": "+441234764365",
         "website": "",
+        "Google Maps URL": "http://maps.google.com/?cid=13215519395969511583",
+        "Address": "23 Pillinge Rd, Stewartby, Bedford MK43 9NW, United Kingdom",
         "storeid": "67"
       },
       "type": "Feature"
@@ -1436,6 +1637,8 @@
         "name": "Arden Forest Honey",
         "phone": "+441527853171",
         "website": "http://ardenforesthoney.co.uk/",
+        "Google Maps URL": "http://maps.google.com/?cid=15866965993736576238",
+        "Address": "13 Hamilton Dr, Studley B80 7RP, United Kingdom",
         "storeid": "69"
       },
       "type": "Feature"
@@ -1450,6 +1653,8 @@
         "name": "Solihull Apiaries",
         "phone": "+441564782213",
         "website": "",
+        "Google Maps URL": "http://maps.google.com/?cid=5643961145312982624",
+        "Address": "342 School Rd, Hockley Heath, Solihull B94 6RN, United Kingdom",
         "storeid": "70"
       },
       "type": "Feature"
@@ -1464,6 +1669,8 @@
         "name": "Moorwood Apiaries",
         "phone": "+447535405104",
         "website": "",
+        "Google Maps URL": "http://maps.google.com/?cid=6351915981797548215",
+        "Address": "140 Coleshill Rd, Nuneaton CV10 0PF, United Kingdom",
         "storeid": "72"
       },
       "type": "Feature"
@@ -1478,6 +1685,8 @@
         "name": "Oakley J S",
         "phone": "+441572823810",
         "website": "",
+        "Google Maps URL": "http://maps.google.com/?cid=16170421859874030253",
+        "Address": "2 Walnut Cl, Bisbrooke, Oakham LE15 9EX, United Kingdom",
         "storeid": "73"
       },
       "type": "Feature"
@@ -1492,6 +1701,8 @@
         "name": "Fen Apiaries",
         "phone": "+447810894876",
         "website": "http://fenapiaries.com/",
+        "Google Maps URL": "http://maps.google.com/?cid=986180534452654240",
+        "Address": "30 Church St, Baston, Peterborough PE6 9PE, United Kingdom",
         "storeid": "75"
       },
       "type": "Feature"
@@ -1506,6 +1717,8 @@
         "name": "Temple Bees",
         "phone": "+447884000517",
         "website": "https://temple-bees.business.site/",
+        "Google Maps URL": "http://maps.google.com/?cid=5773487339830448430",
+        "Address": "21 Bosworth Rd, Measham, Swadlincote DE12 7LG, United Kingdom",
         "storeid": "76"
       },
       "type": "Feature"
@@ -1520,6 +1733,8 @@
         "name": "Colsterworth Honey Farm",
         "phone": "+441476861176",
         "website": "",
+        "Google Maps URL": "http://maps.google.com/?cid=17376697986342456467",
+        "Address": "27 Bridge End, Colsterworth, Grantham NG33 5NZ, United Kingdom",
         "storeid": "77"
       },
       "type": "Feature"
@@ -1534,6 +1749,8 @@
         "name": "The Chester Honey Company",
         "phone": "+441244300655",
         "website": "",
+        "Google Maps URL": "http://maps.google.com/?cid=10936314702176281085",
+        "Address": "Warrington Rd, Mickle Trafford, Chester CH2 4EB, United Kingdom",
         "storeid": "80"
       },
       "type": "Feature"
@@ -1548,6 +1765,8 @@
         "name": "Pure Cheshire Honey",
         "phone": "+447957503038",
         "website": "",
+        "Google Maps URL": "http://maps.google.com/?cid=12219294762669393783",
+        "Address": "17 Larkhill Ave, Birkenhead, Wirral CH49 4PN, United Kingdom",
         "storeid": "81"
       },
       "type": "Feature"
@@ -1562,6 +1781,8 @@
         "name": "Hobson's Honey",
         "phone": "+447943868335",
         "website": "",
+        "Google Maps URL": "http://maps.google.com/?cid=1837958395534050267",
+        "Address": "2 Birchfield Dr, Worksop S80 3DX, United Kingdom",
         "storeid": "86"
       },
       "type": "Feature"
@@ -1576,6 +1797,8 @@
         "name": "Heaton Park Honey",
         "phone": "",
         "website": "https://www.manchester.gov.uk/info/500307/what_to_see_and_do/6923/beekeeping",
+        "Google Maps URL": "http://maps.google.com/?cid=3406312397585097641",
+        "Address": "Manchester M25 2SW, United Kingdom",
         "storeid": "94"
       },
       "type": "Feature"
@@ -1590,6 +1813,8 @@
         "name": "Ormskirk Honey",
         "phone": "+447963682456",
         "website": "",
+        "Google Maps URL": "http://maps.google.com/?cid=2449465104429660141",
+        "Address": "82 St Helens Rd, Ormskirk L39 4QT, United Kingdom",
         "storeid": "96"
       },
       "type": "Feature"
@@ -1604,6 +1829,8 @@
         "name": "WR Bees",
         "phone": "+447495012990",
         "website": "https://wr-bees.business.site/",
+        "Google Maps URL": "http://maps.google.com/?cid=3842634217256074233",
+        "Address": "62 Beckett's Park Cres, Headingley, Leeds LS6 3PF, United Kingdom",
         "storeid": "99"
       },
       "type": "Feature"
@@ -1618,6 +1845,8 @@
         "name": "Ardsley Bees",
         "phone": "+441924870984",
         "website": "",
+        "Google Maps URL": "http://maps.google.com/?cid=7035001355018552793",
+        "Address": "1 Woodhouse Cl, East Ardsley, Wakefield WF3 2JX, United Kingdom",
         "storeid": "100"
       },
       "type": "Feature"
@@ -1632,6 +1861,8 @@
         "name": "Staincross Apiaries",
         "phone": "+447837994040",
         "website": "http://www.staincross-apiaries.co.uk/",
+        "Google Maps URL": "http://maps.google.com/?cid=12176354770287527026",
+        "Address": "Coniston Farm, Coniston Ave, Staincross, Barnsley S75 5BB, United Kingdom",
         "storeid": "101"
       },
       "type": "Feature"
@@ -1646,6 +1877,8 @@
         "name": "Osborne Lodge Farm",
         "phone": "+441723865184",
         "website": "",
+        "Google Maps URL": "http://maps.google.com/?cid=42533447548224058",
+        "Address": "Scarborough YO12 5TG, United Kingdom",
         "storeid": "102"
       },
       "type": "Feature"
@@ -1660,6 +1893,8 @@
         "name": "Arcadian Apiaries Ltd",
         "phone": "+441423507236",
         "website": "",
+        "Google Maps URL": "http://maps.google.com/?cid=13304648585419316190",
+        "Address": "3 Rutland Rd, Harrogate HG1 2PY, United Kingdom",
         "storeid": "105"
       },
       "type": "Feature"
@@ -1674,6 +1909,8 @@
         "name": "North Acomb Farm Shop",
         "phone": "+441661843181",
         "website": "http://northacomb.co.uk/",
+        "Google Maps URL": "http://maps.google.com/?cid=7573002986300238114",
+        "Address": "Stocksfield NE43 7UF, United Kingdom",
         "storeid": "106"
       },
       "type": "Feature"
@@ -1688,6 +1925,8 @@
         "name": "Hexhamshire Organics",
         "phone": "+447770634447",
         "website": "https://www.hexhamshireorganics.co.uk/",
+        "Google Maps URL": "http://maps.google.com/?cid=1891543509593277881",
+        "Address": "Lee Moor Cottage, Hexham NE46 1SR, United Kingdom",
         "storeid": "107"
       },
       "type": "Feature"
@@ -1700,6 +1939,8 @@
       "properties": {
         "category": "instore",
         "name": "Pear Tree Honey Farm Ltd",
+        "Google Maps URL": "http://maps.google.com/?cid=2262420631403235848",
+        "Address": "Moor house, Middleton Tyas, Richmond DL10 6RT, United Kingdom",
         "phone": "+441325377042",
         "website": "",
         "storeid": "109"
@@ -1716,6 +1957,8 @@
         "name": "Greenlands Farm Village",
         "phone": "+441524784184",
         "website": "",
+        "Google Maps URL": "http://maps.google.com/?cid=7758464953701827886",
+        "Address": "2 Brookholme Cottages, Tewitfield, Carnforth LA6 1JH, United Kingdom",
         "storeid": "110"
       },
       "type": "Feature"
@@ -1730,6 +1973,8 @@
         "name": "Low Sizergh Barn Farm Shop & Café",
         "phone": "+441539560426",
         "website": "http://www.lowsizerghbarn.co.uk/",
+        "Google Maps URL": "http://maps.google.com/?cid=1310063482705889512",
+        "Address": "Low Sizergh Farm Sizergh, Kendal LA8 8AE, United Kingdom",
         "storeid": "111"
       },
       "type": "Feature"
@@ -1744,11 +1989,11 @@
         "name": "Altons Honey Bee's",
         "phone": "+447401953020",
         "website": "",
+        "Google Maps URL": "http://maps.google.com/?cid=3952286542612521265",
+        "Address": "Altons lodge, Inverurie AB51 0LZ, United Kingdom",
         "storeid": "123"
       },
       "type": "Feature"
     }
   ]
 }
-
- 
