@@ -258,15 +258,16 @@ function initMap() {
       infowindow = new google.maps.InfoWindow();
 
       marker.addListener("click", function () {
-        let feat = feature;
-        let name = feat.getProperty("name");
-        let phone = feat.getProperty("phone");
-        let website = feat.getProperty("website");
-        let position = feat.getGeometry().get();
+        let name = feature.getProperty("name");
+        let phone = feature.getProperty("phone");
+        let website = feature.getProperty("website");
+        let address = feature.getProperty("Address")
+        let gLink = feature.getProperty("Google Maps URL")
+        let position = feature.getGeometry().get();
         let html = `<div class="content-text"><h5>${name}</h5>
         <i class="fas fa-phone-alt honey-col" alt="phone"></i> ${phone}
-        <br><i class="fas fa-globe honey-col" alt="globe"></i> <a class="website content-text" target="_blank" href="${website}">${website}</a> <br><div onclick="newElement()" id="addTo" class="addBtn" info="${
-          name + " " + phone + " " + website}">Add to your list</div>`;
+        <br><i class="fas fa-globe honey-col" alt="globe"></i> <a class="website content-text" target="_blank" href="${website}">${website}</a><br>${address}<br><div onclick="newElement()" id="addTo" class="addBtn" info="${
+          name + " " + phone + " " + website}">Add to your list</div><a class="addBtn" target="_blank" href="${gLink}">test</a>`;
         infowindow.setContent(html);
         infowindow.open(map, marker);
       });
@@ -387,8 +388,6 @@ function newElement() {
   let t = document.createTextNode(inputValue);
   li.appendChild(t);
   document.getElementById("listItems").appendChild(li);
-
-  inputValue.setAttribute("href", "#");
 
   let div = document.createElement("DIV");
   let txt = document.createTextNode("\u00D7");
