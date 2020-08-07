@@ -691,6 +691,7 @@
         "phone": "",
         "website": "http://honeybeefarmacy.com/",
         "Google Maps URL": "http://maps.google.com/?cid=1708085045603779556",
+        "Address": "Suite 59, 4 Gedling St, Nottingham NG1 1DS, United Kingdom",
         "Business Name": "Honeybee Farmacy",
         "storeid": "78"
       },
@@ -1185,6 +1186,8 @@
         "name": "Loughgall Honey",
         "phone": "+442838891678",
         "website": "",
+        "Address": "11 Derrycrew Rd, Loughgall, Armagh BT61 8PW, United Kingdom",
+        "Google Maps URL": "http://maps.google.com/?cid=5971480724495639524",
         "storeid": "01"
       },
       "type": "Feature"
