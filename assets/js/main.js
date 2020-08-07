@@ -1,3 +1,20 @@
+
+// send form 
+function sendForm(){
+emailjs.sendForm("gmail", "honey_locator", "#myForm")
+    .then(function() {
+       alert("Thanks for your suggestion, we'll get back to you asap!");
+    }, function(error) {
+       alert("Hmm something has gone wrong here, please try again...", error);
+    });
+    return false;
+}
+
+//nav hide on click 
+$('.navbar-nav>li>a').on('click', function(){
+    $('.navbar-collapse').collapse('hide');
+});
+
 // Map styling
 let mapStyle = [
   {
@@ -359,7 +376,7 @@ function initMap() {
   });
 }
 
-// Let user create list of their choices
+// List 
 
 //close button
 let myNodelist = document.getElementsByClassName("listItem");
@@ -525,3 +542,5 @@ function resetQuiz() {
 }
 
 loadQuestion(currentQuestion);
+
+
