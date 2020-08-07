@@ -217,14 +217,16 @@ color: white;
     background: #d9d9d9;
     float: left;
     text-align: center;
-    font-size: 15px;
     cursor: pointer;
     transition: 0.3s;
     border-radius: 5px;
+    color:rgb(109, 112, 114);
 }
 
 .addBtn:hover {
   background-color: #bbb;
+  text-decoration: none;
+  color:rgb(109, 112, 114);
 
 }
 

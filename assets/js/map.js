@@ -261,13 +261,14 @@ function initMap() {
         let name = feature.getProperty("name");
         let phone = feature.getProperty("phone");
         let website = feature.getProperty("website");
-        let address = feature.getProperty("Address")
-        let gLink = feature.getProperty("Google Maps URL")
+        let address = feature.getProperty("Address");
+        let gLink = feature.getProperty("Google Maps URL");
         let position = feature.getGeometry().get();
         let html = `<div class="content-text"><h5>${name}</h5>
         <i class="fas fa-phone-alt honey-col" alt="phone"></i> ${phone}
-        <br><i class="fas fa-globe honey-col" alt="globe"></i> <a class="website content-text" target="_blank" href="${website}">${website}</a><br>${address}<br><div onclick="newElement()" id="addTo" class="addBtn" info="${
-          name + " " + phone + " " + website}">Add to your list</div><a class="addBtn" target="_blank" href="${gLink}">test</a>`;
+        <br><i class="fas fa-globe honey-col" alt="globe"></i> <a class="website content-text" target="_blank" href="${website}">${website}</a><br><i class="fas fa-store honey-col" alt="store"> </i>${address}<br><div onclick="newElement()" id="addTo" class="addBtn text-small" info="${
+          name + ", " + phone + ", " + website + ", " + address
+        }">Add to your list</div><div><a class="addBtn text-small" target="_blank" href="${gLink}">View on GoogleMaps</a></div>`;
         infowindow.setContent(html);
         infowindow.open(map, marker);
       });
