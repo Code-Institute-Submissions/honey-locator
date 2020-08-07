@@ -497,9 +497,11 @@ let option1 = document.getElementById("option1");
 let option2 = document.getElementById("option2");
 let option3 = document.getElementById("option3");
 let nextButton = document.getElementById("nextBtn");
-//let showAnswers = document.getElementById("showAnswers");
 let resultCont = document.getElementById("quizResults");
 let progress = document.getElementById("progBar");
+let restart = document.getElementById("reset");
+let showAnswers = document.getElementById("showAnswers");
+let answers = document.getElementById("answers");
 
 function loadQuestion(i) {
   let q = questions[i];
@@ -529,17 +531,25 @@ function nextQuestion() {
   if (currentQuestion === totalQuestions) {
     container.style.display = "none";
     resultCont.style.display = "";
-    resultCont.textContent = `Your Score  ${score}  /5 `;
+    answers.style.display= "";
+    resultCont.innerHTML = `Your Score  ${score}  /5`;
+    resultCont.appendChild(restart);
+    resultCont.appendChild(showAnswers);
+
     return;
   }
+
   progress.value = progress.value + 10;
   loadQuestion(currentQuestion);
 }
 
-function resetQuiz() {
-  $("#quiz").load(window.location + " #quiz");
-  loadQuestion(0);
-}
+restart.addEventListener('click', function(e) {
+      location.reload();
+    }, false);
+
+ $("#showAnswers").click(function(){
+    $("#answers").toggle();
+  });
 
 loadQuestion(currentQuestion);
 
