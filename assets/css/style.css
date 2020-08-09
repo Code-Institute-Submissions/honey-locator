@@ -267,15 +267,16 @@ color: white;
 }
 
 .quizContainer {
-    background-color: rgb(250, 177, 64, 0.9);
+    background-color: rgb(250, 177, 64);
     border: 1px solid white;
     border-radius: 5px;
     width: 80%;
     height: 300px;
+    color: white;
 }
 
 
-.option{
+.option, #nextbtn {
     width: 200px;
 	display: inline-block;
 	padding: 10px 0 10px 15px;
@@ -283,15 +284,18 @@ color: white;
 	margin: 10px 0 10px 10px;
 	color: #FAB140;
     border: 1px solid rgba(255, 255, 255);
-	border-radius: 15px;
+	border-radius: 15px; 
 }
 
-#nextBtn {
+.option:hover, .option:focus-within, #nextbtn:hover {
+    background-color: #9EBE7B;
     color: white;
 }
 
-#nextBtn:hover {
-        background-color: grey;
+.option input{
+  opacity: 0;
+  position: fixed;
+  width: 0;
 }
 
 #quizResults{
