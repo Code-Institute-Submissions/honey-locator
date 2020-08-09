@@ -10,7 +10,7 @@ emailjs.sendForm("gmail", "honey_locator", "#myForm")
     return false;
 }
 
-//nav hide on click 
+//navbar-collapse hide on click 
 $('.navbar-nav>li>a').on('click', function(){
     $('.navbar-collapse').collapse('hide');
 });
@@ -320,7 +320,7 @@ function initMap() {
         }
       );
     } else {
-      // Browser doesn't support Geolocation
+
       handleLocationError(false, infoWindow, map.getCenter());
     }
   });
@@ -336,6 +336,7 @@ function initMap() {
   }
 
   //search bar autocomplete
+
   let card = document.getElementById("pac-container");
   let input = document.getElementById("pac-input");
   let options = {
@@ -376,20 +377,9 @@ function initMap() {
   });
 }
 
-// List 
 
-//close button
-let myNodelist = document.getElementsByClassName("listItem");
-var i;
-for (i = 0; i < myNodelist.length; i++) {
-  let span = document.createElement("SPAN");
-  let txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  myNodelist[i].appendChild(span);
-}
+// Close list item on click 
 
-// Click on a close button to hide the current list item
 let close = document.getElementsByClassName("close");
 var i;
 for (i = 0; i < close.length; i++) {
@@ -400,6 +390,7 @@ for (i = 0; i < close.length; i++) {
 }
 
 // Create a new list item when clicking on the "Add" button
+
 function newElement() {
   let li = document.createElement("li");
   let inputValue = document.getElementById("addTo").getAttribute("info");
@@ -422,6 +413,7 @@ function newElement() {
 }
 
 // hide/show list
+
 $(document).ready(function () {
   $(".toggleList").click(function () {
     $("#userList").toggle();
@@ -438,14 +430,15 @@ $(".toggleList").click(function () {
   }
 });
 
-//----------benefits
+// flip function for benefits cards
 $(function () {
   $(".flip").flip({
     trigger: "click",
   });
 });
 
-//----------quiz
+
+// Quiz
 let questions = [
   {
     question:
