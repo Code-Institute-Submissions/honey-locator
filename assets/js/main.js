@@ -540,9 +540,13 @@ restart.addEventListener('click', function(e) {
       location.reload();
     }, false);
 
- $("#showAnswers").click(function(){
+     
+$(document).ready(function () {
+$("#answers").hide();
+  $("#showAnswers").click(function () {
     $("#answers").toggle();
   });
+});
 
 loadQuestion(currentQuestion);
 
