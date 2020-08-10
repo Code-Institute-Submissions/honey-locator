@@ -283,9 +283,9 @@ function initMap() {
         let position = feature.getGeometry().get();
         let html = `<div class="content-text"><h5>${name}</h5>
         <i class="fas fa-phone-alt honey-col" alt="phone"></i> ${phone}
-        <br><i class="fas fa-globe honey-col" alt="globe"></i> <a class="website content-text" target="_blank" href="${website}">${website}</a><br><i class="fas fa-store honey-col" alt="store"> </i>${address}<br><div onclick="newElement()" id="addTo" class="addBtn text-small" info= "${
-          name + ", " + phone + ", " + website + ", " + address
-        }">Add to your list</div><div><a class="addBtn text-small" target="_blank" href="${gLink}">View on GoogleMaps</a></div>`;
+        <br><i class="fas fa-globe honey-col" alt="globe"></i> <a class="website content-text" target="_blank" href="${website}">${website}</a><br><i class="fas fa-store honey-col" alt="store"> </i>${address}<br><div onclick="newElement()" id="addTo" class="addBtn text-small btn-hover" info= "${
+          name + " | " + phone + " | " + website + " | " + address
+        }">Add to your list</div><div><a class="addBtn text-small btn-hover" target="_blank" href="${gLink}">View on GoogleMaps</a></div>`;
         infowindow.setContent(html);
         infowindow.open(map, marker);
       });
@@ -438,7 +438,7 @@ $(function () {
 });
 
 
-// Quiz
+// Quiz questions
 let questions = [
   {
     question:
@@ -524,10 +524,10 @@ function nextQuestion() {
   if (currentQuestion === totalQuestions) {
     container.style.display = "none";
     resultCont.style.display = "";
-    answers.style.display= "";
     resultCont.innerHTML = `Your Score  ${score}  /5`;
-    resultCont.appendChild(restart);
     resultCont.appendChild(showAnswers);
+    resultCont.appendChild(restart);
+    
 
     return;
   }
@@ -539,8 +539,7 @@ function nextQuestion() {
 restart.addEventListener('click', function(e) {
       location.reload();
     }, false);
-
-     
+  
 $(document).ready(function () {
 $("#answers").hide();
   $("#showAnswers").click(function () {
