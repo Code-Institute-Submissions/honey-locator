@@ -280,7 +280,6 @@ function initMap() {
         let website = feature.getProperty("website");
         let address = feature.getProperty("Address");
         let gLink = feature.getProperty("Google Maps URL");
-        let position = feature.getGeometry().get();
         let html = `<div class="content-text"><h5>${name}</h5>
         <i class="fas fa-phone-alt honey-col" alt="phone"></i> ${phone}
         <br><i class="fas fa-globe honey-col" alt="globe"></i> <a class="website content-text" target="_blank" href="${website}">${website}</a><br><i class="fas fa-store honey-col" alt="store"> </i>${address}<br><div onclick="newItem();" id="addTo" class="addBtn text-small btn-hover" info= "${
@@ -379,6 +378,12 @@ function initMap() {
 //new list
 
 let ul = document.getElementById("yourListUl");
+let itemsArray = localStorage.getItem("items")
+  ? JSON.parse(localStorage.getItem("items"))
+  : [];
+
+localStorage.setItem("items", JSON.stringify(itemsArray));
+const data = JSON.parse(localStorage.getItem("items"));
 
 function liMaker(text) {
   let li = document.createElement("li");
@@ -388,20 +393,13 @@ function liMaker(text) {
 
 function newItem() {
   let inputValue = document.getElementById("addTo").getAttribute("info");
+  localStorage.setItem("items", JSON.stringify(itemsArray));
   liMaker(inputValue);
-
-  let itemsArray = [];
-
-  localStorage.setItem("items", JSON.stringify(itemsArray));
-  const data = JSON.parse(localStorage.getItem("items"));
-
-  itemsArray.push(inputValue);
-  localStorage.setItem("items", JSON.stringify(itemsArray));
-
-  data.forEach((item) => {
-    liMaker(item);
-  });
 }
+
+data.forEach((item) => {
+  liMaker(item);
+});
 
 function clearBtn() {
   localStorage.clear();
@@ -409,10 +407,6 @@ function clearBtn() {
     ul.removeChild(ul.firstChild);
   }
 }
-
-let itemsArray = localStorage.getItem("items")
-  ? JSON.parse(localStorage.getItem("items"))
-  : [];
 
 /*// Close list item on click
 
@@ -572,7 +566,7 @@ function nextQuestion() {
 
 restart.addEventListener(
   "click",
-  function (e) {
+  function () {
     location.reload();
   },
   false
