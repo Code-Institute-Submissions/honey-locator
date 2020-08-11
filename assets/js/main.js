@@ -387,12 +387,13 @@ const data = JSON.parse(localStorage.getItem("items"));
 
 function liMaker(text) {
   let li = document.createElement("li");
-  li.textContent = text;
+  li.innerHTML = text;
   ul.appendChild(li);
 }
 
 function newItem() {
   let inputValue = document.getElementById("addTo").getAttribute("info");
+    itemsArray.push(inputValue)
   localStorage.setItem("items", JSON.stringify(itemsArray));
   liMaker(inputValue);
 }
