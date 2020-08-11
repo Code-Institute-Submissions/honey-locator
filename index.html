@@ -1,35 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Honey Locator UK</title>
-	<link rel="stylesheet" href="assets/css/style.css" />
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" />
-	<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon_io/favicon-32x32.png" />
-	<link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon_io/favicon-16x16.png" />
-	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
-	<script type="text/javascript">
-		(function () {
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Honey Locator UK</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/images/favicon_io/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/images/favicon_io/favicon-16x16.png"
+    />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
         emailjs.init("user_S3AG8fpXyuDH5VmtFjNMV");
       })();
-	</script>
-</head>
+    </script>
+  </head>
 
-<body>
-	<!--Nav-->
+  <body>
+    <!--Nav-->
 
-	<header>
-		<div class="fixed-top dropdown-nav bg-col">
-			<nav class="navbar navbar-light navbar-expand-sm bg-col content-text">
-				<a href="#home" class="navbar-brand"><img
+    <header>
+      <div class="fixed-top dropdown-nav bg-col">
+        <nav class="navbar navbar-light navbar-expand-sm bg-col content-text">
+          <a href="#home" class="navbar-brand"
+            ><img
               src="assets/images/icon_online.jpg"
               alt="bee logo"
               class="logo-nav"
           /></a>
 
-					<button
+          <button
             class="navbar-toggler"
             type="button"
             data-toggle="collapse"
@@ -41,54 +57,61 @@
             <span class="navbar-toggler-icon"></span>
           </button>
 
-					<div class="collapse navbar-collapse bg-col" id="navbarNavDropdown">
-						<ul class="navbar-nav m-auto pr-5">
-							<li class="nav-item mr-2" id="navbar">
-								<a class="nav-link" href="#home">Home</a>
-							</li>
-							<li class="nav-item mr-2">
-								<a class="nav-link" href="#benefits">Benefits</a>
-							</li>
-							<li class="nav-item mr-2">
-								<a class="nav-link" href="#quiz">Quiz</a>
-							</li>
-						</ul>
-					</div>
-			</nav>
-		</div>
-	</header>
+          <div class="collapse navbar-collapse bg-col" id="navbarNavDropdown">
+            <ul class="navbar-nav m-auto pr-5">
+              <li class="nav-item mr-2" id="navbar">
+                <a class="nav-link" href="#home">Home</a>
+              </li>
+              <li class="nav-item mr-2">
+                <a class="nav-link" href="#benefits">Benefits</a>
+              </li>
+              <li class="nav-item mr-2">
+                <a class="nav-link" href="#quiz">Quiz</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
 
-	<!-- Modal -->
+    <!-- Modal -->
 
-	<div id="home">
-		<div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-			aria-hidden="true">
-			<div class="modal-dialog modal-dialog-centered" role="document">
-				<div class="modal-content content-text bg-col">
-					<div class="modal-body">
-						<form id="myForm" onsubmit="return sendForm(this);">
-							<div class="form-group">
-								<label for="nameInput">Name</label>
-								<input
+    <div id="home">
+      <div
+        class="modal fade"
+        id="modal"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content content-text bg-col">
+            <div class="modal-body">
+              <form id="myForm" onsubmit="return sendForm(this);">
+                <div class="form-group">
+                  <label for="nameInput">Name</label>
+                  <input
                     type="text"
                     class="form-control"
                     id="nameInput"
                     name="nameInput"
                   />
                 </div>
-								<div class="form-group">
-									<label for="emailInput">Email address</label>
-									<input
+                <div class="form-group">
+                  <label for="emailInput">Email address</label>
+                  <input
                     type="email"
                     class="form-control"
                     id="emailInput"
                     name="emailInput"
                   />
                 </div>
-									<div class="form-group">
-										<label for="selectInput"
-                    >What would you like to suggest?</label>
-										<select
+                <div class="form-group">
+                  <label for="selectInput"
+                    >What would you like to suggest?</label
+                  >
+                  <select
                     class="form-control content-text"
                     id="selectInput"
                     name="selectInput"
@@ -97,9 +120,9 @@
                     <option>Remove a location</option>
                     <option>General suggestion</option>
                   </select>
-									</div>
-									<div class="form-group">
-										<textarea
+                </div>
+                <div class="form-group">
+                  <textarea
                     id="textInput"
                     name="textInput"
                     class="form-control content-text"
@@ -107,64 +130,64 @@
                     placeholder="Please let us know more"
                     required
                   ></textarea>
-									</div>
+                </div>
 
-									<div class="modal-footer">
-										<button type="submit" class="btn content-text btn-hover">
+                <div class="modal-footer">
+                  <button type="submit" class="btn content-text btn-hover">
                     Submit
                   </button>
-										<button
+                  <button
                     type="button"
                     class="btn content-text btn-hover"
                     data-dismiss="modal"
                   >
                     Close
                   </button>
-									</div>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
 
-		<div class="center mt-5 pt-5">
-			<h1 class="heading content-text honey-col p-4">
-				Find locally produced honey in the UK!
-			</h1>
-		</div>
+      <div class="center mt-5 pt-5">
+        <h1 class="heading content-text honey-col p-4">
+          Find locally produced honey in the UK!
+        </h1>
+      </div>
 
-		<!--searchers-->
-		<div class="center container-fluid">
-			<div class="row">
-				<div class="col-12 col-md-auto">
-					<div id="pac-container">
-						<input
+      <!--searchers-->
+      <div class="center container-fluid">
+        <div class="row">
+          <div class="col-12 col-md-auto">
+            <div id="pac-container">
+              <input
                 id="pac-input"
                 class="pac-input bg-col content-text"
                 type="text"
                 placeholder="Enter a location"
               />
             </div>
-					</div>
-					<div class="col-12 col-md-auto">
-						<p class="content-text">or</p>
-					</div>
-					<div class="col-12 col-md-auto">
-						<button
+          </div>
+          <div class="col-12 col-md-auto">
+            <p class="content-text">or</p>
+          </div>
+          <div class="col-12 col-md-auto">
+            <button
               id="locatorBTN"
               class="bg-col pac-input cursor content-text"
             >
               Find current location <i class="fas fa-map-marker-alt"></i>
             </button>
-					</div>
-				</div>
-			</div>
+          </div>
+        </div>
+      </div>
 
-			<!-- Map -->
-			<div class="map-container center container-height">
-				<div id="map"></div>
-				<div class="bg-col over-map">
-					<button
+      <!-- Map -->
+      <div class="map-container center container-height">
+        <div id="map"></div>
+        <div class="bg-col over-map">
+          <button
             id="edit-btn"
             class="modal-btn content-text buttons hvr-grow cursor m-0"
             type="button"
@@ -173,9 +196,11 @@
           >
             Suggest an edit
           </button>
-				</div>
-			</div>
-			<div class="center">
+        </div>
+      </div>
+
+      <!--List-->
+      <!--<div class="center">
 				<div id="listDiv" class="bg-col">
 					<button class="toggleList btn-hover buttons cursor content-text">
             <i class="far fa-minus-square"></i>
@@ -189,188 +214,207 @@
 					<div></div>
 				</div>
 				<div></div>
-			</div>
-		</div>
+			</div>-->
 
-		<!-- Benefits -->
+   
+      <h2>Your List</h2>
+      <ul id="yourListUl"></ul>
 
-		<div id="benefits" class="container-fluid center content-text">
-			<div class="row">
-				<div class="col-12 col-md-3 m-4 cursor">
-					<div class="flip">
-						<div class="front">
-							<h5 class="pt-3">Health</h5>
-							<img
+      <button onclick="clearBtn();">Clear All</button>
+    </div>
+
+    <!-- Benefits -->
+
+    <div id="benefits" class="container-fluid center content-text">
+      <div class="row">
+        <div class="col-12 col-md-3 m-4 cursor">
+          <div class="flip">
+            <div class="front">
+              <h5 class="pt-3">Health</h5>
+              <img
                 src="assets/images/heart.png"
                 alt="heart"
                 class="benefitsImgs"
               />
-							<p class="text-small px-3">
-								Raw honey has been used as a folk remedy throughout history and
-								has a variety of health benefits and medical uses...
-							</p>
-						</div>
-						<div class="back">
-							<h5 class="pt-3">Health</h5>
-							<ul class="text-small">
-								<li>A good source of antioxidants</li>
-								<li>Antibacterial and antifungal properties</li>
-								<li>Heal wounds</li>
-								<li>Phytonutrient powerhouse</li>
-								<li>Help for digestive issues</li>
-								<li>Soothe a sore throat</li>
-								<li>
-									A healthier alternative to the high fructose corn syrup in
-									lots of sweets and processed foods
-								</li>
-							</ul>
-							<p class="pt-5">
-								Read more
-								<a href="https://www.healthline.com/health/food-nutrition/top-raw-honey-benefits#digestion-and-gut-health"
-									target="_blank">here</a>
-							</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-12 col-md-3 m-4 or">
-					<div class="flip">
-						<div class="front">
-							<h5 class="pt-3">Economic</h5>
-							<img
+              <p class="text-small px-3">
+                Raw honey has been used as a folk remedy throughout history and
+                has a variety of health benefits and medical uses...
+              </p>
+            </div>
+            <div class="back">
+              <h5 class="pt-3">Health</h5>
+              <ul class="text-small">
+                <li>A good source of antioxidants</li>
+                <li>Antibacterial and antifungal properties</li>
+                <li>Heal wounds</li>
+                <li>Phytonutrient powerhouse</li>
+                <li>Help for digestive issues</li>
+                <li>Soothe a sore throat</li>
+                <li>
+                  A healthier alternative to the high fructose corn syrup in
+                  lots of sweets and processed foods
+                </li>
+              </ul>
+              <p class="pt-5">
+                Read more
+                <a
+                  href="https://www.healthline.com/health/food-nutrition/top-raw-honey-benefits#digestion-and-gut-health"
+                  target="_blank"
+                  >here</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-3 m-4 or">
+          <div class="flip">
+            <div class="front">
+              <h5 class="pt-3">Economic</h5>
+              <img
                 src="assets/images/shop.png"
                 alt="shop"
                 class="benefitsImgs"
               />
-							<p class="text-small px-3">
-								Choosing to shop with your local businesses instead of the
-								larger chain stores has many benefits...
-							</p>
-						</div>
-						<div class="back">
-							<h5 class="pt-3">Economic</h5>
+              <p class="text-small px-3">
+                Choosing to shop with your local businesses instead of the
+                larger chain stores has many benefits...
+              </p>
+            </div>
+            <div class="back">
+              <h5 class="pt-3">Economic</h5>
 
-							<ul class="text-small pr-2">
-								<li>
-									Help to boost your local economy - Research shows that £10
-									spent with a local independent shop means up to an additional
-									£50 goes back into the local economy
-								</li>
-								<li>
-									Creates local jobs - Small, local businesses are surprisingly
-									the largest employer of jobs nationally and provide the most
-									local jobs to communities
-								</li>
-							</ul>
-							<p>
-								Read more
-								<a href="https://smallbusiness.co.uk/fifteen-reasons-choose-local-company-2542429/"
-									target="_blank">here</a>
-							</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-12 col-md-3 m-4">
-					<div class="flip">
-						<div class="front">
-							<h5 class="pt-3">Environmental</h5>
-							<img
+              <ul class="text-small pr-2">
+                <li>
+                  Help to boost your local economy - Research shows that £10
+                  spent with a local independent shop means up to an additional
+                  £50 goes back into the local economy
+                </li>
+                <li>
+                  Creates local jobs - Small, local businesses are surprisingly
+                  the largest employer of jobs nationally and provide the most
+                  local jobs to communities
+                </li>
+              </ul>
+              <p>
+                Read more
+                <a
+                  href="https://smallbusiness.co.uk/fifteen-reasons-choose-local-company-2542429/"
+                  target="_blank"
+                  >here</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-3 m-4">
+          <div class="flip">
+            <div class="front">
+              <h5 class="pt-3">Environmental</h5>
+              <img
                 src="assets/images/earth.png"
                 alt="earth"
                 class="benefitsImgs"
               />
-							<p class="text-small px-3">
-								Save the bees! Bees play an important role in the life cycle of
-								most plants and flowers...
-							</p>
-						</div>
-						<div class="back">
-							<h5 class="pt-3">Environmental</h5>
-							<ul class="text-small">
-								<li>
-									Without bees, many plants would have no way to reproduce and
-									die out.
-								</li>
-								<li>
-									Bees are responsible for pollinating nearly 85% of all food
-									crops for humans, as well as numerous crops that grow the food
-									fed to cattle.
-								</li>
-								<li>
-									There has been research conducted that predicts environmental
-									collapse should the honeybee no longer exist
-								</li>
-							</ul>
-							<p>
-								Read more
-								<a href="https://www.perfectbee.com/learn-about-bees/the-science-of-bees/the-benefits-of-bees"
-									target="_blank">here</a>
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+              <p class="text-small px-3">
+                Save the bees! Bees play an important role in the life cycle of
+                most plants and flowers...
+              </p>
+            </div>
+            <div class="back">
+              <h5 class="pt-3">Environmental</h5>
+              <ul class="text-small">
+                <li>
+                  Without bees, many plants would have no way to reproduce and
+                  die out.
+                </li>
+                <li>
+                  Bees are responsible for pollinating nearly 85% of all food
+                  crops for humans, as well as numerous crops that grow the food
+                  fed to cattle.
+                </li>
+                <li>
+                  There has been research conducted that predicts environmental
+                  collapse should the honeybee no longer exist
+                </li>
+              </ul>
+              <p>
+                Read more
+                <a
+                  href="https://www.perfectbee.com/learn-about-bees/the-science-of-bees/the-benefits-of-bees"
+                  target="_blank"
+                  >here</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-		<!-- Quiz -->
+    <!-- Quiz -->
 
-		<div id="quiz" class="center container-height">
-			<div id="quizQuestions" class="quizContainer content-text">
-				<div>
-					<h3 class="text-center p-3">Quizzzz!</h3>
-				</div>
-				<div class="center">
-					<div id="question" class="question"></div>
-				</div>
-				<div class="center">
-					<label class="option cursor quiz-btns text-center"
+    <div id="quiz" class="center container-height">
+      <div id="quizQuestions" class="quizContainer content-text">
+        <div>
+          <h3 class="text-center p-3">Quizzzz!</h3>
+        </div>
+        <div class="center">
+          <div id="question" class="question"></div>
+        </div>
+        <div class="center">
+          <label class="option cursor quiz-btns text-center"
             ><input type="radio" name="options" value="1" /><span
               id="option1"
             ></span
           ></label>
-					<label class="option cursor quiz-btns text-center"
+          <label class="option cursor quiz-btns text-center"
             ><input type="radio" name="options" value="2" /><span
               id="option2"
             ></span
           ></label>
-					<label class="option cursor quiz-btns text-center"
+          <label class="option cursor quiz-btns text-center"
             ><input type="radio" name="options" value="3" /><span
               id="option3"
             ></span
           ></label>
-				</div>
-				<div class="center">
-					<button id="nextBtn" class="cursor quiz-btns text-center" onclick="nextQuestion();">
+        </div>
+        <div class="center">
+          <button
+            id="nextBtn"
+            class="cursor quiz-btns text-center"
+            onclick="nextQuestion();"
+          >
             Next
           </button>
-				</div>
-				<div class="center">
-					<progress id="progBar" max="50" value="10"> </progress>
-				</div>
-			</div>
-			<div id="quizResults" class="quizContainer" style="display: none;">
-				<button id="showAnswers" class="quiz-btns">
-          Show Answers<p id="answers">Test</p>
+        </div>
+        <div class="center">
+          <progress id="progBar" max="50" value="10"> </progress>
+        </div>
+      </div>
+      <div id="quizResults" class="quizContainer" style="display: none;">
+        <button id="showAnswers" class="quiz-btns">
+          Show Answers
+          <p id="answers">Test</p>
         </button>
-				<button id="reset" class="quiz-btns" onclick="resetQuiz();">
+        <button id="reset" class="quiz-btns" onclick="resetQuiz();">
           Try again! <i class="fas fa-redo"></i>
         </button>
-			</div>
-		</div>
+      </div>
+    </div>
 
-		<!-- Footer -->
+    <!-- Footer -->
 
-		<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-		<script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
-		<script src="assets/js/main.js"></script>
-		<script src="https://kit.fontawesome.com/89255d1b7b.js"></script>
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-		<script
-			src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
-		</script>
-		<script async defer
-			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYEFJ6Ls3eG2snRN2rZx7zHIZ8SS5UeKE&libraries=places&callback=initMap">
-		</script>
-</body>
-
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="https://kit.fontawesome.com/89255d1b7b.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+    <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYEFJ6Ls3eG2snRN2rZx7zHIZ8SS5UeKE&libraries=places&callback=initMap"
+    ></script>
+  </body>
 </html>

@@ -1,18 +1,19 @@
-
-// send form 
-function sendForm(){
-emailjs.sendForm("gmail", "honey_locator", "#myForm")
-    .then(function() {
-       alert("Thanks for your suggestion, we'll get back to you asap!");
-    }, function(error) {
-       alert("Hmm something has gone wrong here, please try again...", error);
-    });
-    return false;
+// send form
+function sendForm() {
+  emailjs.sendForm("gmail", "honey_locator", "#myForm").then(
+    function () {
+      alert("Thanks for your suggestion, we'll get back to you asap!");
+    },
+    function (error) {
+      alert("Hmm something has gone wrong here, please try again...", error);
+    }
+  );
+  return false;
 }
 
-//navbar-collapse hide on click 
-$('.navbar-nav>li>a').on('click', function(){
-    $('.navbar-collapse').collapse('hide');
+//navbar-collapse hide on click
+$(".navbar-nav>li>a").on("click", function () {
+  $(".navbar-collapse").collapse("hide");
 });
 
 // Map styling
@@ -233,7 +234,6 @@ let mapStyle = [
 ];
 
 // initilise Map
-
 function initMap() {
   const map = new google.maps.Map(document.getElementById("map"), {
     zoom: 5.5,
@@ -283,7 +283,7 @@ function initMap() {
         let position = feature.getGeometry().get();
         let html = `<div class="content-text"><h5>${name}</h5>
         <i class="fas fa-phone-alt honey-col" alt="phone"></i> ${phone}
-        <br><i class="fas fa-globe honey-col" alt="globe"></i> <a class="website content-text" target="_blank" href="${website}">${website}</a><br><i class="fas fa-store honey-col" alt="store"> </i>${address}<br><div onclick="newElement()" id="addTo" class="addBtn text-small btn-hover" info= "${
+        <br><i class="fas fa-globe honey-col" alt="globe"></i> <a class="website content-text" target="_blank" href="${website}">${website}</a><br><i class="fas fa-store honey-col" alt="store"> </i>${address}<br><div onclick="newItem();" id="addTo" class="addBtn text-small btn-hover" info= "${
           name + " | " + phone + " | " + website + " | " + address
         }">Add to your list</div><div><a class="addBtn text-small btn-hover" target="_blank" href="${gLink}">View on GoogleMaps</a></div>`;
         infowindow.setContent(html);
@@ -320,7 +320,6 @@ function initMap() {
         }
       );
     } else {
-
       handleLocationError(false, infoWindow, map.getCenter());
     }
   });
@@ -377,8 +376,45 @@ function initMap() {
   });
 }
 
+//new list
 
-// Close list item on click 
+let ul = document.getElementById("yourListUl");
+
+function liMaker(text) {
+  let li = document.createElement("li");
+  li.textContent = text;
+  ul.appendChild(li);
+}
+
+function newItem() {
+  let inputValue = document.getElementById("addTo").getAttribute("info");
+  liMaker(inputValue);
+
+  let itemsArray = [];
+
+  localStorage.setItem("items", JSON.stringify(itemsArray));
+  const data = JSON.parse(localStorage.getItem("items"));
+
+  itemsArray.push(inputValue);
+  localStorage.setItem("items", JSON.stringify(itemsArray));
+
+  data.forEach((item) => {
+    liMaker(item);
+  });
+}
+
+function clearBtn() {
+  localStorage.clear();
+  while (ul.firstChild) {
+    ul.removeChild(ul.firstChild);
+  }
+}
+
+let itemsArray = localStorage.getItem("items")
+  ? JSON.parse(localStorage.getItem("items"))
+  : [];
+
+/*// Close list item on click
 
 let close = document.getElementsByClassName("close");
 var i;
@@ -428,7 +464,7 @@ $(".toggleList").click(function () {
   } else {
     $this.html(`<i class="fas fa-plus-square"></i>`);
   }
-});
+});*/
 
 // flip function for benefits cards
 $(function () {
@@ -436,7 +472,6 @@ $(function () {
     trigger: "click",
   });
 });
-
 
 // Quiz questions
 let questions = [
@@ -527,7 +562,6 @@ function nextQuestion() {
     resultCont.innerHTML = `Your Score  ${score}  /5`;
     resultCont.appendChild(showAnswers);
     resultCont.appendChild(restart);
-    
 
     return;
   }
@@ -536,17 +570,19 @@ function nextQuestion() {
   loadQuestion(currentQuestion);
 }
 
-restart.addEventListener('click', function(e) {
-      location.reload();
-    }, false);
-  
+restart.addEventListener(
+  "click",
+  function (e) {
+    location.reload();
+  },
+  false
+);
+
 $(document).ready(function () {
-$("#answers").hide();
+  $("#answers").hide();
   $("#showAnswers").click(function () {
     $("#answers").toggle();
   });
 });
 
 loadQuestion(currentQuestion);
-
-
