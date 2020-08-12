@@ -393,9 +393,18 @@ function liMaker(text) {
 
 function newItem() {
   let inputValue = document.getElementById("addTo").getAttribute("info");
-    itemsArray.push(inputValue)
-  localStorage.setItem("items", JSON.stringify(itemsArray));
-  liMaker(inputValue);
+
+  let repeated = itemsArray.filter(function (a) {
+    return a.liMaker == inputValue;
+  }).length;
+
+  if (!repeated) {
+    itemsArray.push(inputValue);
+    localStorage.setItem("items", JSON.stringify(itemsArray));
+    liMaker(inputValue);
+  } else {
+    alert("already added");
+  }
 }
 
 data.forEach((item) => {
