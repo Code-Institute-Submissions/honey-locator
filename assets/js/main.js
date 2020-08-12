@@ -377,6 +377,7 @@ function initMap() {
 
 //new list
 
+let ul = document.getElementById("yourListUl");
 let itemsArray = localStorage.getItem("items")
   ? JSON.parse(localStorage.getItem("items"))
   : [];
@@ -385,7 +386,6 @@ localStorage.setItem("items", JSON.stringify(itemsArray));
 const data = JSON.parse(localStorage.getItem("items"));
 
 function liMaker(text) {
-  let ul = document.getElementById("yourListUl");
   let li = document.createElement("li");
   li.innerHTML = text;
   ul.appendChild(li);
