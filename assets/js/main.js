@@ -377,7 +377,6 @@ function initMap() {
 
 //new list
 
-let ul = document.getElementById("yourListUl");
 let itemsArray = localStorage.getItem("items")
   ? JSON.parse(localStorage.getItem("items"))
   : [];
@@ -386,6 +385,7 @@ localStorage.setItem("items", JSON.stringify(itemsArray));
 const data = JSON.parse(localStorage.getItem("items"));
 
 function liMaker(text) {
+  let ul = document.getElementById("yourListUl");
   let li = document.createElement("li");
   li.innerHTML = text;
   ul.appendChild(li);
@@ -407,6 +407,7 @@ let listHandlers = {
       alert("already added");
     }
   },
+
   clearBtn: function () {
     localStorage.clear();
     while (ul.firstChild) {
@@ -535,7 +536,9 @@ function loadQuestion(i) {
 }
 
 function nextQuestion() {
-  let quizQuestionsContainer = document.getElementById("quizQuestionsContainer");
+  let quizQuestionsContainer = document.getElementById(
+    "quizQuestionsContainer"
+  );
   let totalQuestions = questions.length;
   let quizResultsContainer = document.getElementById("quizResultsContainer");
   let restart = document.getElementById("restart");
