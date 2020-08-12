@@ -523,31 +523,31 @@ let questions = [
 let currentQuestion = 0;
 
 function loadQuestion(i) {
-  let questionElement = document.getElementById("question");
+  let question = document.getElementById("question");
   let option1 = document.getElementById("option1");
   let option2 = document.getElementById("option2");
   let option3 = document.getElementById("option3");
   let q = questions[i];
-  questionElement.textContent = i + 1 + ". " + q.question;
+  question.textContent = i + 1 + ". " + q.question;
   option1.textContent = q.option1;
   option2.textContent = q.option2;
   option3.textContent = q.option3;
 }
 
 function nextQuestion() {
-  let container = document.getElementById("quizQuestions");
+  let quizQuestionsContainer = document.getElementById("quizQuestionsContainer");
   let totalQuestions = questions.length;
-  let resultCont = document.getElementById("quizResults");
-  let restart = document.getElementById("reset");
+  let quizResultsContainer = document.getElementById("quizResultsContainer");
+  let restart = document.getElementById("restart");
   let showAnswers = document.getElementById("showAnswers");
   let score = 0;
-  
   let selectedOption = document.querySelector("input[type = radio]:checked");
+  let corAnswer = selectedOption.value;
+
   if (!selectedOption) {
     alert("Please choose an answer");
     return;
   }
-  let corAnswer = selectedOption.value;
   if (questions[currentQuestion].corAnswer == corAnswer) {
     score += 1;
     console.log("success");
@@ -558,7 +558,7 @@ function nextQuestion() {
     nextBtn.textContent = "Finish";
   }
   if (currentQuestion === totalQuestions) {
-    container.style.display = "none";
+    quizQuestionsContainer.style.display = "none";
     resultCont.style.display = "";
     resultCont.innerHTML = `Your Score  ${score}  /5`;
     resultCont.appendChild(showAnswers);
