@@ -521,19 +521,12 @@ let questions = [
 ];
 
 let currentQuestion = 0;
-let score = 0;
-let totalQuestions = questions.length;
-
-let container = document.getElementById("quizQuestions");
-let questionElement = document.getElementById("question");
-let option1 = document.getElementById("option1");
-let option2 = document.getElementById("option2");
-let option3 = document.getElementById("option3");
-let resultCont = document.getElementById("quizResults");
-let restart = document.getElementById("reset");
-let showAnswers = document.getElementById("showAnswers");
 
 function loadQuestion(i) {
+  let questionElement = document.getElementById("question");
+  let option1 = document.getElementById("option1");
+  let option2 = document.getElementById("option2");
+  let option3 = document.getElementById("option3");
   let q = questions[i];
   questionElement.textContent = i + 1 + ". " + q.question;
   option1.textContent = q.option1;
@@ -542,12 +535,18 @@ function loadQuestion(i) {
 }
 
 function nextQuestion() {
+  let container = document.getElementById("quizQuestions");
+  let totalQuestions = questions.length;
+  let resultCont = document.getElementById("quizResults");
+  let restart = document.getElementById("reset");
+  let showAnswers = document.getElementById("showAnswers");
+  let score = 0;
+  
   let selectedOption = document.querySelector("input[type = radio]:checked");
   if (!selectedOption) {
     alert("Please choose an answer");
     return;
   }
-
   let corAnswer = selectedOption.value;
   if (questions[currentQuestion].corAnswer == corAnswer) {
     score += 1;
@@ -564,10 +563,8 @@ function nextQuestion() {
     resultCont.innerHTML = `Your Score  ${score}  /5`;
     resultCont.appendChild(showAnswers);
     resultCont.appendChild(restart);
-
     return;
   }
-
   progBar.value = progBar.value + 10;
   loadQuestion(currentQuestion);
 }
