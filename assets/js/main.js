@@ -282,7 +282,7 @@ function initMap() {
         let gLink = feature.getProperty("Google Maps URL");
         let html = `<div class="content-text"><h5>${name}</h5>
         <i class="fas fa-phone-alt honey-col" alt="phone"></i> ${phone}
-        <br><i class="fas fa-globe honey-col" alt="globe"></i> <a class="website content-text" target="_blank" href="${website}">${website}</a><br><i class="fas fa-store honey-col" alt="store"> </i>${address}<br><div onclick="newItem();" id="addTo" class="addBtn text-small btn-hover" info= "${
+        <br><i class="fas fa-globe honey-col" alt="globe"></i> <a class="website content-text" target="_blank" href="${website}">${website}</a><br><i class="fas fa-store honey-col" alt="store"> </i>${address}<br><div onclick="listHandlers.newItem();" id="addTo" class="addBtn text-small btn-hover" info= "${
           name + " | " + phone + " | " + website + " | " + address
         }">Add to your list</div><div><a class="addBtn text-small btn-hover" target="_blank" href="${gLink}">View on GoogleMaps</a></div>`;
         infowindow.setContent(html);
@@ -391,32 +391,33 @@ function liMaker(text) {
   ul.appendChild(li);
 }
 
-function newItem() {
-  let inputValue = document.getElementById("addTo").getAttribute("info");
+//List handlers
+let listHandlers = {
+  newItem: function () {
+    let inputValue = document.getElementById("addTo").getAttribute("info");
+    let repeated = itemsArray.filter(function (a) {
+      return a.inputValue == inputValue;
+    }).length;
 
-  let repeated = itemsArray.filter(function (a) {
-    return a.liMaker == inputValue;
-  }).length;
-
-  if (!repeated) {
-    itemsArray.push(inputValue);
-    localStorage.setItem("items", JSON.stringify(itemsArray));
-    liMaker(inputValue);
-  } else {
-    alert("already added");
-  }
-}
+    if (!repeated) {
+      itemsArray.push(inputValue);
+      localStorage.setItem("items", JSON.stringify(itemsArray));
+      liMaker(inputValue);
+    } else {
+      alert("already added");
+    }
+  },
+  clearBtn: function () {
+    localStorage.clear();
+    while (ul.firstChild) {
+      ul.removeChild(ul.firstChild);
+    }
+  },
+};
 
 data.forEach((item) => {
   liMaker(item);
 });
-
-function clearBtn() {
-  localStorage.clear();
-  while (ul.firstChild) {
-    ul.removeChild(ul.firstChild);
-  }
-}
 
 /*// Close list item on click
 
@@ -528,12 +529,9 @@ let questionElement = document.getElementById("question");
 let option1 = document.getElementById("option1");
 let option2 = document.getElementById("option2");
 let option3 = document.getElementById("option3");
-let nextButton = document.getElementById("nextBtn");
 let resultCont = document.getElementById("quizResults");
-let progress = document.getElementById("progBar");
 let restart = document.getElementById("reset");
 let showAnswers = document.getElementById("showAnswers");
-let answers = document.getElementById("answers");
 
 function loadQuestion(i) {
   let q = questions[i];
@@ -558,7 +556,7 @@ function nextQuestion() {
   selectedOption.checked = false;
   currentQuestion++;
   if (currentQuestion === totalQuestions - 1) {
-    nextButton.textContent = "Finish";
+    nextBtn.textContent = "Finish";
   }
   if (currentQuestion === totalQuestions) {
     container.style.display = "none";
@@ -570,17 +568,9 @@ function nextQuestion() {
     return;
   }
 
-  progress.value = progress.value + 10;
+  progBar.value = progBar.value + 10;
   loadQuestion(currentQuestion);
 }
-
-restart.addEventListener(
-  "click",
-  function () {
-    location.reload();
-  },
-  false
-);
 
 $(document).ready(function () {
   $("#answers").hide();
