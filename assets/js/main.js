@@ -249,7 +249,7 @@ function initMap() {
       let marker = new google.maps.Marker({
         position: feature.getGeometry().get(0),
         icon: {
-          url: `assets/images/icon_${feature.getProperty("category")}.jpg`,
+          url: `assets/images/icon_online.jpg`,
           scaledSize: new google.maps.Size(40, 40),
         },
       });
@@ -258,14 +258,14 @@ function initMap() {
 
       marker.addListener("mouseover", function () {
         marker.setIcon({
-          url: `assets/images/icon_${feature.getProperty("category")}.jpg`,
+          url: `assets/images/icon_online.jpg`,
           scaledSize: new google.maps.Size(50, 50),
         });
       });
 
       marker.addListener("mouseout", function () {
         marker.setIcon({
-          url: `assets/images/icon_${feature.getProperty("category")}.jpg`,
+          url: `assets/images/icon_online}.jpg`,
           scaledSize: new google.maps.Size(40, 40),
         });
       });
@@ -281,13 +281,12 @@ function initMap() {
         let address = feature.getProperty("Address");
         let gLink = feature.getProperty("Google Maps URL");
         let position = feature.getGeometry().get();
-
         let html = `<div class="content-text"><h5>${name}</h5>
         <i class="fas fa-phone-alt honey-col" alt="phone"></i> ${phone}
         <br><i class="fas fa-globe honey-col" alt="globe"></i> <a class="website content-text" target="_blank" href="${website}">${website}</a><br><i class="fas fa-store honey-col" alt="store"> </i>${address}<br><p><img src="https://maps.googleapis.com/maps/api/streetview?size=350x120&location=${position.lat()},${position.lng()}&key=AIzaSyCYEFJ6Ls3eG2snRN2rZx7zHIZ8SS5UeKE"></p>
 <div onclick="listHandlers.newItem();" id="addTo" class="addBtn text-small btn-hover" info= "${
           name + " | " + phone + " | " + website + " | " + address
-        }">Add to your list</div><div><a class="addBtn text-small btn-hover" target="_blank" href="${gLink}">View on GoogleMaps</a></div>`;
+        } <img src="https://maps.googleapis.com/maps/api/streetview?size=350x120&location=${position.lat()},${position.lng()}&key=AIzaSyCYEFJ6Ls3eG2snRN2rZx7zHIZ8SS5UeKE">">Add to your list</div><div><a class="addBtn text-small btn-hover" target="_blank" href="${gLink}">View on GoogleMaps</a></div>`;
         infowindow.setContent(html);
         infowindow.open(map, marker);
       });
@@ -312,7 +311,7 @@ function initMap() {
           lng: position.coords.longitude,
         };
         infowindow.setPosition(pos);
-        infowindow.setContent("<p class = 'general-text'>Your location</p>");
+        infowindow.setContent("<p class = 'general-text'>You are here!</p><div class='center'><img src ='assets/images/icon_online.jpg' class='logo-nav' alt='logo'></div>");
         infowindow.open(map);
         map.setCenter(pos);
       },
