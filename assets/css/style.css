@@ -190,11 +190,11 @@ text-decoration: none;
 
 }
 
-#listItems li:nth-child(odd) {
+#yourListUl li:nth-child(odd) {
   background: #f9f9f9;
 }
 
- #listItems li:hover {
+ #yourListUl li:hover {
   background: #ddd;
 }
   -webkit-user-select: none;

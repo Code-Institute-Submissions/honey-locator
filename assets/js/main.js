@@ -300,26 +300,25 @@ function initMap() {
 
   //geolocator
 
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(
-        (position) => {
-          const pos = {
-            lat: position.coords.latitude,
-            lng: position.coords.longitude,
-          };
-          infowindow.setPosition(pos);
-          infowindow.setContent("<p class = 'general-text'>Your location</p>");
-          infowindow.open(map);
-          map.setCenter(pos);
-        },
-        () => {
-          handleLocationError(true, infowindow, map.getCenter());
-        }
-      );
-    } else {
-      handleLocationError(false, infoWindow, map.getCenter());
-    }
-  
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        const pos = {
+          lat: position.coords.latitude,
+          lng: position.coords.longitude,
+        };
+        infowindow.setPosition(pos);
+        infowindow.setContent("<p class = 'general-text'>Your location</p>");
+        infowindow.open(map);
+        map.setCenter(pos);
+      },
+      () => {
+        handleLocationError(true, infowindow, map.getCenter());
+      }
+    );
+  } else {
+    handleLocationError(false, infoWindow, map.getCenter());
+  }
 
   function handleLocationError(browserHasGeolocation, infowindow, pos) {
     infowindow.setPosition(pos);
