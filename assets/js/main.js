@@ -280,9 +280,12 @@ function initMap() {
         let website = feature.getProperty("website");
         let address = feature.getProperty("Address");
         let gLink = feature.getProperty("Google Maps URL");
+        let position = feature.getGeometry().get();
+
         let html = `<div class="content-text"><h5>${name}</h5>
         <i class="fas fa-phone-alt honey-col" alt="phone"></i> ${phone}
-        <br><i class="fas fa-globe honey-col" alt="globe"></i> <a class="website content-text" target="_blank" href="${website}">${website}</a><br><i class="fas fa-store honey-col" alt="store"> </i>${address}<br><div onclick="listHandlers.newItem();" id="addTo" class="addBtn text-small btn-hover" info= "${
+        <br><i class="fas fa-globe honey-col" alt="globe"></i> <a class="website content-text" target="_blank" href="${website}">${website}</a><br><i class="fas fa-store honey-col" alt="store"> </i>${address}<br><p><img src="https://maps.googleapis.com/maps/api/streetview?size=350x120&location=${position.lat()},${position.lng()}&key=AIzaSyCYEFJ6Ls3eG2snRN2rZx7zHIZ8SS5UeKE"></p>
+<div onclick="listHandlers.newItem();" id="addTo" class="addBtn text-small btn-hover" info= "${
           name + " | " + phone + " | " + website + " | " + address
         }">Add to your list</div><div><a class="addBtn text-small btn-hover" target="_blank" href="${gLink}">View on GoogleMaps</a></div>`;
         infowindow.setContent(html);
@@ -301,6 +304,7 @@ function initMap() {
   //geolocator
 
   if (navigator.geolocation) {
+    infowindow = new google.maps.InfoWindow();
     navigator.geolocation.getCurrentPosition(
       (position) => {
         const pos = {

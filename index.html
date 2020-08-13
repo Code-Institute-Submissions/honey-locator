@@ -183,9 +183,9 @@
           </button>
         </div>
       </div>
-
-      <!--List-->
-      <!--<div class="center">
+    </div>
+    <!--List-->
+    <!--<div class="center">
 				<div id="listDiv" class="bg-col">
 					<button class="toggleList btn-hover buttons cursor content-text">
             <i class="far fa-minus-square"></i>
@@ -200,20 +200,23 @@
 				</div>
 				<div></div>
 			</div>-->
- 
-      <div id= "yourList" class="center">
-        <div id="listDiv" class="bg-col">
-          <div id="userList">
-            <h2 class="content-text">Your List</h2>
-            <ul id="yourListUl" class="content-text text-small">
-              <li class="listItem"></li>
-            </ul>
-            <button onclick="listHandlers.clearBtn();">Clear All</button>
-            <button onclick="listHandlers.removeBtn();">Remove</button>
-          </div>
+<div class="center mt-5">
+    <div id="yourList" class="center bg-col">
+      <div>
+        <div>
+          <h2 class="content-text text-center p-3">Your List</h2>
+        </div>
+        <div>
+          <ul id="yourListUl" class="content-text text-small text-center">
+          </ul>
+        </div>
+        <div class="text-center">
+          <button onclick="listHandlers.clearBtn();">Clear All</button>
+          <button onclick="listHandlers.removeBtn();">Remove</button>
         </div>
       </div>
     </div>
+</div>
     <!-- Benefits -->
 
     <div id="benefits" class="container-fluid center content-text">
