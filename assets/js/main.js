@@ -300,8 +300,6 @@ function initMap() {
 
   //geolocator
 
-  let locatorBTN = document.getElementById("locatorBTN");
-  locatorBTN.addEventListener("click", function () {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
         (position) => {
@@ -321,7 +319,7 @@ function initMap() {
     } else {
       handleLocationError(false, infoWindow, map.getCenter());
     }
-  });
+  
 
   function handleLocationError(browserHasGeolocation, infowindow, pos) {
     infowindow.setPosition(pos);
@@ -562,10 +560,10 @@ function nextQuestion() {
   }
   if (currentQuestion === totalQuestions) {
     quizQuestionsContainer.style.display = "none";
-    resultCont.style.display = "";
-    resultCont.innerHTML = `Your Score  ${score}  /5`;
-    resultCont.appendChild(showAnswers);
-    resultCont.appendChild(restart);
+    quizResultsContainer.style.display = "";
+    quizResultsContainer.innerHTML = `Your Score  ${score}  /5`;
+    quizResultsContainer.appendChild(showAnswers);
+    quizResultsContainer.appendChild(restart);
     return;
   }
   progBar.value = progBar.value + 10;

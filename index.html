@@ -151,35 +151,20 @@
       </div>
 
       <div class="center mt-5 pt-5">
-        <h1 class="heading content-text honey-col p-4">
+        <h1 class="heading content-text p-4">
           Find locally produced honey in the UK!
         </h1>
       </div>
 
-      <!--searchers-->
+      <!--search-->
       <div class="center container-fluid">
-        <div class="row">
-          <div class="col-12 col-md-auto">
-            <div id="pac-container">
-              <input
-                id="pac-input"
-                class="pac-input bg-col content-text"
-                type="text"
-                placeholder="Enter a location"
-              />
-            </div>
-          </div>
-          <div class="col-12 col-md-auto">
-            <p class="content-text">or</p>
-          </div>
-          <div class="col-12 col-md-auto">
-            <button
-              id="locatorBTN"
-              class="bg-col pac-input cursor content-text"
-            >
-              Find current location <i class="fas fa-map-marker-alt"></i>
-            </button>
-          </div>
+        <div id="pac-container">
+          <input
+            id="pac-input"
+            class="pac-input bg-col content-text text-center"
+            type="text"
+            placeholder="Enter a location"
+          />
         </div>
       </div>
 
@@ -216,7 +201,6 @@
 				<div></div>
 			</div>-->
 
-   
       <h2>Your List</h2>
       <ul id="yourListUl"></ul>
 
@@ -392,7 +376,11 @@
           <progress id="progBar" max="50" value="10"> </progress>
         </div>
       </div>
-      <div id="quizResultsContainer" class="quizContainer" style="display: none;">
+      <div
+        id="quizResultsContainer"
+        class="quizContainer"
+        style="display: none;"
+      >
         <button id="showAnswers" class="quiz-btns">
           Show Answers
           <p id="answers">Test</p>
