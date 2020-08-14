@@ -311,7 +311,9 @@ function initMap() {
           lng: position.coords.longitude,
         };
         infowindow.setPosition(pos);
-        infowindow.setContent("<p class = 'general-text'>You are here!</p><div class='center'><img src ='assets/images/icon_online.jpg' class='logo-nav' alt='logo'></div>");
+        infowindow.setContent(
+          "<p class = 'general-text'>You are here!</p><div class='center'><img src ='assets/images/icon_online.jpg' class='logo-nav' alt='logo'></div>"
+        );
         infowindow.open(map);
         map.setCenter(pos);
       },
@@ -385,11 +387,20 @@ let itemsArray = localStorage.getItem("items")
 localStorage.setItem("items", JSON.stringify(itemsArray));
 const data = JSON.parse(localStorage.getItem("items"));
 
-function liMaker(text) {
-  let li = document.createElement("li");
-  li.innerHTML = text;
-  ul.appendChild(li);
-}
+let listView = {
+  liMaker: function (text) {
+    let li = document.createElement("li");
+    li.innerHTML = text;
+    ul.appendChild(li);
+    li.appendChild(this.createDeleteButton());
+  },
+  createDeleteButton: function () {
+    let deleteButton = document.createElement("button");
+    deleteButton.textContent = "Delete";
+    deleteButton.className = "deleteButton";
+    return deleteButton;
+  },
+};
 
 //List handlers
 let listHandlers = {
@@ -402,7 +413,7 @@ let listHandlers = {
     if (!repeated) {
       itemsArray.push(inputValue);
       localStorage.setItem("items", JSON.stringify(itemsArray));
-      liMaker(inputValue);
+      listView.liMaker(inputValue);
     } else {
       alert("already added");
     }
@@ -417,7 +428,7 @@ let listHandlers = {
 };
 
 data.forEach((item) => {
-  liMaker(item);
+  listView.liMaker(item);
 });
 
 /*// Close list item on click
