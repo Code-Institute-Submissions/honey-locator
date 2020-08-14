@@ -390,10 +390,14 @@ const data = JSON.parse(localStorage.getItem("items"));
 let listView = {
   liMaker: function (text) {
     let li = document.createElement("li");
-    li.innerHTML = text;
+    li.textContent = text;
     ul.appendChild(li);
     li.appendChild(this.createDeleteButton());
+    for (let i = 0; i < itemsArray.length; i++) {
+      li.id = i;
+    }
   },
+
   createDeleteButton: function () {
     let deleteButton = document.createElement("button");
     deleteButton.textContent = "Delete";
