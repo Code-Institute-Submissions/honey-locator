@@ -281,12 +281,14 @@ function initMap() {
         let address = feature.getProperty("Address");
         let gLink = feature.getProperty("Google Maps URL");
         let position = feature.getGeometry().get();
+
+        if (website === undefined){console.log('yes')}else{console.log('no')}
         let html = `<div class="content-text"><h5>${name}</h5>
-        <i class="fas fa-phone-alt honey-col" alt="phone"></i> ${phone}
-        <br><i class="fas fa-globe honey-col" alt="globe"></i> <a class="website content-text" target="_blank" href="${website}">${website}</a><br><i class="fas fa-store honey-col" alt="store"> </i>${address}<br><p><img src="https://maps.googleapis.com/maps/api/streetview?size=350x120&location=${position.lat()},${position.lng()}&key=AIzaSyCYEFJ6Ls3eG2snRN2rZx7zHIZ8SS5UeKE"></p>
+        <div class = "py-1"><i class="fas fa-phone-alt honey-col" alt="phone"></i> ${phone}</div>
+        <div class = "py-1"><i class="fas fa-globe honey-col" alt="globe"></i> <a class="website content-text" target="_blank" href="${website}">Website</a></div><div class = "pt-1"><i class="fas fa-store honey-col" alt="store"> </i>${address}</div><br><img src="https://maps.googleapis.com/maps/api/streetview?size=350x120&location=${position.lat()},${position.lng()}&key=AIzaSyCYEFJ6Ls3eG2snRN2rZx7zHIZ8SS5UeKE"><br>
 <div onclick="listHandlers.newItem();" id="addTo" class="addBtn text-small btn-hover" info= "${
           name + " | " + phone + " | " + website + " | " + address
-        } <img src="https://maps.googleapis.com/maps/api/streetview?size=350x120&location=${position.lat()},${position.lng()}&key=AIzaSyCYEFJ6Ls3eG2snRN2rZx7zHIZ8SS5UeKE">">Add to your list</div><div><a class="addBtn text-small btn-hover" target="_blank" href="${gLink}">View on GoogleMaps</a></div>`;
+        }">Add to your list</div><div><a class="addBtn text-small btn-hover" target="_blank" href="${gLink}">View on GoogleMaps</a></div>`;
         infowindow.setContent(html);
         infowindow.open(map, marker);
       });

@@ -213,8 +213,9 @@ text-decoration: none;
 
 
 .addBtn {
-  padding: 5px;
+    padding: 5px;
     margin-top: 5px;
+    margin-left: 3px; 
     background: #d9d9d9;
     float: left;
     text-align: center;
