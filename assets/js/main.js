@@ -70,7 +70,6 @@ function initMap() {
         } else {
           console.log("no");
         }
-
         let html = `<div class="content-text"><h5>${name}</h5>
         <div class = "py-1"><i class="fas fa-phone-alt honey-col" alt="phone"></i> ${phone}</div>
         <div class = "py-1"><i class="fas fa-globe honey-col" alt="globe"></i> <a class="website content-text" target="_blank" href="${website}">Website</a></div><div class = "pt-1"><i class="fas fa-store honey-col" alt="store"> </i>${address}</div><br><img src="https://maps.googleapis.com/maps/api/streetview?size=350x120&location=${position.lat()},${position.lng()}&key=AIzaSyCYEFJ6Ls3eG2snRN2rZx7zHIZ8SS5UeKE"><br>
@@ -174,6 +173,7 @@ let itemsArray = localStorage.getItem("items")
   ? JSON.parse(localStorage.getItem("items"))
   : [];
 
+
 localStorage.setItem("items", JSON.stringify(itemsArray));
 const data = JSON.parse(localStorage.getItem("items"));
 
@@ -197,19 +197,14 @@ let listView = {
 };
 
 //List handlers
+
 let listHandlers = {
   newItem: function () {
     let inputValue = document.getElementById("addTo").getAttribute("info");
-    let repeated = itemsArray.filter(function (a) {
-      return a.inputValue == inputValue;
-    }).length;
-
-    if (!repeated) {
+    if (itemsArray.indexOf(inputValue) == -1) {
       itemsArray.push(inputValue);
       localStorage.setItem("items", JSON.stringify(itemsArray));
       listView.liMaker(inputValue);
-    } else {
-      alert("already added");
     }
   },
 
@@ -348,9 +343,10 @@ function nextQuestion() {
   let quizResultsContainer = document.getElementById("quizResultsContainer");
   let restart = document.getElementById("restart");
   let showAnswers = document.getElementById("showAnswers");
-  let score = 0;
   let selectedOption = document.querySelector("input[type = radio]:checked");
   let corAnswer = selectedOption.value;
+
+  let score = 0;
 
   if (!selectedOption) {
     alert("Please choose an answer");
@@ -358,8 +354,8 @@ function nextQuestion() {
   }
   if (questions[currentQuestion].corAnswer == corAnswer) {
     score += 1;
-    console.log("success");
   }
+
   selectedOption.checked = false;
   currentQuestion++;
   if (currentQuestion === totalQuestions - 1) {
@@ -375,6 +371,10 @@ function nextQuestion() {
   }
   progBar.value = progBar.value + 10;
   loadQuestion(currentQuestion);
+}
+
+function resetQuiz() {
+  $("#quiz").load(window.location.href + " #quiz");
 }
 
 $(document).ready(function () {
