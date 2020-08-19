@@ -206,6 +206,10 @@ let listHandlers = {
       localStorage.setItem("items", JSON.stringify(itemsArray));
       listView.liMaker(inputValue);
     }
+    else{
+          alert("Already added");
+    return;
+    }
   },
 
   clearBtn: function () {
