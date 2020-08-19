@@ -64,23 +64,23 @@ function initMap() {
         let address = feature.getProperty("Address");
         let gLink = feature.getProperty("Google Maps URL");
         let position = feature.getGeometry().get();
-
-        if (website === undefined) {
-          console.log("yes");
-        } else {
-          console.log("no");
-        }
         let html = `<div class="content-text"><h5>${name}</h5>
         <div class = "py-1"><i class="fas fa-phone-alt honey-col" alt="phone"></i> ${phone}</div>
         <div class = "py-1"><i class="fas fa-globe honey-col" alt="globe"></i> <a class="website content-text" target="_blank" href="${website}">Website</a></div><div class = "pt-1"><i class="fas fa-store honey-col" alt="store"> </i>${address}</div><br><img src="https://maps.googleapis.com/maps/api/streetview?size=350x120&location=${position.lat()},${position.lng()}&key=AIzaSyCYEFJ6Ls3eG2snRN2rZx7zHIZ8SS5UeKE"><br>
 <div onclick="listHandlers.newItem();" id="addTo" class="addBtn text-small btn-hover" info= "${
           name + " | " + phone + " | " + website + " | " + address
         }">Add to your list</div><div><a class="addBtn text-small btn-hover" target="_blank" href="${gLink}">View on GoogleMaps</a></div>`;
-        infowindow.setContent(html);
-        infowindow.open(map, marker);
+
+        if (website === null) {
+          console.log;
+        } else {
+          infowindow.setContent(html);
+          infowindow.open(map, marker);
+        }
       });
       return marker;
     });
+
     let markerCluster = new MarkerClusterer(map, markers, {
       imagePath:
         "https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m",
@@ -173,7 +173,6 @@ let itemsArray = localStorage.getItem("items")
   ? JSON.parse(localStorage.getItem("items"))
   : [];
 
-
 localStorage.setItem("items", JSON.stringify(itemsArray));
 const data = JSON.parse(localStorage.getItem("items"));
 
@@ -205,10 +204,9 @@ let listHandlers = {
       itemsArray.push(inputValue);
       localStorage.setItem("items", JSON.stringify(itemsArray));
       listView.liMaker(inputValue);
-    }
-    else{
-          alert("Already added");
-    return;
+    } else {
+      alert("Already added");
+      return;
     }
   },
 
@@ -223,58 +221,6 @@ let listHandlers = {
 data.forEach((item) => {
   listView.liMaker(item);
 });
-
-/*// Close list item on click
-
-let close = document.getElementsByClassName("close");
-var i;
-for (i = 0; i < close.length; i++) {
-  close[i].onclick = function () {
-    let div = this.parentElement;
-    div.style.display = "none";
-  };
-}
-
-// Create a new list item when clicking on the "Add" button
-
-function newElement() {
-  let li = document.createElement("li");
-  let inputValue = document.getElementById("addTo").getAttribute("info");
-  let t = document.createTextNode(inputValue);
-  li.appendChild(t);
-  document.getElementById("listItems").appendChild(li);
-
-  let div = document.createElement("DIV");
-  let txt = document.createTextNode("\u00D7");
-  div.className = "close";
-  div.appendChild(txt);
-  li.appendChild(div);
-
-  for (i = 0; i < close.length; i++) {
-    close[i].onclick = function () {
-      let div = this.parentElement;
-      div.style.display = "none";
-    };
-  }
-}
-
-// hide/show list
-
-$(document).ready(function () {
-  $(".toggleList").click(function () {
-    $("#userList").toggle();
-  });
-});
-
-$(".toggleList").click(function () {
-  let $this = $(this);
-  $this.toggleClass("toggleList");
-  if ($this.hasClass("toggleList")) {
-    $this.html(`<i class="fas fa-minus-square"></i>`);
-  } else {
-    $this.html(`<i class="fas fa-plus-square"></i>`);
-  }
-});*/
 
 // flip function for benefits cards
 $(function () {
@@ -378,9 +324,9 @@ function nextQuestion() {
 }
 
 function resetQuiz() {
-  $("#quiz").load(window.location.href + " #quiz");
-}
-
+    document.getElementById("quizTest").reset();
+  }
+  
 $(document).ready(function () {
   $("#answers").hide();
   $("#showAnswers").click(function () {

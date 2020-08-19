@@ -185,21 +185,6 @@
       </div>
     </div>
     <!--List-->
-    <!--<div class="center">
-				<div id="listDiv" class="bg-col">
-					<button class="toggleList btn-hover buttons cursor content-text">
-            <i class="far fa-minus-square"></i>
-          </button>
-					<div id="userList">
-						<h5 class="content-text p-1">Your List</h5>
-						<ul class="content-text pr-2 text-small" id="listItems">
-							<li class="listItem"></li>
-						</ul>
-					</div>
-					<div></div>
-				</div>
-				<div></div>
-			</div>-->
 <div class="center mt-5">
     <div id="yourList" class="center bg-col">
       <div>
@@ -212,7 +197,6 @@
         </div>
         <div class="text-center">
           <button onclick="listHandlers.clearBtn();">Clear All</button>
-          <button onclick="listHandlers.removeBtn();">Remove</button>
         </div>
       </div>
     </div>
@@ -348,6 +332,7 @@
     <!-- Quiz -->
 
     <div id="quiz" class="container-height container-fluid">
+    <form id="quizTest">
       <div id="quizQuestionsContainer" class="quizContainer content-text">
         <div>
           <h3 class="text-center p-3">Quizzzz!</h3>
@@ -394,10 +379,11 @@
           Show Answers
           <p id="answers">Test</p>
         </button>
-        <button id="restart" class="quiz-btns" onclick="resetQuiz();">
+        <button onclick="resetQuiz()">
           Try again! <i class="fas fa-redo"></i>
         </button>
       </div>
+      </form>
     </div>
 
     <!-- Footer -->

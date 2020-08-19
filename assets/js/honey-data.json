@@ -1254,7 +1254,7 @@
         "category": "instore",
         "name": "The Gables Apiary",
         "phone": "+441782723923",
-        "website": "",
+
         "Google Maps URL": "http://maps.google.com/?cid=7384123778134332863",
         "Address": "The Gables, Park Lane, Audley, Stoke-on-Trent ST7 8HR, United Kingdom",
         "storeid": "09"
@@ -1303,7 +1303,7 @@
         "category": "instore",
         "name": "West country honey",
         "phone": "+447718226733",
-        "website": "",
+
         "Google Maps URL": "http://maps.google.com/?cid=6196267703595078630",
         "Address": "89 Park Rd, Congresbury, Bristol BS49 5HE, United Kingdom",
         "storeid": "21"
@@ -1319,7 +1319,7 @@
         "category": "instore",
         "name": "Cornish Moorland Honey",
         "phone": "+441208850090",
-        "website": "",
+
         "Google Maps URL": "http://maps.google.com/?cid=12867827787889423043",
         "Address": "Glebe Farm, Bodmin PL30 4PP, United Kingdom",
         "storeid": "22"
@@ -1337,7 +1337,7 @@
         "Google Maps URL": "http://maps.google.com/?cid=10917639333588397920",
         "Address": "Little Park Hoskyn, Penhallow, Truro TR4 9NA, United Kingdom",
         "phone": "+441872554165",
-        "website": "",
+
         "storeid": "23"
       },
       "type": "Feature"
@@ -1351,7 +1351,7 @@
         "category": "instore",
         "name": "W R C M & S R Davey",
         "phone": "+441872520206",
-        "website": "",
+
         "Google Maps URL": "http://maps.google.com/?cid=17082885383554662791",
         "Address": "Little Trewirgie Farm, Truro TR2 4HW, United Kingdom",
         "storeid": "25"
@@ -1367,7 +1367,7 @@
         "category": "instore",
         "name": "Cornish Honey",
         "phone": "+441840261518",
-        "website": "",
+
         "Google Maps URL": "http://maps.google.com/?cid=17904762859069206177",
         "Address": "Caroe Farm Bungalow, Camelford PL32 9SZ, United Kingdom",
         "storeid": "26"
@@ -1399,7 +1399,7 @@
         "category": "instore",
         "name": "Abbotskerswell Bee Company",
         "phone": "+441803872781",
-        "website": "",
+
         "Google Maps URL": "http://maps.google.com/?cid=11880147791010717886",
         "Address": "The Croft, Abbotskerswell, Newton Abbot TQ12 5LQ, United Kingdom",
         "storeid": "32"
@@ -1431,7 +1431,7 @@
         "category": "instore",
         "name": "Devonhurst Bees",
         "phone": "+447538790545",
-        "website": "",
+
         "Google Maps URL": "http://maps.google.com/?cid=7711614398360287932",
         "Address": "6 Cowley Dr, Worthy Down, South Wonston, Winchester SO21 2QW, United Kingdom",
         "storeid": "38"
@@ -1447,7 +1447,7 @@
         "category": "instore",
         "name": "BritishBeekeeping",
         "phone": "+447510082531",
-        "website": "",
+
         "Google Maps URL": "http://maps.google.com/?cid=9055021608175611657",
         "Address": "65 Newtown Rd, Warsash, Southampton SO31 9GA, United Kingdom",
         "storeid": "41"
@@ -1463,7 +1463,7 @@
         "category": "instore",
         "name": "Heath Farm",
         "phone": "+442392263207",
-        "website": "",
+
         "Google Maps URL": "http://maps.google.com/?cid=14634036088018469416",
         "Address": "Purbrook Heath Rd, Waterlooville PO7 5RY, United Kingdom",
         "storeid": "43"
@@ -1479,7 +1479,7 @@
         "category": "instore",
         "name": "SW Honey Farms",
         "phone": "+447368646696",
-        "website": "",
+
         "Google Maps URL": "http://maps.google.com/?cid=8935037691454902347",
         "Address": "28 Harwood Ave, Goring-by-Sea, Worthing BN12 6EJ, United Kingdom",
         "storeid": "48"
@@ -1495,7 +1495,7 @@
         "category": "instore",
         "name": "Southlands Honey",
         "phone": "+447500009603",
-        "website": "",
+
         "Google Maps URL": "http://maps.google.com/?cid=12670486339609871879",
         "Address": "Southlands Lodge, Southlands Ln, Oxted RH8 9PH, United Kingdom",
         "storeid": "51"
@@ -1543,7 +1543,7 @@
         "category": "instore",
         "name": "East Anglian Honey Farm",
         "phone": "+441473787228",
-        "website": "",
+
         "Google Maps URL": "http://maps.google.com/?cid=3309680087543042097",
         "Address": "Bristol Hill, Shotley Gate, Ipswich IP9 1PU, United Kingdom",
         "storeid": "56"
@@ -1575,7 +1575,7 @@
         "category": "instore",
         "name": "Paston Cottage Bees",
         "phone": "+447540891057",
-        "website": "",
+
         "Google Maps URL": "http://maps.google.com/?cid=9025928859497287683",
         "Address": "Paston Cottage, London St NR20 5ST, United Kingdom",
         "storeid": "60"
@@ -1623,7 +1623,7 @@
         "category": "instore",
         "name": "Stewartbees",
         "phone": "+441234764365",
-        "website": "",
+
         "Google Maps URL": "http://maps.google.com/?cid=13215519395969511583",
         "Address": "23 Pillinge Rd, Stewartby, Bedford MK43 9NW, United Kingdom",
         "storeid": "67"
@@ -1655,7 +1655,7 @@
         "category": "instore",
         "name": "Solihull Apiaries",
         "phone": "+441564782213",
-        "website": "",
+
         "Google Maps URL": "http://maps.google.com/?cid=5643961145312982624",
         "Address": "342 School Rd, Hockley Heath, Solihull B94 6RN, United Kingdom",
         "storeid": "70"
@@ -1671,7 +1671,7 @@
         "category": "instore",
         "name": "Moorwood Apiaries",
         "phone": "+447535405104",
-        "website": "",
+
         "Google Maps URL": "http://maps.google.com/?cid=6351915981797548215",
         "Address": "140 Coleshill Rd, Nuneaton CV10 0PF, United Kingdom",
         "storeid": "72"
@@ -1687,7 +1687,7 @@
         "category": "instore",
         "name": "Oakley J S",
         "phone": "+441572823810",
-        "website": "",
+
         "Google Maps URL": "http://maps.google.com/?cid=16170421859874030253",
         "Address": "2 Walnut Cl, Bisbrooke, Oakham LE15 9EX, United Kingdom",
         "storeid": "73"
@@ -1735,7 +1735,7 @@
         "category": "instore",
         "name": "Colsterworth Honey Farm",
         "phone": "+441476861176",
-        "website": "",
+
         "Google Maps URL": "http://maps.google.com/?cid=17376697986342456467",
         "Address": "27 Bridge End, Colsterworth, Grantham NG33 5NZ, United Kingdom",
         "storeid": "77"
@@ -1751,7 +1751,7 @@
         "category": "instore",
         "name": "The Chester Honey Company",
         "phone": "+441244300655",
-        "website": "",
+
         "Google Maps URL": "http://maps.google.com/?cid=10936314702176281085",
         "Address": "Warrington Rd, Mickle Trafford, Chester CH2 4EB, United Kingdom",
         "storeid": "80"
@@ -1767,7 +1767,7 @@
       "properties": {
         "name": "Pure Cheshire Honey",
         "phone": "+447957503038",
-        "website": "",
+
         "Google Maps URL": "http://maps.google.com/?cid=12219294762669393783",
         "Address": "17 Larkhill Ave, Birkenhead, Wirral CH49 4PN, United Kingdom",
         "storeid": "81"
@@ -1783,7 +1783,7 @@
         "category": "instore",
         "name": "Hobson's Honey",
         "phone": "+447943868335",
-        "website": "",
+
         "Google Maps URL": "http://maps.google.com/?cid=1837958395534050267",
         "Address": "2 Birchfield Dr, Worksop S80 3DX, United Kingdom",
         "storeid": "86"
@@ -1815,7 +1815,7 @@
         "category": "instore",
         "name": "Ormskirk Honey",
         "phone": "+447963682456",
-        "website": "",
+
         "Google Maps URL": "http://maps.google.com/?cid=2449465104429660141",
         "Address": "82 St Helens Rd, Ormskirk L39 4QT, United Kingdom",
         "storeid": "96"
@@ -1847,7 +1847,7 @@
         "category": "instore",
         "name": "Ardsley Bees",
         "phone": "+441924870984",
-        "website": "",
+
         "Google Maps URL": "http://maps.google.com/?cid=7035001355018552793",
         "Address": "1 Woodhouse Cl, East Ardsley, Wakefield WF3 2JX, United Kingdom",
         "storeid": "100"
@@ -1879,7 +1879,7 @@
         "category": "instore",
         "name": "Osborne Lodge Farm",
         "phone": "+441723865184",
-        "website": "",
+
         "Google Maps URL": "http://maps.google.com/?cid=42533447548224058",
         "Address": "Scarborough YO12 5TG, United Kingdom",
         "storeid": "102"
@@ -1895,7 +1895,7 @@
         "category": "instore",
         "name": "Arcadian Apiaries Ltd",
         "phone": "+441423507236",
-        "website": "",
+
         "Google Maps URL": "http://maps.google.com/?cid=13304648585419316190",
         "Address": "3 Rutland Rd, Harrogate HG1 2PY, United Kingdom",
         "storeid": "105"
@@ -1945,7 +1945,7 @@
         "Google Maps URL": "http://maps.google.com/?cid=2262420631403235848",
         "Address": "Moor house, Middleton Tyas, Richmond DL10 6RT, United Kingdom",
         "phone": "+441325377042",
-        "website": "",
+
         "storeid": "109"
       },
       "type": "Feature"
@@ -1959,7 +1959,7 @@
         "category": "instore",
         "name": "Greenlands Farm Village",
         "phone": "+441524784184",
-        "website": "",
+
         "Google Maps URL": "http://maps.google.com/?cid=7758464953701827886",
         "Address": "2 Brookholme Cottages, Tewitfield, Carnforth LA6 1JH, United Kingdom",
         "storeid": "110"
@@ -1991,7 +1991,7 @@
         "category": "instore",
         "name": "Altons Honey Bee's",
         "phone": "+447401953020",
-        "website": "",
+
         "Google Maps URL": "http://maps.google.com/?cid=3952286542612521265",
         "Address": "Altons lodge, Inverurie AB51 0LZ, United Kingdom",
         "storeid": "123"
