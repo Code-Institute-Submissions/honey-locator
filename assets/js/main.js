@@ -64,6 +64,8 @@ function initMap() {
         let address = feature.getProperty("Address");
         let gLink = feature.getProperty("Google Maps URL");
         let position = feature.getGeometry().get();
+
+        // html for infoWindow
         let html = `<div class="content-text"><h5>${name}</h5>
         <div class = "py-1"><i class="fas fa-phone-alt honey-col" alt="phone"></i> ${phone}</div>
         <div class = "py-1"><i class="fas fa-globe honey-col" alt="globe"></i> <a class="website content-text" target="_blank" href="${website}">Website</a></div><div class = "pt-1"><i class="fas fa-store honey-col" alt="store"> </i>${address}</div><br><img src="https://maps.googleapis.com/maps/api/streetview?size=350x120&location=${position.lat()},${position.lng()}&key=AIzaSyCYEFJ6Ls3eG2snRN2rZx7zHIZ8SS5UeKE"><br>
@@ -71,8 +73,18 @@ function initMap() {
           name + " | " + phone + " | " + website + " | " + address
         }">Add to your list</div><div><a class="addBtn text-small btn-hover" target="_blank" href="${gLink}">View on GoogleMaps</a></div>`;
 
-        if (website === null) {
-          console.log;
+        let htmlAlt = `<div class="content-text"><h5>${name}</h5>
+        <div class = "py-1"><i class="fas fa-phone-alt honey-col" alt="phone"></i> ${phone}</div>
+        <div class = "pt-1"><i class="fas fa-store honey-col" alt="store"> </i>${address}</div><br><img src="https://maps.googleapis.com/maps/api/streetview?size=350x120&location=${position.lat()},${position.lng()}&key=AIzaSyCYEFJ6Ls3eG2snRN2rZx7zHIZ8SS5UeKE"><br>
+<div onclick="listHandlers.newItem();" id="addTo" class="addBtn text-small btn-hover" info= "${
+          name + " | " + phone + " | " + address
+        }">Add to your list</div><div><a class="addBtn text-small btn-hover" target="_blank" href="${gLink}">View on GoogleMaps</a></div>`;
+
+        // If no website info is present display htmlAlt, otherwise display html
+
+        if (website == null) {
+          infowindow.setContent(htmlAlt);
+          infowindow.open(map, marker);
         } else {
           infowindow.setContent(html);
           infowindow.open(map, marker);
@@ -323,10 +335,6 @@ function nextQuestion() {
   loadQuestion(currentQuestion);
 }
 
-function resetQuiz() {
-    document.getElementById("quizTest").reset();
-  }
-  
 $(document).ready(function () {
   $("#answers").hide();
   $("#showAnswers").click(function () {
