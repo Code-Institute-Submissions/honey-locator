@@ -274,16 +274,16 @@ let questions = [
   {
     question:
       "How many miles does a beehive fly (collectively) to make a pound of honey?",
-    option1: " 55,000 miles",
+    option1: "55,000 miles",
     option2: "100,00 miles",
     option3: "900 miles",
     corAnswer: "1",
   },
   {
     question: "How much honey does an average worker bee make in its lifetime?",
-    option1: "half a teaspoon",
-    option2: "one whole teaspoon",
-    option3: "one tenth of a teaspoon",
+    option1: "Half a teaspoon",
+    option2: "One whole teaspoon",
+    option3: "One tenth of a teaspoon",
     corAnswer: "3",
   },
   {
