@@ -66,19 +66,35 @@ function initMap() {
         let position = feature.getGeometry().get();
 
         // html for infoWindow
-        let html = `<div class="content-text"><h5>${name}</h5>
-        <div class = "py-1"><i class="fas fa-phone-alt honey-col" alt="phone"></i> ${phone}</div>
-        <div class = "py-1"><i class="fas fa-globe honey-col" alt="globe"></i> <a class="website content-text" target="_blank" href="${website}">Website</a></div><div class = "pt-1"><i class="fas fa-store honey-col" alt="store"> </i>${address}</div><br><img src="https://maps.googleapis.com/maps/api/streetview?size=350x120&location=${position.lat()},${position.lng()}&key=AIzaSyCYEFJ6Ls3eG2snRN2rZx7zHIZ8SS5UeKE"><br>
-<div onclick="listHandlers.newItem();" id="addTo" class="addBtn text-small btn-hover" info= "${
-          name + " | " + phone + " | " + website + " | " + address
-        }">Add to your list</div><div><a class="addBtn text-small btn-hover" target="_blank" href="${gLink}">View on GoogleMaps</a></div>`;
+        let html = 
+        `<div class="content-text">
+            <h5>${name}</h5>
+            <div class="py-1"><i class="fas fa-phone-alt honey-col" alt="phone"></i> ${phone}</div>
+            <div class="py-1">
+                <i class="fas fa-globe honey-col" alt="globe"></i>
+                <a class="website content-text" target="_blank" href="${website}">Website</a>
+            </div>
+            <div class="pt-1"><i class="fas fa-store honey-col" alt="store"></i>${address}</div>
+            <br />
+            <img src="https://maps.googleapis.com/maps/api/streetview?size=350x120&location=${position.lat()},${position.lng()}&key=AIzaSyCYEFJ6Ls3eG2snRN2rZx7zHIZ8SS5UeKE"/>
+            <br />
+            <div onclick="listHandlers.newItem();" id="addTo" class="addBtn text-small btn-hover" info= "${ name + " | " + phone + " | " + website + " | " + address}">Add to your list
+        </div>
+        <div>
+            <a class="addBtn text-small btn-hover" target="_blank" href="${gLink}">View on GoogleMaps</a>
+        </div>`;
 
-        let htmlAlt = `<div class="content-text"><h5>${name}</h5>
-        <div class = "py-1"><i class="fas fa-phone-alt honey-col" alt="phone"></i> ${phone}</div>
-        <div class = "pt-1"><i class="fas fa-store honey-col" alt="store"> </i>${address}</div><br><img src="https://maps.googleapis.com/maps/api/streetview?size=350x120&location=${position.lat()},${position.lng()}&key=AIzaSyCYEFJ6Ls3eG2snRN2rZx7zHIZ8SS5UeKE"><br>
-<div onclick="listHandlers.newItem();" id="addTo" class="addBtn text-small btn-hover" info= "${
-          name + " | " + phone + " | " + address
-        }">Add to your list</div><div><a class="addBtn text-small btn-hover" target="_blank" href="${gLink}">View on GoogleMaps</a></div>`;
+        let htmlAlt = 
+        `<div class="content-text">
+        <h5>${name}</h5>
+        <div class="py-1"><i class="fas fa-phone-alt honey-col" alt="phone"></i> ${phone}</div>
+        <div class="pt-1"><i class="fas fa-store honey-col" alt="store"> </i>${address}</div>
+        <br />
+        <img src="https://maps.googleapis.com/maps/api/streetview?size=350x120&location=${position.lat()},${position.lng()}&key=AIzaSyCYEFJ6Ls3eG2snRN2rZx7zHIZ8SS5UeKE" /><br />
+        <div onclick="listHandlers.newItem();" id="addTo" class="addBtn text-small btn-hover" info= "${ name + " | " + phone + " | " + address }">Add to your list
+    </div>
+    <div><a class="addBtn text-small btn-hover" target="_blank" href="${gLink}">View on GoogleMaps</a></div>
+`;
 
         // If no website info is present display htmlAlt, otherwise display html
 
@@ -242,6 +258,7 @@ $(function () {
 });
 
 // Quiz questions
+
 let questions = [
   {
     question:
@@ -285,8 +302,10 @@ let questions = [
 
 let currentQuestion = 0;
 let question = document.getElementById("question");
+let score = 0;
 
-function loadQuestion(i) {
+let quizHandlers = {
+loadQuestion: function(i) {
   let option1 = document.getElementById("option1");
   let option2 = document.getElementById("option2");
   let option3 = document.getElementById("option3");
@@ -295,9 +314,9 @@ function loadQuestion(i) {
   option1.textContent = q.option1;
   option2.textContent = q.option2;
   option3.textContent = q.option3;
-}
+},
 
-function nextQuestion() {
+nextQuestion: function() {
   let quizQuestionsContainer = document.getElementById(
     "quizQuestionsContainer"
   );
@@ -308,7 +327,6 @@ function nextQuestion() {
   let selectedOption = document.querySelector("input[type = radio]:checked");
   let corAnswer = selectedOption.value;
 
-  let score = 0;
 
   if (!selectedOption) {
     alert("Please choose an answer");
@@ -316,6 +334,7 @@ function nextQuestion() {
   }
   if (questions[currentQuestion].corAnswer == corAnswer) {
     score += 1;
+    console.log("success");
   }
 
   selectedOption.checked = false;
@@ -332,8 +351,10 @@ function nextQuestion() {
     return;
   }
   progBar.value = progBar.value + 10;
-  loadQuestion(currentQuestion);
+  quizHandlers.loadQuestion(currentQuestion);
 }
+}
+
 
 $(document).ready(function () {
   $("#answers").hide();
@@ -342,4 +363,4 @@ $(document).ready(function () {
   });
 });
 
-loadQuestion(currentQuestion);
+quizHandlers.loadQuestion(currentQuestion);
