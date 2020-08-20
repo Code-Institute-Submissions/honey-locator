@@ -185,22 +185,24 @@
       </div>
     </div>
     <!--List-->
-<div class="center mt-5">
-    <div id="yourList" class="center bg-col">
-      <div>
+    <div class="center mt-5">
+      <div id="yourList" class="center bg-col">
         <div>
-          <h2 class="content-text text-center p-3">Your List</h2>
-        </div>
-        <div>
-          <ul id="yourListUl" class="content-text text-small text-center">
-          </ul>
-        </div>
-        <div class="text-center">
-          <button onclick="listHandlers.clearBtn();">Clear All</button>
+          <div>
+            <h2 class="content-text text-center p-3">Your List</h2>
+          </div>
+          <div>
+            <ul
+              id="yourListUl"
+              class="content-text text-small text-center"
+            ></ul>
+          </div>
+          <div class="text-center">
+            <button onclick="listHandlers.clearBtn();">Clear All</button>
+          </div>
         </div>
       </div>
     </div>
-</div>
     <!-- Benefits -->
 
     <div id="benefits" class="content-text center container-fluid">
@@ -331,57 +333,57 @@
 
     <!-- Quiz -->
 
-    <div id="quiz" class="container-height container-fluid">
-      <div id="quizQuestionsContainer" class="quizContainer content-text">
-        <div>
-          <h3 class="text-center p-3">Quizzzz!</h3>
+    <div id="quiz" class="container-height">
+        <div id="quizQuestionsContainer" class="quizContainer content-text">
+          <div>
+            <h3 class="text-center p-3">Quizzzz!</h3>
+          </div>
+          <div class="center">
+            <div id="question" class="question"></div>
+          </div>
+          <div class="center">
+            <label class="option cursor quiz-btns text-center"
+              ><input type="radio" name="options" value="1" /><span
+                id="option1"
+              ></span
+            ></label>
+            <label class="option cursor quiz-btns text-center"
+              ><input type="radio" name="options" value="2" /><span
+                id="option2"
+              ></span
+            ></label>
+            <label class="option cursor quiz-btns text-center"
+              ><input type="radio" name="options" value="3" /><span
+                id="option3"
+              ></span
+            ></label>
+          </div>
+          <div class="center">
+            <button
+              id="nextBtn"
+              class="cursor quiz-btns text-center"
+              onclick="quizHandlers.nextQuestion();"
+            >
+              Next
+            </button>
+          </div>
+          <div class="center">
+            <progress id="progBar" max="50" value="10"> </progress>
+          </div>
         </div>
-        <div class="center">
-          <div id="question" class="question"></div>
-        </div>
-        <div class="center">
-          <label class="option cursor quiz-btns text-center"
-            ><input type="radio" name="options" value="1" /><span
-              id="option1"
-            ></span
-          ></label>
-          <label class="option cursor quiz-btns text-center"
-            ><input type="radio" name="options" value="2" /><span
-              id="option2"
-            ></span
-          ></label>
-          <label class="option cursor quiz-btns text-center"
-            ><input type="radio" name="options" value="3" /><span
-              id="option3"
-            ></span
-          ></label>
-        </div>
-        <div class="center">
-          <button
-            id="nextBtn"
-            class="cursor quiz-btns text-center"
-            onclick="quizHandlers.nextQuestion();"
-          >
-            Next
+        <div
+          id="quizResultsContainer"
+          class="quizContainer"
+          style="display: none;"
+        >
+          <button id="showAnswers" class="quiz-btns">
+            Show Answers
+            <p id="answers">Test</p>
+          </button>
+          <button id="restart" class="quiz-btns" onclick="quizHandlers.restartQuiz()">
+            Try again! <i class="fas fa-redo"></i>
           </button>
         </div>
-        <div class="center">
-          <progress id="progBar" max="50" value="10"> </progress>
-        </div>
-      </div>
-      <div
-        id="quizResultsContainer"
-        class="quizContainer"
-        style="display: none;"
-      >
-        <button id="showAnswers" class="quiz-btns">
-          Show Answers
-          <p id="answers">Test</p>
-        </button>
-        <button id="restart" class="quiz-btns" onclick="restartQuiz()">
-          Try again! <i class="fas fa-redo"></i>
-        </button>
-      </div>
     </div>
 
     <!-- Footer -->

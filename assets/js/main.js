@@ -66,8 +66,7 @@ function initMap() {
         let position = feature.getGeometry().get();
 
         // html for infoWindow
-        let html = 
-        `<div class="content-text">
+        let html = `<div class="content-text">
             <h5>${name}</h5>
             <div class="py-1"><i class="fas fa-phone-alt honey-col" alt="phone"></i> ${phone}</div>
             <div class="py-1">
@@ -78,20 +77,23 @@ function initMap() {
             <br />
             <img src="https://maps.googleapis.com/maps/api/streetview?size=350x120&location=${position.lat()},${position.lng()}&key=AIzaSyCYEFJ6Ls3eG2snRN2rZx7zHIZ8SS5UeKE"/>
             <br />
-            <div onclick="listHandlers.newItem();" id="addTo" class="addBtn text-small btn-hover" info= "${ name + " | " + phone + " | " + website + " | " + address}">Add to your list
+            <div onclick="listHandlers.newItem();" id="addTo" class="addBtn text-small btn-hover" info= "${
+              name + " | " + phone + " | " + website + " | " + address
+            }">Add to your list
         </div>
         <div>
             <a class="addBtn text-small btn-hover" target="_blank" href="${gLink}">View on GoogleMaps</a>
         </div>`;
 
-        let htmlAlt = 
-        `<div class="content-text">
+        let htmlAlt = `<div class="content-text">
         <h5>${name}</h5>
         <div class="py-1"><i class="fas fa-phone-alt honey-col" alt="phone"></i> ${phone}</div>
         <div class="pt-1"><i class="fas fa-store honey-col" alt="store"> </i>${address}</div>
         <br />
         <img src="https://maps.googleapis.com/maps/api/streetview?size=350x120&location=${position.lat()},${position.lng()}&key=AIzaSyCYEFJ6Ls3eG2snRN2rZx7zHIZ8SS5UeKE" /><br />
-        <div onclick="listHandlers.newItem();" id="addTo" class="addBtn text-small btn-hover" info= "${ name + " | " + phone + " | " + address }">Add to your list
+        <div onclick="listHandlers.newItem();" id="addTo" class="addBtn text-small btn-hover" info= "${
+          name + " | " + phone + " | " + address
+        }">Add to your list
     </div>
     <div><a class="addBtn text-small btn-hover" target="_blank" href="${gLink}">View on GoogleMaps</a></div>
 `;
@@ -251,6 +253,7 @@ data.forEach((item) => {
 });
 
 // flip function for benefits cards
+
 $(function () {
   $(".flip").flip({
     trigger: "click",
@@ -305,56 +308,53 @@ let question = document.getElementById("question");
 let score = 0;
 
 let quizHandlers = {
-loadQuestion: function(i) {
-  let option1 = document.getElementById("option1");
-  let option2 = document.getElementById("option2");
-  let option3 = document.getElementById("option3");
-  let q = questions[i];
-  question.textContent = i + 1 + ". " + q.question;
-  option1.textContent = q.option1;
-  option2.textContent = q.option2;
-  option3.textContent = q.option3;
-},
+  loadQuestion: function (i) {
+    let option1 = document.getElementById("option1");
+    let option2 = document.getElementById("option2");
+    let option3 = document.getElementById("option3");
+    let q = questions[i];
+    question.textContent = i + 1 + ". " + q.question;
+    option1.textContent = q.option1;
+    option2.textContent = q.option2;
+    option3.textContent = q.option3;
+  },
 
-nextQuestion: function() {
-  let quizQuestionsContainer = document.getElementById(
-    "quizQuestionsContainer"
-  );
-  let totalQuestions = questions.length;
-  let quizResultsContainer = document.getElementById("quizResultsContainer");
-  let restart = document.getElementById("restart");
-  let showAnswers = document.getElementById("showAnswers");
-  let selectedOption = document.querySelector("input[type = radio]:checked");
-  let corAnswer = selectedOption.value;
+  nextQuestion: function () {
+    let totalQuestions = questions.length;
+    let quizResultsContainer = document.getElementById("quizResultsContainer");
+    let restart = document.getElementById("restart");
+    let showAnswers = document.getElementById("showAnswers");
+    let selectedOption = document.querySelector("input[type = radio]:checked");
 
+    let quizQuestionsContainer = document.getElementById(
+      "quizQuestionsContainer"
+    );
+    if (!selectedOption) {
+      alert("Please choose an answer");
+    }
 
-  if (!selectedOption) {
-    alert("Please choose an answer");
-    return;
-  }
-  if (questions[currentQuestion].corAnswer == corAnswer) {
-    score += 1;
-    console.log("success");
-  }
+    let corAnswer = selectedOption.value;
+    if (questions[currentQuestion].corAnswer == corAnswer) {
+      score += 1;
+    }
 
-  selectedOption.checked = false;
-  currentQuestion++;
-  if (currentQuestion === totalQuestions - 1) {
-    nextBtn.textContent = "Finish";
-  }
-  if (currentQuestion === totalQuestions) {
-    quizQuestionsContainer.style.display = "none";
-    quizResultsContainer.style.display = "";
-    quizResultsContainer.innerHTML = `Your Score  ${score}  /5`;
-    quizResultsContainer.appendChild(showAnswers);
-    quizResultsContainer.appendChild(restart);
-    return;
-  }
-  progBar.value = progBar.value + 10;
-  quizHandlers.loadQuestion(currentQuestion);
-}
-}
-
+    selectedOption.checked = false;
+    currentQuestion++;
+    if (currentQuestion === totalQuestions - 1) {
+      nextBtn.textContent = "Finish";
+    }
+    if (currentQuestion === totalQuestions) {
+      quizQuestionsContainer.style.display = "none";
+      quizResultsContainer.style.display = "";
+      quizResultsContainer.innerHTML = `Your Score  ${score}  /5`;
+      quizResultsContainer.appendChild(showAnswers);
+      quizResultsContainer.appendChild(restart);
+      return;
+    }
+    progBar.value = progBar.value + 10;
+    quizHandlers.loadQuestion(currentQuestion);
+  },
+};
 
 $(document).ready(function () {
   $("#answers").hide();
