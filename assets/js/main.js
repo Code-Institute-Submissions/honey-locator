@@ -64,9 +64,12 @@ function initMap() {
         let address = feature.getProperty("Address");
         let gLink = feature.getProperty("Google Maps URL");
         let position = feature.getGeometry().get();
+        let streetView = `<img src="https://maps.googleapis.com/maps/api/streetview?size=350x120&location=${position.lat()},${position.lng()}&key=AIzaSyCYEFJ6Ls3eG2snRN2rZx7zHIZ8SS5UeKE"/>`;
 
         // html for infoWindow
-        let html = `<div class="content-text">
+
+        let html = 
+        `<div class="content-text">
             <h5>${name}</h5>
             <div class="py-1"><i class="fas fa-phone-alt honey-col" alt="phone"></i> ${phone}</div>
             <div class="py-1">
@@ -75,29 +78,27 @@ function initMap() {
             </div>
             <div class="pt-1"><i class="fas fa-store honey-col" alt="store"></i>${address}</div>
             <br />
-            <img src="https://maps.googleapis.com/maps/api/streetview?size=350x120&location=${position.lat()},${position.lng()}&key=AIzaSyCYEFJ6Ls3eG2snRN2rZx7zHIZ8SS5UeKE"/>
+            ${streetView}
             <br />
-            <div onclick="listHandlers.newItem();" id="addTo" class="addBtn text-small btn-hover" info= "${
-              name + " | " + phone + " | " + website + " | " + address
-            }">Add to your list
+            <div onclick="listHandlers.newItem();" id="addTo" class="addBtn text-small btn-hover" inputValue= "${ name + " | " + phone + " | " + website + " | " + address }">Add to your list
         </div>
         <div>
             <a class="addBtn text-small btn-hover" target="_blank" href="${gLink}">View on GoogleMaps</a>
         </div>`;
 
-        let htmlAlt = `<div class="content-text">
-        <h5>${name}</h5>
-        <div class="py-1"><i class="fas fa-phone-alt honey-col" alt="phone"></i> ${phone}</div>
-        <div class="pt-1"><i class="fas fa-store honey-col" alt="store"> </i>${address}</div>
-        <br />
-        <img src="https://maps.googleapis.com/maps/api/streetview?size=350x120&location=${position.lat()},${position.lng()}&key=AIzaSyCYEFJ6Ls3eG2snRN2rZx7zHIZ8SS5UeKE" /><br />
-        <div onclick="listHandlers.newItem();" id="addTo" class="addBtn text-small btn-hover" info= "${
-          name + " | " + phone + " | " + address
-        }">Add to your list
-    </div>
-    <div><a class="addBtn text-small btn-hover" target="_blank" href="${gLink}">View on GoogleMaps</a></div>
-`;
-
+        let htmlAlt = 
+        `<div class="content-text">
+            <h5>${name}</h5>
+            <div class="py-1"><i class="fas fa-phone-alt honey-col" alt="phone"></i> ${phone}</div>
+            <div class="pt-1"><i class="fas fa-store honey-col" alt="store"></i>${address}</div>
+            <br />
+            ${streetView}
+            <br />
+            <div onclick="listHandlers.newItem();" id="addTo" class="addBtn text-small btn-hover" inputValue= "${ name + " | " + phone + " | " + address }">Add to your list
+        </div>
+        <div>
+            <a class="addBtn text-small btn-hover" target="_blank" href="${gLink}">View on GoogleMaps</a>
+        </div>`;
         // If no website info is present display htmlAlt, otherwise display html
 
         if (website == null) {
@@ -211,17 +212,6 @@ let listView = {
     let li = document.createElement("li");
     li.textContent = text;
     ul.appendChild(li);
-    li.appendChild(this.createDeleteButton());
-    for (let i = 0; i < itemsArray.length; i++) {
-      li.id = i;
-    }
-  },
-
-  createDeleteButton: function () {
-    let deleteButton = document.createElement("button");
-    deleteButton.textContent = "Delete";
-    deleteButton.className = "deleteButton";
-    return deleteButton;
   },
 };
 
@@ -229,7 +219,9 @@ let listView = {
 
 let listHandlers = {
   newItem: function () {
-    let inputValue = document.getElementById("addTo").getAttribute("info");
+    let inputValue = document
+      .getElementById("addTo")
+      .getAttribute("inputValue");
     if (itemsArray.indexOf(inputValue) == -1) {
       itemsArray.push(inputValue);
       localStorage.setItem("items", JSON.stringify(itemsArray));
@@ -353,6 +345,11 @@ let quizHandlers = {
     }
     progBar.value = progBar.value + 10;
     quizHandlers.loadQuestion(currentQuestion);
+  },
+
+  restartQuiz: function () {
+    location.reload();
+    return false;
   },
 };
 
