@@ -79,10 +79,44 @@
       </div>
     </header>
 
-    <!-- Modal -->
-
     <div id="honeyMap">
-      <div
+      <div class="center mt-5 pt-5">
+        <h1 class="heading content-text p-4">
+          Find locally produced honey in the UK!
+        </h1>
+      </div>
+
+      <!--search-->
+      <div class="center container-fluid">
+        <div id="pac-container">
+          <input
+            id="pac-input"
+            class="pac-input bg-col content-text text-center"
+            type="text"
+            placeholder="Enter a location"
+          />
+        </div>
+      </div>
+
+      <!-- Map -->
+      <div class="map-container center container-height">
+        <div id="map"></div>
+        <div class="over-map">
+          <button
+            id="edit-btn"
+            class="content-text m-0 button"
+            type="button"
+            data-toggle="modal"
+            data-target="#modal"
+          >
+            Suggest an edit
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Form -->
+     <div
         class="modal fade"
         id="modal"
         tabindex="-1"
@@ -155,43 +189,7 @@
         </div>
       </div>
 
-      <div class="center mt-5 pt-5">
-        <h1 class="heading content-text p-4">
-          Find locally produced honey in the UK!
-        </h1>
-      </div>
-
-      <!--search-->
-      <div class="center container-fluid">
-        <div id="pac-container">
-          <input
-            id="pac-input"
-            class="pac-input bg-col content-text text-center"
-            type="text"
-            placeholder="Enter a location"
-          />
-        </div>
-      </div>
-
-      <!-- Map -->
-      <div class="map-container center container-height">
-        <div id="map"></div>
-        <div class="bg-col over-map">
-          <button
-            id="edit-btn"
-            class="modal-btn content-text buttons hvr-grow cursor m-0"
-            type="button"
-            data-toggle="modal"
-            data-target="#modal"
-          >
-            Suggest an edit
-          </button>
-        </div>
-      </div>
-    </div>
-
     <!--List-->
-
     <div id="list" class="center mt-5">
       <div id="yourList" class="center bg-col">
         <div>
@@ -205,7 +203,7 @@
             ></ul>
           </div>
           <div class="text-center">
-            <button class="quiz-btns" onclick="listHandlers.clearBtn();">
+            <button class="button" onclick="listHandlers.clearBtn();">
               Clear All
             </button>
           </div>
@@ -216,7 +214,7 @@
 
     <div id="benefits" class="content-text center container-fluid">
       <div class="row">
-        <div class="col-12 col-md-4 cursor p-2">
+        <div class="col-12 col-md-4  p-2">
           <div class="flip">
             <div class="front">
               <h5 class="pt-3">Health</h5>
@@ -351,17 +349,17 @@
           <div id="question" class="question"></div>
         </div>
         <div class="center">
-          <label class="option cursor quiz-btns text-center"
+          <label class="option  button text-center"
             ><input type="radio" name="options" value="1" /><span
               id="option1"
             ></span
           ></label>
-          <label class="option cursor quiz-btns text-center"
+          <label class="option  button text-center"
             ><input type="radio" name="options" value="2" /><span
               id="option2"
             ></span
           ></label>
-          <label class="option cursor quiz-btns text-center"
+          <label class="option  button text-center"
             ><input type="radio" name="options" value="3" /><span
               id="option3"
             ></span
@@ -370,7 +368,7 @@
         <div class="center">
           <button
             id="nextBtn"
-            class="cursor quiz-btns text-center"
+            class=" button text-center"
             onclick="quizHandlers.nextQuestion();"
           >
             Next
@@ -385,7 +383,7 @@
         class="quizContainer"
         style="display: none;"
       >
-        <button id="showAnswers" class="quiz-btns">
+        <button id="showAnswers" class="buttonns">
           Show Answers
           <ol id="answers">
             <li>Four Million</li>
@@ -397,7 +395,7 @@
         </button>
         <button
           id="restart"
-          class="quiz-btns"
+          class="button"
           onclick="quizHandlers.restartQuiz()"
         >
           Try again! <i class="fas fa-redo"></i>

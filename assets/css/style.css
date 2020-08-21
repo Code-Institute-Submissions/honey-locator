@@ -79,13 +79,18 @@ body {
 .logo-nav{
     height: 40px;
 }
-.buttons {
-    border: none;
-  background-color: transparent;
-  outline: none;
-  
-}
 
+.button{
+    width: 200px;
+	display: inline-block;
+	padding: 10px;
+	background: rgba(255, 255, 255);
+	margin: 10px 0 10px 10px;
+	color: #FAB140;
+    border: 1px solid rgba(255, 255, 255);
+	border-radius: 15px; 
+    cursor: pointer;
+}
 
 /*--------map--------*/
 
@@ -132,29 +137,6 @@ div #map {
   display: none;
 }
 
-/*--------modal--------*/
-
-
-.transition {
-    -webkit-transform: scale(.1); 
-    -moz-transform: scale(.1);
-    -o-transform: scale(.1);
-    transform: scale(.1);
-}
-#edit-btn {
-	-webkit-transition: all .6s ease-in-out;
-	-moz-transition: all .6s ease-in-out;
-	-o-transition: all .6s ease-in-out;
-	-ms-transition: all .6s ease-in-out;
-}
-
-#test{
-    -webkit-transition: all .6s ease-in-out;
-	-moz-transition: all .6s ease-in-out;
-	-o-transition: all .6s ease-in-out;
-	-ms-transition: all .6s ease-in-out;
-}
-
 
 
 /*--------hover--------*/
@@ -164,16 +146,11 @@ div #map {
   margin-top: 10px;
 }
 
-
-.btn-hover:hover {
-background-color: #fab140;
-color: white;
-text-decoration: none;
+.button:hover, .option:focus-within {
+    background-color: #9EBE7B;
+    color: white;
 }
 
-.modal-btn:hover{
-    color: #fab140;
-}
 
 /*--------list--------*/
 
@@ -231,9 +208,6 @@ text-decoration: none;
     color:rgb(109, 112, 114);
 }
 
-.cursor {
-    cursor: pointer;
-}
 /*--------benefits-cards--------*/
 
 #benefits {
@@ -276,23 +250,6 @@ text-decoration: none;
     border-radius: 5px;
     width: 60%;
     height: 300px;
-    color: white;
-}
-
-
-.quiz-btns{
-    width: 200px;
-	display: inline-block;
-	padding: 10px;
-	background: rgba(255, 255, 255);
-	margin: 10px 0 10px 10px;
-	color: #FAB140;
-    border: 1px solid rgba(255, 255, 255);
-	border-radius: 15px; 
-}
-
-.quiz-btns:hover, .option:focus-within {
-    background-color: #9EBE7B;
     color: white;
 }
 
