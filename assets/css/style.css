@@ -131,7 +131,7 @@ div #map {
   text-overflow: ellipsis;
   border-radius: 5px;
   border-color: #eeeff1;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   width: 300px;
 }
 
@@ -143,8 +143,6 @@ div #map {
 .hidden {
   display: none;
 }
-
-
 
 /*--------hover--------*/
 
@@ -194,7 +192,6 @@ div #map {
 
 .flip {
     height: 350px;
-    width: 300px;
 }
 
 .flip .front {
