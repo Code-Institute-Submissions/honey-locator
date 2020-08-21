@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap");
 
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: url(../../assets/images/honey-bg.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -24,6 +29,7 @@ body {
 
 .content-heading {
   margin: 7px;
+  font-weight: 500;
 }
 
 .content-text {
@@ -48,7 +54,7 @@ body {
     height: 50px;
 }
 
-.navbar-toggler {
+.navbar-light .navbar-toggler {
     border: none;
 }
 

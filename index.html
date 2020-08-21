@@ -37,7 +37,7 @@
 
     <header>
       <div class="fixed-top dropdown-nav bg-col">
-        <nav class="navbar navbar-light navbar-expand-sm bg-col content-text">
+        <nav class="navbar navbar-light navbar-expand-sm bg-col content-text p-0">
           <a href="#home" class="navbar-brand"
             ><img
               src="assets/images/icon_online.jpg"
@@ -56,17 +56,22 @@
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-
           <div class="collapse navbar-collapse bg-col" id="navbarNavDropdown">
-            <ul class="navbar-nav m-auto pr-5">
+            <ul class="navbar-nav pr-5 content-heading">
               <li class="nav-item mr-2" id="navbar">
-                <a class="nav-link" href="#home">Home</a>
+                <a class="nav-link" href="#honeyMap">Honey Map</a>
               </li>
+              <li class="mr-2 d-flex align-items-center honey-col"><b>.</b></li>
               <li class="nav-item mr-2">
-                <a class="nav-link" href="#benefits">Benefits</a>
+                <a class="nav-link" href="#list">Your List</a>
               </li>
+              <li class="mr-2 d-flex align-items-center honey-col"><b>.</b></li>
               <li class="nav-item mr-2">
-                <a class="nav-link" href="#quiz">Quiz</a>
+                <a class="nav-link" href="#benefits">All about Bees</a>
+              </li>
+              <li class="mr-2 d-flex align-items-center honey-col"><b>.</b></li>
+              <li class="nav-item mr-2">
+                <a class="nav-link" href="#quiz">Quizzz!</a>
               </li>
             </ul>
           </div>
@@ -76,7 +81,7 @@
 
     <!-- Modal -->
 
-    <div id="home">
+    <div id="honeyMap">
       <div
         class="modal fade"
         id="modal"
@@ -184,10 +189,10 @@
         </div>
       </div>
     </div>
+
     <!--List-->
 
-   <a id="myAnchor" onclick="testFunction();" target="_blank">A Link: Go to w3schools.com</a>
-    <div class="center mt-5">
+    <div id="list" class="center mt-5">
       <div id="yourList" class="center bg-col">
         <div>
           <div>
@@ -200,7 +205,9 @@
             ></ul>
           </div>
           <div class="text-center">
-            <button class = "quiz-btns" onclick="listHandlers.clearBtn();">Clear All</button>
+            <button class="quiz-btns" onclick="listHandlers.clearBtn();">
+              Clear All
+            </button>
           </div>
         </div>
       </div>
@@ -336,62 +343,66 @@
     <!-- Quiz -->
 
     <div id="quiz" class="container-height">
-        <div id="quizQuestionsContainer" class="quizContainer content-text">
-          <div>
-            <h3 class="text-center p-3">Quizzzz!</h3>
-          </div>
-          <div class="center">
-            <div id="question" class="question"></div>
-          </div>
-          <div class="center">
-            <label class="option cursor quiz-btns text-center"
-              ><input type="radio" name="options" value="1" /><span
-                id="option1"
-              ></span
-            ></label>
-            <label class="option cursor quiz-btns text-center"
-              ><input type="radio" name="options" value="2" /><span
-                id="option2"
-              ></span
-            ></label>
-            <label class="option cursor quiz-btns text-center"
-              ><input type="radio" name="options" value="3" /><span
-                id="option3"
-              ></span
-            ></label>
-          </div>
-          <div class="center">
-            <button
-              id="nextBtn"
-              class="cursor quiz-btns text-center"
-              onclick="quizHandlers.nextQuestion();"
-            >
-              Next
-            </button>
-          </div>
-          <div class="center">
-            <progress id="progBar" max="50" value="10"> </progress>
-          </div>
+      <div id="quizQuestionsContainer" class="quizContainer content-text">
+        <div>
+          <h3 class="text-center p-3">Quizzzz!</h3>
         </div>
-        <div
-          id="quizResultsContainer"
-          class="quizContainer"
-          style="display: none;"
-        >
-          <button id="showAnswers" class="quiz-btns">
-            Show Answers
-            <ol id="answers">
+        <div class="center">
+          <div id="question" class="question"></div>
+        </div>
+        <div class="center">
+          <label class="option cursor quiz-btns text-center"
+            ><input type="radio" name="options" value="1" /><span
+              id="option1"
+            ></span
+          ></label>
+          <label class="option cursor quiz-btns text-center"
+            ><input type="radio" name="options" value="2" /><span
+              id="option2"
+            ></span
+          ></label>
+          <label class="option cursor quiz-btns text-center"
+            ><input type="radio" name="options" value="3" /><span
+              id="option3"
+            ></span
+          ></label>
+        </div>
+        <div class="center">
+          <button
+            id="nextBtn"
+            class="cursor quiz-btns text-center"
+            onclick="quizHandlers.nextQuestion();"
+          >
+            Next
+          </button>
+        </div>
+        <div class="center">
+          <progress id="progBar" max="50" value="10"> </progress>
+        </div>
+      </div>
+      <div
+        id="quizResultsContainer"
+        class="quizContainer"
+        style="display: none;"
+      >
+        <button id="showAnswers" class="quiz-btns">
+          Show Answers
+          <ol id="answers">
             <li>Four Million</li>
             <li>55,000 miles</li>
             <li>One tenth of a teaspoon</li>
             <li>11,400 times</li>
             <li>Up to ten miles per hour</li>
-            </ol>
-          </button>
-          <button id="restart" class="quiz-btns" onclick="quizHandlers.restartQuiz()">
-            Try again! <i class="fas fa-redo"></i>
-          </button>
-        </div>
+          </ol>
+        </button>
+        <button
+          id="restart"
+          class="quiz-btns"
+          onclick="quizHandlers.restartQuiz()"
+        >
+          Try again! <i class="fas fa-redo"></i>
+        </button>
+      </div>
     </div>
 
     <!-- Footer -->

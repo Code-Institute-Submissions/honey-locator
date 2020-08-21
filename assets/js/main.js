@@ -222,19 +222,13 @@ let listView = {
     anchor.textContent = "test";
     anchor.className = "testing";
     let att = document.createAttribute("href")
-    att.value = ("#");
+    att.value = website;
     anchor.setAttributeNode(att);
     return anchor;
     },
 };
 
-// function testFunction(){
-// var anchor = document.getElementById("myAnchor");
-//   var att = document.createAttribute("href");
-//   att.value = "https://www.w3schools.com";
-//   anchor.setAttributeNode(att);
-//   listView.liMaker.appendChild(anchor);
-// }
+
 //List handlers
 
 let listHandlers = {
