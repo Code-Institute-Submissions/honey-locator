@@ -76,30 +76,30 @@ function initMap() {
                 <a class="website content-text" target="_blank" href="${website}">Website</a>
             </div>
             <div class="pt-1"><i class="fas fa-store honey-col" alt="store"></i>${address}</div>
-            <br />
+             <div class="pt-2">
             ${streetView}
-            <br />
-            <div onclick="listHandlers.newItem();" id="addTo" class="addBtn text-small btn-hover" inputValue= "${
-              name + " | " + phone + " | " + website + " | " + address
+            </div>
+            <div onclick="listHandlers.newItem();" id="addTo" class="button text-small text-center float-left" inputValue= "${
+              name + "  |  " + phone + "  |  " + website + "  |  " + address
             }">Add to your list
         </div>
         <div>
-            <a class="addBtn text-small btn-hover" target="_blank" href="${gLink}">View on GoogleMaps</a>
+            <a class="button text-small text-center" target="_blank" href="${gLink}">View on GoogleMaps</a>
         </div>`;
 
         let htmlAlt = `<div class="content-text">
             <h5>${name}</h5>
             <div class="py-1"><i class="fas fa-phone-alt honey-col" alt="phone"></i> ${phone}</div>
             <div class="pt-1"><i class="fas fa-store honey-col" alt="store"></i>${address}</div>
-            <br />
+            <div class="pt-2">
             ${streetView}
-            <br />
-            <div onclick="listHandlers.newItem();" id="addTo" class="addBtn text-small btn-hover" inputValue= "${
-              name + " | " + phone + " | " + address
+            </div>
+            <div onclick="listHandlers.newItem();" id="addTo" class="text-small button text-center float-left" inputValue= "${
+              name + "  |  " + phone + "  |  " + address
             }">Add to your list
         </div>
         <div>
-            <a class="addBtn text-small btn-hover" target="_blank" href="${gLink}">View on GoogleMaps</a>
+            <a class="button text-small text-center" target="_blank" href="${gLink}">View on GoogleMaps</a>
         </div>`;
         // If no website info is present display htmlAlt, otherwise display html
 
@@ -214,20 +214,19 @@ let listView = {
     let li = document.createElement("li");
     li.textContent = text;
     ul.appendChild(li);
-        li.appendChild(this.testFunction());
+    li.appendChild(this.testFunction());
   },
 
-    testFunction: function () {
+  testFunction: function () {
     let anchor = document.createElement("a");
     anchor.textContent = "test";
     anchor.className = "testing";
-    let att = document.createAttribute("href")
-    att.value = website;
+    let att = document.createAttribute("href");
+    att.value = "#";
     anchor.setAttributeNode(att);
     return anchor;
-    },
+  },
 };
-
 
 //List handlers
 
@@ -242,7 +241,7 @@ let listHandlers = {
       localStorage.setItem("items", JSON.stringify(itemsArray));
       listView.liMaker(inputValue);
     } else {
-      alert("Already added");
+      alert("Looks like you've already got this one on your list! Please try another.");
       return;
     }
   },
