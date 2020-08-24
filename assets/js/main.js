@@ -237,7 +237,7 @@ let listHandlers = {
       .getAttribute("inputValue");
 
     if (itemsArray.indexOf(inputValue) == -1) {
-      itemsArray.push(inputValue);
+      itemsArray.push(inputValue)
       localStorage.setItem("items", JSON.stringify(itemsArray));
       listView.liMaker(inputValue);
     } else {
@@ -268,6 +268,7 @@ $(function () {
   });
 });
 
+  
 // Quiz questions
 
 let questions = [

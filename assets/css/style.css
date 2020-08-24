@@ -7,15 +7,8 @@ html {
 #mapPage {
   background: url(../../assets/images/honey-bg.jpg) no-repeat center center
     fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
   background-size: cover;
   font-family: "Montserrat", sans-serif;
-}
-
-.container-height {
-  height: 80vh;
 }
 
 .container-width {
@@ -104,7 +97,7 @@ html {
 }
 
 .cursor {
-    cursor: pointer;
+  cursor: pointer;
 }
 /*--------map--------*/
 
@@ -153,7 +146,8 @@ div #map {
 
 /*--------hover--------*/
 
-.text-hvr:hover, .active {
+.text-hvr:hover,
+.active {
   text-decoration: none;
   color: #fab140;
 }
@@ -204,15 +198,15 @@ div #map {
 }
 
 .flipCard1 {
-    background-color: #A8E1E8;
+  background-color: #a8e1e8;
 }
 
 .flipCard2 {
-     background-color: #fab140;
+  background-color: #fab140;
 }
 
 .flipCard3 {
-    background-color: #9EBE7B;
+  background-color: #9ebe7b;
 }
 
 .benefitsImgs {
@@ -220,11 +214,13 @@ div #map {
 }
 
 .beekeeper {
-    height: 400px;
+  height: 400px;
 }
+
 @media screen and (max-width: 576px) {
   .beekeeper {
     height: 250px;
+  }
 }
 
 /*--------quiz--------*/
