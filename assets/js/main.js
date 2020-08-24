@@ -102,7 +102,7 @@ function initMap() {
             <a class="button text-small text-center" target="_blank" href="${gLink}">View on GoogleMaps</a>
         </div>`;
         // If no website info is present display htmlAlt, otherwise display html
-            
+
         if (website == null) {
           infowindow.setContent(htmlAlt);
           infowindow.open(map, marker);
@@ -241,7 +241,9 @@ let listHandlers = {
       localStorage.setItem("items", JSON.stringify(itemsArray));
       listView.liMaker(inputValue);
     } else {
-      alert("Looks like you've already got this one on your list! Please try another.");
+      alert(
+        "Looks like you've already got this one on your list! Please try another."
+      );
       return;
     }
   },
