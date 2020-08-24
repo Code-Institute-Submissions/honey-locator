@@ -73,7 +73,7 @@ function initMap() {
             <div class="py-1"><i class="fas fa-phone-alt honey-col" alt="phone"></i> ${phone}</div>
             <div class="py-1">
                 <i class="fas fa-globe honey-col" alt="globe"></i>
-                <a class="website content-text" target="_blank" href="${website}">Website</a>
+                <a class="website text-hvr content-text" target="_blank" href="${website}">Website</a>
             </div>
             <div class="pt-1"><i class="fas fa-store honey-col" alt="store"></i>${address}</div>
              <div class="pt-2">
@@ -102,7 +102,7 @@ function initMap() {
             <a class="button text-small text-center" target="_blank" href="${gLink}">View on GoogleMaps</a>
         </div>`;
         // If no website info is present display htmlAlt, otherwise display html
-
+            
         if (website == null) {
           infowindow.setContent(htmlAlt);
           infowindow.open(map, marker);

@@ -32,12 +32,11 @@
     </script>
   </head>
 
-  <body>
-
+  <body id="mapPage">
     <!--Nav-->
     <header>
       <div class="fixed-top dropdown-nav bg-col">
-        <nav class="navbar navbar-light navbar-expand-sm bg-col content-text p-0">
+        <nav class="navbar navbar-expand-sm bg-col p-0">
           <a href="#home" class="navbar-brand"
             ><img
               src="assets/images/icon_online.jpg"
@@ -54,24 +53,34 @@
             aria-expanded="false"
             aria-label="Togglenavigation"
           >
-            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon">
+              <i class="fa fa-navicon"></i>
+            </span>
           </button>
           <div class="collapse navbar-collapse bg-col" id="navbarNavDropdown">
             <ul class="navbar-nav pr-5 content-heading">
               <li class="nav-item mr-2" id="navbar">
-                <a class="nav-link" href="#honeyMap">Honey Map</a>
+                <a class="nav-link content-text text-hvr" href="index.html"
+                  >Honey Map</a
+                >
               </li>
               <li class="mr-2 d-flex align-items-center honey-col"><b>.</b></li>
               <li class="nav-item mr-2">
-                <a class="nav-link" href="#list">Your List</a>
+                <a class="nav-link content-text text-hvr" href="#list"
+                  >Your List</a
+                >
               </li>
               <li class="mr-2 d-flex align-items-center honey-col"><b>.</b></li>
               <li class="nav-item mr-2">
-                <a class="nav-link" href="#about">All about Bees</a>
+                <a class="nav-link content-text text-hvr" href="about.html"
+                  >About</a
+                >
               </li>
               <li class="mr-2 d-flex align-items-center honey-col"><b>.</b></li>
               <li class="nav-item mr-2">
-                <a class="nav-link" href="#quiz">Quizzz!</a>
+                <a class="nav-link content-text text-hvr" href="#quiz"
+                  >Quizzz!</a
+                >
               </li>
             </ul>
           </div>
@@ -99,7 +108,7 @@
       </div>
 
       <!-- Map -->
-      <div class="map-container center container-height">
+      <div class="map-container center">
         <div id="map"></div>
         <div class="over-map">
           <button
@@ -116,227 +125,101 @@
     </div>
 
     <!-- Modal Form -->
-     <div
-        class="modal fade"
-        id="modal"
-        tabindex="-1"
-        role="dialog"
-        aria-labelledby="exampleModalCenterTitle"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content content-text bg-col">
-            <div class="modal-body">
-              <form id="myForm" onsubmit="return sendForm(this);">
-                <div class="form-group">
-                  <label for="nameInput">Name</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="nameInput"
-                    name="nameInput"
-                  />
-                </div>
-                <div class="form-group">
-                  <label for="emailInput">Email address</label>
-                  <input
-                    type="email"
-                    class="form-control"
-                    id="emailInput"
-                    name="emailInput"
-                  />
-                </div>
-                <div class="form-group">
-                  <label for="selectInput"
-                    >What would you like to suggest?</label
-                  >
-                  <select
-                    class="form-control content-text"
-                    id="selectInput"
-                    name="selectInput"
-                  >
-                    <option>Add a location</option>
-                    <option>Remove a location</option>
-                    <option>General suggestion</option>
-                  </select>
-                </div>
-                <div class="form-group">
-                  <textarea
-                    id="textInput"
-                    name="textInput"
-                    class="form-control content-text"
-                    rows="3"
-                    placeholder="Please let us know more"
-                    required
-                  ></textarea>
-                </div>
+    <div
+      class="modal fade"
+      id="modal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content content-text bg-col">
+          <div class="modal-body">
+            <form id="myForm" onsubmit="return sendForm(this);">
+              <div class="form-group">
+                <label for="nameInput">Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="nameInput"
+                  name="nameInput"
+                />
+              </div>
+              <div class="form-group">
+                <label for="emailInput">Email address</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="emailInput"
+                  name="emailInput"
+                />
+              </div>
+              <div class="form-group">
+                <label for="selectInput">What would you like to suggest?</label>
+                <select
+                  class="form-control content-text"
+                  id="selectInput"
+                  name="selectInput"
+                >
+                  <option>Add a location</option>
+                  <option>Remove a location</option>
+                  <option>General suggestion</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <textarea
+                  id="textInput"
+                  name="textInput"
+                  class="form-control content-text"
+                  rows="3"
+                  placeholder="Please let us know more"
+                  required
+                ></textarea>
+              </div>
 
-                <div class="modal-footer">
-                  <button type="submit" class="btn content-text btn-hover">
-                    Submit
-                  </button>
-                  <button
-                    type="button"
-                    class="btn content-text btn-hover"
-                    data-dismiss="modal"
-                  >
-                    Close
-                  </button>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    <!--List-->
-    <div id="list" class="center pt-5">
-      <div id="yourList" class="center bg-col">
-        <div>
-          <div>
-           <div class="center">
-            <img src="assets/images/honey-pot.jpg" class="honeyPot" alt="honey pot"/>
-            </div>
-            <h2 class="content-text text-center p-1 m-0">Your List</h2>
-            <p class="content-text text-center text-small">Feel free to leave and come back, we'll save your list for you!</p>
-          </div>
-          <div>
-            <ul
-              id="yourListUl"
-              class="content-text text-center p-0"
-            ></ul>
-          </div>
-          <div class="text-center">
-            <button class="button mt-0" onclick="listHandlers.clearBtn();">
-              Clear All
-            </button>
+              <div class="modal-footer">
+                <button type="submit" class="btn content-text btn-hover">
+                  Submit
+                </button>
+                <button
+                  type="button"
+                  class="btn content-text btn-hover"
+                  data-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
+            </form>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- About -->
-    <div id="about" class="content-text center container-fluid pt-5">
-      <div class="row">
-        <div class="col-md-4">
-          <div class="flip">
-            <div class="front">
-              <h5 class="pt-3">Health</h5>
+    <!--List-->
+    <div id="list" class="center pt-5">
+      <div id="yourList" class="center bg-col container-width">
+        <div>
+          <div>
+            <div class="center">
               <img
-                src="assets/images/heart.png"
-                alt="heart"
-                class="benefitsImgs"
+                src="assets/images/honey-pot.jpg"
+                class="honeyPot"
+                alt="honey pot"
               />
-              <p class="text-small px-3">
-                Raw honey has been used as a folk remedy throughout history and
-                has a variety of health benefits and medical uses...
-              </p>
             </div>
-            <div class="back">
-              <h5 class="pt-3">Health</h5>
-              <ul class="text-small">
-                <li>A good source of antioxidants</li>
-                <li>Antibacterial and antifungal properties</li>
-                <li>Heal wounds</li>
-                <li>Phytonutrient powerhouse</li>
-                <li>Help for digestive issues</li>
-                <li>Soothe a sore throat</li>
-                <li>
-                  A healthier alternative to the high fructose corn syrup in
-                  lots of sweets and processed foods
-                </li>
-              </ul>
-              <p class="pt-5">
-                Read more
-                <a
-                  href="https://www.healthline.com/health/food-nutrition/top-raw-honey-benefits#digestion-and-gut-health"
-                  target="_blank"
-                  >here</a
-                >
-              </p>
-            </div>
+            <h2 class="content-text text-center p-1 m-0">Your List</h2>
+            <p class="content-text text-center text-small">
+              Feel free to leave and come back, we'll save your list for you!
+            </p>
           </div>
-        </div>
-        <div class="col-md-4 p-2">
-          <div class="flip">
-            <div class="front">
-              <h5 class="pt-3">Economic</h5>
-              <img
-                src="assets/images/shop.png"
-                alt="shop"
-                class="benefitsImgs"
-              />
-              <p class="text-small px-3">
-                Choosing to shop with your local businesses instead of the
-                larger chain stores has many benefits...
-              </p>
-            </div>
-            <div class="back">
-              <h5 class="pt-3">Economic</h5>
-
-              <ul class="text-small pr-2">
-                <li>
-                  Help to boost your local economy - Research shows that £10
-                  spent with a local independent shop means up to an additional
-                  £50 goes back into the local economy
-                </li>
-                <li>
-                  Creates local jobs - Small, local businesses are surprisingly
-                  the largest employer of jobs nationally and provide the most
-                  local jobs to communities
-                </li>
-              </ul>
-              <p>
-                Read more
-                <a
-                  href="https://smallbusiness.co.uk/fifteen-reasons-choose-local-company-2542429/"
-                  target="_blank"
-                  >here</a
-                >
-              </p>
-            </div>
+          <div>
+            <ul id="yourListUl" class="content-text text-center p-0"></ul>
           </div>
-        </div>
-        <div class="col-md-4 p-2">
-          <div class="flip">
-            <div class="front">
-              <h5 class="pt-3">Environmental</h5>
-              <img
-                src="assets/images/earth.png"
-                alt="earth"
-                class="benefitsImgs"
-              />
-              <p class="text-small px-3">
-                Save the bees! Bees play an important role in the life cycle of
-                most plants and flowers...
-              </p>
-            </div>
-            <div class="back">
-              <h5 class="pt-3">Environmental</h5>
-              <ul class="text-small">
-                <li>
-                  Without bees, many plants would have no way to reproduce and
-                  die out.
-                </li>
-                <li>
-                  Bees are responsible for pollinating nearly 85% of all food
-                  crops for humans, as well as numerous crops that grow the food
-                  fed to cattle.
-                </li>
-                <li>
-                  There has been research conducted that predicts environmental
-                  collapse should the honeybee no longer exist
-                </li>
-              </ul>
-              <p>
-                Read more
-                <a
-                  href="https://www.perfectbee.com/learn-about-bees/the-science-of-bees/the-benefits-of-bees"
-                  target="_blank"
-                  >here</a
-                >
-              </p>
-            </div>
+          <div class="text-center">
+            <button class="button mt-0" onclick="listHandlers.clearBtn();">
+              Clear All
+            </button>
           </div>
         </div>
       </div>
@@ -353,17 +236,17 @@
           <div id="question" class="question"></div>
         </div>
         <div class="center">
-          <label class="option  button text-center"
+          <label class="option button text-center"
             ><input type="radio" name="options" value="1" /><span
               id="option1"
             ></span
           ></label>
-          <label class="option  button text-center"
+          <label class="option button text-center"
             ><input type="radio" name="options" value="2" /><span
               id="option2"
             ></span
           ></label>
-          <label class="option  button text-center"
+          <label class="option button text-center"
             ><input type="radio" name="options" value="3" /><span
               id="option3"
             ></span
@@ -372,7 +255,7 @@
         <div class="center">
           <button
             id="nextBtn"
-            class=" button text-center"
+            class="button text-center"
             onclick="quizHandlers.nextQuestion();"
           >
             Next

@@ -1,12 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap");
 
-
 html {
   scroll-behavior: smooth;
 }
 
-body {
-  background: url(../../assets/images/honey-bg.jpg) no-repeat center center fixed;
+#mapPage{
+  background: url(../../assets/images/honey-bg.jpg) no-repeat center center
+    fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -15,17 +15,21 @@ body {
 }
 
 .container-height {
-    height: 80vh; 
+  height: 80vh;
 }
 
+.container-width {
+  width: 97%;
+  margin: 0;
+}
 /*--------text--------*/
 
 .heading {
   margin-top: 0;
-  font-weight: 600; 
-  text-shadow: 0.5px 0.5px 0.5px	rgba(255, 255, 255);
+  font-weight: 600;
+  text-shadow: 0.5px 0.5px 0.5px rgba(255, 255, 255);
   letter-spacing: 0.2rem;
- }
+}
 
 .content-heading {
   margin: 7px;
@@ -34,7 +38,7 @@ body {
 
 .content-text {
   font-family: "Montserrat", sans-serif;
-  color: rgb(109, 112, 114);
+  color: rgb(10, 10, 10);
   letter-spacing: 0.1rem;
 }
 
@@ -44,30 +48,30 @@ body {
 }
 
 .text-small {
-    font-size: small;
-    letter-spacing: 0.05rem;
-    text-align: left;
+  font-size: small;
+  letter-spacing: 0.05rem;
+  text-align: left;
 }
 
 /*--------nav--------*/
 .navbar {
-    height: 50px;
+  height: 50px;
 }
 
 .navbar-light .navbar-toggler {
-    border: none;
+  border: none;
 }
-
 
 /*--------color--------*/
 
 .bg-col {
-    background-color: rgb(248,248,255,0.9);
+  background-color: rgb(248, 248, 255, 0.9);
+    border-radius: 5px;
+
 }
 
 .honey-col {
-      color: #FAB140;
-
+  color: #fab140;
 }
 
 /*--------general--------*/
@@ -78,26 +82,26 @@ body {
   overflow: hidden;
 }
 
-.logo-nav{
-    height: 40px;
+.logo-nav {
+  height: 40px;
 }
 
-.button{
-    width: 200px;
-	display: inline-block;
-	padding: 10px;
-	background: rgba(255, 255, 255);
-	margin: 10px 0 10px 10px;
-	color: #FAB140;
-    border: 1px solid #FAB140;
-	border-radius: 15px; 
-    cursor: pointer;
-    transition: 0.3s;
-    text-decoration: none;
+.button {
+  width: 200px;
+  display: inline-block;
+  padding: 10px;
+  background: rgba(255, 255, 255);
+  margin: 10px 0 10px 10px;
+  color: #fab140;
+  border: 1px solid #fab140;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+  text-decoration: none;
 }
 
 .honeyPot {
-    height: 100px;
+  height: 100px;
 }
 /*--------map--------*/
 
@@ -116,12 +120,13 @@ div #map {
   margin: 0 auto;
 }
 
-.over-map{
-    position: absolute; bottom: 7%; left: 5%; z-index: 99;
-
+.over-map {
+  position: absolute;
+  bottom: 7%;
+  left: 5%;
+  z-index: 99;
 }
 /*--------search bar--------*/
-
 
 .pac-input {
   font-family: "Montserrat", sans-serif;
@@ -135,7 +140,6 @@ div #map {
   width: 300px;
 }
 
-
 #pac-input:focus {
   border-color: #fab140;
 }
@@ -146,86 +150,75 @@ div #map {
 
 /*--------hover--------*/
 
-.website:hover {
+.text-hvr:hover {
   text-decoration: none;
   color: #fab140;
-  margin-top: 10px;
 }
 
-.button:hover, .option:focus-within {
-    background-color: #9EBE7B;
-    border: 1px solid white;
-    color: white;
-    text-decoration: none;
-
+.button:hover,
+.option:focus-within {
+  background-color: #9ebe7b;
+  border: 1px solid white;
+  color: white;
+  text-decoration: none;
 }
-
 
 /*--------list--------*/
 
-#yourList {
-    width: 97%;
-    border-radius: 5px; 
+#yourListUl {
+  list-style-type: none;
+  line-height: 30px;
 }
 
-#yourListUl {
-    list-style-type: none;
-    line-height: 30px;
-} 
-
 #yourListUl li {
-    padding: 1% 10% 1% 10%;
+  padding: 1% 10% 1% 10%;
 }
 
 #yourListUl li:nth-child(odd) {
-  background-color: rgb(250,177,64, 0.9);
-   color: white;
+  background-color: rgb(250, 177, 64, 0.9);
+  color: white;
 }
-
-
 
 /*--------benefits-cards--------*/
 
 #benefits {
-    margin-top: 100px;
+  margin-top: 100px;
 }
 
 .flip {
-    height: 350px;
+  height: 350px;
 }
 
 .flip .front {
-    background-color: rgb(248,248,255);
-    text-align: center;
-    border-radius: 5px;
+  background-color: rgb(248, 248, 255);
+  text-align: center;
+  border-radius: 5px;
 }
 
 .flip .back {
-     background-color: rgb(248,248,255);
-    text-align: center;
-    border-radius: 5px;
-
+  background-color: rgb(248, 248, 255);
+  text-align: center;
+  border-radius: 5px;
 }
 
-.benefitsImgs{
-    height: 200px;
-
+.benefitsImgs {
+  height: 200px;
 }
 /*--------quiz--------*/
 
 #quiz {
-    height: 70vh;
-    display: flex;
-    align-items: center;
+  height: 70vh;
+  display: flex;
+  align-items: center;
 }
 
 .quizContainer {
-    background-color: rgb(250, 177, 64);
-    border: 1px solid white;
-    border-radius: 5px;
-    width: 60%;
-    height: 300px;
-    color: white;
+  background-color: rgb(250, 177, 64);
+  border: 1px solid white;
+  border-radius: 5px;
+  width: 60%;
+  height: 300px;
+  color: white;
 }
 
 .option input {
@@ -235,8 +228,7 @@ div #map {
 }
 
 #quizResults {
-	text-align: center;
-	font-size: 35px;
-    color: white;
+  text-align: center;
+  font-size: 35px;
+  color: white;
 }
-
