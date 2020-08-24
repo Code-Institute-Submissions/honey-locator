@@ -4,7 +4,7 @@ html {
   scroll-behavior: smooth;
 }
 
-#mapPage {
+.bee-bg {
   background: url(../../assets/images/honey-bg.jpg) no-repeat center center
     fixed;
   background-size: cover;
@@ -226,7 +226,7 @@ div #map {
 /*--------quiz--------*/
 
 #quiz {
-  height: 70vh;
+  height: 80vh;
   display: flex;
   align-items: center;
 }
@@ -235,19 +235,15 @@ div #map {
   background-color: rgb(250, 177, 64);
   border: 1px solid white;
   border-radius: 5px;
-  width: 60%;
-  height: 300px;
   color: white;
+}
+
+.options {
+    font-size: 20px;
 }
 
 .option input {
   opacity: 0;
   position: fixed;
   width: 0;
-}
-
-#quizResults {
-  text-align: center;
-  font-size: 35px;
-  color: white;
 }
