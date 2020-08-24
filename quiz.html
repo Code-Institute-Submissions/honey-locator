@@ -50,10 +50,21 @@
           </button>
           <div class="collapse navbar-collapse bg-col" id="navbarNavDropdown">
             <ul class="navbar-nav pr-5 content-heading">
-              <li class="nav-item mr-2" id="navbar">
-                <a class="nav-link content-text text-hvr" href="index.html"
+              <li class="nav-item mr-2 dropdown" id="navbar">
+                <a
+                  class="nav-link content-text text-hvr dropdown-toggle"
+                  href="#"
+                  role="button"
+                  id="dropdownMenuLink"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
                   >Honey Map</a
                 >
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                  <a class="dropdown-item" href="index.html">Locator</a>
+                  <a class="dropdown-item" href="index.html">Your List</a>
+                </div>
               </li>
               <li class="mr-2 d-flex align-items-center honey-col"><b>.</b></li>
               <li class="nav-item mr-2">
@@ -81,71 +92,71 @@
       </div>
     </header>
 
-<!--Quiz-->
+    <!--Quiz-->
     <div id="quiz" class="pt-5 center">
-    <div class="container-fluid">
-      <div id="quizQuestionsContainer" class="content-text quizContainer">
-        <div>
-          <h1 class="text-center p-3">Quizzzz!</h1>
+      <div class="container-fluid">
+        <div id="quizQuestionsContainer" class="content-text quizContainer">
+          <div>
+            <h1 class="text-center p-3">Quizzzz!</h1>
+          </div>
+          <div class="center">
+            <h3><div id="question" class="question p-3"></div></h3>
+          </div>
+          <div class="center p-3 options">
+            <label class="option button text-center"
+              ><input type="radio" name="options" value="1" /><span
+                id="option1"
+              ></span
+            ></label>
+            <label class="option button text-center"
+              ><input type="radio" name="options" value="2" /><span
+                id="option2"
+              ></span
+            ></label>
+            <label class="option button text-center"
+              ><input type="radio" name="options" value="3" /><span
+                id="option3"
+              ></span
+            ></label>
+          </div>
+          <div class="center">
+            <button
+              id="nextBtn"
+              class="button text-center"
+              onclick="quizHandlers.nextQuestion();"
+            >
+              Next
+            </button>
+          </div>
+          <div class="center">
+            <progress id="progBar" max="50" value="10"> </progress>
+          </div>
         </div>
-        <div class="center">
-          <h3><div id="question" class="question p-3"></div></h3>
-        </div>
-        <div class="center p-3 options">
-          <label class="option button text-center"
-            ><input type="radio" name="options" value="1" /><span
-              id="option1"
-            ></span
-          ></label>
-          <label class="option button text-center"
-            ><input type="radio" name="options" value="2" /><span
-              id="option2"
-            ></span
-          ></label>
-          <label class="option button text-center"
-            ><input type="radio" name="options" value="3" /><span
-              id="option3"
-            ></span
-          ></label>
-        </div>
-        <div class="center">
+        <div
+          id="quizResultsContainer"
+          class="quizContainer"
+          style="display: none;"
+        >
+          <button id="showAnswers" class="buttons">
+            Show Answers
+            <ol id="answers">
+              <li>Four Million</li>
+              <li>55,000 miles</li>
+              <li>One tenth of a teaspoon</li>
+              <li>11,400 times</li>
+              <li>Up to ten miles per hour</li>
+            </ol>
+          </button>
           <button
-            id="nextBtn"
-            class="button text-center"
-            onclick="quizHandlers.nextQuestion();"
+            id="restart"
+            class="button"
+            onclick="quizHandlers.restartQuiz()"
           >
-            Next
+            Try again! <i class="fas fa-redo"></i>
           </button>
         </div>
-        <div class="center">
-          <progress id="progBar" max="50" value="10"> </progress>
-        </div>
-      </div>
-      <div
-        id="quizResultsContainer"
-        class="quizContainer"
-        style="display: none;"
-      >
-        <button id="showAnswers" class="buttons">
-          Show Answers
-          <ol id="answers">
-            <li>Four Million</li>
-            <li>55,000 miles</li>
-            <li>One tenth of a teaspoon</li>
-            <li>11,400 times</li>
-            <li>Up to ten miles per hour</li>
-          </ol>
-        </button>
-        <button
-          id="restart"
-          class="button"
-          onclick="quizHandlers.restartQuiz()"
-        >
-          Try again! <i class="fas fa-redo"></i>
-        </button>
       </div>
     </div>
-</div>
     <!-- Footer -->
 
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
