@@ -161,7 +161,6 @@ function initMap() {
     componentRestrictions: { country: "gb" },
   };
 
-
   const autocomplete = new google.maps.places.Autocomplete(input, options);
 
   autocomplete.setFields(["address_components", "geometry", "name"]);
@@ -233,7 +232,7 @@ let listHandlers = {
       .getAttribute("inputValue");
 
     if (itemsArray.indexOf(inputValue) == -1) {
-      itemsArray.push(inputValue)
+      itemsArray.push(inputValue);
       localStorage.setItem("items", JSON.stringify(itemsArray));
       listView.liMaker(inputValue);
     } else {
@@ -264,7 +263,6 @@ $(function () {
   });
 });
 
-  
 // Quiz questions
 
 let questions = [
@@ -327,13 +325,14 @@ let quizHandlers = {
   nextQuestion: function () {
     let totalQuestions = questions.length;
     let quizResultsContainer = document.getElementById("quizResultsContainer");
+    let quizQuestionsContainer = document.getElementById(
+      "quizQuestionsContainer"
+    );
+    let quizNextContainer = document.getElementById("nextContainer");
     let restart = document.getElementById("restart");
     let showAnswers = document.getElementById("showAnswers");
     let selectedOption = document.querySelector("input[type = radio]:checked");
 
-    let quizQuestionsContainer = document.getElementById(
-      "quizQuestionsContainer"
-    );
     if (!selectedOption) {
       alert("Please choose an answer");
     }
@@ -350,6 +349,7 @@ let quizHandlers = {
     }
     if (currentQuestion === totalQuestions) {
       quizQuestionsContainer.style.display = "none";
+      quizNextContainer.style.display = "none";
       quizResultsContainer.style.display = "";
       quizResultsContainer.innerHTML = `Your Score  ${score}  /5`;
       quizResultsContainer.appendChild(showAnswers);

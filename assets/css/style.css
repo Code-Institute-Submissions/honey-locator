@@ -11,6 +11,12 @@ html {
   font-family: "Montserrat", sans-serif;
 }
 
+.clouds-bg {
+  background: url(../../assets/images/clouds-bg.jpg) no-repeat center center
+    fixed;
+  background-size: cover;
+}
+
 .container-width {
   width: 97%;
   margin: 0;
@@ -233,17 +239,10 @@ div #map {
 
 /*--------quiz--------*/
 
-#quiz {
-  height: 80vh;
-  display: flex;
-  align-items: center;
-}
-
 .quizContainer {
-  background-color: rgb(250, 177, 64);
-  border: 1px solid white;
+  background-color: white;
+  border: 1px solid #fab140;
   border-radius: 5px;
-  color: white;
 }
 
 .options {
@@ -256,3 +255,6 @@ div #map {
   width: 0;
 }
 
+.bee-img {
+    height: 200px;
+}
