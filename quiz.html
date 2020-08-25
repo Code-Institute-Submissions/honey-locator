@@ -103,36 +103,34 @@
               <img class="bee-img" src="assets/images/bee.jpg" alt="bee" />
             </div>
             <div class="col-md-9 d-flex align-items-center">
-              <h3>
                 <div id="question" class="question text-center pt-3"></div>
-              </h3>
             </div>
           </div>
           <div class="row center p-2">
-              <div class="col-l-3 text-center">
-                <label class="option button text-center"
-                  ><input type="radio" name="options" value="1" /><span
-                    id="option1"
-                  ></span
-                ></label>
-              </div>
-              <div class="col-l-3 text-center">
-                <label class="option button text-center"
-                  ><input type="radio" name="options" value="2" /><span
-                    id="option2"
-                  ></span
-                ></label>
-              </div>
-              <div class="col-l-3 text-center">
-                <label class="option button text-center"
-                  ><input type="radio" name="options" value="3" /><span
-                    id="option3"
-                  ></span
-                ></label>
-              </div>
+            <div class="col-l-3 text-center">
+              <label class="option button text-center"
+                ><input type="radio" name="options" value="1" /><span
+                  id="option1"
+                ></span
+              ></label>
+            </div>
+            <div class="col-l-3 text-center">
+              <label class="option button text-center"
+                ><input type="radio" name="options" value="2" /><span
+                  id="option2"
+                ></span
+              ></label>
+            </div>
+            <div class="col-l-3 text-center">
+              <label class="option button text-center"
+                ><input type="radio" name="options" value="3" /><span
+                  id="option3"
+                ></span
+              ></label>
             </div>
           </div>
-          <div id="nextContainer">
+        </div>
+        <div id="nextContainer">
           <div class="row center p-2">
             <button
               id="nextBtn"
@@ -145,32 +143,31 @@
           <div class="row center pt-2 pb-3">
             <progress id="progBar" max="50" value="10"> </progress>
           </div>
-          </div>
-        <div
-          id="quizResultsContainer"
-          style="display: none;"
-        >
-          <button id="showAnswers" class="buttons">
-            Show Answers
-            <ol id="answers">
-              <li>Four Million</li>
-              <li>55,000 miles</li>
-              <li>One tenth of a teaspoon</li>
-              <li>11,400 times</li>
-              <li>Up to ten miles per hour</li>
-            </ol>
-          </button>
-          <button
-            id="restart"
-            class="button"
-            onclick="quizHandlers.restartQuiz()"
-          >
-            Try again! <i class="fas fa-redo"></i>
-          </button>
         </div>
+        <div id="quizResultsContainer" style="display: none;">
+          <div class="center">
+            <div id="showAnswers" class="button">
+              Show Answers
+              <ol id="answers">
+                <li>Four Million</li>
+                <li>55,000 miles</li>
+                <li>One tenth of a teaspoon</li>
+                <li>11,400 times</li>
+                <li>Up to ten miles per hour</li>
+              </ol>
+            </div>
+            <button
+              id="restart"
+              class="button"
+              onclick="quizHandlers.restartQuiz()"
+            >
+              Try again! <i class="fas fa-redo"></i>
+            </button>
+          </div>
         </div>
       </div>
-  
+    </div>
+
     <!-- Footer -->
 
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>

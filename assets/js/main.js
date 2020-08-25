@@ -351,7 +351,7 @@ let quizHandlers = {
       quizQuestionsContainer.style.display = "none";
       quizNextContainer.style.display = "none";
       quizResultsContainer.style.display = "";
-      quizResultsContainer.innerHTML = `Your Score  ${score}  /5`;
+      quizResultsContainer.innerHTML = `<div class="content-text center p-5"><h2>Your Score  ${score} / 5!</h2></div>`;
       quizResultsContainer.appendChild(showAnswers);
       quizResultsContainer.appendChild(restart);
       return;
