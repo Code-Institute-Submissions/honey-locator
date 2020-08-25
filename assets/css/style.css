@@ -99,6 +99,7 @@ html {
 .cursor {
   cursor: pointer;
 }
+
 /*--------map--------*/
 
 .map-container {
@@ -116,11 +117,18 @@ div #map {
   margin: 0 auto;
 }
 
-.over-map {
+#edit-btn {
   position: absolute;
   bottom: 7%;
   left: 5%;
-  z-index: 99;
+}
+
+.directIcon {
+  position: absolute;
+  bottom: 1%;
+  left: 50%;
+  color: white;
+  font-size: 25px;
 }
 /*--------search bar--------*/
 
@@ -239,7 +247,7 @@ div #map {
 }
 
 .options {
-    font-size: 20px;
+  font-size: 20px;
 }
 
 .option input {
