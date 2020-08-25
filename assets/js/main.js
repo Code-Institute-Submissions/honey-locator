@@ -161,6 +161,7 @@ function initMap() {
     componentRestrictions: { country: "gb" },
   };
 
+
   const autocomplete = new google.maps.places.Autocomplete(input, options);
 
   autocomplete.setFields(["address_components", "geometry", "name"]);

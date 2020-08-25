@@ -24,7 +24,7 @@
   </head>
 
   <body>
-    <!--Nav-->
+   <!--Nav-->
     <header>
       <div class="fixed-top dropdown-nav bg-col">
         <nav class="navbar navbar-expand-sm bg-col p-0">
@@ -50,16 +50,21 @@
           </button>
           <div class="collapse navbar-collapse bg-col" id="navbarNavDropdown">
             <ul class="navbar-nav pr-5 content-heading">
-              <li class="nav-item mr-2" id="navbar">
-                <a class="nav-link content-text text-hvr" href="index.html"
+              <li class="nav-item mr-2 dropdown" id="navbar">
+                <a
+                  class="nav-link content-text text-hvr dropdown-toggle"
+                  href="#"
+                  role="button"
+                  id="dropdownMenuLink"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
                   >Honey Map</a
                 >
-              </li>
-              <li class="mr-2 d-flex align-items-center honey-col"><b>.</b></li>
-              <li class="nav-item mr-2">
-                <a class="nav-link content-text text-hvr" href="#list"
-                  >Your List</a
-                >
+                <div class="dropdown-menu bg-col" aria-labelledby="dropdownMenuLink">
+                  <a class="dropdown-item" href="index.html">Locator</a>
+                  <a class="dropdown-item" href="index.html#yourList">Your List</a>
+                </div>
               </li>
               <li class="mr-2 d-flex align-items-center honey-col"><b>.</b></li>
               <li class="nav-item mr-2">
@@ -69,7 +74,9 @@
               </li>
               <li class="mr-2 d-flex align-items-center honey-col"><b>.</b></li>
               <li class="nav-item mr-2">
-                <a class="nav-link content-text text-hvr" href="quiz.html"
+                <a
+                  class="nav-link content-text text-hvr"
+                  href="quiz.html"
                   >Quizzz!</a
                 >
               </li>
@@ -78,6 +85,7 @@
         </nav>
       </div>
     </header>
+
 
     <!-- About -->
     <div class="container-fluid mt-5 pt-5 pb-5">
