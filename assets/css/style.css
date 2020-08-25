@@ -241,8 +241,9 @@ div #map {
 
 .quizContainer {
   background-color: white;
-  border: 1px solid #fab140;
+  border: 3px solid #fab140;
   border-radius: 5px;
+  width: 80%;
 }
 
 .options {
@@ -256,5 +257,20 @@ div #map {
 }
 
 .bee-img {
-    height: 200px;
+  height: 200px;
+}
+
+
+progress {
+  border-radius: 3px; 
+  height: 20px;
+  width: 30%
+}
+progress::-webkit-progress-bar {
+  background-color: #A8E1E8;
+  border-radius: 3px;
+}
+progress::-webkit-progress-value {
+  background-color: #fab140;
+  border-radius: 3px;
 }
