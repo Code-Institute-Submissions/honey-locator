@@ -11,11 +11,6 @@ function sendForm() {
   return false;
 }
 
-//navbar-collapse hide on click
-$(".navbar-nav>li>a").on("click", function () {
-  $(".navbar-collapse").collapse("hide");
-});
-
 // initilise Map
 function initMap() {
   const map = new google.maps.Map(document.getElementById("map"), {
