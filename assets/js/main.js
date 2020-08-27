@@ -11,145 +11,277 @@ function sendForm() {
   return false;
 }
 
-// initilise Map
+let pos;
+let map;
+let bounds;
+let infoWindow;
+let currentInfoWindow;
+let service;
+let infoPane;
+
+// Map styling
+
+let mapStyle = [
+  {
+    elementType: "geometry",
+    stylers: [
+      {
+        color: "#ebe3cd",
+      },
+    ],
+  },
+  {
+    elementType: "labels.text.fill",
+    stylers: [
+      {
+        color: "#523735",
+      },
+    ],
+  },
+  {
+    elementType: "labels.text.stroke",
+    stylers: [
+      {
+        color: "#f5f1e6",
+      },
+    ],
+  },
+  {
+    featureType: "administrative",
+    elementType: "geometry.stroke",
+    stylers: [
+      {
+        color: "#c9b2a6",
+      },
+    ],
+  },
+  {
+    featureType: "administrative.land_parcel",
+    elementType: "geometry.stroke",
+    stylers: [
+      {
+        color: "#dcd2be",
+      },
+    ],
+  },
+  {
+    featureType: "administrative.land_parcel",
+    elementType: "labels.text.fill",
+    stylers: [
+      {
+        color: "#ae9e90",
+      },
+    ],
+  },
+  {
+    featureType: "landscape.natural",
+    elementType: "geometry",
+    stylers: [
+      {
+        color: "#81BC84",
+      },
+    ],
+  },
+  {
+    featureType: "poi",
+    elementType: "geometry",
+    stylers: [
+      {
+        color: "#DFD3AE",
+      },
+    ],
+  },
+  {
+    featureType: "poi",
+    elementType: "labels.text.fill",
+    stylers: [
+      {
+        color: "#93817c",
+      },
+    ],
+  },
+  {
+    featureType: "poi.park",
+    elementType: "geometry.fill",
+    stylers: [
+      {
+        color: "#C27156",
+      },
+    ],
+  },
+  {
+    featureType: "poi.park",
+    elementType: "labels.text.fill",
+    stylers: [
+      {
+        color: "#447530",
+      },
+    ],
+  },
+  {
+    featureType: "road",
+    elementType: "geometry",
+    stylers: [
+      {
+        color: "#f5f1e6",
+      },
+    ],
+  },
+  {
+    featureType: "road.arterial",
+    elementType: "geometry",
+    stylers: [
+      {
+        color: "#fdfcf8",
+      },
+    ],
+  },
+  {
+    featureType: "road.highway",
+    elementType: "geometry",
+    stylers: [
+      {
+        color: "#f8c967",
+      },
+    ],
+  },
+  {
+    featureType: "road.highway",
+    elementType: "geometry.stroke",
+    stylers: [
+      {
+        color: "#e9bc62",
+      },
+    ],
+  },
+  {
+    featureType: "road.highway.controlled_access",
+    elementType: "geometry",
+    stylers: [
+      {
+        color: "#e98d58",
+      },
+    ],
+  },
+  {
+    featureType: "road.highway.controlled_access",
+    elementType: "geometry.stroke",
+    stylers: [
+      {
+        color: "#db8555",
+      },
+    ],
+  },
+  {
+    featureType: "road.local",
+    elementType: "labels.text.fill",
+    stylers: [
+      {
+        color: "#806b63",
+      },
+    ],
+  },
+  {
+    featureType: "transit.line",
+    elementType: "geometry",
+    stylers: [
+      {
+        color: "#dfd2ae",
+      },
+    ],
+  },
+  {
+    featureType: "transit.line",
+    elementType: "labels.text.fill",
+    stylers: [
+      {
+        color: "#8f7d77",
+      },
+    ],
+  },
+  {
+    featureType: "transit.line",
+    elementType: "labels.text.stroke",
+    stylers: [
+      {
+        color: "#ebe3cd",
+      },
+    ],
+  },
+  {
+    featureType: "transit.station",
+    elementType: "geometry",
+    stylers: [
+      {
+        color: "#dfd2ae",
+      },
+    ],
+  },
+  {
+    featureType: "water",
+    elementType: "geometry.fill",
+    stylers: [
+      {
+        color: "#A8E1E8",
+      },
+    ],
+  },
+  {
+    featureType: "water",
+    elementType: "labels.text.fill",
+    stylers: [
+      {
+        color: "#92998d",
+      },
+    ],
+  },
+];
+
+// Initialize map
 function initMap() {
-  const map = new google.maps.Map(document.getElementById("map"), {
+  // Initialize variables
+  bounds = new google.maps.LatLngBounds();
+  infoWindow = new google.maps.InfoWindow();
+  currentInfoWindow = infoWindow;
+  map = new google.maps.Map(document.getElementById("map"), {
     zoom: 5.5,
     center: { lat: 55.08122, lng: -3.016536 },
-    mapTypeControl: false,
     styles: mapStyle,
   });
 
-  // set markers and clusters
-
-  map.data.loadGeoJson("assets/js/honey-data.json", null, function (features) {
-    markers = features.map(function (feature) {
-      let marker = new google.maps.Marker({
-        position: feature.getGeometry().get(0),
-        icon: {
-          url: `assets/images/icon_online.jpg`,
-          scaledSize: new google.maps.Size(40, 40),
-        },
-      });
-
-      // add mouseover
-
-      marker.addListener("mouseover", function () {
-        marker.setIcon({
-          url: `assets/images/icon_online.jpg`,
-          scaledSize: new google.maps.Size(50, 50),
-        });
-      });
-
-      marker.addListener("mouseout", function () {
-        marker.setIcon({
-          url: `assets/images/icon_online}.jpg`,
-          scaledSize: new google.maps.Size(40, 40),
-        });
-      });
-
-      // open infowindow on click
-
-      infowindow = new google.maps.InfoWindow();
-
-      marker.addListener("click", function () {
-        let name = feature.getProperty("name");
-        let phone = feature.getProperty("phone");
-        let website = feature.getProperty("website");
-        let address = feature.getProperty("Address");
-        let gLink = feature.getProperty("Google Maps URL");
-        let position = feature.getGeometry().get();
-        let streetView = `<img src="https://maps.googleapis.com/maps/api/streetview?size=350x120&location=${position.lat()},${position.lng()}&key=AIzaSyCYEFJ6Ls3eG2snRN2rZx7zHIZ8SS5UeKE"/>`;
-
-        // html for infoWindow
-
-        let html = `<div class="content-text">
-            <h5>${name}</h5>
-            <div class="py-1"><i class="fas fa-phone-alt honey-col" alt="phone"></i> ${phone}</div>
-            <div class="py-1">
-                <i class="fas fa-globe honey-col" alt="globe"></i>
-                <a class="website text-hvr content-text" target="_blank" href="${website}">Website</a>
-            </div>
-            <div class="pt-1"><i class="fas fa-store honey-col" alt="store"></i>${address}</div>
-             <div class="pt-2">
-            ${streetView}
-            </div>
-            <div onclick="listHandlers.newItem();" id="addTo" class="button text-small text-center float-left" inputValue= "${
-              name + "  |  " + phone + "  |  " + website + "  |  " + address
-            }">Add to your list
-        </div>
-        <div>
-            <a class="button text-small text-center" target="_blank" href="${gLink}">View on GoogleMaps</a>
-        </div>`;
-
-        let htmlAlt = `<div class="content-text">
-            <h5>${name}</h5>
-            <div class="py-1"><i class="fas fa-phone-alt honey-col" alt="phone"></i> ${phone}</div>
-            <div class="pt-1"><i class="fas fa-store honey-col" alt="store"></i>${address}</div>
-            <div class="pt-2">
-            ${streetView}
-            </div>
-            <div onclick="listHandlers.newItem();" id="addTo" class="text-small button text-center float-left" inputValue= "${
-              name + "  |  " + phone + "  |  " + address
-            }">Add to your list
-        </div>
-        <div>
-            <a class="button text-small text-center" target="_blank" href="${gLink}">View on GoogleMaps</a>
-        </div>`;
-        // If no website info is present display htmlAlt, otherwise display html
-
-        if (website == null) {
-          infowindow.setContent(htmlAlt);
-          infowindow.open(map, marker);
-        } else {
-          infowindow.setContent(html);
-          infowindow.open(map, marker);
-        }
-      });
-      return marker;
-    });
-
-    let markerCluster = new MarkerClusterer(map, markers, {
-      imagePath:
-        "https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m",
-    });
-  });
-
-  map.data.setMap(null);
-
-  //geolocator
-
+  // geolocation
   if (navigator.geolocation) {
-    infowindow = new google.maps.InfoWindow();
     navigator.geolocation.getCurrentPosition(
       (position) => {
-        const pos = {
+        pos = {
           lat: position.coords.latitude,
           lng: position.coords.longitude,
         };
-        infowindow.setPosition(pos);
-        infowindow.setContent(
+        map = new google.maps.Map(document.getElementById("map"), {
+          center: pos,
+          zoom: 10,
+          styles: mapStyle,
+        });
+        bounds.extend(pos);
+
+        infoWindow.setPosition(pos);
+        infoWindow.setContent(
           "<p class = 'general-text'>You are here!</p><div class='center'><img src ='assets/images/icon_online.jpg' class='logo-nav' alt='logo'></div>"
         );
-        infowindow.open(map);
+        infoWindow.open(map);
         map.setCenter(pos);
+
+        // Call Places Nearby Search on user's location
+        getNearbyPlaces(pos);
       },
       () => {
-        handleLocationError(true, infowindow, map.getCenter());
+        // Browser supports geolocation, but user has denied permission
+        handleLocationError(true, infoWindow);
       }
     );
   } else {
-    handleLocationError(false, infoWindow, map.getCenter());
-  }
-
-  function handleLocationError(browserHasGeolocation, infowindow, pos) {
-    infowindow.setPosition(pos);
-    infowindow.setContent(
-      browserHasGeolocation
-        ? "Error: The Geolocation service failed."
-        : "Error: Your browser doesn't support geolocation."
-    );
-    infowindow.open(map);
+    // Browser doesn't support geolocation
+    handleLocationError(false, infoWindow);
   }
 
   //search bar autocomplete
@@ -187,11 +319,138 @@ function initMap() {
     originLocation = place.geometry.location;
     map.setCenter(originLocation);
     map.setZoom(10);
-    console.log(place);
-
     originMarker.setPosition(originLocation);
     originMarker.setVisible(true);
+    getNearbyPlaces(originLocation);
   });
+}
+
+// Handle a geolocation error
+function handleLocationError(browserHasGeolocation, infoWindow) {
+  // Set default location to uk
+  pos = { lat: 55.08122, lng: -3.016536 };
+  map = new google.maps.Map(document.getElementById("map"), {
+    center: pos,
+    zoom: 10,
+    styles: mapStyle,
+  });
+
+  // Display an InfoWindow at the map center
+  infoWindow.setPosition(pos);
+  infoWindow.setContent(
+    browserHasGeolocation
+      ? "Geolocation permissions denied. Using default location."
+      : "Error: Your browser doesn't support geolocation."
+  );
+  infoWindow.open(map);
+  currentInfoWindow = infoWindow;
+
+  // Call Places Nearby Search on the default location
+  getNearbyPlaces(pos);
+}
+
+// Perform a Places Nearby Search Request
+function getNearbyPlaces(position) {
+  let request = {
+    location: position,
+    rankBy: google.maps.places.RankBy.DISTANCE,
+    keyword: "Honey Farm",
+  };
+
+  service = new google.maps.places.PlacesService(map);
+  service.nearbySearch(request, nearbyCallback);
+}
+
+// Handle the results (up to 20) of the Nearby Search
+function nearbyCallback(results, status) {
+  if (status == google.maps.places.PlacesServiceStatus.OK) {
+    createMarkers(results);
+  }
+}
+
+// Set markers at the location of each place result
+function createMarkers(places) {
+  places.forEach((place) => {
+    let marker = new google.maps.Marker({
+      position: place.geometry.location,
+      map: map,
+      title: place.name,
+      icon: {
+        url: `assets/images/icon_online.jpg`,
+        scaledSize: new google.maps.Size(40, 40),
+      },
+    });
+
+    marker.addListener("mouseover", function () {
+      marker.setIcon({
+        url: `assets/images/icon_online.jpg`,
+        scaledSize: new google.maps.Size(50, 50),
+      });
+    });
+
+    marker.addListener("mouseout", function () {
+      marker.setIcon({
+        url: `assets/images/icon_online.jpg`,
+        scaledSize: new google.maps.Size(40, 40),
+      });
+    });
+
+    // Add click listener to each marker
+    google.maps.event.addListener(marker, "click", () => {
+      let request = {
+        placeId: place.place_id,
+        fields: [
+          "name",
+          "formatted_address",
+          "geometry",
+          "rating",
+          "website",
+          "photos",
+          "formatted_phone_number",
+        ],
+      };
+
+      service.getDetails(request, (placeResult, status) => {
+        showDetails(placeResult, marker, status);
+      });
+    });
+
+    bounds.extend(place.geometry.location);
+  });
+  map.fitBounds(bounds);
+}
+
+// InfoWindow
+function showDetails(placeResult, marker, status) {
+  if (status == google.maps.places.PlacesServiceStatus.OK) {
+    let placeInfowindow = new google.maps.InfoWindow();
+    let rating = "None";
+    if (placeResult.rating) rating = placeResult.rating;
+
+    placeInfowindow.setContent(`<div class="content-text">
+            <h5>${placeResult.name}</h5>
+            <div class="py-1"><i class="fas fa-phone-alt honey-col" alt="phone"></i>${placeResult.formatted_phone_number}</div>
+            <div class="py-1">
+                <i class="fas fa-globe honey-col" alt="globe"></i>
+                <a class="website text-hvr content-text" target="_blank" href="${placeResult.website}">Website</a>
+            </div>
+            <div class="pt-1"><i class="fas fa-store honey-col" alt="store"></i>${placeResult.formatted_address}</div>
+                      <div class="pt-1"><i class="fas fa-store honey-col" alt="store"></i>${placeResult.rating}</div>
+
+            <div onclick="listHandlers.newItem();" id="addTo" class="button text-small text-center float-left">Add to your list
+        </div>
+        <div>
+            <a class="button text-small text-center" target="_blank"">${placeResult.photos}test</a>
+        </div>
+        <div>
+            <a class="button text-small text-center" target="_blank"">View on GoogleMaps</a>
+        </div>`);
+    placeInfowindow.open(marker.map, marker);
+    currentInfoWindow.close();
+    currentInfoWindow = placeInfowindow;
+  } else {
+    console.log("showDetails failed: " + status);
+  }
 }
 
 //new list
