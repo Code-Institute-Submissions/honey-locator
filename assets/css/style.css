@@ -261,12 +261,12 @@ div #map {
 }
 
 progress {
-  border-radius: 3px; 
+  border-radius: 3px;
   height: 20px;
-  width: 30%
+  width: 30%;
 }
 progress::-webkit-progress-bar {
-  background-color: #A8E1E8;
+  background-color: #a8e1e8;
   border-radius: 3px;
 }
 progress::-webkit-progress-value {
