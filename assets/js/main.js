@@ -13,7 +13,6 @@ function sendForm() {
 
 let pos;
 let map;
-let bounds;
 let infoWindow;
 let currentInfoWindow;
 let service;
@@ -240,7 +239,6 @@ let mapStyle = [
 // Initialize map
 function initMap() {
   // Initialize variables
-  bounds = new google.maps.LatLngBounds();
   infoWindow = new google.maps.InfoWindow();
   currentInfoWindow = infoWindow;
   map = new google.maps.Map(document.getElementById("map"), {
@@ -262,7 +260,6 @@ function initMap() {
           zoom: 10,
           styles: mapStyle,
         });
-        bounds.extend(pos);
 
         infoWindow.setPosition(pos);
         infoWindow.setContent(
@@ -312,38 +309,13 @@ function initMap() {
       );
       return;
     }
-
     originLocation = place.geometry.location;
     map.setCenter(originLocation);
-    map.setZoom(10);
-    console.log(place);
+
     originMarker.setPosition(originLocation);
     originMarker.setVisible(true);
+    getNearbyPlaces(originLocation);
   });
-}
-
-// Handle a geolocation error
-function handleLocationError(browserHasGeolocation, infoWindow) {
-  // Set default location to uk
-  pos = { lat: 55.08122, lng: -3.016536 };
-  map = new google.maps.Map(document.getElementById("map"), {
-    center: pos,
-    zoom: 10,
-    styles: mapStyle,
-  });
-
-  // Display an InfoWindow at the map center
-  infoWindow.setPosition(pos);
-  infoWindow.setContent(
-    browserHasGeolocation
-      ? "Geolocation permissions denied. Using default location."
-      : "Error: Your browser doesn't support geolocation."
-  );
-  infoWindow.open(map);
-  currentInfoWindow = infoWindow;
-
-  // Call Places Nearby Search on the default location
-  getNearbyPlaces(pos);
 }
 
 // Perform a Places Nearby Search Request
@@ -411,10 +383,7 @@ function createMarkers(places) {
         showDetails(placeResult, marker, status);
       });
     });
-
-    bounds.extend(place.geometry.location);
   });
-  map.fitBounds(bounds);
 }
 
 // InfoWindow
