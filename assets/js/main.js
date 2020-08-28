@@ -297,15 +297,12 @@ function initMap() {
 
   autocomplete.setFields(["address_components", "geometry", "name"]);
 
-  const originMarker = new google.maps.Marker({ map: map });
-  originMarker.setVisible(false);
-  let originLocation = map.getCenter();
-
   autocomplete.addListener("place_changed", async () => {
-    originMarker.setVisible(false);
-    originLocation = map.getCenter();
+    let originMarker = new google.maps.Marker({
+      map: map,
+    });
 
-    const place = autocomplete.getPlace();
+    let place = autocomplete.getPlace();
 
     if (!place.geometry) {
       window.alert(
@@ -319,9 +316,9 @@ function initMap() {
     originLocation = place.geometry.location;
     map.setCenter(originLocation);
     map.setZoom(10);
+    console.log(place);
     originMarker.setPosition(originLocation);
     originMarker.setVisible(true);
-    getNearbyPlaces(originLocation);
   });
 }
 
