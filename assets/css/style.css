@@ -273,3 +273,8 @@ progress::-webkit-progress-value {
   background-color: #fab140;
   border-radius: 3px;
 }
+
+
+ .open {
+      width: 250px;
+    }

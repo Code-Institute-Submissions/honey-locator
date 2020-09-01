@@ -17,6 +17,7 @@ let infoWindow;
 let currentInfoWindow;
 let service;
 let myList;
+let addTo;
 
 // Map styling
 
@@ -340,6 +341,7 @@ function nearbyCallback(results, status) {
 
 // Set markers at the location of each place result
 function createMarkers(places) {
+  addTo = document.getElementById("addTo");
   places.forEach((place) => {
     let marker = new google.maps.Marker({
       position: place.geometry.location,
@@ -381,7 +383,7 @@ function createMarkers(places) {
       };
       service.getDetails(request, (placeResult, status) => {
         showDetails(placeResult, marker, status);
-        newItem(placeResult);
+        addTo.onclick = function(){newItem(placeResult)};
       });
     });
   });
@@ -391,9 +393,7 @@ function createMarkers(places) {
 function showDetails(placeResult, marker, status) {
   if (status == google.maps.places.PlacesServiceStatus.OK) {
     let placeInfowindow = new google.maps.InfoWindow();
-    let rating = "None";
     if (placeResult.rating) rating = placeResult.rating;
-
     placeInfowindow.setContent(`<div class="content-text">
             <h5>${placeResult.name}</h5>
             <div class="py-1"><i class="fas fa-phone-alt honey-col" alt="phone"></i>${placeResult.formatted_phone_number}</div>
@@ -403,11 +403,12 @@ function showDetails(placeResult, marker, status) {
             </div>
             <div class="pt-1"><i class="fas fa-store honey-col" alt="store"></i>${placeResult.formatted_address}</div>
                       <div class="pt-1"><i class="fas fa-store honey-col" alt="store"></i>${placeResult.rating}</div>
-            <div id="addTo" class="button text-small text-center float-left">Add to your list
-        </div>
         <div>
             <a class="button text-small text-center" target="_blank"">View on GoogleMaps</a>
         </div>`);
+
+
+
     placeInfowindow.open(marker.map, marker);
     currentInfoWindow.close();
     currentInfoWindow = placeInfowindow;
@@ -416,45 +417,44 @@ function showDetails(placeResult, marker, status) {
   }
 }
 
-function newItem(placeResult) {
-  document.getElementById("addTo").addEventListener("click", function () {
-    if (placeResult.photos) {
-      let firstPhoto = placeResult.photos[0];
-      let photo = document.createElement("img");
-      photo.classList.add("hero");
-      photo.src = firstPhoto.getUrl();
-      myList.appendChild(photo);
-    }
 
-    // Add place details with text formatting
-    let name = document.createElement("h1");
-    name.classList.add("place");
-    name.textContent = placeResult.name;
-    myList.appendChild(name);
-    if (placeResult.rating) {
-      let rating = document.createElement("p");
-      rating.classList.add("details");
-      rating.textContent = `Rating: ${placeResult.rating} \u272e`;
-      yourList.appendChild(rating);
-    }
-    let address = document.createElement("p");
-    address.classList.add("details");
-    address.textContent = placeResult.formatted_address;
-    myList.appendChild(address);
-    if (placeResult.website) {
-      let websitePara = document.createElement("p");
-      let websiteLink = document.createElement("a");
-      let websiteUrl = document.createTextNode(placeResult.website);
-      websiteLink.appendChild(websiteUrl);
-      websiteLink.title = placeResult.website;
-      websiteLink.href = placeResult.website;
-      websitePara.appendChild(websiteLink);
-      myList.appendChild(websitePara);
-    }
-  });
+function newItem(placeResult) {
+
+  if (placeResult.photos) {
+    let firstPhoto = placeResult.photos[0];
+    let photo = document.createElement("img");
+    photo.classList.add("hero");
+    photo.src = firstPhoto.getUrl();
+    myList.appendChild(photo);
+  }
+  // Add place details with text formatting
+  let name = document.createElement("h1");
+  name.classList.add("placeResult");
+  name.textContent = placeResult.name;
+  myList.appendChild(name);
+  if (placeResult.rating) {
+    let rating = document.createElement("p");
+    rating.classList.add("details");
+    rating.textContent = `Rating: ${placeResult.rating} \u272e`;
+    yourList.appendChild(rating);
+  }
+  let address = document.createElement("p");
+  address.classList.add("details");
+  address.textContent = placeResult.formatted_address;
+  myList.appendChild(address);
+  if (placeResult.website) {
+    let websitePara = document.createElement("p");
+    let websiteLink = document.createElement("a");
+    let websiteUrl = document.createTextNode(placeResult.website);
+    websiteLink.appendChild(websiteUrl);
+    websiteLink.title = placeResult.website;
+    websiteLink.href = placeResult.website;
+    websitePara.appendChild(websiteLink);
+    myList.appendChild(websitePara);
+  }
 }
 
-//new list
+// // //new list
 
 // let ul = document.getElementById("yourListUl");
 // let itemsArray = localStorage.getItem("items")
@@ -475,10 +475,8 @@ function newItem(placeResult) {
 // //List handlers
 
 // let listHandlers = {
-//   yourListtem: function (placeResult, status) {
-//     let inputValue = `<div class="content-text">
-//             <h5>${placeResult.name}</h5>`
-
+//   yourListItem: function (placeResult) {
+//     let inputValue = showDetails(placeResult);
 //     if (itemsArray.indexOf(inputValue) == -1) {
 //       itemsArray.push(inputValue);
 //       localStorage.setItem("items", JSON.stringify(itemsArray));
@@ -500,5 +498,5 @@ function newItem(placeResult) {
 // };
 
 // data.forEach((item) => {
-//   listView.liMaker(item);
+//   listView.liMaker;
 // });
