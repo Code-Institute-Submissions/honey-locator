@@ -383,7 +383,9 @@ function createMarkers(places) {
       };
       service.getDetails(request, (placeResult, status) => {
         showDetails(placeResult, marker, status);
-        addTo.onclick = function(){newItem(placeResult)};
+        addTo.onclick = function () {
+          newItem(placeResult);
+        };
       });
     });
   });
@@ -407,8 +409,6 @@ function showDetails(placeResult, marker, status) {
             <a class="button text-small text-center" target="_blank"">View on GoogleMaps</a>
         </div>`);
 
-
-
     placeInfowindow.open(marker.map, marker);
     currentInfoWindow.close();
     currentInfoWindow = placeInfowindow;
@@ -417,86 +417,61 @@ function showDetails(placeResult, marker, status) {
   }
 }
 
+let itemsArray = localStorage.getItem("items")
+  ? JSON.parse(localStorage.getItem("items"))
+  : [];
+localStorage.setItem("items", JSON.stringify(itemsArray));
+const data = JSON.parse(localStorage.getItem("items"));
 
 function newItem(placeResult) {
+  let inputValue = placeResult.name
+  if (itemsArray.indexOf(inputValue) == -1) {
+    if (placeResult.photos) {
+      let firstPhoto = placeResult.photos[0];
+      let photo = document.createElement("img");
+      photo.classList.add("hero");
+      photo.src = firstPhoto.getUrl();
+      myList.appendChild(photo);
+    }
+    // Add place details with text formatting
 
-  if (placeResult.photos) {
-    let firstPhoto = placeResult.photos[0];
-    let photo = document.createElement("img");
-    photo.classList.add("hero");
-    photo.src = firstPhoto.getUrl();
-    myList.appendChild(photo);
-  }
-  // Add place details with text formatting
-  let name = document.createElement("h1");
-  name.classList.add("placeResult");
-  name.textContent = placeResult.name;
-  myList.appendChild(name);
-  if (placeResult.rating) {
-    let rating = document.createElement("p");
-    rating.classList.add("details");
-    rating.textContent = `Rating: ${placeResult.rating} \u272e`;
-    yourList.appendChild(rating);
-  }
-  let address = document.createElement("p");
-  address.classList.add("details");
-  address.textContent = placeResult.formatted_address;
-  myList.appendChild(address);
-  if (placeResult.website) {
-    let websitePara = document.createElement("p");
-    let websiteLink = document.createElement("a");
-    let websiteUrl = document.createTextNode(placeResult.website);
-    websiteLink.appendChild(websiteUrl);
-    websiteLink.title = placeResult.website;
-    websiteLink.href = placeResult.website;
-    websitePara.appendChild(websiteLink);
-    myList.appendChild(websitePara);
+    let name = document.createElement("h1");
+    name.classList.add("placeResult");
+    name.textContent = placeResult.name;
+    myList.appendChild(name);
+    if (placeResult.rating) {
+      let rating = document.createElement("p");
+      rating.classList.add("details");
+      rating.textContent = `Rating: ${placeResult.rating} \u272e`;
+      myList.appendChild(rating);
+    }
+    let address = document.createElement("p");
+    address.classList.add("details");
+    address.textContent = placeResult.formatted_address;
+    myList.appendChild(address);
+    if (placeResult.website) {
+      let websitePara = document.createElement("p");
+      let websiteLink = document.createElement("a");
+      let websiteUrl = document.createTextNode(placeResult.website);
+      websiteLink.appendChild(websiteUrl);
+      websiteLink.title = placeResult.website;
+      websiteLink.href = placeResult.website;
+      websitePara.appendChild(websiteLink);
+      myList.appendChild(websitePara);
+    }
+    itemsArray.push(inputValue);
+    localStorage.setItem("items", JSON.stringify(itemsArray));
+  } else {
+    alert(
+      "Looks like you've already got this one on your list! Please try another."
+    );
   }
 }
 
-// // //new list
-
-// let ul = document.getElementById("yourListUl");
-// let itemsArray = localStorage.getItem("items")
-//   ? JSON.parse(localStorage.getItem("items"))
-//   : [];
-
-// localStorage.setItem("items", JSON.stringify(itemsArray));
-// const data = JSON.parse(localStorage.getItem("items"));
-
-// let listView = {
-//   liMaker: function (text) {
-//     let li = document.createElement("li");
-//     li.textContent = text;
-//     ul.appendChild(li);
-//   },
-// };
-
-// //List handlers
-
-// let listHandlers = {
-//   yourListItem: function (placeResult) {
-//     let inputValue = showDetails(placeResult);
-//     if (itemsArray.indexOf(inputValue) == -1) {
-//       itemsArray.push(inputValue);
-//       localStorage.setItem("items", JSON.stringify(itemsArray));
-//       listView.liMaker(inputValue);
-//     } else {
-//       alert(
-//         "Looks like you've already got this one on your list! Please try another."
-//       );
-//       return;
-//     }
-//   },
-
-//   clearBtn: function () {
-//     localStorage.clear();
-//     while (ul.firstChild) {
-//       ul.removeChild(ul.firstChild);
-//     }
-//   },
-// };
-
-// data.forEach((item) => {
-//   listView.liMaker;
-// });
+function clearBtn() {
+  localStorage.clear();
+  while (myList.firstChild) {
+    myList.removeChild(myList.firstChild);
+  }
+  itemsArray = [];
+}
