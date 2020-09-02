@@ -181,14 +181,6 @@ div #map {
   line-height: 30px;
 }
 
-#yourListUl li {
-  padding: 1% 10% 1% 10%;
-}
-
-#yourListUl li:nth-child(odd) {
-  background-color: rgb(250, 177, 64, 0.9);
-  color: white;
-}
 
 /*--------about--------*/
 
@@ -274,7 +266,6 @@ progress::-webkit-progress-value {
   border-radius: 3px;
 }
 
-
- .open {
-      width: 250px;
-    }
+.open {
+  width: 250px;
+}
