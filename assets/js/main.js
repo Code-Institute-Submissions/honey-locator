@@ -379,6 +379,7 @@ function createMarkers(places) {
           "website",
           "photos",
           "formatted_phone_number",
+          "url",
         ],
       };
       service.getDetails(request, (placeResult, status) => {
@@ -406,7 +407,7 @@ function showDetails(placeResult, marker, status) {
             <div class="pt-1"><i class="fas fa-store honey-col" alt="store"></i>${placeResult.formatted_address}</div>
                       <div class="pt-1"><i class="fas fa-store honey-col" alt="store"></i>${placeResult.rating}</div>
         <div>
-            <a class="button text-small text-center" target="_blank"">View on GoogleMaps</a>
+            <a class="button text-small text-center" target="_blank" target="_blank" href="${placeResult.url}">View on GoogleMaps</a>
         </div>`);
 
     placeInfowindow.open(marker.map, marker);
@@ -424,12 +425,12 @@ let data = JSON.parse(localStorage.getItem("items"));
 
 //new list item
 
-
 function newItem(placeResult) {
   //list item content
   let content = document.createElement("p");
   let inputValue = (content.innerHTML = `<div class="content-text">
             <h5>${placeResult.name}</h5>
+            <img src="${placeResult.photos[0].getUrl()}">
             <div class="py-1"><i class="fas fa-phone-alt honey-col" alt="phone"></i>${placeResult.formatted_phone_number}</div>
             <div class="py-1">
                 <i class="fas fa-globe honey-col" alt="globe"></i>
@@ -438,18 +439,11 @@ function newItem(placeResult) {
             <div class="pt-1"><i class="fas fa-store honey-col" alt="store"></i>${placeResult.formatted_address}</div>
             <div class="pt-1"><i class="fas fa-store honey-col" alt="store"></i>${placeResult.rating}</div>
         <div>
-            <a class="button text-small text-center" target="_blank"">View on GoogleMaps</a>
-        </div>`);
+<a class="button text-small text-center" target="_blank" target="_blank" href="${placeResult.url}">View on GoogleMaps</a>        </div>
+`) 
 
-  //list item add to myList and local storage 
+  //if an item is not already in local storage, add myList and local storage
   if (itemsArray.indexOf(inputValue) == -1) {
-    if (placeResult.photos) {
-      let firstPhoto = placeResult.photos[0];
-      let photo = document.createElement("img");
-      photo.classList.add("hero");
-      photo.src = firstPhoto.getUrl();
-      myList.appendChild(photo);
-    }
     myList.appendChild(content);
     itemsArray.push(inputValue);
     localStorage.setItem("items", JSON.stringify(itemsArray));
@@ -460,9 +454,9 @@ function newItem(placeResult) {
   }
 }
 
-// reset html on page refresh 
+// html remains on page after refresh
 data.forEach(() => {
-    document.getElementById("yourListUl").innerHTML = data;
+  document.getElementById("yourListUl").innerHTML = data;
 });
 
 function clearBtn() {
