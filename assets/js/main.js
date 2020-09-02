@@ -420,12 +420,15 @@ function showDetails(placeResult, marker, status) {
 let itemsArray = localStorage.getItem("items")
   ? JSON.parse(localStorage.getItem("items"))
   : [];
-localStorage.setItem("items", JSON.stringify(itemsArray));
-const data = JSON.parse(localStorage.getItem("items"));
+let data = JSON.parse(localStorage.getItem("items"));
+
+//new list item
+
 
 function newItem(placeResult) {
-  const content = document.createElement("p");
-  const inputValue = (content.innerHTML = `<div class="content-text">
+  //list item content
+  let content = document.createElement("p");
+  let inputValue = (content.innerHTML = `<div class="content-text">
             <h5>${placeResult.name}</h5>
             <div class="py-1"><i class="fas fa-phone-alt honey-col" alt="phone"></i>${placeResult.formatted_phone_number}</div>
             <div class="py-1">
@@ -433,10 +436,12 @@ function newItem(placeResult) {
                 <a class="website text-hvr content-text" target="_blank" href="${placeResult.website}">Website</a>
             </div>
             <div class="pt-1"><i class="fas fa-store honey-col" alt="store"></i>${placeResult.formatted_address}</div>
-                      <div class="pt-1"><i class="fas fa-store honey-col" alt="store"></i>${placeResult.rating}</div>
+            <div class="pt-1"><i class="fas fa-store honey-col" alt="store"></i>${placeResult.rating}</div>
         <div>
             <a class="button text-small text-center" target="_blank"">View on GoogleMaps</a>
         </div>`);
+
+  //list item add to myList and local storage 
   if (itemsArray.indexOf(inputValue) == -1) {
     if (placeResult.photos) {
       let firstPhoto = placeResult.photos[0];
@@ -445,34 +450,7 @@ function newItem(placeResult) {
       photo.src = firstPhoto.getUrl();
       myList.appendChild(photo);
     }
-
     myList.appendChild(content);
-
-    // // Add place details with text formatting
-    // let name = document.createElement("h1");
-    // name.classList.add("placeResult");
-    // name.textContent = placeResult.name;
-    // myList.appendChild(name);
-    // if (placeResult.rating) {
-    //   let rating = document.createElement("p");
-    //   rating.classList.add("details");
-    //   rating.textContent = `Rating: ${placeResult.rating} \u272e`;
-    //   myList.appendChild(rating);
-    // }
-    // let address = document.createElement("p");
-    // address.classList.add("details");
-    // address.textContent = placeResult.formatted_address;
-    // myList.appendChild(address);
-    // if (placeResult.website) {
-    //   let websitePara = document.createElement("p");
-    //   let websiteLink = document.createElement("a");
-    //   let websiteUrl = document.createTextNode(placeResult.website);
-    //   websiteLink.appendChild(websiteUrl);
-    //   websiteLink.title = placeResult.website;
-    //   websiteLink.href = placeResult.website;
-    //   websitePara.appendChild(websiteLink);
-    //   myList.appendChild(websitePara);
-    // }
     itemsArray.push(inputValue);
     localStorage.setItem("items", JSON.stringify(itemsArray));
   } else {
@@ -480,14 +458,12 @@ function newItem(placeResult) {
       "Looks like you've already got this one on your list! Please try another."
     );
   }
-
 }
 
-data.forEach((placeResult) => {
-  newItem(placeResult);
+// reset html on page refresh 
+data.forEach(() => {
+    document.getElementById("yourListUl").innerHTML = data;
 });
-
-
 
 function clearBtn() {
   localStorage.clear();
