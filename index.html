@@ -110,26 +110,26 @@
       </div>
 
       <!-- Map -->
-      <div class="map-container center">
+      <div class="map-container center content-text">
         <div id="map"></div>
-        <button
-          id="edit-btn"
-          class="content-text m-0 button"
-          type="button"
-          data-toggle="modal"
-          data-target="#modal"
-        >
-          Suggest an edit
-        </button>
-         <div id="addTo" class="button text-small text-center float-left">Add to your list
-        </div>
-     
-        <div class="center">
-          <a href="#yourList" class="directIcon text-hvr"
-            ><i class="fas fa-chevron-down"></i
-          ></a>
+        <div class="map-btn">
+          <button
+            id="edit-btn"
+            class="button m-1"
+            type="button"
+            data-toggle="modal"
+            data-target="#modal"
+          >
+            Suggest an edit
+          </button>
+          <button id="add-btn" class="button m-1">Add to your list</button>
         </div>
       </div>
+       <div class="center">
+            <a href="#yourList" class="text-hvr directIcon"
+              ><i class="fas fa-chevron-down"></i
+            ></a>
+          </div>
     </div>
 
     <!-- Modal Form -->

@@ -42,8 +42,6 @@ html {
   letter-spacing: 0.1rem;
 }
 
-
-
 .text-small {
   font-size: small;
   letter-spacing: 0.05rem;
@@ -120,16 +118,13 @@ div #map {
   margin: 0 auto;
 }
 
-#edit-btn {
+.map-btn {
   position: absolute;
-  bottom: 7%;
-  left: 5%;
+  bottom: 1%;
+  left: 2%;
 }
 
 .directIcon {
-  position: absolute;
-  bottom: 1%;
-  left: 50%;
   color: white;
   font-size: 25px;
 }
@@ -177,7 +172,6 @@ div #map {
   list-style-type: none;
   line-height: 30px;
 }
-
 
 /*--------about--------*/
 

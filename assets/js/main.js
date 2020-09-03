@@ -341,7 +341,7 @@ function nearbyCallback(results, status) {
 
 // Set markers at the location of each place result
 function createMarkers(places) {
-  addTo = document.getElementById("addTo");
+  addTo = document.getElementById("add-btn");
   places.forEach((place) => {
     let marker = new google.maps.Marker({
       position: place.geometry.location,
@@ -425,17 +425,17 @@ let data = JSON.parse(localStorage.getItem("items"));
 //new list item
 let firstPhoto;
 let photo;
-let noPhoto
+let noPhoto;
 function newItem(placeResult) {
   //list item content
 
   if (placeResult.photos) {
     firstPhoto = placeResult.photos[0];
   } else {
-    photo = document.getElementById("photo")
-    noPhoto = document.getElementById("noPhoto")
-    photo.style.display = "none"
-    noPhoto.style.display = ""
+    photo = document.getElementById("photo");
+    noPhoto = document.getElementById("noPhoto");
+    photo.style.display = "none";
+    noPhoto.style.display = "";
   }
   let content = document.createElement("div");
   content.classList.add("col");
