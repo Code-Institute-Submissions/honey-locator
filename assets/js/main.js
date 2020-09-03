@@ -399,15 +399,14 @@ function showDetails(placeResult, marker, status) {
     if (placeResult.rating) rating = placeResult.rating;
     placeInfowindow.setContent(`<div class="content-text">
             <h5>${placeResult.name}</h5>
-            <div class="py-1"><i class="fas fa-phone-alt honey-col" alt="phone"></i>${placeResult.formatted_phone_number}</div>
+            <div class="py-1"><i class="fas fa-phone-alt honey-col" alt="phone"></i><a class="content-text text-hvr"  href="tel:${placeResult.formatted_phone_number}" target="_blank"> ${placeResult.formatted_phone_number}</a></div>
             <div class="py-1">
                 <i class="fas fa-globe honey-col" alt="globe"></i>
-                <a class="website text-hvr content-text" target="_blank" href="${placeResult.website}">Website</a>
+                <a class="text-hvr content-text" target="_blank" href="${placeResult.website}"> Website</a>
             </div>
-            <div class="pt-1"><i class="fas fa-store honey-col" alt="store"></i>${placeResult.formatted_address}</div>
-                      <div class="pt-1"><i class="fas fa-store honey-col" alt="store"></i>${placeResult.rating}</div>
+            <div class="py-1"><i class="fas fa-store honey-col" alt="store"></i> ${placeResult.formatted_address}</div>
         <div>
-            <a class="button text-small text-center" target="_blank" target="_blank" href="${placeResult.url}">View on GoogleMaps</a>
+             <div class="py-1"><i class="fas fa-map-marked-alt honey-col" alt="map"></i><a class="content-text text-hvr" target="_blank" target="_blank" href="${placeResult.url}"> View on GoogleMaps</a>    
         </div>`);
 
     placeInfowindow.open(marker.map, marker);
@@ -424,35 +423,47 @@ let itemsArray = localStorage.getItem("items")
 let data = JSON.parse(localStorage.getItem("items"));
 
 //new list item
-
+let firstPhoto;
+let photo;
+let noPhoto
 function newItem(placeResult) {
   //list item content
+
+  if (placeResult.photos) {
+    firstPhoto = placeResult.photos[0];
+  } else {
+    photo = document.getElementById("photo")
+    noPhoto = document.getElementById("noPhoto")
+    photo.style.display = "none"
+    noPhoto.style.display = ""
+  }
   let content = document.createElement("div");
   content.classList.add("col");
   let inputValue = (content.innerHTML = `
   <li>
-  <div class="card" style="width: 18rem;">
-  <img src="${placeResult.photos[0].getUrl()}" class="card-img-top" alt="googlemaps photo" style="height: 12rem;">
+  <div class="card" style="width: 20rem;">
+  <img id="photo" src="${firstPhoto.getUrl()}" class="card-img-top" alt="googleMaps photo">
+    <img id="noPhoto" src="assets/images/honey-pot.jpg" class="card-img-top benefitsImgs" alt="googleMaps photo" style="display: none;">
   <div class="card-body">
-    <h5 class="card-title">${placeResult.name}</h5>
-    <p class="card-text">   <div class="py-1"><i class="fas fa-phone-alt honey-col" alt="phone"></i>${
-      placeResult.formatted_phone_number
-    }</div>
+   <div class="content-text">
+            <h5>${placeResult.name}</h5>
+            <div class="py-1"><i class="fas fa-phone-alt honey-col" alt="phone"></i><a class="content-text text-hvr"  href="tel:${
+              placeResult.formatted_phone_number
+            }" target="_blank"> ${placeResult.formatted_phone_number}</a></div>
             <div class="py-1">
                 <i class="fas fa-globe honey-col" alt="globe"></i>
-                <a class="website text-hvr content-text" target="_blank" href="${
+                <a class="text-hvr content-text" target="_blank" href="${
                   placeResult.website
-                }">Website</a>
+                }"> Website</a>
             </div>
-            <div class="pt-1"><i class="fas fa-store honey-col" alt="store"></i>${
+            <div class="py-1"><i class="fas fa-store honey-col" alt="store"></i> ${
               placeResult.formatted_address
             }</div>
-            <div class="pt-1"><i class="fas fa-store honey-col" alt="store"></i>${
-              placeResult.rating
-            }</div>
-        <div></p> <a class="button text-small text-center" target="_blank" target="_blank" href="${
-          placeResult.url
-        }">View on GoogleMaps</a>     
+        <div>
+             <div class="py-1"><i class="fas fa-map-marked-alt honey-col" alt="map"></i><a class="content-text text-hvr" target="_blank" target="_blank" href="${
+               placeResult.url
+             }"> View on GoogleMaps</a>    
+        </div>
   </div>
 </div>
 </li>
