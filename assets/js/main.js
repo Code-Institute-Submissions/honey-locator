@@ -427,9 +427,10 @@ let data = JSON.parse(localStorage.getItem("items"));
 
 function newItem(placeResult) {
   //list item content
-  let content = document.createElement("li");
-  content.classList.add("col")
+  let content = document.createElement("div");
+  content.classList.add("col");
   let inputValue = (content.innerHTML = `
+  <li>
   <div class="card" style="width: 18rem;">
   <img src="${placeResult.photos[0].getUrl()}" class="card-img-top" alt="googlemaps photo" style="height: 12rem;">
   <div class="card-body">
@@ -454,6 +455,7 @@ function newItem(placeResult) {
         }">View on GoogleMaps</a>     
   </div>
 </div>
+</li>
 `);
 
   //if an item is not already in local storage, add myList and local storage
