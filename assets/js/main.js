@@ -286,7 +286,6 @@ function initMap() {
 
   //search bar autocomplete
 
-  let card = document.getElementById("pac-container");
   let input = document.getElementById("pac-input");
   let options = {
     types: ["address"],
@@ -427,12 +426,13 @@ function newItem(placeResult) {
   //list item content
 
   let content = document.createElement("div");
-  content.classList.add("col");
+  content.classList.add("col-lg-4");
+  content.classList.add("col-md-6");
+
   let inputValue = (content.innerHTML = `
   <li>
-  <div class="card" style="width: 20rem;"
-  <div class="card-body">
-   <div class="content-text">
+  <div class="card m-2" style="width: 23rem;"
+   <div class="content-text text-small p-3">
             <h5>${placeResult.name}</h5>
             <div class="py-1"><i class="fas fa-phone-alt honey-col" alt="phone"></i><a class="content-text text-hvr"  href="tel:${placeResult.formatted_phone_number}" target="_blank"> ${placeResult.formatted_phone_number}</a></div>
             <div class="py-1">
@@ -443,7 +443,6 @@ function newItem(placeResult) {
         <div>
              <div class="py-1"><i class="fas fa-map-marked-alt honey-col" alt="map"></i><a class="content-text text-hvr" target="_blank" target="_blank" href="${placeResult.url}"> View on GoogleMaps</a>    
         </div>
-  </div>
 </div>
 </li>
 `);
