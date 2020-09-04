@@ -421,23 +421,42 @@ let itemsArray = localStorage.getItem("items")
 let data = JSON.parse(localStorage.getItem("items"));
 
 //new list item
-
+let tel;
 function newItem(placeResult) {
   //list item content
+
+  //handles undefined results
+  if (placeResult.formatted_phone_number === undefined) {
+    tel = "No phone number";
+  } else {
+    tel = placeResult.formatted_phone_number;
+  }
+
+  if (placeResult.formatted_phone_number === undefined) {
+    tel = "No phone number";
+  } else {
+    tel = placeResult.formatted_phone_number;
+  }
+
+  if (placeResult.website === undefined) {
+    website = "No Website";
+  } else {
+    website = placeResult.website;
+  }
 
   let content = document.createElement("div");
   content.classList.add("col-lg-4");
   content.classList.add("col-md-6");
-
   let inputValue = (content.innerHTML = `
   <li>
   <div class="card m-2" style="width: 23rem;"
    <div class="content-text text-small p-3">
             <h5>${placeResult.name}</h5>
-            <div class="py-1"><i class="fas fa-phone-alt honey-col" alt="phone"></i><a class="content-text text-hvr"  href="tel:${placeResult.formatted_phone_number}" target="_blank"> ${placeResult.formatted_phone_number}</a></div>
+            <div id="tel" class="py-1"><i class="fas fa-phone-alt honey-col" alt="phone"></i><a class="content-text text-hvr"  href="tel:${tel}" target="_blank"> ${tel}</a></div>
+            
             <div class="py-1">
                 <i class="fas fa-globe honey-col" alt="globe"></i>
-                <a class="text-hvr content-text" target="_blank" href="${placeResult.website}"> Website</a>
+                <a class="text-hvr content-text" target="_blank" href="${website}"> Website</a>
             </div>
             <div class="py-1"><i class="fas fa-store honey-col" alt="store"></i> ${placeResult.formatted_address}</div>
         <div>
