@@ -426,11 +426,6 @@ function newItem(placeResult) {
   //list item content
 
   //handles undefined results
-  if (placeResult.formatted_phone_number === undefined) {
-    tel = "No phone number";
-  } else {
-    tel = placeResult.formatted_phone_number;
-  }
 
   if (placeResult.formatted_phone_number === undefined) {
     tel = "No phone number";
@@ -447,10 +442,12 @@ function newItem(placeResult) {
   let content = document.createElement("div");
   content.classList.add("col-lg-4");
   content.classList.add("col-md-6");
+  content.classList.add("m-2");
+
   let inputValue = (content.innerHTML = `
   <li>
-  <div class="card m-2" style="width: 23rem;"
-   <div class="content-text text-small p-3">
+  <div class="card" style="width: 23rem;"
+   <div class="text-small p-3">
             <h5>${placeResult.name}</h5>
             <div id="tel" class="py-1"><i class="fas fa-phone-alt honey-col" alt="phone"></i><a class="content-text text-hvr"  href="tel:${tel}" target="_blank"> ${tel}</a></div>
             
