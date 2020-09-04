@@ -440,12 +440,10 @@ function newItem(placeResult) {
   }
 
   let content = document.createElement("div");
-  content.classList.add("col-lg-4");
-  content.classList.add("col-md-6");
-  content.classList.add("m-2");
+
 
   let inputValue = (content.innerHTML = `
-  <li>
+  <li class = "m-1">
   <div class="card" style="width: 23rem;"
    <div class="text-small p-3">
             <h5>${placeResult.name}</h5>
