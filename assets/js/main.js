@@ -448,6 +448,9 @@ function newItem(placeResult) {
   let content = document.createElement("li");
   let inputValue = (content.innerHTML = `
   <div class="card m-1 p-3" style="width:22rem;">
+  <div class="text-center">
+  <img src="assets/images/honey-pot.jpg" class="honey-pot" alt="honey pot">
+  </div>
             <h5 class="content-text"><b>${placeResult.name}</b></h5>
             <p class="content-text text-small m-0">${placeResult.formatted_address}</p>
             <div class="text-center favourites-icon ">
@@ -458,7 +461,7 @@ function newItem(placeResult) {
          </div>
 `);
 
-  //if an item is not already in local storage, add myList and local storage
+  //if an item is not already in local storage, add to myList and local storage
   if (itemsArray.indexOf(inputValue) == -1) {
     myList.appendChild(content);
     itemsArray.push(inputValue);
@@ -472,6 +475,7 @@ function newItem(placeResult) {
   clearButton.style.display = "";
 }
 
+// Display the clear button if there are items in local storage array 
 if (localStorage.items) {
   clearButton.style.display = "";
 }

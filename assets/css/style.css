@@ -93,8 +93,9 @@ html {
   text-decoration: none;
 }
 
-.honeyPot {
-  height: 100px;
+.honey-pot {
+  height: 135px;
+  width: 135px;
 }
 
 .cursor {
@@ -158,7 +159,6 @@ div #map {
   color: #fab140;
 }
 
-
 .button:hover,
 .option:focus-within {
   background-color: #9ebe7b;
@@ -201,10 +201,8 @@ div #map {
 }
 
 .favourites-icon {
-    font-size: 30px; 
+  font-size: 30px;
 }
-
-
 
 /*--------about--------*/
 
@@ -289,4 +287,3 @@ progress::-webkit-progress-value {
   background-color: #fab140;
   border-radius: 3px;
 }
-
