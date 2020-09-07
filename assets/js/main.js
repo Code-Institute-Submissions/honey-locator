@@ -390,17 +390,34 @@ function createMarkers(places) {
   });
 }
 
+//handles undefined results
+
+function undefinedResults(placeResult) {
+  if (placeResult.formatted_phone_number === undefined) {
+    tel = "no phone number";
+  } else {
+    tel = placeResult.formatted_phone_number;
+  }
+
+  if (placeResult.website === undefined) {
+    website = "No Website";
+  } else {
+    website = placeResult.website;
+  }
+}
+
 // InfoWindow
 function showDetails(placeResult, marker, status) {
+  undefinedResults(placeResult);
   if (status == google.maps.places.PlacesServiceStatus.OK) {
     let placeInfowindow = new google.maps.InfoWindow();
     if (placeResult.rating) rating = placeResult.rating;
     placeInfowindow.setContent(`<div class="content-text">
             <h5>${placeResult.name}</h5>
-            <div class="py-1"><i class="fas fa-phone-alt honey-col" alt="phone"></i><a class="content-text text-hvr"  href="tel:${placeResult.formatted_phone_number}" target="_blank"> ${placeResult.formatted_phone_number}</a></div>
+            <div class="py-1"><i class="fas fa-phone-alt honey-col" alt="phone"></i><a class="content-text text-hvr"  href="tel:${tel}" target="_blank"> ${tel}</a></div>
             <div class="py-1">
                 <i class="fas fa-globe honey-col" alt="globe"></i>
-                <a class="text-hvr content-text" target="_blank" href="${placeResult.website}"> Website</a>
+                <a class="text-hvr content-text" target="_blank" href="${website}"> Website</a>
             </div>
             <div class="py-1"><i class="fas fa-store honey-col" alt="store"></i> ${placeResult.formatted_address}</div>
         <div>
@@ -421,27 +438,11 @@ let itemsArray = localStorage.getItem("items")
 let data = JSON.parse(localStorage.getItem("items"));
 
 //new list item
-let tel;
+
 function newItem(placeResult) {
   //list item content
-
-  //handles undefined results
-
-  if (placeResult.formatted_phone_number === undefined) {
-    tel = "No phone number";
-  } else {
-    tel = placeResult.formatted_phone_number;
-  }
-
-  if (placeResult.website === undefined) {
-    website = "No Website";
-  } else {
-    website = placeResult.website;
-  }
-
+  undefinedResults(placeResult);
   let content = document.createElement("div");
-
-
   let inputValue = (content.innerHTML = `
   <li class = "m-1">
   <div class="card" style="width: 23rem;"
