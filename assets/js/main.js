@@ -434,12 +434,19 @@ function showDetails(placeResult, marker, status) {
   }
 }
 
+
+
 let itemsArray = localStorage.getItem("items")
   ? JSON.parse(localStorage.getItem("items"))
   : [];
 let data = JSON.parse(localStorage.getItem("items"));
 myList = document.getElementById("yourListUl");
 let clearButton = document.getElementById("clear-btn");
+
+//direct to favourites on first click only 
+$("#add-btn" ).one( "click", function() {
+  $("#add-btn").attr("href", "#yourList");
+});
 
 //new list item
 function newItem(placeResult) {
@@ -472,7 +479,7 @@ function newItem(placeResult) {
   clearButton.style.display = "";
 }
 
-// Display the clear button if there are items in local storage array 
+// Display the clear button if there are items in local storage array
 if (localStorage.items) {
   clearButton.style.display = "";
 }
