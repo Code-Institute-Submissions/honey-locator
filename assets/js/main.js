@@ -385,6 +385,9 @@ function createMarkers(places) {
         addTo.onclick = function () {
           newItem(placeResult);
         };
+        addTo.onclick = function () {
+          newItem(placeResult);
+        };
       });
     });
   });
@@ -438,28 +441,21 @@ let itemsArray = localStorage.getItem("items")
 let data = JSON.parse(localStorage.getItem("items"));
 
 //new list item
-let firstPhoto;
 function newItem(placeResult) {
   //list item content
-
   undefinedResults(placeResult);
-  let content = document.createElement("div");
+  let content = document.createElement("li");
   let inputValue = (content.innerHTML = `
-  <li class = "m-1">
-  <div class="card" style="width: 23rem;"
-   <div class="text-small p-3">
-            <h5>${placeResult.name}</h5>
-            <div id="tel" class="py-1"><i class="fas fa-phone-alt honey-col" alt="phone"></i><a class="content-text text-hvr"  href="tel:${tel}" target="_blank"> ${tel}</a></div>
-            <div class="py-1">
-                <i class="fas fa-globe honey-col" alt="globe"></i>
-                <a class="text-hvr content-text" target="_blank" href="${website}"> Website</a>
-            </div>
-             <div class="py-1"><i class="fas fa-map-marked-alt honey-col" alt="map"></i><a class="content-text text-hvr" target="_blank" target="_blank" href="${placeResult.url}"> View on GoogleMaps</a>    
-        </div>
-</div>
-</li>
+  <div class="card m-1 p-3">
+            <h5 class="content-text"><b>${placeResult.name}</b></h5>
+            <h7 class="content-text">${placeResult.formatted_address}</h7>
+            <div class="p-2 favourite-icon ">
+           <a class="text-hvr p-1"  href="tel:${tel}" target="_blank"> <i class="fas fa-phone-alt honey-col" alt="phone"></i></a>               
+                <a class="text-hvr p-1" target="_blank" href="${website}"> <i class="fas fa-globe honey-col" alt="globe"></i></a>
+         <a class="text-hvr p-1" target="_blank" href="${placeResult.url}"><i class="fas fa-map-marked-alt honey-col" alt="map"></i></a>    
+         </div>
+         </div>
 `);
-
 
   //if an item is not already in local storage, add myList and local storage
   if (itemsArray.indexOf(inputValue) == -1) {

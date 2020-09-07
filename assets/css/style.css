@@ -173,6 +173,9 @@ div #map {
   line-height: 30px;
 }
 
+#yourListUl > li > div > div {
+  font-size: 30px;
+}
 /*--------about--------*/
 
 #benefits {
@@ -260,4 +263,3 @@ progress::-webkit-progress-value {
 .open {
   width: 250px;
 }
-
