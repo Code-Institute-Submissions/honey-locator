@@ -446,13 +446,13 @@ function newItem(placeResult) {
   undefinedResults(placeResult);
   let content = document.createElement("li");
   let inputValue = (content.innerHTML = `
-  <div class="card m-1 p-3">
+  <div class="card m-1 p-3" style="width:23rem;">
             <h5 class="content-text"><b>${placeResult.name}</b></h5>
-            <h7 class="content-text">${placeResult.formatted_address}</h7>
-            <div class="p-2 favourite-icon ">
-           <a class="text-hvr p-1"  href="tel:${tel}" target="_blank"> <i class="fas fa-phone-alt honey-col" alt="phone"></i></a>               
-                <a class="text-hvr p-1" target="_blank" href="${website}"> <i class="fas fa-globe honey-col" alt="globe"></i></a>
-         <a class="text-hvr p-1" target="_blank" href="${placeResult.url}"><i class="fas fa-map-marked-alt honey-col" alt="map"></i></a>    
+            <p class="content-text">${placeResult.formatted_address}</p>
+            <div class="text-center favourites-icon ">
+           <a class="m-3 hvr-icon-grow"  href="tel:${tel}" target="_blank"> <i class="fas fa-phone-alt honey-col hvr-icon" alt="phone"></i></a>     
+           <a class="m-3 hvr-icon-grow" target="_blank" href="${website}"> <i class="fas fa-globe honey-col hvr-icon" alt="globe"></i></a>
+         <a class="m-3 hvr-icon-grow" target="_blank" href="${placeResult.url}"><i class="fas fa-map-marked-alt honey-col hvr-icon" alt="map"></i></a>    
          </div>
          </div>
 `);
