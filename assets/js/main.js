@@ -448,9 +448,6 @@ function newItem(placeResult) {
   let content = document.createElement("li");
   let inputValue = (content.innerHTML = `
   <div class="card m-1 p-3" style="width:22rem;">
-  <div class="text-center">
-  <img src="assets/images/honey-pot.jpg" class="honey-pot" alt="honey pot">
-  </div>
             <h5 class="content-text"><b>${placeResult.name}</b></h5>
             <p class="content-text text-small m-0">${placeResult.formatted_address}</p>
             <div class="text-center favourites-icon ">
