@@ -439,6 +439,7 @@ let itemsArray = localStorage.getItem("items")
   : [];
 let data = JSON.parse(localStorage.getItem("items"));
 myList = document.getElementById("yourListUl");
+let clearButton = document.getElementById("clear-btn");
 
 //new list item
 function newItem(placeResult) {
@@ -446,7 +447,7 @@ function newItem(placeResult) {
   undefinedResults(placeResult);
   let content = document.createElement("li");
   let inputValue = (content.innerHTML = `
-  <div class="card m-1 p-3 open" style="width:22rem;">
+  <div class="card m-1 p-3" style="width:22rem;">
             <h5 class="content-text"><b>${placeResult.name}</b></h5>
             <p class="content-text text-small m-0">${placeResult.formatted_address}</p>
             <div class="text-center favourites-icon ">
@@ -467,11 +468,13 @@ function newItem(placeResult) {
       "Looks like you've already got this one on your list! Please try another."
     );
   }
-  $(document).ready(function(){
-    alert($("div").hasClass("open"));
-})
+  let clearButton = document.getElementById("clear-btn");
+  clearButton.style.display = "";
 }
 
+if (localStorage.items) {
+  clearButton.style.display = "";
+}
 
 // html remains on page after refresh
 data.forEach(() => {
@@ -483,5 +486,6 @@ function clearBtn() {
   while (myList.firstChild) {
     myList.removeChild(myList.firstChild);
   }
+  clearButton.style.display = "none";
   itemsArray = [];
 }
