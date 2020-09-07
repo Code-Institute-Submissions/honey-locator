@@ -416,7 +416,7 @@ function showDetails(placeResult, marker, status) {
     let placeInfowindow = new google.maps.InfoWindow();
     if (placeResult.rating) rating = placeResult.rating;
     placeInfowindow.setContent(`<div class="content-text">
-            <h5>${placeResult.name}</h5>
+            <h5><b>${placeResult.name}</b></h5>
             <div class="py-1"><i class="fas fa-phone-alt honey-col" alt="phone"></i><a class="content-text text-hvr"  href="tel:${tel}" target="_blank"> ${tel}</a></div>
             <div class="py-1">
                 <i class="fas fa-globe honey-col" alt="globe"></i>
@@ -446,9 +446,9 @@ function newItem(placeResult) {
   undefinedResults(placeResult);
   let content = document.createElement("li");
   let inputValue = (content.innerHTML = `
-  <div class="card m-1 p-3" style="width:23rem;">
+  <div class="card m-1 p-3" style="width:22rem;">
             <h5 class="content-text"><b>${placeResult.name}</b></h5>
-            <p class="content-text">${placeResult.formatted_address}</p>
+            <p class="content-text text-small m-0">${placeResult.formatted_address}</p>
             <div class="text-center favourites-icon ">
            <a class="m-3 hvr-icon-grow"  href="tel:${tel}" target="_blank"> <i class="fas fa-phone-alt honey-col hvr-icon" alt="phone"></i></a>     
            <a class="m-3 hvr-icon-grow" target="_blank" href="${website}"> <i class="fas fa-globe honey-col hvr-icon" alt="globe"></i></a>

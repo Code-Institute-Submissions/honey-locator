@@ -200,8 +200,7 @@ div #map {
   line-height: 30px;
 }
 
-.favourites-icon {
-    font-size: 30px; 
+#yourListUl > div {     background: rgb(106, 202, 216, 0.9);
 }
 
 /*--------about--------*/
