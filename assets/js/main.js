@@ -438,9 +438,10 @@ let itemsArray = localStorage.getItem("items")
 let data = JSON.parse(localStorage.getItem("items"));
 
 //new list item
-
+let firstPhoto;
 function newItem(placeResult) {
   //list item content
+
   undefinedResults(placeResult);
   let content = document.createElement("div");
   let inputValue = (content.innerHTML = `
@@ -449,18 +450,16 @@ function newItem(placeResult) {
    <div class="text-small p-3">
             <h5>${placeResult.name}</h5>
             <div id="tel" class="py-1"><i class="fas fa-phone-alt honey-col" alt="phone"></i><a class="content-text text-hvr"  href="tel:${tel}" target="_blank"> ${tel}</a></div>
-            
             <div class="py-1">
                 <i class="fas fa-globe honey-col" alt="globe"></i>
                 <a class="text-hvr content-text" target="_blank" href="${website}"> Website</a>
             </div>
-            <div class="py-1"><i class="fas fa-store honey-col" alt="store"></i> ${placeResult.formatted_address}</div>
-        <div>
              <div class="py-1"><i class="fas fa-map-marked-alt honey-col" alt="map"></i><a class="content-text text-hvr" target="_blank" target="_blank" href="${placeResult.url}"> View on GoogleMaps</a>    
         </div>
 </div>
 </li>
 `);
+
 
   //if an item is not already in local storage, add myList and local storage
   if (itemsArray.indexOf(inputValue) == -1) {
