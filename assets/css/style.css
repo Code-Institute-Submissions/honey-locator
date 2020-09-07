@@ -200,8 +200,11 @@ div #map {
   line-height: 30px;
 }
 
-#yourListUl > div {     background: rgb(106, 202, 216, 0.9);
+.favourites-icon {
+    font-size: 30px; 
 }
+
+
 
 /*--------about--------*/
 
@@ -287,6 +290,3 @@ progress::-webkit-progress-value {
   border-radius: 3px;
 }
 
-.open {
-  width: 250px;
-}
