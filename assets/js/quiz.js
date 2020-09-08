@@ -38,6 +38,7 @@ function showResults() {
   resultsContainer.innerHTML = `${numCorrect} out of ${quizQuestions.length}`;
   restartButton.style.display = "inline-block";
   checkAnswersButton.style.display = "inline-block";
+  submitButton.style.display = "none";
 }
 
 function checkAnswers() {
