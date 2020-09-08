@@ -384,9 +384,6 @@ function createMarkers(places) {
         addTo.onclick = function () {
           newItem(placeResult);
         };
-        addTo.onclick = function () {
-          newItem(placeResult);
-        };
       });
     });
   });
