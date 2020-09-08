@@ -34,7 +34,28 @@ function showResults() {
     if (userAnswer === currentQuestion.correctAnswer) {
       // add to the number of correct answers
       numCorrect++;
+    }
+    //   // color the answers green
+    //   answerContainers[questionNumber].style.color = "lightgreen";
+    // }
+    // // if answer is wrong or blank
+    // else {
+    //   // color the answers red
+    //   answerContainers[questionNumber].style.color = "red";
+    // }
+  });
+  resultsContainer.innerHTML = `${numCorrect} out of ${quizQuestions.length}`;
+  restartButton.style.display = "inline-block";
+}
 
+function checkAnswers() {
+  const answerContainers = quizContainer.querySelectorAll(".answers");
+  quizQuestions.forEach((currentQuestion, questionNumber) => {
+    const answerContainer = answerContainers[questionNumber];
+    const selector = `input[name=question${questionNumber}]:checked`;
+    const userAnswer = (answerContainer.querySelector(selector) || {}).value;
+
+    if (userAnswer === currentQuestion.correctAnswer) {
       // color the answers green
       answerContainers[questionNumber].style.color = "lightgreen";
     }
@@ -44,10 +65,7 @@ function showResults() {
       answerContainers[questionNumber].style.color = "red";
     }
   });
-  resultsContainer.innerHTML = `${numCorrect} out of ${quizQuestions.length}`;
-  restartButton.style.display = "inline-block";
 }
-
 function showSlide(n) {
   slides[currentSlide].classList.remove("active-slide");
   slides[n].classList.add("active-slide");
@@ -88,6 +106,7 @@ function restartQuiz() {
 let quizContainer = document.getElementById("quiz");
 let resultsContainer = document.getElementById("results");
 let submitButton = document.getElementById("submit");
+let checkAnswersButton = document.getElementById("checkAnswers")
 let quizQuestions = [
   {
     question:
@@ -154,6 +173,7 @@ submitButton.addEventListener("click", showResults);
 previousButton.addEventListener("click", showPreviousSlide);
 nextButton.addEventListener("click", showNextSlide);
 restartButton.addEventListener("click", restartQuiz);
+checkAnswersButton.addEventListener("click", checkAnswers);
 
 // let currentQuestion = 0;
 // let question = document.getElementById("question");
