@@ -5,10 +5,10 @@ function buildQuiz() {
     const answers = [];
     for (letter in currentQuestion.answers) {
       answers.push(
-        `<label>
+        `<label class="option button text-center">
             <input type="radio" name="question${questionNumber}" value="${letter}">
-            ${letter} :
             ${currentQuestion.answers[letter]}
+             <span class="checkmark"></span>
           </label>`
       );
     }
@@ -40,8 +40,6 @@ function showResults() {
   checkAnswersButton.style.display = "inline-block";
 }
 
-
-
 function checkAnswers() {
   const answerContainers = quizContainer.querySelectorAll(".answers");
 
@@ -60,6 +58,7 @@ function checkAnswers() {
     }
   });
 }
+
 function showSlide(n) {
   slides[currentSlide].classList.remove("active-slide");
   slides[n].classList.add("active-slide");
@@ -171,72 +170,3 @@ previousButton.addEventListener("click", showPreviousSlide);
 nextButton.addEventListener("click", showNextSlide);
 restartButton.addEventListener("click", restartQuiz);
 checkAnswersButton.addEventListener("click", checkAnswers);
-
-// let currentQuestion = 0;
-// let question = document.getElementById("question");
-// let score = 0;
-
-// let quizHandlers = {
-//   loadQuestion: function (i) {
-//     let option1 = document.getElementById("option1");
-//     let option2 = document.getElementById("option2");
-//     let option3 = document.getElementById("option3");
-//     let q = questions[i];
-//     question.textContent = i + 1 + ". " + q.question;
-//     option1.textContent = q.option1;
-//     option2.textContent = q.option2;
-//     option3.textContent = q.option3;
-//   },
-
-//   nextQuestion: function () {
-//     let totalQuestions = questions.length;
-//     let quizResultsContainer = document.getElementById("quizResultsContainer");
-//     let quizQuestionsContainer = document.getElementById(
-//       "quizQuestionsContainer"
-//     );
-//     let quizNextContainer = document.getElementById("nextContainer");
-//     let restart = document.getElementById("restart");
-//     let showAnswers = document.getElementById("showAnswers");
-//     let selectedOption = document.querySelector("input[type = radio]:checked");
-
-//     if (!selectedOption) {
-//       alert("Please choose an answer");
-//     }
-
-//     let corAnswer = selectedOption.value;
-//     if (questions[currentQuestion].corAnswer == corAnswer) {
-//       score += 1;
-//     }
-
-//     selectedOption.checked = false;
-//     currentQuestion++;
-//     if (currentQuestion === totalQuestions - 1) {
-//       nextBtn.textContent = "Finish";
-//     }
-//     if (currentQuestion === totalQuestions) {
-//       quizQuestionsContainer.style.display = "none";
-//       quizNextContainer.style.display = "none";
-//       quizResultsContainer.style.display = "";
-//       quizResultsContainer.innerHTML = `<div class="content-text center p-5"><h2>Your Score  ${score} / 5!</h2></div>`;
-//       quizResultsContainer.appendChild(showAnswers);
-//       quizResultsContainer.appendChild(restart);
-//       return;
-//     }
-//     progBar.value = progBar.value + 10;
-//     quizHandlers.loadQuestion(currentQuestion);
-//   },
-
-//   restartQuiz: function () {
-//     location.reload();
-//     return false;
-//   },
-// };
-
-// $(document).ready(function () {
-//   $("#answers").hide();
-//   $("#showAnswers").click(function () {
-//     $("#answers").toggle();
-//   });
-// });
-
-// quizHandlers.loadQuestion(currentQuestion);

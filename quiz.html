@@ -1,41 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Honey Locator UK</title>
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="/assets/images/favicon_io/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="assets/images/favicon_io/favicon-16x16.png"
-    />
-  </head>
 
-  <body class="clouds-bg">
-    <!--Nav-->
-    <header>
-      <div class="fixed-top dropdown-nav bg-col">
-        <nav class="navbar navbar-expand-sm bg-col p-0">
-          <a href="index.html" class="navbar-brand"
-            ><img
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Honey Locator UK</title>
+	<link rel="stylesheet" href="assets/css/style.css" />
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" />
+	<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon_io/favicon-32x32.png" />
+	<link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon_io/favicon-16x16.png" />
+</head>
+
+<body class="clouds-bg">
+	<!--Nav-->
+	<header>
+		<div class="fixed-top dropdown-nav bg-col">
+			<nav class="navbar navbar-expand-sm bg-col p-0">
+				<a href="index.html" class="navbar-brand"><img
               src="assets/images/icon_online.jpg"
               alt="bee logo"
               class="logo-nav"
           /></a>
 
-          <button
+					<button
             class="navbar-toggler"
             type="button"
             data-toggle="collapse"
@@ -48,65 +35,52 @@
               ><i class="fa fa-navicon logo-nav p-1"></i>
             </span>
           </button>
-          <div class="collapse navbar-collapse bg-col" id="navbarNavDropdown">
-            <ul class="navbar-nav pr-5 content-heading">
-              <li class="nav-item mr-2 dropdown" id="navbar">
-                <a
-                  class="nav-link content-text text-hvr dropdown-toggle"
-                  href="#"
-                  role="button"
-                  id="dropdownMenuLink"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                  >Honey Map</a
-                >
-                <div
-                  class="dropdown-menu bg-col"
-                  aria-labelledby="dropdownMenuLink"
-                >
-                  <a class="dropdown-item" href="index.html">Locator</a>
-                  <a class="dropdown-item" href="index.html#yourList"
-                    >Your List</a
-                  >
-                </div>
-              </li>
-              <li class="mr-2 d-flex align-items-center honey-col"><b>.</b></li>
-              <li class="nav-item mr-2">
-                <a class="nav-link content-text text-hvr" href="about.html"
-                  >About</a
-                >
-              </li>
-              <li class="mr-2 d-flex align-items-center honey-col"><b>.</b></li>
-              <li class="nav-item mr-2">
-                <a
-                  class="nav-link content-text text-hvr active"
-                  href="quiz.html"
-                  >Quizzz!</a
-                >
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </div>
-    </header>
+					<div class="collapse navbar-collapse bg-col" id="navbarNavDropdown">
+						<ul class="navbar-nav pr-5 content-heading">
+							<li class="nav-item mr-2 dropdown" id="navbar">
+								<a class="nav-link content-text text-hvr dropdown-toggle" href="#" role="button"
+									id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+									aria-expanded="false">Honey Map</a>
+								<div class="dropdown-menu bg-col" aria-labelledby="dropdownMenuLink">
+									<a class="dropdown-item" href="index.html">Locator</a>
+									<a class="dropdown-item" href="index.html#yourList">Your List</a>
+								</div>
+							</li>
+							<li class="mr-2 d-flex align-items-center honey-col"><b>.</b></li>
+							<li class="nav-item mr-2">
+								<a class="nav-link content-text text-hvr" href="about.html">About</a>
+							</li>
+							<li class="mr-2 d-flex align-items-center honey-col"><b>.</b></li>
+							<li class="nav-item mr-2">
+								<a class="nav-link content-text text-hvr active" href="quiz.html">Quizzz!</a>
+							</li>
+						</ul>
+					</div>
+			</nav>
+		</div>
+	</header>
 
-    <!--Quiz-->
-    <div class="center mt-5 pt-5 px-3 content-text">
-      <h1>Test your knowledge with a quizzzz</h1>
-    </div>
-    <!-- <div id="quiz" class="pt-5 px-2 mb-2 center"> -->
-    <div class="quiz-container">
-      <div id="quiz"></div>
-    </div>
-    <button id="previous">Previous Question</button>
-    <button id="next">Next Question</button>
-    <button id="submit">Submit Quiz</button>
-    <button id="restart">Try again</button>
-    <button id="checkAnswers">check answers</button>
-    <progress id="progBar" max="50" value="10"> </progress>
-    <div id="results"></div>
-    <!-- <div class="container quizContainer">
+	<!--Quiz-->
+	<div class="center mt-5 pt-5 px-3 content-text">
+		<h1>Test your knowledge with a quizzzz</h1>
+	</div>
+	<!-- <div id="quiz" class="pt-5 px-2 mb-2 center"> -->
+	<div class="quiz-container-1">
+    <div class="question-container">
+		<img class="bee-img" src="assets/images/bee.jpg" alt="bee" />
+		<div class="quiz-container">
+			<div id="quiz"></div>
+</div>
+			<button id="previous" class="button text-center">Previous Question</button>
+			<button id="next" class="button text-center">Next Question</button>
+			<button id="submit" class="button text-center">Submit Quiz</button>
+			<button id="restart" class="button text-center">Try again</button>
+			<button id="checkAnswers" class="button text-center">check answers</button>
+			<progress id="progBar" max="50" value="10"> </progress>
+			<div id="results"></div>
+		</div>
+	</div>
+	<!-- <div class="container quizContainer">
         <div id="quizQuestionsContainer" class="content-text">
           <div class="row">
             <div class="col-md-3">
@@ -178,14 +152,15 @@
           </div>
         </div>
       </div>-->
-    <!-- </div> -->
+	<!-- </div> -->
 
-    <!-- Footer -->
+	<!-- Footer -->
 
-    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-    <script src="assets/js/quiz.js"></script>
-    <script src="https://kit.fontawesome.com/89255d1b7b.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-  </body>
+	<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+	<script src="assets/js/quiz.js"></script>
+	<script src="https://kit.fontawesome.com/89255d1b7b.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+</body>
+
 </html>

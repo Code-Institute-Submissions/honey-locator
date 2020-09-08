@@ -85,7 +85,7 @@ html {
   padding: 10px;
   background: rgba(255, 255, 255);
   margin: 10px 0 10px 10px;
-  color: #fab140;
+  /* color: #fab140; */
   border: 1px solid #fab140;
   border-radius: 15px;
   cursor: pointer;
@@ -161,7 +161,7 @@ div #map {
 
 .button:hover,
 .option:focus-within {
-  background-color: #9ebe7b;
+  background: #9ebe7b;
   border: 1px solid white;
   color: white;
   text-decoration: none;
@@ -253,22 +253,44 @@ div #map {
 
 /*--------quiz--------*/
 
-.quizContainer {
+.quiz-container-1 {
   background-color: white;
   border: 3px solid #fab140;
   border-radius: 5px;
   width: 80%;
 }
 
-.options {
-  font-size: 20px;
-}
 
 .option input {
+  position: absolute;
   opacity: 0;
-  position: fixed;
-  width: 0;
+  cursor: pointer;
 }
+
+.checkmark {
+  position: absolute;
+  border-radius: 50%;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.option input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.option .checkmark:after {
+ 	top: 4px;
+    width: 15px;
+    left: 5px;
+    height: 15px;
+    border-radius: 50%;
+    background: #fab140;
+}
+
 
 .bee-img {
   height: 200px;
@@ -307,3 +329,4 @@ progress::-webkit-progress-value {
   height: 200px;
   margin-top: 40px;
 }
+
