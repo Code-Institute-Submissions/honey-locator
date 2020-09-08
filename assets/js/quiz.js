@@ -27,12 +27,10 @@ function showResults() {
   const answerContainers = quizContainer.querySelectorAll(".answers");
   let numCorrect = 0;
   quizQuestions.forEach((currentQuestion, questionNumber) => {
-    // find selected answer
     const answerContainer = answerContainers[questionNumber];
     const selector = `input[name=question${questionNumber}]:checked`;
     const userAnswer = (answerContainer.querySelector(selector) || {}).value;
 
-    // if answer is correct
     if (userAnswer === currentQuestion.correctAnswer) {
       // add to the number of correct answers
       numCorrect++;
@@ -73,10 +71,12 @@ function showSlide(n) {
 
 function showNextSlide() {
   showSlide(currentSlide + 1);
+  progBar.value = progBar.value + 10;
 }
 
 function showPreviousSlide() {
   showSlide(currentSlide - 1);
+  progBar.value = progBar.value - 10;
 }
 
 function restartQuiz() {
