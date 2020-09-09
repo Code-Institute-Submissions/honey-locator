@@ -13,10 +13,17 @@ function buildQuiz() {
       );
     }
     output.push(
-      `  <div class="slide">
+      ` 
+       <div class="slide center">
+       <div class = "quiz-container-1 p-4">
+       <div class="center">
             <div class="question"> ${currentQuestion.question} </div>
-            <div class="answers"> ${answers.join("")} </div>
             </div>
+            <div class="center">
+            <div class="answers"> ${answers.join("")} </div>  
+            </div>
+            </div>
+        </div>
        `
     );
   });

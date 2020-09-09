@@ -80,7 +80,7 @@ html {
 }
 
 .button {
-  width: 200px;
+  /* width: 200px; */
   display: inline-block;
   padding: 10px;
   background: rgba(255, 255, 255);
@@ -88,9 +88,9 @@ html {
   /* color: #fab140; */
   border: 1px solid #fab140;
   border-radius: 15px;
-  cursor: pointer;
   transition: 0.3s;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .honey-pot {
@@ -257,9 +257,7 @@ div #map {
   background-color: white;
   border: 3px solid #fab140;
   border-radius: 5px;
-  width: 80%;
 }
-
 
 .option input {
   position: absolute;
@@ -283,14 +281,13 @@ div #map {
 }
 
 .option .checkmark:after {
- 	top: 4px;
-    width: 15px;
-    left: 5px;
-    height: 15px;
-    border-radius: 50%;
-    background: #fab140;
+  top: 4px;
+  width: 15px;
+  left: 5px;
+  height: 15px;
+  border-radius: 50%;
+  background: #fab140;
 }
-
 
 .bee-img {
   height: 200px;
@@ -299,7 +296,7 @@ div #map {
 progress {
   border-radius: 3px;
   height: 20px;
-  width: 30%;
+  width: 40%;
 }
 progress::-webkit-progress-bar {
   background-color: #a8e1e8;
@@ -310,23 +307,24 @@ progress::-webkit-progress-value {
   border-radius: 3px;
 }
 
-
-.slide{
+.slide {
   position: absolute;
   left: 0px;
   top: 0px;
-  width: 100%;
   z-index: 1;
   opacity: 0;
   transition: opacity 0.5s;
 }
-.active-slide{
+.active-slide {
   opacity: 1;
   z-index: 2;
 }
-.quiz-container{
+#quiz {
   position: relative;
-  height: 200px;
+  height: 100px;
   margin-top: 40px;
 }
 
+.quiz-button-container {
+  margin-top: 200px;
+}
