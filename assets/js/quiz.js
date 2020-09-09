@@ -14,16 +14,14 @@ function buildQuiz() {
     }
     output.push(
       ` 
-       <div class="slide center">
-       <div class = "quiz-container-1 p-4">
+       <div class="slide p-4 ml-5 content-text">
        <div class="center">
-            <div class="question"> ${currentQuestion.question} </div>
+            <div class="question"><h5>${currentQuestion.question} </h5></div>
             </div>
             <div class="center">
-            <div class="answers"> ${answers.join("")} </div>  
+            <div class="answers ml-2"> ${answers.join("")} </div>  
             </div>
             </div>
-        </div>
        `
     );
   });
@@ -118,7 +116,7 @@ let quizQuestions = [
     answers: {
       a: "Four Hundred",
       b: "Four Thousand",
-      c: "Four Million",
+      c: "Four Million"
     },
     correctAnswer: "c",
   },

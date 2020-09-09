@@ -321,10 +321,16 @@ progress::-webkit-progress-value {
 }
 #quiz {
   position: relative;
-  height: 100px;
-  margin-top: 40px;
 }
 
 .quiz-button-container {
-  margin-top: 200px;
+  position: relative;
+  margin-top: 10rem;
+}
+
+@media screen and (max-width: 576px) {
+  .quiz-button-container {
+    position: relative;
+    margin-top: 22rem;
+  }
 }
