@@ -8,8 +8,8 @@ function sendForm() {
       alert("Hmm something has gone wrong here, please try again...", error);
     }
   );
+  //close modal on submit 
   $("#modal").modal("hide");
-
   return false;
 }
 
@@ -442,7 +442,7 @@ let clearButton = document.getElementById("clear-btn");
 
 //direct to favourites on first click only
 $("#add-btn").one("click", function () {
-  $("#add-btn").attr("href", "#yourList");
+  $("#add-btn").attr("href", "#your-list");
 });
 
 //new list item
