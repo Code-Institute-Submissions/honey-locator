@@ -8,6 +8,8 @@ function sendForm() {
       alert("Hmm something has gone wrong here, please try again...", error);
     }
   );
+  $("#modal").modal("hide");
+
   return false;
 }
 
@@ -431,8 +433,6 @@ function showDetails(placeResult, marker, status) {
   }
 }
 
-
-
 let itemsArray = localStorage.getItem("items")
   ? JSON.parse(localStorage.getItem("items"))
   : [];
@@ -440,8 +440,8 @@ let data = JSON.parse(localStorage.getItem("items"));
 myList = document.getElementById("your-list-ul");
 let clearButton = document.getElementById("clear-btn");
 
-//direct to favourites on first click only 
-$("#add-btn" ).one( "click", function() {
+//direct to favourites on first click only
+$("#add-btn").one("click", function () {
   $("#add-btn").attr("href", "#yourList");
 });
 
