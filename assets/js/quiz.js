@@ -15,12 +15,12 @@ function buildQuiz() {
     output.push(
       ` 
       <div>
-       <div class="slide p-4 content-text">
-       <div class="center">
-            <div class="question"><h5>${currentQuestion.question} </h5></div>
+       <div class="slide content-text">
+       <div>
+            <div class="question text-center"><h5>${currentQuestion.question} </h5></div>
             </div>
             <div class="center">
-            <div class="answers ml-2"> ${answers.join("")} </div>  
+            <div class="answers"> ${answers.join("")} </div>  
             </div>
             </div>
             </div>
@@ -42,7 +42,10 @@ function showResults() {
       numCorrect++;
     }
   });
-  resultsContainer.innerHTML = `${numCorrect} out of ${quizQuestions.length}`;
+  resultsContainer.innerHTML = `<div class="content-text pb-3">
+  <div class="text-center"><h6>You scored:</h6></div>
+  <div class="text-center">${numCorrect} out of ${quizQuestions.length}!</div>
+  </div>`;
   restartButton.style.display = "inline-block";
   checkAnswersButton.style.display = "inline-block";
   submitButton.style.display = "none";
@@ -57,7 +60,7 @@ function checkAnswers() {
     const userAnswer = (answerContainer.querySelector(selector) || {}).value;
     if (userAnswer === currentQuestion.correctAnswer) {
       // color the answers green
-      answerContainers[questionNumber].style.color = "lightgreen";
+      answerContainers[questionNumber].style.color = "#9ebe7b";
     }
     // if answer is wrong or blank
     else {
@@ -118,7 +121,7 @@ let quizQuestions = [
     answers: {
       a: "Four Hundred",
       b: "Four Thousand",
-      c: "Four Million"
+      c: "Four Million",
     },
     correctAnswer: "c",
   },
@@ -156,7 +159,7 @@ let quizQuestions = [
     answers: {
       a: "Up to five miles per hour",
       b: "Up to ten miles per hour",
-      c: "Up to fifteen miles per hour",
+      c: "Up to fifty miles per hour",
     },
     correctAnswer: "b",
   },
