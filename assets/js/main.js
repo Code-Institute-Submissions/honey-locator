@@ -483,7 +483,7 @@ if (localStorage.items) {
 
 // html remains on page after refresh
 data.forEach(() => {
-  document.getElementById("yourListUl").innerHTML = data;
+  document.getElementById("your-list-ul").innerHTML = data;
 });
 
 function clearBtn() {
