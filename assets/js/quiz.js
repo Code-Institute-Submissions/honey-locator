@@ -14,12 +14,14 @@ function buildQuiz() {
     }
     output.push(
       ` 
-       <div class="slide p-4 ml-5 content-text">
+      <div>
+       <div class="slide p-4 content-text">
        <div class="center">
             <div class="question"><h5>${currentQuestion.question} </h5></div>
             </div>
             <div class="center">
             <div class="answers ml-2"> ${answers.join("")} </div>  
+            </div>
             </div>
             </div>
        `
