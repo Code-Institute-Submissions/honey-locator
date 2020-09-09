@@ -303,6 +303,7 @@ progress::-webkit-progress-value {
 
 .slide {
   position: absolute;
+  height: 30vh;
   left: 0px;
   top: 0px;
   z-index: 1;
@@ -312,7 +313,10 @@ progress::-webkit-progress-value {
   border: 3px solid #fab140;
   border-radius: 5px;
   margin: 0 10%;
+  width: 750px;
 }
+
+
 @media screen and (max-width: 686px) {
   .slide {
     margin: 0;
@@ -329,7 +333,7 @@ progress::-webkit-progress-value {
 
 .quiz-button-container {
   position: relative;
-  margin-top: 13rem;
+  margin-top: 15rem;
 }
 
 @media screen and (max-width: 576px) {
