@@ -125,7 +125,7 @@ div #map {
   left: 2%;
 }
 
-.directIcon {
+.direct-icon {
   color: white;
   font-size: 25px;
 }
@@ -195,7 +195,7 @@ div #map {
 
 /*--------list--------*/
 
-#yourListUl {
+#your-list-ul {
   list-style-type: none;
   line-height: 30px;
 }
@@ -225,19 +225,19 @@ div #map {
   border-radius: 5px;
 }
 
-.flipCard1 {
+.flip-card-1 {
   background-color: #a8e1e8;
 }
 
-.flipCard2 {
+.flip-card-2 {
   background-color: #fab140;
 }
 
-.flipCard3 {
+.flip-card-3 {
   background-color: #9ebe7b;
 }
 
-.benefitsImgs {
+.benefits-imgs {
   height: 200px;
 }
 

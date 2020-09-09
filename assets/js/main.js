@@ -437,7 +437,7 @@ let itemsArray = localStorage.getItem("items")
   ? JSON.parse(localStorage.getItem("items"))
   : [];
 let data = JSON.parse(localStorage.getItem("items"));
-myList = document.getElementById("yourListUl");
+myList = document.getElementById("your-list-ul");
 let clearButton = document.getElementById("clear-btn");
 
 //direct to favourites on first click only 
