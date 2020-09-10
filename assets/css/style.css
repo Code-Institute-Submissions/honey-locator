@@ -48,7 +48,6 @@ html {
   text-align: left;
 }
 
-
 /*--------nav--------*/
 .navbar {
   height: 50px;
@@ -68,8 +67,8 @@ html {
   color: #fab140;
 }
 
-.white{
-    color: white;
+.white {
+  color: white;
 }
 
 /*--------general--------*/
@@ -96,11 +95,6 @@ html {
   transition: 0.3s;
   text-decoration: none;
   cursor: pointer;
-}
-
-.honey-pot {
-  height: 135px;
-  width: 135px;
 }
 
 .cursor {
