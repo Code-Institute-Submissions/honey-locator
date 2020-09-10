@@ -256,7 +256,7 @@ function initMap() {
 
         infoWindow.setPosition(pos);
         infoWindow.setContent(
-          "<p class = 'general-text'>You are here!</p><div class='center'><img src ='assets/images/icon_online.jpg' class='logo-nav' alt='logo'></div>"
+          "<p class = 'general-text'>You are here!</p><div class='center'><img src ='assets/images/icon_online.jpg' class='logo-nav'></div>"
         );
         infoWindow.open(map);
         map.setCenter(pos);
@@ -410,19 +410,18 @@ function showDetails(placeResult, marker, status) {
   if (status == google.maps.places.PlacesServiceStatus.OK) {
     let placeInfowindow = new google.maps.InfoWindow();
     if (placeResult.rating) rating = placeResult.rating;
-    placeInfowindow.setContent(`<div class="content-text">
-            <h5><b>${placeResult.name}</b></h5>
-            <div class="py-1"><i class="fas fa-phone-alt honey-col" alt="phone"></i><a class="content-text text-hvr"  href="tel:${tel}" target="_blank"> ${tel}</a></div>
-            <div class="py-1">
-                <i class="fas fa-globe honey-col" alt="globe"></i>
-                <a class="text-hvr content-text" target="_blank" href="${website}"> Website</a>
-            </div>
-            <div class="py-1"><i class="fas fa-store honey-col" alt="store"></i> ${placeResult.formatted_address}</div>
-        <div>
-             <div class="py-1"><i class="fas fa-map-marked-alt honey-col" alt="map"></i><a class="content-text text-hvr" target="_blank" target="_blank" href="${placeResult.url}"> View on GoogleMaps</a>    
-        </div>
-        <div class="py-1">Save this location by clicking <i class="fas fa-heart honey-col"></i> below!</div>
-        `);
+    placeInfowindow.setContent(`
+<h5><b>${placeResult.name}</b></h5>
+<div class="py-1"><i class="fas fa-phone-alt honey-col"></i><a class="content-text text-hvr"  href="tel:${tel}" target="_blank"> ${tel}</a></div>
+<div class="py-1">
+   <i class="fas fa-globe honey-col"></i>
+   <a class="text-hvr content-text" target="_blank" href="${website}"> Website</a>
+</div>
+<div class="py-1"><i class="fas fa-store honey-col"></i> ${placeResult.formatted_address}</div>
+<div class="py-1"><i class="fas fa-map-marked-alt honey-col"></i><a class="content-text text-hvr" target="_blank" href="${placeResult.url}"> View on GoogleMaps</a>    
+</div>
+<div class="py-1">Save this location by clicking <i class="fas fa-heart honey-col"></i> below!</div>
+`);
 
     placeInfowindow.open(marker.map, marker);
     currentInfoWindow.close();
@@ -453,15 +452,15 @@ function newItem(placeResult) {
   undefinedResults(placeResult);
   let content = document.createElement("li");
   let inputValue = (content.innerHTML = `
-  <div class="card m-1 p-3" style="width:22rem;">
-            <h5 class="content-text"><b>${placeResult.name}</b></h5>
-            <p class="content-text text-small m-0">${placeResult.formatted_address}</p>
-            <div class="text-center favourites-icon ">
-           <a class="m-3 hvr-icon-grow"  href="tel:${tel}" target="_blank"> <i class="fas fa-phone-alt honey-col hvr-icon" alt="phone"></i></a>     
-           <a class="m-3 hvr-icon-grow" target="_blank" href="${website}"> <i class="fas fa-globe honey-col hvr-icon" alt="globe"></i></a>
-         <a class="m-3 hvr-icon-grow" target="_blank" href="${placeResult.url}"><i class="fas fa-map-marked-alt honey-col hvr-icon" alt="map"></i></a>    
-         </div>
-         </div>
+<div class="card m-1 p-3" style="width:22rem;">
+   <h5 class="content-text"><b>${placeResult.name}</b></h5>
+   <p class="content-text text-small m-0">${placeResult.formatted_address}</p>
+   <div class="text-center favourites-icon ">
+      <a class="m-3 hvr-icon-grow"  href="tel:${tel}" target="_blank"> <i class="fas fa-phone-alt honey-col hvr-icon" ></i></a>     
+      <a class="m-3 hvr-icon-grow" target="_blank" href="${website}"> <i class="fas fa-globe honey-col hvr-icon" ></i></a>
+      <a class="m-3 hvr-icon-grow" target="_blank" href="${placeResult.url}"><i class="fas fa-map-marked-alt honey-col hvr-icon"></i></a>    
+   </div>
+</div>
 `);
 
   // If an item is not already in local storage, add to myList and local storage
