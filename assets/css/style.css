@@ -48,6 +48,7 @@ html {
   text-align: left;
 }
 
+
 /*--------nav--------*/
 .navbar {
   height: 50px;
@@ -67,8 +68,8 @@ html {
   color: #fab140;
 }
 
-.white {
-  color: white;
+.white{
+    color: white;
 }
 
 /*--------general--------*/
