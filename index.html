@@ -1,30 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Honey Locator UK</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/images/favicon_io/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/images/favicon_io/favicon-16x16.png"
+    />
+  </head>
 
-<head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Honey Locator UK</title>
-	<link rel="stylesheet" href="assets/css/style.css" />
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" />
-	<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon_io/favicon-32x32.png" />
-	<link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon_io/favicon-16x16.png" />
-</head>
+  <body class="bee-bg">
+    <!---------- Navigation ---------->
 
-<body class="bee-bg">
-
-	<!---------- Navigation ---------->
-
-	<header>
-		<div class="fixed-top dropdown-nav bg-col">
-			<nav class="navbar navbar-expand-sm bg-col p-0">
-				<a href="index.html" class="navbar-brand"><img
+    <header>
+      <div class="fixed-top dropdown-nav bg-col">
+        <nav class="navbar navbar-expand-sm bg-col p-0">
+          <a href="index.html" class="navbar-brand"
+            ><img
               src="assets/images/icon_online.jpg"
               alt="bee logo"
               class="logo-nav"
           /></a>
 
-					<button
+          <button
             class="navbar-toggler"
             type="button"
             data-toggle="collapse"
@@ -37,51 +49,57 @@
               ><i class="fa fa-navicon logo-nav p-1"></i>
             </span>
           </button>
-					<div class="collapse navbar-collapse bg-col" id="navbarNavDropdown">
-						<ul class="navbar-nav pr-5 content-heading">
-							<li class="nav-item mr-2 dropdown" id="navbar">
-								<a class="nav-link content-text text-hvr active" href="index.html">Home</a>
-							</li>
-							<li class="mr-2 d-flex align-items-center honey-col"><b>.</b></li>
-							<li class="nav-item mr-2">
-								<a class="nav-link content-text text-hvr" href="about.html">About</a>
-							</li>
-						</ul>
-					</div>
-			</nav>
-		</div>
-	</header>
+          <div class="collapse navbar-collapse bg-col" id="navbarNavDropdown">
+            <ul class="navbar-nav pr-5 content-heading">
+              <li class="nav-item mr-2 dropdown" id="navbar">
+                <a
+                  class="nav-link content-text text-hvr active"
+                  href="index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="mr-2 d-flex align-items-center honey-col"><b>.</b></li>
+              <li class="nav-item mr-2">
+                <a class="nav-link content-text text-hvr" href="about.html"
+                  >About</a
+                >
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
 
-	<!---------- Heading ---------->
+    <!---------- Heading ---------->
 
-	<div id="honeyMap">
-		<div class="center mt-5 p-3">
-			<h1 class="heading content-text pt-4 pb-2">
-				Find locally produced honey in the UK!
-			</h1>
-		</div>
+    <div id="honeyMap">
+      <div class="center mt-5 p-3">
+        <h1 class="heading content-text pt-4 pb-2">
+          Find locally produced honey in the UK!
+        </h1>
+      </div>
 
-		<!---------- Search Bar ---------->
+      <!---------- Search Bar ---------->
 
-		<div id="locator" class="center container-fluid">
-			<div id="pac-container">
-				<input
+      <div id="locator" class="center container-fluid">
+        <div id="pac-container">
+          <input
             id="pac-input"
             class="pac-input bg-col content-text text-center"
             type="text"
             placeholder="Enter a location"
           />
         </div>
-			</div>
+      </div>
 
-			<!---------- Map ---------->
+      <!---------- Map ---------->
 
-			<div class="map-container center content-text">
-				<div id="panel"></div>
+      <div class="map-container center content-text">
+        <div id="panel"></div>
 
-				<div id="map"></div>
-				<div class="map-btn">
-					<button
+        <div id="map"></div>
+        <div class="map-btn">
+          <button
             id="edit-btn"
             class="button m-1 content-text"
             type="button"
@@ -90,40 +108,46 @@
           >
             Suggest an edit
           </button>
-					<a id="add-btn" class="button m-1">Add location to your list</a>
-				</div>
-			</div>
-		</div>
+          <a id="add-btn" class="button m-1">Add location to your list</a>
+        </div>
+      </div>
+    </div>
 
-		<!---------- Modal-Form ---------->
+    <!---------- Modal-Form ---------->
 
-		<div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-			aria-hidden="true">
-			<div class="modal-dialog modal-dialog-centered" role="document">
-				<div class="modal-content content-text bg-col">
-					<div class="modal-body">
-						<form id="myForm" onsubmit="return sendForm(this);">
-							<div class="form-group">
-								<label for="nameInput">Name</label>
-								<input
+    <div
+      class="modal fade"
+      id="modal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="modal"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content content-text bg-col">
+          <div class="modal-body">
+            <form id="myForm" onsubmit="return sendForm(this);">
+              <div class="form-group">
+                <label for="nameInput">Name</label>
+                <input
                   type="text"
                   class="form-control"
                   id="nameInput"
                   name="nameInput"
                 />
               </div>
-								<div class="form-group">
-									<label for="emailInput">Email address</label>
-									<input
+              <div class="form-group">
+                <label for="emailInput">Email address</label>
+                <input
                   type="email"
                   class="form-control"
                   id="emailInput"
                   name="emailInput"
                 />
               </div>
-									<div class="form-group">
-										<label for="selectInput">What would you like to suggest?</label>
-										<select
+              <div class="form-group">
+                <label for="selectInput">What would you like to suggest?</label>
+                <select
                   class="form-control content-text"
                   id="selectInput"
                   name="selectInput"
@@ -132,9 +156,9 @@
                   <option>Remove a location</option>
                   <option>General suggestion</option>
                 </select>
-									</div>
-									<div class="form-group">
-										<textarea
+              </div>
+              <div class="form-group">
+                <textarea
                   id="textInput"
                   name="textInput"
                   class="form-control content-text"
@@ -142,39 +166,43 @@
                   placeholder="Please let us know more"
                   required
                 ></textarea>
-									</div>
+              </div>
 
-									<div class="modal-footer">
-										<button id="submit-btn" type="submit" class="btn content-text btn-hover">
+              <div class="modal-footer">
+                <button
+                  id="submit-btn"
+                  type="submit"
+                  class="btn content-text btn-hover"
+                >
                   Submit
                 </button>
-										<button
+                <button
                   type="button"
                   class="btn content-text btn-hover"
                   data-dismiss="modal"
                 >
                   Close
                 </button>
-									</div>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
 
-		<!---------- List ---------->
+    <!---------- List ---------->
 
-		<div id="list" class="container mt-3 py-5">
-			<div id="your-list">
-				<div>
-					<div>
-						<div class="center"></div>
-					</div>
-					<div>
-						<ul id="your-list-ul" class="p-0 row"></ul>
-					</div>
-					<div class="text-center">
-						<button
+    <div id="list" class="container mt-3 py-5">
+      <div id="your-list">
+        <div>
+          <div>
+            <div class="center"></div>
+          </div>
+          <div>
+            <ul id="your-list-ul" class="p-0 row"></ul>
+          </div>
+          <div class="text-center">
+            <button
               id="clear-btn"
               class="button mt-0"
               onclick="clearBtn();"
@@ -182,24 +210,22 @@
             >
               Clear All
             </button>
-					</div>
-				</div>
-			</div>
-		</div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-		<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-		<script src="assets/js/main.js"></script>
-		<script src="assets/js/modal-form.js"></script>
-		<script src="https://kit.fontawesome.com/89255d1b7b.js"></script>
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-		<script
-			src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
-		</script>
-		<script async defer
-			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYEFJ6Ls3eG2snRN2rZx7zHIZ8SS5UeKE&libraries=places&callback=initMap">
-		</script>
-</body>
-
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/modal-form.js"></script>
+    <script src="https://kit.fontawesome.com/89255d1b7b.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYEFJ6Ls3eG2snRN2rZx7zHIZ8SS5UeKE&libraries=places&callback=initMap"
+    ></script>
+  </body>
 </html>

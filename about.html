@@ -1,30 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Honey Locator UK</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/images/favicon_io/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/images/favicon_io/favicon-16x16.png"
+    />
+  </head>
 
-<head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Honey Locator UK</title>
-	<link rel="stylesheet" href="assets/css/style.css" />
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" />
-	<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon_io/favicon-32x32.png" />
-	<link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon_io/favicon-16x16.png" />
-</head>
+  <body>
+    <!---------- Navigation ---------->
 
-<body>
-
-	<!---------- Navigation ---------->
-
-	<header>
-		<div class="fixed-top dropdown-nav bg-col">
-			<nav class="navbar navbar-expand-sm bg-col p-0">
-				<a href="index.html" class="navbar-brand"><img
+    <header>
+      <div class="fixed-top dropdown-nav bg-col">
+        <nav class="navbar navbar-expand-sm bg-col p-0">
+          <a href="index.html" class="navbar-brand"
+            ><img
               src="assets/images/icon_online.jpg"
               alt="bee logo"
               class="logo-nav"
           /></a>
 
-					<button
+          <button
             class="navbar-toggler"
             type="button"
             data-toggle="collapse"
@@ -37,217 +49,238 @@
               ><i class="fa fa-navicon logo-nav p-1"></i>
             </span>
           </button>
-					<div class="collapse navbar-collapse bg-col" id="navbarNavDropdown">
-						<ul class="navbar-nav pr-5 content-heading">
-							<li class="nav-item mr-2 dropdown" id="navbar">
-								<a class="nav-link content-text text-hvr" href="index.html">Home</a>
-							</li>
-							<li class="mr-2 d-flex align-items-center honey-col"><b>.</b></li>
-							<li class="nav-item mr-2">
-								<a class="nav-link content-text text-hvr active" href="about.html">About</a>
-							</li>
-						</ul>
-					</div>
-			</nav>
-		</div>
-	</header>
+          <div class="collapse navbar-collapse bg-col" id="navbarNavDropdown">
+            <ul class="navbar-nav pr-5 content-heading">
+              <li class="nav-item mr-2 dropdown" id="navbar">
+                <a class="nav-link content-text text-hvr" href="index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="mr-2 d-flex align-items-center honey-col"><b>.</b></li>
+              <li class="nav-item mr-2">
+                <a
+                  class="nav-link content-text text-hvr active"
+                  href="about.html"
+                  >About</a
+                >
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
 
-	<!---------- About ---------->
+    <!---------- About ---------->
 
-	<div class="container-fluid mt-5 pt-5 pb-5 content-text">
-		<h1 class="text-center">About</h1>
-		<div class="row px-4">
-			<div class="col-md-9 d-flex align-items-center">
-				<div>
-					<p class="text-center">
-						Honey is a thick golden liquid that bees make from the nectar of
-						flowering plants. The bees produce the honey through a process of
-						collecting nectar and then regurgitating the nectar. Then water
-						evaporates from the nectar to produce the material we consume and
-						know as honey. Bees perform the vital service of pollinating
-						fruits, legumes, vegetables, and other types of food-producing
-						plants in the course of their business of honey production.
-					</p>
-					<p class="text-center">
-						Buying and consuming locally produced honey comes with a whole
-						host of benefits, see below to find out more!
-					</p>
-				</div>
-			</div>
-			<div class="col-md-3 center pr-0">
-				<img
+    <div class="container-fluid mt-5 pt-5 pb-5 content-text">
+      <h1 class="text-center">About</h1>
+      <div class="row px-4">
+        <div class="col-md-9 d-flex align-items-center">
+          <div>
+            <p class="text-center">
+              Honey is a thick golden liquid that bees make from the nectar of
+              flowering plants. The bees produce the honey through a process of
+              collecting nectar and then regurgitating the nectar. Then water
+              evaporates from the nectar to produce the material we consume and
+              know as honey. Bees perform the vital service of pollinating
+              fruits, legumes, vegetables, and other types of food-producing
+              plants in the course of their business of honey production.
+            </p>
+            <p class="text-center">
+              Buying and consuming locally produced honey comes with a whole
+              host of benefits, see below to find out more!
+            </p>
+          </div>
+        </div>
+        <div class="col-md-3 center pr-0">
+          <img
             src="assets/images/beekeeper.jpg"
             alt="beekeeper"
             class="beekeeper"
           />
         </div>
-			</div>
-		</div>
+      </div>
+    </div>
 
-		<div class="center">
-			<a href="#benefits" class="text-hvr direct-icon"><i class="fas fa-chevron-down"></i></a>
-		</div>
+    <div class="center">
+      <a href="#benefits" class="text-hvr direct-icon"
+        ><i class="fas fa-chevron-down"></i
+      ></a>
+    </div>
 
-		<!---------- Benefits Flip-Cards ---------->
+    <!---------- Benefits Flip-Cards ---------->
 
-		<div id="benefits" class="mt-4"></div>
-		<div class="container-fluid content-text pt-4">
-			<div class="row m-4">
-				<div class="col-md-4 p-2">
-					<div class="flip cursor">
-						<div class="front flip-card-1">
-							<h5 class="pt-3">Health</h5>
-							<img
+    <div id="benefits" class="mt-4"></div>
+    <div class="container-fluid content-text pt-4">
+      <div class="row m-4">
+        <div class="col-md-4 p-2">
+          <div class="flip cursor">
+            <div class="front flip-card-1">
+              <h5 class="pt-3">Health</h5>
+              <img
                 src="assets/images/heart.png"
                 alt="heart"
                 class="benefits-imgs"
               />
-							<p class="text-small px-3">
-								Raw honey has been used as a folk remedy throughout history and
-								has a variety of health benefits and medical uses...
-							</p>
-							<p><i class="far fa-hand-pointer"></i></p>
-						</div>
-						<div class="back flip-card-1">
-							<h5 class="p-3">Health</h5>
-							<ul class="text-small pr-2">
-								<li>A good source of antioxidants</li>
-								<li>Antibacterial and antifungal properties</li>
-								<li>Heal wounds</li>
-								<li>Phytonutrient powerhouse</li>
-								<li>Help for digestive issues</li>
-								<li>Soothe a sore throat</li>
-								<li>
-									A healthier alternative to the high fructose corn syrup in
-									lots of sweets and processed foods
-								</li>
-							</ul>
-							<p class="text-small text-center">
-								Read more
-								<a href="https://www.healthline.com/health/food-nutrition/top-raw-honey-benefits#digestion-and-gut-health"
-									target="_blank" class="text-hvr">here</a>
-							</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4 p-2">
-					<div class="flip cursor">
-						<div class="front flip-card-2">
-							<h5 class="pt-3">Economic</h5>
-							<img
+              <p class="text-small px-3">
+                Raw honey has been used as a folk remedy throughout history and
+                has a variety of health benefits and medical uses...
+              </p>
+              <p><i class="far fa-hand-pointer"></i></p>
+            </div>
+            <div class="back flip-card-1">
+              <h5 class="p-3">Health</h5>
+              <ul class="text-small pr-2">
+                <li>A good source of antioxidants</li>
+                <li>Antibacterial and antifungal properties</li>
+                <li>Heal wounds</li>
+                <li>Phytonutrient powerhouse</li>
+                <li>Help for digestive issues</li>
+                <li>Soothe a sore throat</li>
+                <li>
+                  A healthier alternative to the high fructose corn syrup in
+                  lots of sweets and processed foods
+                </li>
+              </ul>
+              <p class="text-small text-center">
+                Read more
+                <a
+                  href="https://www.healthline.com/health/food-nutrition/top-raw-honey-benefits#digestion-and-gut-health"
+                  target="_blank"
+                  class="text-hvr"
+                  >here</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 p-2">
+          <div class="flip cursor">
+            <div class="front flip-card-2">
+              <h5 class="pt-3">Economic</h5>
+              <img
                 src="assets/images/shop.png"
                 alt="shop"
                 class="benefits-imgs"
               />
-							<p class="text-small px-3">
-								Choosing to shop with your local businesses instead of the
-								larger chain stores has many benefits...
-							</p>
-							<p><i class="far fa-hand-pointer"></i></p>
-						</div>
-						<div class="back flip-card-2">
-							<h5 class="p-3">Economic</h5>
+              <p class="text-small px-3">
+                Choosing to shop with your local businesses instead of the
+                larger chain stores has many benefits...
+              </p>
+              <p><i class="far fa-hand-pointer"></i></p>
+            </div>
+            <div class="back flip-card-2">
+              <h5 class="p-3">Economic</h5>
 
-							<ul class="text-small pr-2">
-								<li>
-									Help to boost your local economy - Research shows that £10
-									spent with a local independent shop means up to an additional
-									£50 goes back into the local economy
-								</li>
-								<li>
-									Creates local jobs - Small, local businesses are surprisingly
-									the largest employer of jobs nationally and provide the most
-									local jobs to communities
-								</li>
-							</ul>
-							<p class="text-small text-center">
-								Read more
-								<a href="https://smallbusiness.co.uk/fifteen-reasons-choose-local-company-2542429/"
-									target="_blank" class="text-hvr">here</a>
-							</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4 p-2">
-					<div class="flip cursor">
-						<div class="front flip-card-3">
-							<h5 class="pt-3">Environmental</h5>
-							<img
+              <ul class="text-small pr-2">
+                <li>
+                  Help to boost your local economy - Research shows that £10
+                  spent with a local independent shop means up to an additional
+                  £50 goes back into the local economy
+                </li>
+                <li>
+                  Creates local jobs - Small, local businesses are surprisingly
+                  the largest employer of jobs nationally and provide the most
+                  local jobs to communities
+                </li>
+              </ul>
+              <p class="text-small text-center">
+                Read more
+                <a
+                  href="https://smallbusiness.co.uk/fifteen-reasons-choose-local-company-2542429/"
+                  target="_blank"
+                  class="text-hvr"
+                  >here</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 p-2">
+          <div class="flip cursor">
+            <div class="front flip-card-3">
+              <h5 class="pt-3">Environmental</h5>
+              <img
                 src="assets/images/earth.png"
                 alt="earth"
                 class="benefits-imgs"
               />
-							<p class="text-small px-3">
-								Save the bees! Bees play an important role in the life cycle of
-								most plants and flowers...
-							</p>
-							<p><i class="far fa-hand-pointer"></i></p>
-						</div>
-						<div class="back flip-card-3">
-							<h5 class="p-3">Environmental</h5>
-							<ul class="text-small pr-2">
-								<li>
-									Without bees, many plants would have no way to reproduce and
-									die out.
-								</li>
-								<li>
-									Bees are responsible for pollinating nearly 85% of all food
-									crops for humans, as well as numerous crops that grow the food
-									fed to cattle.
-								</li>
-								<li>
-									There has been research conducted that predicts environmental
-									collapse should the honeybee no longer exist
-								</li>
-							</ul>
-							<p class="text-small text-center">
-								Read more
-								<a href="https://www.perfectbee.com/learn-about-bees/the-science-of-bees/the-benefits-of-bees"
-									target="_blank" class="text-hvr">here</a>
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="center">
-			<a href="#quiz-section" class="text-hvr direct-icon"><i class="fas fa-chevron-down"></i></a>
-		</div>
-
-		<!---------- Quiz ---------->
-
-		<div id="quiz-section"></div>
-		<div class="mt-5 pt-5 pb-4 px-3 content-text center">
-			<h2>Test your knowledge with a quizzzz!</h2>
-		</div>
-		<div class="center">
-			<img src="assets/images/bee.jpg" alt="bee" class="bee-img" />
+              <p class="text-small px-3">
+                Save the bees! Bees play an important role in the life cycle of
+                most plants and flowers...
+              </p>
+              <p><i class="far fa-hand-pointer"></i></p>
+            </div>
+            <div class="back flip-card-3">
+              <h5 class="p-3">Environmental</h5>
+              <ul class="text-small pr-2">
+                <li>
+                  Without bees, many plants would have no way to reproduce and
+                  die out.
+                </li>
+                <li>
+                  Bees are responsible for pollinating nearly 85% of all food
+                  crops for humans, as well as numerous crops that grow the food
+                  fed to cattle.
+                </li>
+                <li>
+                  There has been research conducted that predicts environmental
+                  collapse should the honeybee no longer exist
+                </li>
+              </ul>
+              <p class="text-small text-center">
+                Read more
+                <a
+                  href="https://www.perfectbee.com/learn-about-bees/the-science-of-bees/the-benefits-of-bees"
+                  target="_blank"
+                  class="text-hvr"
+                  >here</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-			<div id="results"></div>
-			<div id="quiz"></div>
-			<div class="quiz-button-container content-text center">
-				<button id="previous" class="button text-center">
+
+    <div class="center">
+      <a href="#quiz-section" class="text-hvr direct-icon"
+        ><i class="fas fa-chevron-down"></i
+      ></a>
+    </div>
+
+    <!---------- Quiz ---------->
+
+    <div id="quiz-section"></div>
+    <div class="mt-5 pt-5 pb-4 px-3 content-text center">
+      <h2>Test your knowledge with a quizzzz!</h2>
+    </div>
+    <div class="center">
+      <img src="assets/images/bee.jpg" alt="bee" class="bee-img" />
+    </div>
+    <div id="results"></div>
+    <div id="quiz"></div>
+    <div class="quiz-button-container content-text center">
+      <button id="previous" class="button text-center">
         Previous Question
       </button>
-				<button id="next" class="button text-center">Next Question</button>
-				<button id="submit" class="button text-center">Submit Quiz</button>
-				<button id="restart" class="button text-center">Try again</button>
-				<button id="checkAnswers" class="button text-center">
+      <button id="next" class="button text-center">Next Question</button>
+      <button id="submit" class="button text-center">Submit Quiz</button>
+      <button id="restart" class="button text-center">Try again</button>
+      <button id="checkAnswers" class="button text-center">
         check answers
       </button>
-			</div>
-			<div class="center p-3 mb-3">
-				<progress id="progBar" max="50" value="10"> </progress>
-			</div>
+    </div>
+    <div class="center p-3 mb-3">
+      <progress id="progBar" max="50" value="10"> </progress>
+    </div>
 
-			<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-			<script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
-			<script src="assets/js/about.js"></script>
-			<script src="assets/js/quiz.js"></script>
-			<script src="https://kit.fontawesome.com/89255d1b7b.js"></script>
-			<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-</body>
-
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
+    <script src="assets/js/about.js"></script>
+    <script src="assets/js/quiz.js"></script>
+    <script src="https://kit.fontawesome.com/89255d1b7b.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  </body>
 </html>

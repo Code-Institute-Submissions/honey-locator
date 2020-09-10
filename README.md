@@ -3,7 +3,7 @@
 
 "Honey Locator UK” combines a googleMaps API along with various other interactive aspects to create a fun, educational and informative website. The website is responsive on a range of devices to increase accessibility. The layout of the site is clean and has conveniently placed navigation throughout.  
 
-![Responsive Design](https://github.com/irahbt/honey-locator-uk/blob/43aa63fa0c7eecbd5ba4cdc22f68c8cb386fe9c0/assets/images/readme_images/responsive-design.jpg)
+![Responsive Design](./assets/images/readme_images/responsive-design.jpg)
  
 ## User Experience (UX)
 
