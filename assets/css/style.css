@@ -127,6 +127,7 @@ div #map {
 
 .direct-icon {
   font-size: 25px;
+  color: #fab140;
 }
 /*--------search bar--------*/
 
@@ -260,8 +261,8 @@ div #map {
 
 .checkmark {
   position: relative;
-    border-radius: 50%;
-    left: 45%
+  border-radius: 50%;
+  left: 45%;
 }
 
 .checkmark:after {
@@ -308,7 +309,7 @@ progress::-webkit-progress-value {
   z-index: 1;
   opacity: 0;
   transition: opacity 0.5s;
-width: 100%
+  width: 100%;
 }
 
 .active-slide {
