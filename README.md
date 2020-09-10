@@ -40,7 +40,7 @@
  - The background-image on the home page provided much of the inspiration for the colour scheme present though-out the website. [Html colour matcher](https://html-color-codes.info/colors-from-image/) was used to ascertain the main colours to be used creating a consistent theme.
 
 #### Typography
- - The Montserrat font is used on all pages with Sans Serif as the back-up font. The font was chosen based on the most commonly used fonts for[educational websites](https://www.ilovewp.com/resources/education/wordpress-for-schools/most-used-google-fonts-on-school-websites/).  Varying font weights and letter-spacing where used for aesthetic and distinguishing purposes.
+ - The Montserrat font is used on all pages with Sans Serif as the back-up font. The font was chosen based on the most commonly used fonts for [educational websites](https://www.ilovewp.com/resources/education/wordpress-for-schools/most-used-google-fonts-on-school-websites/).  Varying font weights and letter-spacing where used for aesthetic and distinguishing purposes.
 
 #### Imagery
  - Each image was chosen based on its relations to bees / honey. Where possible, images from the same artist were used for style consistency. 
@@ -89,37 +89,37 @@
 ### Frameworks, Libraries & Programs Used
 
 1. [Bootstrap 4.5:](https://getbootstrap.com/docs/4.5/getting-started/download/)
-- Bootstrap was used to help make the website responsive on a range of devices
+    - Bootstrap was used to help make the website responsive on a range of devices
 
 2. [Figma:](https://www.figma.com/)
- - Figma was used to create the wireframes during the design process
+    - Figma was used to create the wireframes during the design process
 
 3. [Font Awesome:](https://fontawesome.com/)
--  Font Awesome icons were used for the details section and the social media links in the footer
+    -  Font Awesome icons were used for the details section and the social media links in the footer
 
 4. [Git](https://git-scm.com/)
- - The Gitpod terminal from Git was used to commit to Git and Push to GitHub
+    - The Gitpod terminal from Git was used to commit to Git and Push to GitHub
 
 5. [GitHub:](https://github.com/)
-- GitHub was used to store the code after being pushed from Git
+    - GitHub was used to store the code after being pushed from Git
 
 6. [Google Fonts:](https://fonts.google.com/)
-- Google fonts was used to import the ‘Spartan’ font into the style.css
+    - Google fonts was used to import the ‘Spartan’ font into the style.css
 
 7. [Google Maps JavaScript API:](https://developers.google.com/maps/documentation/javascript/overview)
-- Was used to create map 
+    - Was used to create map 
 
 8. [Google Places API:](https://developers.google.com/places/web-service/overview)
-- Was used to create map 
+    - Was used to create map 
 
 9. [jQuery Flip v1.1.1:](http://nnattawat.github.io/flip/)
-- A plugin used to flip content with 3D animation 
+    - A plugin used to flip content with 3D animation 
 
 10. [jQuery:](https://jquery.com/)
-- jQuery was used through-out to create interactivity
+    - jQuery was used through-out to create interactivity
 
 11.	[Hover.css:](https://ianlunn.github.io/Hover/)
-- Hover.css was used on the Social Media icons in the footer of the page to implement the grow transition when the icons were being hovered over 
+    - Hover.css was used on the Social Media icons in the footer of the page to implement the grow transition when the icons were being hovered over 
 
 ## Testing
 
@@ -134,44 +134,44 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate th
 
 1. As a First Time User, I want to easily understand the purpose of the website and the services it offers 
 
-- The heading clearing states “Find locally produced honey near you” informing the user of what the website offers 
-- Bee and honey related Imagery throughout the site suggests the nature of the website to the user
+    - The heading clearing states “Find locally produced honey near you” informing the user of what the website offers 
+    - Bee and honey related Imagery throughout the site suggests the nature of the website to the user
 
 2. As a First Time User, I want to be able to navigate intuitively through the site
 
-- Upon entering the site, the navigation bar is positioned at the top of the page and unobstructed by any images. This makes it easy for users to locate and read
-- The navigation bar is stuck to the top of the screen so the user is always able to navigate wherever they are in the site
-- In accordance with UX expectancies the logo, in the right-hand corner, navigates users back to the homepage
-- All navigation links provide feedback to the user with hover overs, this makes them easily identifiable as links
-- Clickable chevron icons are used to direct the user on the about.html page 
+    - Upon entering the site, the navigation bar is positioned at the top of the page and unobstructed by any images. This makes it easy for users to locate and read
+    - The navigation bar is stuck to the top of the screen so the user is always able to navigate wherever they are in the site
+    - In accordance with UX expectancies the logo, in the right-hand corner, navigates users back to the homepage
+    - All navigation links provide feedback to the user with hover overs, this makes them easily identifiable as links
+    - Clickable chevron icons are used to direct the user on the about.html page 
 
 #### Returning User Goals
 
 1. As a Returning User, I want to find out how I am able to purchase the honey 
 
-- The geolocation service prompts the user to allow location which, if accepted, immediately places a marker on the users location, this allows the users to see which locations are close to them 
-- The autocomplete search bar has placeholder text of “Enter a location”. To inform the start how to start searching for honey. 
-- The use of markers informs the user where the honey is located, click on zoom allows the user to see this in more detail.
+    - The geolocation service prompts the user to allow location which, if accepted, immediately places a marker on the users location, this allows the users to see which locations are close to them 
+    - The autocomplete search bar has placeholder text of “Enter a location”. To inform the start how to start searching for honey. 
+    - The use of markers informs the user where the honey is located, click on zoom allows the user to see this in more detail.
 
 2. As a Returning User, I want to find out how I am able to purchase the honey 
 
-- Clicking on each marker opens an info window for that specific place, the info window contains contact information; phone number and website 
-- If the location has a website, clicking will direct the user to that website in a new tab
-- The info window also contains a link to google Maps that places the marker on the specific location, in a separate tab, to allow the user to take full advantage of google Maps functions, such as directions 
+    - Clicking on each marker opens an info window for that specific place, the info window contains contact information; phone number and website 
+    - If the location has a website, clicking will direct the user to that website in a new tab
+    - The info window also contains a link to google Maps that places the marker on the specific location, in a separate tab, to allow the user to take full advantage of google Maps functions, such as directions 
 
 3. As a Returning User, I want to understand the benefits of buying local honey 
 
-- In about.html there is a section that provides information on the benefits of local honey 
+    - In about.html there is a section that provides information on the benefits of local honey 
 
 #### Frequent User Goals
 
 1. As a Frequent User, I want to be able to inform the website of any incorrect or missing shops 
 
-- There is a “Suggest an Edit” button on the map that opens a modal which allows the user to contact the maintainer of the site with any suggestions. The form is linked to EmailJS and will notify the maintainer on submit.
+    - There is a “Suggest an Edit” button on the map that opens a modal which allows the user to contact the maintainer of the site with any suggestions. The form is linked to EmailJS and will notify the maintainer on submit.
 
 2. As a Frequent User, I want to be able to save my favourite locations 
 
-- The heart button allows the users to compile a personalised list of their favourite locations and their information. Local storage means they are able to leave the site or the page and their list will remain until it is cleared. 
+    - The heart button allows the users to compile a personalised list of their favourite locations and their information. Local storage means they are able to leave the site or the page and their list will remain until it is cleared. 
 
 
 ### Testing Interactive Elements 
