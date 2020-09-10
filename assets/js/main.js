@@ -421,7 +421,7 @@ function showDetails(placeResult, marker, status) {
         <div>
              <div class="py-1"><i class="fas fa-map-marked-alt honey-col" alt="map"></i><a class="content-text text-hvr" target="_blank" target="_blank" href="${placeResult.url}"> View on GoogleMaps</a>    
         </div>
-        <div class="py-1">Save this location clicking <i class="fas fa-heart honey-col"></i> below!</div>
+        <div class="py-1">Save this location by clicking <i class="fas fa-heart honey-col"></i> below!</div>
         `);
 
     placeInfowindow.open(marker.map, marker);
