@@ -102,6 +102,10 @@ html {
   cursor: pointer;
 }
 
+.img-credit {
+    color: grey;
+    font-size: x-small;
+}
 /*--------map--------*/
 
 .map-container {
