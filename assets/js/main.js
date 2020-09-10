@@ -1,3 +1,5 @@
+// Map Variables
+
 let pos;
 let map;
 let infoWindow;
@@ -225,8 +227,10 @@ let mapStyle = [
 ];
 
 // Initialize map
+
 function initMap() {
-  // Initialize variables
+  // Initialize Variables
+
   infoWindow = new google.maps.InfoWindow();
   currentInfoWindow = infoWindow;
 
@@ -236,7 +240,7 @@ function initMap() {
     styles: mapStyle,
   });
 
-  // geolocation
+  // Geolocation
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(
       (position) => {
@@ -258,15 +262,18 @@ function initMap() {
         map.setCenter(pos);
 
         // Call Places Nearby Search on user's location
+
         getNearbyPlaces(pos);
       },
       () => {
         // Browser supports geolocation, but user has denied permission
+
         handleLocationError(true, infoWindow);
       }
     );
   } else {
     // Browser doesn't support geolocation
+
     handleLocationError(false, infoWindow);
   }
 
@@ -306,6 +313,7 @@ function initMap() {
 }
 
 // Perform a Places Nearby Search Request
+
 function getNearbyPlaces(position) {
   let request = {
     location: position,
@@ -318,6 +326,7 @@ function getNearbyPlaces(position) {
 }
 
 // Handle the results (up to 20) of the Nearby Search
+
 function nearbyCallback(results, status) {
   if (status == google.maps.places.PlacesServiceStatus.OK) {
     createMarkers(results);
@@ -325,6 +334,7 @@ function nearbyCallback(results, status) {
 }
 
 // Set markers at the location of each place result
+
 function createMarkers(places) {
   addTo = document.getElementById("add-btn");
   places.forEach((place) => {
@@ -353,6 +363,7 @@ function createMarkers(places) {
     });
 
     // Add click listener to each marker
+
     google.maps.event.addListener(marker, "click", () => {
       let request = {
         placeId: place.place_id,
@@ -376,11 +387,11 @@ function createMarkers(places) {
   });
 }
 
-//handles undefined results
+// Handle undefined results
 
 function undefinedResults(placeResult) {
   if (placeResult.formatted_phone_number === undefined) {
-    tel = "no phone number";
+    tel = "No Phone Number";
   } else {
     tel = placeResult.formatted_phone_number;
   }
@@ -393,6 +404,7 @@ function undefinedResults(placeResult) {
 }
 
 // InfoWindow
+
 function showDetails(placeResult, marker, status) {
   undefinedResults(placeResult);
   if (status == google.maps.places.PlacesServiceStatus.OK) {
@@ -425,14 +437,17 @@ let data = JSON.parse(localStorage.getItem("items"));
 myList = document.getElementById("your-list-ul");
 let clearButton = document.getElementById("clear-btn");
 
-//direct to favourites on first click only
+// Direct user to list on first click only
+
 $("#add-btn").one("click", function () {
   $("#add-btn").attr("href", "#your-list");
 });
 
-//new list item
+// Create new list item
+
 function newItem(placeResult) {
   //list item content
+
   undefinedResults(placeResult);
   let content = document.createElement("li");
   let inputValue = (content.innerHTML = `
@@ -447,7 +462,8 @@ function newItem(placeResult) {
          </div>
 `);
 
-  //if an item is not already in local storage, add to myList and local storage
+  // If an item is not already in local storage, add to myList and local storage
+
   if (itemsArray.indexOf(inputValue) == -1) {
     myList.appendChild(content);
     itemsArray.push(inputValue);
@@ -462,14 +478,18 @@ function newItem(placeResult) {
 }
 
 // Display the clear button if there are items in local storage array
+
 if (localStorage.items) {
   clearButton.style.display = "";
 }
 
-// html remains on page after refresh
+// Html remains on page after refresh
+
 data.forEach(() => {
   document.getElementById("your-list-ul").innerHTML = data;
 });
+
+// Clear items from local storage and html display
 
 function clearBtn() {
   localStorage.clear();

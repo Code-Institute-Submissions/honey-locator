@@ -15,6 +15,7 @@ function sendForm() {
   );
 
   //close modal on submit
+
   $("#modal").modal("hide");
   return false;
 }

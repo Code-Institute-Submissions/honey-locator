@@ -1,3 +1,5 @@
+// Quiz Structure
+
 function buildQuiz() {
   const output = [];
 
@@ -17,7 +19,9 @@ function buildQuiz() {
       <div>
        <div class="slide content-text">
        <div>
-            <div class="question text-center"><h5>${currentQuestion.question} </h5></div>
+            <div class="question text-center"><h5>${
+              currentQuestion.question
+            } </h5></div>
             </div>
             <div class="center">
             <div class="answers"> ${answers.join("")} </div>  
@@ -30,6 +34,8 @@ function buildQuiz() {
   quizContainer.innerHTML = output.join("");
 }
 
+// Show results at end of quiz
+
 function showResults() {
   const answerContainers = quizContainer.querySelectorAll(".answers");
   let numCorrect = 0;
@@ -38,7 +44,8 @@ function showResults() {
     const selector = `input[name=question${questionNumber}]:checked`;
     const userAnswer = (answerContainer.querySelector(selector) || {}).value;
     if (userAnswer === currentQuestion.correctAnswer) {
-      // add to the number of correct answers
+      // Add to the number of correct answers
+
       numCorrect++;
     }
   });
@@ -59,16 +66,21 @@ function checkAnswers() {
     const selector = `input[name=question${questionNumber}]:checked`;
     const userAnswer = (answerContainer.querySelector(selector) || {}).value;
     if (userAnswer === currentQuestion.correctAnswer) {
-      // color the answers green
+      // Color correct answers green
+
       answerContainers[questionNumber].style.color = "#9ebe7b";
     }
+
     // if answer is wrong or blank
     else {
-      // color the answers red
+      // Color the answers red
+
       answerContainers[questionNumber].style.color = "red";
     }
   });
 }
+
+// Slide content
 
 function showSlide(n) {
   slides[currentSlide].classList.remove("active-slide");
@@ -94,6 +106,8 @@ function showSlide(n) {
   }
 }
 
+// Pagination
+
 function showNextSlide() {
   showSlide(currentSlide + 1);
   progBar.value = progBar.value + 10;
@@ -110,6 +124,7 @@ function restartQuiz() {
 }
 
 //Quiz Variables
+
 let quizContainer = document.getElementById("quiz");
 let resultsContainer = document.getElementById("results");
 let submitButton = document.getElementById("submit");
@@ -164,10 +179,12 @@ let quizQuestions = [
     correctAnswer: "b",
   },
 ];
-// display the quiz
+
+// Initilise the quiz on load
+
 buildQuiz();
 
-// pagination
+// Pagination variables and initilisation
 const previousButton = document.getElementById("previous");
 const nextButton = document.getElementById("next");
 const restartButton = document.getElementById("restart");
@@ -175,7 +192,8 @@ const slides = document.querySelectorAll(".slide");
 let currentSlide = 0;
 showSlide(currentSlide);
 
-// quiz handlers
+// Quiz handlers
+
 submitButton.addEventListener("click", showResults);
 previousButton.addEventListener("click", showPreviousSlide);
 nextButton.addEventListener("click", showNextSlide);
